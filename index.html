@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grupo Velas Desarrollos · Primera Vivienda, Residencial y Residencial Plus en México</title>
+<meta name="description" content="Encuentra tu hogar con Grupo Velas: 30 desarrollos en 8 plazas de México, en tres categorías (Primera Vivienda, Residencial y Residencial Plus). Más de 40 años construyendo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Grupo Velas Desarrollos",
+  "description":"Desarrolladora inmobiliaria mexicana con más de 40 años de experiencia y marca hermana de Velas Resorts. Vivienda en tres categorías: Primera Vivienda, Residencial y Residencial Plus.",
+  "logo":"https://velatowerscancun.com/wp-content/uploads/2024/10/logo_GV-1.png",
+  "areaServed":["Cancún","Playa del Carmen","Tampico","Reynosa","Matamoros","Los Cabos","Querétaro","Ciudad Juárez"]
+}
+</script>
+
+<style>
+:root{
+  --navy:#0f2340; --navy-2:#1d3561; --deep:#0a1830; --ink:#1d2433; --muted:#667085;
+  --sand:#f4efe8; --sand-2:#ebe3d7; --line:#e4ddd2; --white:#fff;
+  --gold:#b8976a; --gold-2:#d7bf98;
+  /* Acento por categoría */
+  --pv:#c8643f;  --pv-soft:#f7e7df;   /* Primera Vivienda: terracota cálido */
+  --re:#2f6f9f;  --re-soft:#e2edf5;   /* Residencial: azul costa */
+  --rp:#b8976a;  --rp-soft:#f3ebdd;   /* Residencial Plus: dorado Vela */
+  --serif:"Cormorant Garamond", Georgia, serif;
+  --sans:"Manrope", system-ui, -apple-system, Segoe UI, sans-serif;
+  --ease:cubic-bezier(.22,.8,.2,1);
+  --ease-out:cubic-bezier(.16,1,.3,1);
+  --r:14px;
+  --wrap:1240px;
+  --shadow:0 1px 2px rgba(15,35,64,.06), 0 14px 36px -14px rgba(15,35,64,.22);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:#fff;line-height:1.6;font-size:16px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+.wrap{width:min(var(--wrap),100% - 32px);margin-inline:auto}
+.eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--navy-2);font-weight:600;display:inline-flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--gold);transform-origin:left;transform:scaleX(0);transition:transform 1s var(--ease-out) .2s}
+.eyebrow.is-in::before{transform:scaleX(1)}
+.dark .eyebrow{color:var(--gold-2)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--navy);line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(34px,4.4vw,56px);margin:10px 0 12px}
+.dark h2,.dark h3{color:#fff}
+.lead{color:var(--muted);max-width:56ch}
+.dark .lead{color:rgba(255,255,255,.75)}
+section{position:relative}
+.sec{padding:clamp(72px,9vw,120px) 0}
+.center{text-align:center}.center .lead{margin-inline:auto}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:36px;flex-wrap:wrap}
+
+/* Botones */
+.btn{--bg:var(--navy);--fg:#fff;--hv:var(--gold);position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 24px;border-radius:6px;background:var(--bg);color:var(--fg);font-weight:600;font-size:14px;border:1px solid var(--bg);cursor:pointer;overflow:hidden;isolation:isolate;transition:transform .4s var(--ease),box-shadow .4s var(--ease),color .4s,border-color .4s}
+.btn::before{content:"";position:absolute;inset:0;background:var(--hv);transform:translateY(101%);transition:transform .5s var(--ease-out);z-index:-1}
+.btn:hover::before{transform:none}
+.btn:hover{box-shadow:0 10px 24px -10px rgba(15,35,64,.5);border-color:var(--hv)}
+.btn:active{transform:scale(.97)}
+.btn .arr{transition:transform .4s var(--ease)}
+.btn:hover .arr{transform:translateX(4px)}
+.btn.ghost{--bg:transparent;--fg:var(--navy);--hv:var(--navy);border-color:rgba(15,35,64,.25)}
+.btn.ghost:hover{color:#fff}
+.btn.light{--bg:#fff;--fg:var(--navy)}
+.btn.light:hover{color:#fff}
+.btn.sm{padding:10px 16px;font-size:13px}
+.link{font-size:13px;font-weight:600;color:var(--navy);display:inline-flex;gap:8px;align-items:center;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .5s var(--ease-out);padding-bottom:2px}
+.link:hover{background-size:100% 1px}
+.link .arr{transition:transform .4s var(--ease)}
+.link:hover .arr{transform:translateX(4px)}
+
+/* Etiqueta de categoría */
+.cat{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px 11px;border-radius:999px;background:var(--cs);color:var(--cc)}
+.cat::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--cc)}
+[data-cat="pv"]{--cc:var(--pv);--cs:var(--pv-soft)}
+[data-cat="re"]{--cc:var(--re);--cs:var(--re-soft)}
+[data-cat="rp"]{--cc:#8a6d45;--cs:var(--rp-soft)}
+
+/* Header */
+.progress{position:fixed;top:0;left:0;height:2px;width:100%;background:var(--gold);transform-origin:left;transform:scaleX(0);z-index:60}
+header.top{position:fixed;inset:0 0 auto;z-index:50;padding:16px 0;transition:transform .5s var(--ease),background .5s var(--ease),padding .5s var(--ease),box-shadow .5s var(--ease)}
+header.top.scrolled{background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(14px);box-shadow:0 1px 0 var(--line);padding:8px 0}
+header.top.hide{transform:translateY(-100%)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo img{height:52px;width:auto;transition:filter .5s,height .5s var(--ease)}
+header.top:not(.scrolled) .logo img{filter:brightness(0) invert(1)}
+header.top.scrolled .logo img{height:42px}
+.menu{display:flex;gap:26px;font-size:13px;font-weight:500;align-items:center}
+.menu a{position:relative;padding:6px 0;opacity:.9;transition:opacity .3s,color .5s;display:inline-flex;align-items:center;gap:8px}
+header.top:not(.scrolled) .menu a{color:#fff}
+.menu a i{width:7px;height:7px;border-radius:50%;background:var(--cc)}
+.menu a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--cc,var(--gold));transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease-out)}
+.menu a:hover::after{transform:scaleX(1);transform-origin:left}
+.menu .sep{width:1px;height:18px;background:currentColor;opacity:.25}
+header.top:not(.scrolled) .btn.desk{--bg:#fff;--fg:var(--navy)}
+header.top:not(.scrolled) .btn.desk:hover{color:#fff}
+.burger{display:none;width:42px;height:42px;border:0;background:none;cursor:pointer;position:relative}
+.burger span{position:absolute;left:10px;right:10px;height:1.5px;background:var(--navy);transition:transform .4s var(--ease),opacity .3s,background .4s}
+header.top:not(.scrolled) .burger span{background:#fff}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:20px}.burger span:nth-child(3){top:25px}
+.nav-open .burger span:nth-child(1){transform:translateY(5px) rotate(45deg)}
+.nav-open .burger span:nth-child(2){opacity:0}
+.nav-open .burger span:nth-child(3){transform:translateY(-5px) rotate(-45deg)}
+
+/* ===== HERO: tres paneles ===== */
+.hero{height:100svh;min-height:640px;max-height:1000px;background:var(--deep);color:#fff;overflow:hidden;position:relative}
+.hero-title{position:absolute;z-index:5;top:clamp(110px,15vh,150px);left:0;right:0;text-align:center;pointer-events:none}
+.hero-title .eyebrow{color:var(--gold-2);justify-content:center}
+.hero-title h1{color:#fff;font-size:clamp(44px,6.4vw,88px);margin-top:12px;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.hero-title h1 .line{display:block;overflow:hidden;padding-bottom:.06em}
+.hero-title h1 .line>span{display:block;transform:translateY(110%);transition:transform 1.3s var(--ease-out) .5s}
+.hero-title h1 .line:nth-child(2)>span{transition-delay:.62s}
+.hero-title h1 em{color:var(--gold-2)}
+.loaded .hero-title h1 .line>span{transform:none}
+.hero-title .eyebrow{opacity:0;transition:opacity 1s .4s}
+.loaded .hero-title .eyebrow{opacity:1}
+.panels{position:absolute;inset:0;display:flex}
+.panel{position:relative;flex:1;overflow:hidden;cursor:pointer;transition:flex 1s var(--ease-out);clip-path:inset(100% 0 0 0);color:#fff;isolation:isolate}
+.loaded .panel{clip-path:inset(0);transition:flex 1s var(--ease-out),clip-path 1.4s var(--ease-out)}
+.loaded .panel:nth-child(2){transition-delay:0s,.12s}.loaded .panel:nth-child(3){transition-delay:0s,.24s}
+.panel+.panel{border-left:1px solid rgba(255,255,255,.18)}
+.panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.2);transition:transform 1.6s var(--ease-out),filter .8s}
+.loaded .panel img{transform:scale(1.06)}
+.panel::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(8,20,48,.55) 0%,rgba(8,20,48,.1) 35%,rgba(8,20,48,.25) 55%,rgba(8,20,48,.9) 100%);transition:opacity .8s}
+.panel::after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;z-index:3;background:var(--cc);transform:scaleX(0);transform-origin:left;transition:transform .8s var(--ease-out)}
+.panel .pc{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:0 clamp(20px,3vw,44px) clamp(28px,5vh,52px)}
+.panel .num{font-family:var(--serif);font-size:15px;letter-spacing:.2em;opacity:.8}
+.panel h2{color:#fff;font-size:clamp(30px,3.2vw,48px);margin:8px 0 6px;white-space:nowrap}
+.panel .tag{font-family:var(--serif);font-style:italic;font-size:clamp(18px,1.6vw,22px);color:var(--pl)}
+.panel .price{font-size:13.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:#fff;opacity:.9;margin-top:6px}
+.panel .more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .8s var(--ease-out)}
+.panel .more>div{overflow:hidden}
+.panel .more p{font-size:14px;opacity:.85;max-width:40ch;margin:14px 0 18px}
+.panel .meta{display:flex;gap:18px;font-size:12.5px;margin-bottom:20px;flex-wrap:wrap}
+.panel .meta b{display:block;font-family:var(--serif);font-size:26px;font-weight:600;line-height:1}
+.panel .meta span{opacity:.75}
+.panel .go{--bg:#fff;--fg:var(--navy);--hv:var(--cc)}
+.panel .go:hover{color:#fff}
+.panel[data-cat="pv"]{--pl:#f2b79f}.panel[data-cat="re"]{--pl:#a9cbe6}.panel[data-cat="rp"]{--pl:var(--gold-2)}
+@media (hover:hover) and (min-width:901px){
+  .panels:hover .panel{flex:.8}
+  .panels .panel:hover{flex:1.6}
+  .panel:hover img{transform:scale(1)}
+  .panel:hover .more{grid-template-rows:1fr}
+  .panel:hover::after{transform:scaleX(1)}
+  .panels:hover .panel:not(:hover) img{filter:grayscale(.5) brightness(.7)}
+}
+.panel.open .more{grid-template-rows:1fr}
+.panel.open::after{transform:scaleX(1)}
+.hero-hint{position:absolute;z-index:5;left:50%;bottom:22px;transform:translateX(-50%);font-size:11px;letter-spacing:.25em;text-transform:uppercase;opacity:0;transition:opacity 1s 1.8s;display:flex;align-items:center;gap:10px;pointer-events:none}
+.loaded .hero-hint{opacity:.8}
+.hero-hint i{width:1px;height:28px;background:linear-gradient(#fff,transparent);animation:drip 2s var(--ease) infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* Stats */
+.stats-band{background:var(--navy);color:#fff}
+.stats-band .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.sb{padding:30px 24px;display:flex;align-items:baseline;gap:12px}
+.sb+.sb{border-left:1px solid rgba(255,255,255,.12)}
+.sb b{font-family:var(--serif);font-size:clamp(38px,4vw,54px);font-weight:600;line-height:1;color:var(--gold-2)}
+.sb>span{font-size:13px;opacity:.8;line-height:1.3}
+
+/* Reveal */
+[data-reveal]{opacity:0;transition:opacity 1s var(--ease-out),transform 1.1s var(--ease-out);transition-delay:var(--d,0s)}
+[data-reveal="up"]{transform:translateY(40px)}
+[data-reveal="left"]{transform:translateX(-50px)}
+[data-reveal="right"]{transform:translateX(50px)}
+[data-reveal="scale"]{transform:scale(.94)}
+[data-reveal].is-in{opacity:1;transform:none}
+.split-words .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em}
+.split-words .w>span{display:inline-block;transform:translateY(105%);transition:transform 1s var(--ease-out);transition-delay:calc(var(--i)*55ms)}
+.split-words.is-in .w>span{transform:none}
+
+/* ===== Buscador ===== */
+.finder{background:#fff}
+.fbar{position:sticky;top:64px;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:16px;padding:12px;display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;box-shadow:var(--shadow);margin-bottom:28px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:#fff;padding:9px 14px;border-radius:999px;font-size:13px;font-weight:600;color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:all .35s var(--ease)}
+.chip i{width:8px;height:8px;border-radius:50%;background:var(--cc,var(--navy))}
+.chip:hover{border-color:var(--cc,var(--navy))}
+.chip.on{background:var(--cc,var(--navy));border-color:var(--cc,var(--navy));color:#fff}
+.chip.on i{background:#fff}
+.chip[data-cat="rp"].on{--cc:#8a6d45}
+.sel{position:relative}
+.sel select{appearance:none;border:1px solid var(--line);border-radius:10px;padding:10px 38px 10px 14px;background:#fff;font-size:13.5px;font-weight:600;cursor:pointer;min-width:170px;transition:border-color .3s}
+.sel select:focus{outline:none;border-color:var(--navy)}
+.sel::after{content:"";position:absolute;right:14px;top:50%;width:7px;height:7px;border-right:1.5px solid var(--navy);border-bottom:1.5px solid var(--navy);transform:translateY(-70%) rotate(45deg);pointer-events:none}
+.fcount{font-size:13px;color:var(--muted);white-space:nowrap;padding:0 6px}
+.fcount b{color:var(--navy);font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.card.out{display:none}
+.card .ph{position:relative;aspect-ratio:16/10.5;overflow:hidden;background:var(--sand)}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease-out)}
+.card:hover .ph img{transform:scale(1.08)}
+.card .ph .cat{position:absolute;top:12px;left:12px;backdrop-filter:blur(6px)}
+.card .st{position:absolute;top:12px;right:12px;font-size:11px;font-weight:700;padding:6px 10px;border-radius:999px;background:rgba(15,35,64,.8);color:#fff;backdrop-filter:blur(6px)}
+.card .st.now{background:#2e9d6a}
+.card .demo{position:absolute;bottom:10px;right:10px;font-size:10px;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.85);color:var(--muted);padding:3px 8px;border-radius:4px}
+.card .body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.card .loc{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.card .loc svg{width:13px;height:13px;color:var(--cc)}
+.card h3{font-size:28px;margin:4px 0 10px}
+.card .specs{display:flex;gap:16px;font-size:12.5px;color:var(--ink);padding:12px 0;border-top:1px dashed var(--line);border-bottom:1px dashed var(--line);margin-bottom:16px;flex-wrap:wrap}
+.card .specs span{display:flex;align-items:center;gap:6px}
+.card .specs svg{width:15px;height:15px;color:var(--navy)}
+.card .foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto;gap:10px}
+.card .price small{display:block;font-size:11px;color:var(--muted)}
+.card .price b{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--navy);line-height:1}
+.card .price b.q{font-family:var(--sans);font-size:14px}
+.card .go{width:44px;height:44px;border-radius:50%;background:var(--sand);display:grid;place-items:center;flex:none;transition:background .4s,color .4s,transform .5s var(--ease)}
+.card:hover .go{background:var(--cc);color:#fff;transform:rotate(-45deg)}
+.empty{display:none;text-align:center;padding:60px 20px;color:var(--muted)}
+.empty.show{display:block}
+.more-row{text-align:center;margin-top:36px}
+
+/* ===== ¿Qué categoría es para ti? ===== */
+.compare{background:var(--sand)}
+.cmp{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.cc{background:#fff;border-radius:18px;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.cc:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.cc .top{padding:26px 26px 22px;background:var(--cs);position:relative;overflow:hidden}
+.cc .top::after{content:"";position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:var(--cc);opacity:.12;transition:transform .8s var(--ease-out)}
+.cc:hover .top::after{transform:scale(1.6)}
+.cc h3{font-size:34px;margin:12px 0 4px}
+.cc .tl{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--cc)}
+.cc ul{list-style:none;padding:22px 26px;display:grid;gap:14px;font-size:14px;flex:1}
+.cc li{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start;line-height:1.45}
+.cc li svg{width:20px;height:20px;color:var(--cc);margin-top:1px}
+.cc li b{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:2px}
+.cc .ft{padding:0 26px 26px}
+.cc .ft .btn{width:100%;--bg:var(--navy);--hv:var(--cc)}
+
+/* Quiz */
+.quiz{margin-top:56px;background:var(--navy);color:#fff;border-radius:22px;padding:clamp(26px,4vw,48px);display:grid;grid-template-columns:.9fr 1.4fr;gap:clamp(24px,4vw,56px);align-items:center;position:relative;overflow:hidden}
+.quiz::before{content:"";position:absolute;width:420px;height:420px;left:-160px;bottom:-220px;border-radius:50%;background:radial-gradient(circle,rgba(215,191,152,.28),transparent 70%)}
+.quiz h3{color:#fff;font-size:clamp(30px,3vw,42px)}
+.quiz p{opacity:.75;font-size:14.5px;margin-top:10px}
+.qsteps{position:relative;min-height:230px}
+.qstep{position:absolute;inset:0;opacity:0;transform:translateX(40px);pointer-events:none;transition:opacity .5s,transform .7s var(--ease-out)}
+.qstep.on{opacity:1;transform:none;pointer-events:auto}
+.qstep.done{opacity:0;transform:translateX(-40px)}
+.qstep .q{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-2);margin-bottom:14px}
+.qstep .qt{font-family:var(--serif);font-size:28px;margin-bottom:18px;line-height:1.15}
+.qopts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.qopts button{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.05);color:#fff;border-radius:12px;padding:16px;text-align:left;cursor:pointer;font-size:14px;font-weight:600;transition:background .35s,border-color .35s,transform .35s var(--ease)}
+.qopts button small{display:block;font-weight:400;opacity:.65;font-size:12px;margin-top:3px}
+.qopts button:hover{background:rgba(255,255,255,.12);border-color:var(--gold-2);transform:translateY(-3px)}
+.qbar{display:flex;gap:6px;margin-bottom:22px}
+.qbar i{flex:1;height:3px;border-radius:3px;background:rgba(255,255,255,.18);overflow:hidden;position:relative}
+.qbar i::after{content:"";position:absolute;inset:0;background:var(--gold-2);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease-out)}
+.qbar i.on::after{transform:scaleX(1)}
+.qres .cat{margin-bottom:12px}
+.qres .qt{font-size:34px}
+.qres .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.qres .row .btn{--hv:var(--gold-2)}
+.qres .again{background:none;border:0;color:#fff;opacity:.7;font-size:13px;cursor:pointer;text-decoration:underline;margin-left:6px}
+
+/* ===== Mapa de plazas ===== */
+.plazas{background:#fff}
+.map-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(24px,4vw,56px);align-items:center}
+.mapwrap{position:relative;background:var(--sand);border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+.mapwrap svg{width:100%;height:auto;display:block}
+.mx{fill:#fff;stroke:#d9cfbf;stroke-width:1.5;stroke-dasharray:var(--len);stroke-dashoffset:var(--len);transition:stroke-dashoffset 2.6s var(--ease-out),fill .8s 1.6s;fill-opacity:0}
+.mapwrap.is-in .mx{stroke-dashoffset:0;fill-opacity:1}
+.city{cursor:pointer}
+.city .halo{fill:var(--gold);opacity:0;transform-box:fill-box;transform-origin:center}
+.mapwrap.is-in .city .halo{animation:halo 2.8s ease-out infinite;animation-delay:calc(var(--d) + 1.5s)}
+@keyframes halo{0%{opacity:.5;transform:scale(.6)}100%{opacity:0;transform:scale(2.8)}}
+.city .dot{fill:var(--navy);stroke:#fff;stroke-width:2;opacity:0;transform:scale(0);transform-box:fill-box;transform-origin:center;transition:transform .7s cubic-bezier(.34,1.56,.64,1),opacity .4s,fill .3s;transition-delay:calc(var(--d) + 1.2s)}
+.mapwrap.is-in .city .dot{opacity:1;transform:none}
+.city text{font:700 12px var(--sans);fill:var(--ink);paint-order:stroke;stroke:#f4efe8;stroke-width:4px;opacity:0;transition:opacity .6s;transition-delay:calc(var(--d) + 1.4s)}
+.mapwrap.is-in .city text{opacity:1}
+.city:hover .dot,.city.hot .dot{fill:var(--gold);transform:scale(1.4)}
+.plist{list-style:none;display:grid;gap:4px}
+.plist li{display:grid;grid-template-columns:1fr auto;gap:6px 14px;align-items:center;padding:14px 14px;border-radius:12px;cursor:pointer;transition:background .35s,transform .45s var(--ease)}
+.plist li:hover,.plist li.hot{background:var(--sand);transform:translateX(6px)}
+.plist .n{font-weight:700;color:var(--navy)}
+.plist .c{font-size:12px;color:var(--muted)}
+.plist .bars{grid-column:1/-1;display:flex;height:6px;border-radius:6px;overflow:hidden;background:var(--sand-2);gap:2px}
+.plist .bars i{display:block;height:100%;width:0;transition:width 1.2s var(--ease-out)}
+.plist .bars i.pv{background:var(--pv)}.plist .bars i.re{background:var(--re)}.plist .bars i.rp{background:var(--rp)}
+.legend{display:flex;gap:16px;font-size:12px;color:var(--muted);margin-top:16px;flex-wrap:wrap}
+.legend span{display:flex;align-items:center;gap:6px}
+.legend span::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--cc)}
+
+/* ===== Destacados (scroll horizontal) ===== */
+.feat{background:var(--deep);color:#fff;overflow:hidden}
+.hscroll{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px max(16px,calc((100vw - var(--wrap))/2)) 20px;scrollbar-width:none;cursor:grab;scroll-padding-inline:max(16px,calc((100vw - var(--wrap))/2))}
+.hscroll::-webkit-scrollbar{display:none}
+.hscroll.drag{cursor:grabbing;scroll-snap-type:none}
+.fc{flex:0 0 min(520px,82vw);scroll-snap-align:start;border-radius:20px;overflow:hidden;position:relative;aspect-ratio:4/5;color:#fff;isolation:isolate}
+.fc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease-out);pointer-events:none}
+.fc:hover img{transform:scale(1.07)}
+.fc::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(8,20,48,.2),rgba(8,20,48,0) 30%,rgba(8,20,48,.9))}
+.fc .in{position:absolute;z-index:2;left:26px;right:26px;bottom:26px}
+.fc h3{color:#fff;font-size:clamp(34px,3.4vw,46px);margin:12px 0 6px}
+.fc p{font-size:14px;opacity:.8;max-width:38ch}
+.fc .cat{background:rgba(255,255,255,.92)}
+.fc .row{display:flex;justify-content:space-between;align-items:center;margin-top:18px;gap:12px}
+.fc .row b{font-family:var(--serif);font-size:28px;font-weight:600}
+.fc .row small{display:block;font-size:11px;opacity:.7}
+.fc .go{width:52px;height:52px;border-radius:50%;background:#fff;color:var(--navy);display:grid;place-items:center;transition:transform .6s var(--ease),background .4s,color .4s}
+.fc:hover .go{transform:rotate(-45deg);background:var(--cc);color:#fff}
+.hctrl{display:flex;gap:10px}
+.hctrl button{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;cursor:pointer;font-size:18px;transition:background .35s,color .35s,transform .35s var(--ease)}
+.hctrl button:hover{background:#fff;color:var(--navy);transform:scale(1.06)}
+.hprog{height:2px;background:rgba(255,255,255,.15);margin-top:18px;position:relative;overflow:hidden;border-radius:2px}
+.hprog i{position:absolute;left:0;top:0;bottom:0;background:var(--gold-2);width:20%;transition:transform .2s linear}
+
+/* ===== Cómo comprar ===== */
+.steps-sec{background:#fff}
+.ptabs{display:inline-flex;gap:6px;background:var(--sand);padding:5px;border-radius:999px;position:relative;margin-top:24px;flex-wrap:wrap}
+.ptabs button{position:relative;z-index:1;border:0;background:none;padding:10px 20px;border-radius:999px;font-size:13.5px;font-weight:600;color:var(--muted);cursor:pointer;transition:color .4s}
+.ptabs button.on{color:#fff}
+.ptabs .pill{position:absolute;top:5px;bottom:5px;left:0;border-radius:999px;background:var(--navy);transition:transform .55s var(--ease-out),width .55s var(--ease-out),background .5s}
+.tl-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px;position:relative}
+.tl-steps::before{content:"";position:absolute;left:0;right:0;top:27px;height:1px;background:var(--line)}
+.tl-steps::after{content:"";position:absolute;left:0;top:27px;height:2px;background:var(--acc,var(--navy));width:var(--w,0%);transition:width 1.4s var(--ease-out),background .5s}
+.ts{position:relative;z-index:1;transition:opacity .45s,transform .6s var(--ease-out)}
+.ts .n{width:56px;height:56px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font-family:var(--serif);font-size:24px;font-weight:600;color:var(--navy);margin-bottom:18px;transition:background .5s,color .5s,border-color .5s}
+.ts:hover .n{background:var(--acc,var(--navy));color:#fff;border-color:transparent}
+.ts b{display:block;font-size:16px;color:var(--navy);margin-bottom:6px}
+.ts p{font-size:13.5px;color:var(--muted)}
+.swapping .ts{opacity:0;transform:translateY(12px)}
+
+/* ===== Respaldo ===== */
+.gv{display:grid;grid-template-columns:1fr 1.15fr;background:var(--sand);overflow:hidden}
+.gv .ph{position:relative;overflow:hidden;min-height:480px}
+.gv .ph img{position:absolute;left:0;top:-12%;width:100%;height:124%;object-fit:cover;will-change:transform}
+.gv .txt{padding:clamp(40px,6vw,86px) clamp(20px,5vw,72px);display:flex;flex-direction:column;justify-content:center}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:18px 26px;margin-top:28px}
+.pillars>div{display:flex;gap:12px;align-items:flex-start}
+.pillars svg{width:26px;height:26px;color:var(--gold);flex:none}
+.pillars b{display:block;color:var(--navy);font-size:14.5px}
+.pillars span{font-size:13px;color:var(--muted)}
+.marquee{padding:34px 0;border-top:1px solid var(--line);background:#fff;overflow:hidden;position:relative}
+.marquee p{text-align:center;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.track{display:flex;gap:70px;width:max-content;animation:marq 34s linear infinite;align-items:center}
+.marquee:hover .track{animation-play-state:paused}
+@keyframes marq{to{transform:translateX(-50%)}}
+.track img{height:50px;width:auto;filter:grayscale(1) opacity(.6);transition:filter .5s,transform .5s var(--ease)}
+.track img:hover{filter:none;transform:scale(1.08)}
+.marquee::before,.marquee::after{content:"";position:absolute;top:0;bottom:0;width:120px;z-index:1;pointer-events:none}
+.marquee::before{left:0;background:linear-gradient(90deg,#fff,transparent)}
+.marquee::after{right:0;background:linear-gradient(-90deg,#fff,transparent)}
+
+/* ===== Guías ===== */
+.guides{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.guide{border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--line);transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.guide:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.guide .ph{aspect-ratio:16/9;overflow:hidden}
+.guide img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease-out)}
+.guide:hover img{transform:scale(1.07)}
+.guide .b{padding:20px}
+.guide h3{font-family:var(--sans);font-size:17px;font-weight:700;letter-spacing:0;line-height:1.35;margin:10px 0 12px}
+
+/* FAQ */
+.faq{max-width:840px;margin:36px auto 0}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 0;display:flex;justify-content:space-between;gap:20px;font-weight:600;color:var(--navy);font-size:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{width:20px;height:20px;position:relative;flex:none;margin-top:2px}
+.faq summary i::before,.faq summary i::after{content:"";position:absolute;left:3px;right:3px;top:9px;height:1.5px;background:var(--navy);transition:transform .45s var(--ease)}
+.faq summary i::after{transform:rotate(90deg)}
+.faq details[open] summary i::after{transform:rotate(0)}
+.faq .ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--ease-out)}
+.faq details[open] .ans{grid-template-rows:1fr}
+.faq .ans>div{overflow:hidden;color:var(--muted);font-size:14.5px}
+.faq .ans>div>p{padding-bottom:22px}
+
+/* Contacto */
+.final{position:relative;overflow:hidden;color:#fff;padding:clamp(80px,10vw,130px) 0}
+.final .bg{position:absolute;inset:-22% 0;background:url("https://velatowerscancun.com/wp-content/uploads/2024/10/Copia-de-Roof-top-vista-1-1536x1024.jpg") center/cover;will-change:transform}
+.final::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(100deg,rgba(10,24,48,.95) 0%,rgba(10,24,48,.84) 45%,rgba(10,24,48,.55) 100%)}
+.final .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:center}
+.final p{opacity:.85;max-width:44ch}
+.script{font-family:var(--serif);font-style:italic;font-size:clamp(26px,3vw,34px);color:var(--gold-2);margin-top:26px;display:inline-block}
+.form{background:#fff;color:var(--ink);border-radius:18px;padding:clamp(22px,3vw,34px);box-shadow:0 30px 60px -20px rgba(0,0,0,.45);position:relative}
+.form h3{font-family:var(--sans);font-size:18px;font-weight:700;letter-spacing:0;margin-bottom:4px;color:var(--navy)}
+.form .hint{font-size:12.5px;color:var(--muted);margin-bottom:18px}
+.form .chips{margin-bottom:14px}
+.fld{position:relative;margin-bottom:14px}
+.fld input,.fld select{width:100%;border:1px solid var(--line);border-radius:8px;padding:20px 14px 8px;background:#fbfaf8;font-size:14.5px;transition:border-color .3s,box-shadow .3s,background .3s;appearance:none}
+.fld select{background-image:linear-gradient(45deg,transparent 50%,var(--navy) 50%),linear-gradient(135deg,var(--navy) 50%,transparent 50%);background-position:calc(100% - 20px) 55%,calc(100% - 15px) 55%;background-size:5px 5px;background-repeat:no-repeat}
+.fld label{position:absolute;left:14px;top:15px;font-size:14px;color:var(--muted);pointer-events:none;transition:all .3s var(--ease)}
+.fld input:focus,.fld select:focus{outline:none;border-color:var(--navy);background:#fff;box-shadow:0 0 0 4px rgba(15,35,64,.08)}
+.fld input:focus+label,.fld input:not(:placeholder-shown)+label,.fld select+label{top:6px;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--navy-2)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.form .btn{width:100%;margin-top:6px;padding:16px}
+.form .legal{font-size:10.5px;color:var(--muted);margin-top:12px;text-align:center}
+.form .ok{position:absolute;inset:0;background:#fff;border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;opacity:0;pointer-events:none;transition:opacity .6s}
+.form.sent .ok{opacity:1;pointer-events:auto}
+.ok svg{width:70px;height:70px}
+.ok circle{stroke-dasharray:190;stroke-dashoffset:190;transition:stroke-dashoffset .9s var(--ease-out) .2s}
+.ok path{stroke-dasharray:50;stroke-dashoffset:50;transition:stroke-dashoffset .6s var(--ease-out) .9s}
+.form.sent .ok circle,.form.sent .ok path{stroke-dashoffset:0}
+.ok h3{margin-top:16px;font-size:22px}
+.ok p{color:var(--muted);font-size:14px;margin-top:6px;opacity:1}
+
+/* Footer */
+footer{padding:50px 0 30px;border-top:1px solid var(--line);font-size:13px;background:#fff}
+.fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:30px}
+.fgrid img{height:64px;width:auto}
+.fgrid h4{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.fgrid p,.fgrid a{color:var(--muted);display:block;line-height:1.9}
+.fgrid a:hover{color:var(--navy)}
+footer .fine{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* Flotantes */
+.wa{position:fixed;right:20px;bottom:20px;z-index:40;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 10px 24px -6px rgba(0,0,0,.35);transform:scale(0);transition:transform .6s cubic-bezier(.34,1.56,.64,1)}
+.wa.show{transform:scale(1)}
+.wa svg{width:28px;height:28px}
+.wa::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:ring 2.6s infinite}
+@keyframes ring{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.6);opacity:0}}
+
+/* Responsive */
+@media (max-width:1100px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .fbar{grid-template-columns:1fr 1fr;}
+  .fbar .chips{grid-column:1/-1}
+  .fcount{text-align:right}
+}
+@media (max-width:980px){
+  .menu,.nav .btn.desk{display:none}
+  .burger{display:block}
+  .nav-open .menu{display:flex;position:fixed;inset:68px 0 auto;flex-direction:column;align-items:flex-start;background:#fff;padding:20px 24px 28px;gap:4px;box-shadow:0 20px 30px -20px rgba(0,0,0,.25);animation:drop .45s var(--ease-out)}
+  .nav-open .menu a{font-size:17px;padding:10px 0;color:var(--ink)!important}
+  .nav-open .menu .sep{display:none}
+  @keyframes drop{from{opacity:0;transform:translateY(-10px)}}
+  .nav-open header.top{background:#fff}
+  .nav-open header.top .logo img{filter:none}
+  .nav-open header.top .burger span{background:var(--navy)}
+}
+@media (max-width:900px){
+  .hero{height:auto;max-height:none;min-height:0}
+  .hero-title{position:relative;top:auto;padding:120px 16px 30px}
+  .panels{position:relative;flex-direction:column}
+  .panel{min-height:230px;flex:none}
+  .panel+.panel{border-left:0;border-top:1px solid rgba(255,255,255,.18)}
+  .panel .pc{padding:0 20px 22px}
+  .panel.open{min-height:420px}
+  .hero-hint{display:none}
+  .stats-band .wrap{grid-template-columns:1fr 1fr}
+  .sb{padding:22px 12px;flex-direction:column;gap:4px}
+  .sb:nth-child(3){border-left:0}
+  .sb:nth-child(n+3){border-top:1px solid rgba(255,255,255,.12)}
+  .fbar{position:relative;top:auto}
+  .cmp,.guides{grid-template-columns:1fr}
+  .quiz,.map-grid,.gv,.final .wrap{grid-template-columns:1fr}
+  .qsteps{min-height:330px}
+  .tl-steps{grid-template-columns:1fr 1fr}
+  .tl-steps::before,.tl-steps::after{display:none}
+  .gv .ph{min-height:300px}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  .grid{grid-template-columns:1fr}
+  .fbar{grid-template-columns:1fr}
+  .fcount{text-align:left}
+  .sel select{width:100%}
+  .two,.pillars{grid-template-columns:1fr}
+  .tl-steps{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr}
+  .qopts{grid-template-columns:1fr}
+  .ptabs{display:grid;border-radius:14px;width:100%}
+  .ptabs .pill{display:none}
+  .ptabs button{border-radius:10px;transition:background .4s,color .4s}
+  .ptabs button.on{background:var(--navy)}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0s!important}
+  [data-reveal],.split-words .w>span,.hero-title h1 .line>span{opacity:1!important;transform:none!important}
+  .panel{clip-path:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="top" id="top">
+  <div class="wrap nav">
+    <a href="#inicio" class="logo" aria-label="Grupo Velas Desarrollos"><img src="https://velatowerscancun.com/wp-content/uploads/2024/10/logo_GV-1.png" alt="Grupo Velas"></a>
+    <nav class="menu" id="menu">
+      <a href="pvivienda/index.html" data-go="pv" data-cat="pv"><i></i>Primera Vivienda</a>
+      <a href="residencial/index.html" data-go="re" data-cat="re"><i></i>Residencial</a>
+      <a href="residencialp/index.html" data-go="rp" data-cat="rp"><i></i>Residencial Plus</a>
+      <span class="sep"></span>
+      <a href="#plazas">Plazas</a>
+      <a href="#grupo-velas">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a href="#desarrollos" class="btn sm desk">Encuentra tu hogar <span class="arr">→</span></a>
+    <button class="burger" id="burger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ============ HERO: 3 CATEGORÍAS ============ -->
+<section class="hero" id="inicio">
+  <div class="hero-title">
+    <span class="eyebrow is-in">Grupo Velas Desarrollos</span>
+    <h1><span class="line"><span>Un hogar para cada</span></span><span class="line"><span><em>etapa</em> de tu vida</span></span></h1>
+  </div>
+  <div class="panels" id="panels"></div>
+  <div class="hero-hint"><i></i>Elige tu categoría</div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats-band">
+  <div class="wrap">
+    <div class="sb" data-reveal="up"><b data-count="30">0</b><span>desarrollos<br>en México</span></div>
+    <div class="sb" data-reveal="up" style="--d:.08s"><b data-count="8">0</b><span>plazas<br>en 5 estados</span></div>
+    <div class="sb" data-reveal="up" style="--d:.16s"><b>+<span data-count="40">0</span></b><span>años<br>construyendo</span></div>
+    <div class="sb" data-reveal="up" style="--d:.24s"><b data-count="3">0</b><span>categorías<br>de vivienda</span></div>
+  </div>
+</section>
+
+<!-- ============ BUSCADOR ============ -->
+<section class="sec finder" id="desarrollos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow" data-reveal="up">Nuestros desarrollos</span>
+        <h2 class="split-words" data-split>Encuentra tu próximo hogar</h2>
+        <p class="lead" data-reveal="up" style="--d:.1s">Filtra por categoría, plaza y etapa de obra. Cada desarrollo tiene su propia página con prototipos, amenidades, ubicación y precios.</p>
+      </div>
+    </div>
+
+    <div class="fbar" id="fbar" data-reveal="up" style="--d:.15s">
+      <div class="chips" id="catChips">
+        <button class="chip on" data-c="all">Todas</button>
+        <button class="chip" data-c="pv" data-cat="pv"><i></i>Primera Vivienda</button>
+        <button class="chip" data-c="re" data-cat="re"><i></i>Residencial</button>
+        <button class="chip" data-c="rp" data-cat="rp"><i></i>Residencial Plus</button>
+      </div>
+      <div class="sel"><select id="fPlaza" aria-label="Plaza"><option value="all">Todas las plazas</option></select></div>
+      <div class="sel"><select id="fStatus" aria-label="Etapa"><option value="all">Cualquier etapa</option><option>Preventa</option><option>En construcción</option><option>Entrega inmediata</option></select></div>
+      <div class="fcount" id="fcount"><b>0</b> desarrollos</div>
+    </div>
+
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty">No hay desarrollos con esos filtros. <button class="link" id="reset" style="border:0;background:none;cursor:pointer">Limpiar filtros</button></div>
+    <div class="more-row" data-reveal="up"><a href="#contacto" class="btn ghost">¿No encuentras lo que buscas? Te asesoramos <span class="arr">→</span></a></div>
+  </div>
+</section>
+
+<!-- ============ ¿QUÉ CATEGORÍA ES PARA TI? ============ -->
+<section class="sec compare" id="categorias">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow" data-reveal="up">Tres categorías, una misma calidad</span>
+      <h2 class="split-words" data-split>¿Qué categoría es para ti?</h2>
+      <p class="lead" data-reveal="up" style="--d:.1s">Todas nuestras viviendas comparten el respaldo de Grupo Velas. Lo que cambia es la etapa de vida y el tipo de espacio que buscas.</p>
+    </div>
+    <div class="cmp" id="cmp"></div>
+
+    <div class="quiz" id="quiz" data-reveal="up">
+      <div>
+        <span class="eyebrow" style="color:var(--gold-2)">Test de 30 segundos</span>
+        <h3 style="margin-top:12px">Te ayudamos a elegir</h3>
+        <p>Responde tres preguntas y te mostramos los desarrollos que mejor encajan contigo.</p>
+      </div>
+      <div>
+        <div class="qbar"><i></i><i></i><i></i></div>
+        <div class="qsteps" id="qsteps">
+          <div class="qstep on" data-s="0">
+            <div class="q">Pregunta 1 de 3</div>
+            <div class="qt">¿Es tu primera vivienda?</div>
+            <div class="qopts"><button data-v="pv:2">Sí, es mi primera casa<small>Quiero dejar de rentar</small></button><button data-v="re:1,rp:1">Ya tengo una<small>Busco algo mejor o una inversión</small></button></div>
+          </div>
+          <div class="qstep" data-s="1">
+            <div class="q">Pregunta 2 de 3</div>
+            <div class="qt">¿Cómo piensas pagarla?</div>
+            <div class="qopts"><button data-v="pv:2">Infonavit o Fovissste<small>Crédito de mi trabajo</small></button><button data-v="re:2">Crédito bancario<small>Con enganche propio</small></button><button data-v="rp:2">Recursos propios<small>Contado o plan directo</small></button></div>
+          </div>
+          <div class="qstep" data-s="2">
+            <div class="q">Pregunta 3 de 3</div>
+            <div class="qt">¿Qué es lo más importante para ti?</div>
+            <div class="qopts"><button data-v="pv:2">Una mensualidad que me acomode</button><button data-v="re:2">Más espacio y amenidades</button><button data-v="rp:2">Ubicación, diseño y exclusividad</button></div>
+          </div>
+          <div class="qstep qres" data-s="3" id="qres"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLAZAS ============ -->
+<section class="sec plazas" id="plazas">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow" data-reveal="up">Presencia nacional</span>
+        <h2 class="split-words" data-split>8 plazas, un mismo respaldo</h2>
+      </div>
+      <p class="lead" data-reveal="up" style="--d:.1s">Del Caribe mexicano a la frontera norte. Elige una plaza para ver sus desarrollos.</p>
+    </div>
+    <div class="map-grid">
+      <div class="mapwrap" id="mapwrap" data-reveal="scale">
+        <svg viewBox="0 0 820 540" id="mapsvg" aria-label="Mapa de plazas de Grupo Velas">
+          <path class="mx" id="mx" d=""/>
+          <g id="cities"></g>
+        </svg>
+      </div>
+      <div>
+        <ul class="plist" id="plist"></ul>
+        <div class="legend"><span data-cat="pv">Primera Vivienda</span><span data-cat="re">Residencial</span><span data-cat="rp" style="--cc:var(--rp)">Residencial Plus</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DESTACADOS ============ -->
+<section class="sec feat dark" id="destacados">
+  <div class="wrap sec-head">
+    <div>
+      <span class="eyebrow" data-reveal="up">Destacados</span>
+      <h2 class="split-words" data-split>Desarrollos que inspiran</h2>
+    </div>
+    <div class="hctrl" data-reveal="up"><button id="hPrev" aria-label="Anterior">←</button><button id="hNext" aria-label="Siguiente">→</button></div>
+  </div>
+  <div class="hscroll" id="hscroll"></div>
+  <div class="wrap"><div class="hprog"><i id="hprog"></i></div></div>
+</section>
+
+<!-- ============ CÓMO COMPRAR ============ -->
+<section class="sec steps-sec" id="como-comprar">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow" data-reveal="up">Cómo comprar</span>
+      <h2 class="split-words" data-split>Tu camino a casa, paso a paso</h2>
+      <div data-reveal="up" style="--d:.1s"><div class="ptabs" id="ptabs"><span class="pill"></span><button class="on" data-p="credito">Con Infonavit / Fovissste</button><button data-p="banco">Con crédito bancario</button><button data-p="directo">Contado o plan directo</button></div></div>
+    </div>
+    <div class="tl-steps" id="tlsteps"></div>
+  </div>
+</section>
+
+<!-- ============ GRUPO VELAS ============ -->
+<section class="gv" id="grupo-velas">
+  <div class="ph"><img src="https://velatowerscancun.com/wp-content/uploads/2024/11/Sin-ti%CC%81tulo-1-09-scaled-1-1.jpg" alt="Desarrollo de Grupo Velas" loading="lazy" data-parallax=".12"></div>
+  <div class="txt">
+    <span class="eyebrow" data-reveal="up">Sobre Grupo Velas</span>
+    <h2 class="split-words" data-split>Más de 40 años construyendo patrimonio</h2>
+    <p class="lead" data-reveal="up" style="--d:.1s">Grupo Velas es una empresa mexicana con una trayectoria impecable en la industria de la construcción y marca hermana de la reconocida cadena hotelera Velas Resorts.</p>
+    <div class="pillars">
+      <div data-reveal="up" style="--d:.1s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg><div><b>Respaldo y solidez</b><span>Más de cuatro décadas entregando vivienda.</span></div></div>
+      <div data-reveal="up" style="--d:.16s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 21V9l8-6 8 6v12M9 21v-6h6v6"/></svg><div><b>Calidad en cada categoría</b><span>De tu primera casa a una residencia de lujo.</span></div></div>
+      <div data-reveal="up" style="--d:.22s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12c3-6 15-6 18 0M5 12v8h14v-8M12 20v-5"/></svg><div><b>ADN de hospitalidad</b><span>La experiencia de servicio de Velas Resorts.</span></div></div>
+      <div data-reveal="up" style="--d:.28s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg><div><b>Asesoría personalizada</b><span>Asesores especializados en cada plaza.</span></div></div>
+    </div>
+  </div>
+</section>
+<div class="marquee" aria-label="Marcas y desarrollos de Grupo Velas">
+  <p>Nuestros desarrollos</p>
+  <div class="track" id="track">
+    <img src="https://velatowerscancun.com/wp-content/uploads/2024/10/logo_vela_towers.png" alt="Vela Towers" loading="lazy">
+    <img src="https://velatowerscancun.com/wp-content/uploads/2020/06/logo_vistavela.png" alt="Vista Vela" loading="lazy">
+    <img src="https://velatowerscancun.com/wp-content/uploads/2020/06/logo_selvanova.png" alt="Selvanova" loading="lazy">
+    <img src="https://velatowerscancun.com/wp-content/uploads/2020/06/logo_velamar_tampico.png" alt="Velamar Tampico" loading="lazy">
+    <img src="https://velatowerscancun.com/wp-content/uploads/2020/06/logo_velamar_cabos.png" alt="Velamar Los Cabos" loading="lazy">
+    <img src="https://velatowerscancun.com/wp-content/uploads/2020/06/logo_aldea_serena.png" alt="Aldea Serena" loading="lazy">
+  </div>
+</div>
+
+<!-- ============ GUÍAS ============ -->
+<section class="sec" id="guias" style="background:var(--sand)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow" data-reveal="up">Blog</span>
+        <h2 class="split-words" data-split>Guías para comprar con confianza</h2>
+      </div>
+      <a href="https://velatowerscancun.com/#blog" target="_blank" rel="noopener" class="link" data-reveal="up">Ver todas las guías <span class="arr">→</span></a>
+    </div>
+    <div class="guides">
+      <a class="guide" data-reveal="up" href="https://velatowerscancun.com/construir-desde-cero-o-comprar-en-preventa-la-guia-para-una-inversion-inteligente/" target="_blank" rel="noopener"><div class="ph"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=70&auto=format&fit=crop" alt="" loading="lazy"></div><div class="b"><span class="cat" data-cat="re">Inversión</span><h3>¿Construir desde cero o comprar en preventa? La guía para una inversión inteligente</h3><span class="link">Leer guía <span class="arr">→</span></span></div></a>
+      <a class="guide" data-reveal="up" style="--d:.1s" href="https://velatowerscancun.com/la-importancia-de-la-ubicacion-en-una-inversion-inmobiliaria-de-lujo-en-cancun-2/" target="_blank" rel="noopener"><div class="ph"><img src="https://velatowerscancun.com/wp-content/uploads/2024/10/destino.png" alt="" loading="lazy"></div><div class="b"><span class="cat" data-cat="rp">Residencial Plus</span><h3>La importancia de la ubicación en una inversión inmobiliaria de lujo en Cancún</h3><span class="link">Leer guía <span class="arr">→</span></span></div></a>
+      <a class="guide" data-reveal="up" style="--d:.2s" href="https://velatowerscancun.com/departamentos-en-vela-towers-vive-la-experiencia-de-un-resort/" target="_blank" rel="noopener"><div class="ph"><img src="https://velatowerscancun.com/wp-content/uploads/2024/10/Sky-Bar--1024x683.jpg" alt="" loading="lazy"></div><div class="b"><span class="cat" data-cat="rp">Residencial Plus</span><h3>Departamentos en Vela Towers: vive la experiencia de un resort</h3><span class="link">Leer guía <span class="arr">→</span></span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="sec" id="faq">
+  <div class="wrap center">
+    <span class="eyebrow" data-reveal="up">Preguntas frecuentes</span>
+    <h2 class="split-words" data-split>Lo que necesitas saber</h2>
+  </div>
+  <div class="wrap faq">
+    <details data-reveal="up"><summary>¿Qué diferencia hay entre Primera Vivienda, Residencial y Residencial Plus?<i></i></summary><div class="ans"><div><p>Primera Vivienda está pensada para quien compra su primera casa, con opciones compatibles con créditos como Infonavit y Fovissste. Residencial ofrece más espacio y amenidades para familias que buscan crecer. Residencial Plus reúne nuestros desarrollos con mayor nivel de diseño, ubicación y amenidades, como Vela Towers Cancún.</p></div></div></details>
+    <details data-reveal="up" style="--d:.06s"><summary>¿En qué ciudades tiene desarrollos Grupo Velas?<i></i></summary><div class="ans"><div><p>Cancún, Playa del Carmen, Tampico, Reynosa, Matamoros, Los Cabos, Querétaro y Ciudad Juárez.</p></div></div></details>
+    <details data-reveal="up" style="--d:.12s"><summary>¿Puedo comprar con crédito Infonavit o Fovissste?<i></i></summary><div class="ans"><div><p>Sí, en los desarrollos que lo permiten. Un asesor te indicará qué desarrollos y prototipos aplican para tu tipo de crédito.</p></div></div></details>
+    <details data-reveal="up" style="--d:.18s"><summary>¿Tienen viviendas con entrega inmediata?<i></i></summary><div class="ans"><div><p>Sí. Usa el filtro "Entrega inmediata" en el buscador para ver los desarrollos disponibles para mudarte ya.</p></div></div></details>
+    <details data-reveal="up" style="--d:.24s"><summary>¿Quién es Grupo Velas?<i></i></summary><div class="ans"><div><p>Una empresa mexicana con más de 40 años en la construcción y marca hermana de Velas Resorts.</p></div></div></details>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="final dark" id="contacto">
+  <div class="bg" data-parallax=".15"></div>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow" data-reveal="up">Asesoría sin costo</span>
+      <h2 class="split-words" data-split>Hablemos de tu próximo hogar</h2>
+      <p data-reveal="up" style="--d:.1s">Cuéntanos qué buscas y un asesor especializado de tu plaza te contactará con opciones, precios y planes de pago.</p>
+      <div data-reveal="up" style="--d:.3s"><span class="script">Un hogar para cada etapa</span></div>
+    </div>
+    <form class="form" id="form" data-reveal="up" style="--d:.15s" novalidate>
+      <h3>Recibe asesoría personalizada</h3>
+      <p class="hint">Elige tu categoría de interés</p>
+      <div class="chips" id="formCats">
+        <button type="button" class="chip" data-c="pv" data-cat="pv"><i></i>Primera Vivienda</button>
+        <button type="button" class="chip" data-c="re" data-cat="re"><i></i>Residencial</button>
+        <button type="button" class="chip" data-c="rp" data-cat="rp"><i></i>Residencial Plus</button>
+      </div>
+      <input type="hidden" name="categoria" id="fcat">
+      <div class="fld"><input id="fn" name="nombre" placeholder=" " required autocomplete="name"><label for="fn">Nombre completo</label></div>
+      <div class="two">
+        <div class="fld"><input id="fp" name="telefono" type="tel" placeholder=" " required autocomplete="tel" inputmode="tel"><label for="fp">Teléfono / WhatsApp</label></div>
+        <div class="fld"><select id="fpl" name="plaza"></select><label for="fpl">Plaza de interés</label></div>
+      </div>
+      <input type="hidden" name="desarrollo" id="fdev">
+      <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="utm_content"><input type="hidden" name="utm_term"><input type="hidden" name="gclid"><input type="hidden" name="fbclid">
+      <button class="btn" type="submit">Quiero asesoría <span class="arr">→</span></button>
+      <p class="legal">Al enviar aceptas nuestro <a href="#" style="text-decoration:underline">Aviso de privacidad</a>.</p>
+      <div class="ok">
+        <svg viewBox="0 0 70 70" fill="none" stroke="#0f2340" stroke-width="2.5"><circle cx="35" cy="35" r="30"/><path d="m22 36 9 9 17-19" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>¡Gracias!</h3>
+        <p>Un asesor de tu plaza te contactará muy pronto.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><img src="https://velatowerscancun.com/wp-content/uploads/2024/10/logo_GV-1.png" alt="Grupo Velas" loading="lazy"><p style="margin-top:14px;max-width:34ch">Más de 40 años construyendo hogares en México. Marca hermana de Velas Resorts.</p></div>
+      <div><h4>Categorías</h4><a href="pvivienda/index.html" data-go="pv">Primera Vivienda</a><a href="residencial/index.html" data-go="re">Residencial</a><a href="residencialp/index.html" data-go="rp">Residencial Plus</a></div>
+      <div><h4>Plazas</h4><div id="fplazas"></div></div>
+      <div><h4>Grupo Velas</h4><a href="#grupo-velas">Nosotros</a><a href="#como-comprar">Cómo comprar</a><a href="#guias">Blog</a><a href="#contacto">Contacto</a><a href="#">Aviso de privacidad</a></div>
+    </div>
+    <div class="fine"><span>© <span id="yr"></span> Grupo Velas Desarrollos. Todos los derechos reservados.</span><span>Imágenes ilustrativas. Precios sujetos a cambio y disponibilidad.</span></div>
+  </div>
+</footer>
+
+<a href="#" class="wa" id="wa" data-wa aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg></a>
+
+<script>
+/* =====================================================================
+   DATOS — reemplazar con el inventario real de los 30 desarrollos.
+   Solo Vela Towers tiene datos reales; el resto son EJEMPLOS (demo:true).
+   ===================================================================== */
+const U = s => 'https://images.unsplash.com/photo-' + s + '?w=1000&q=70&auto=format&fit=crop';
+const WHATSAPP = '520000000000'; // número general / call center
+
+const CATS = {
+  pv:{name:'Primera Vivienda', page:'pvivienda/index.html', tag:'Tu primer gran paso', num:'01', price:'Desde $790,000 MXN',
+      desc:'Casas y departamentos pensados para estrenar patrimonio, con opciones para créditos Infonavit, Fovissste y bancarios.',
+      img:U('1502672260266-1c1ef2d93688'),
+      rows:[['Ideal para','Quien deja de rentar y compra su primera casa'],['Formas de pago','Infonavit, Fovissste, crédito bancario y cofinanciamientos'],['Producto','Casas y departamentos funcionales en zonas con servicios'],['Lo que más valoras','Una mensualidad que te acomode']]},
+  re:{name:'Residencial', page:'residencial/index.html', tag:'Espacio para crecer', num:'02', price:'Desde $1.5 MDP',
+      desc:'Más metros, más amenidades y comunidades planeadas para familias que buscan crecer con comodidad.',
+      img:U('1600596542815-ffad4c1539a9'),
+      rows:[['Ideal para','Familias en crecimiento que buscan más espacio'],['Formas de pago','Crédito bancario, cofinanciamiento o recursos propios'],['Producto','Casas y departamentos amplios con amenidades'],['Lo que más valoras','Espacio, seguridad y calidad de vida']]},
+  rp:{name:'Residencial Plus', page:'residencialp/index.html', tag:'Vivir superior', num:'03', price:'Desde $4.5 MDP',
+      desc:'Nuestros desarrollos más exclusivos: diseño de autor, ubicaciones privilegiadas y amenidades con experiencia de resort.',
+      img:'https://velatowerscancun.com/wp-content/uploads/2024/10/Portada-1.png',
+      rows:[['Ideal para','Quien busca exclusividad o una inversión patrimonial'],['Formas de pago','Recursos propios, planes directos y crédito bancario'],['Producto','Departamentos y residencias de lujo con amenidades de resort'],['Lo que más valoras','Ubicación, diseño y exclusividad']]}
+};
+
+const PLAZAS = {
+  'Cancún':{lat:21.16,lon:-86.85}, 'Playa del Carmen':{lat:20.63,lon:-87.08},
+  'Tampico':{lat:22.25,lon:-97.86}, 'Reynosa':{lat:26.09,lon:-98.28}, 'Matamoros':{lat:25.87,lon:-97.5},
+  'Los Cabos':{lat:22.89,lon:-109.92}, 'Querétaro':{lat:20.59,lon:-100.39}, 'Ciudad Juárez':{lat:31.69,lon:-106.42}
+};
+
+const DEVS = [
+  {name:'Vela Towers', cat:'rp', plaza:'Cancún', status:'Entrega inmediata', type:'Departamentos', rec:'3 rec.', m2:'207 – 264 m²', from:'$9 MDP', img:'https://velatowerscancun.com/wp-content/uploads/2024/11/Sin-ti%CC%81tulo-1-09-scaled-1-1.jpg', url:'https://velatowerscancun.com/', feat:'Amenidades de resort, Sky Bar y cancha de pádel en una de las zonas con mayor plusvalía de Cancún.'},
+  {name:'Velamar Los Cabos', cat:'rp', plaza:'Los Cabos', status:'Preventa', type:'Departamentos', rec:'2 – 3 rec.', m2:'', from:'', img:U('1613490493576-7fde63acd811'), demo:true, feat:'Diseño contemporáneo frente al Pacífico con amenidades exclusivas.'},
+  {name:'Residencial Plus Playa', cat:'rp', plaza:'Playa del Carmen', status:'En construcción', type:'Departamentos', rec:'2 – 3 rec.', m2:'', from:'', img:U('1600607687939-ce8a6c25118c'), demo:true, feat:'A minutos de la Quinta Avenida y el mar Caribe.'},
+  {name:'Velamar Tampico', cat:'re', plaza:'Tampico', status:'Entrega inmediata', type:'Departamentos', rec:'2 – 3 rec.', m2:'', from:'', img:U('1545324418-cc1a3fa10c00'), demo:true, feat:'Vida residencial con amenidades en una ubicación céntrica.'},
+  {name:'Residencial Querétaro', cat:'re', plaza:'Querétaro', status:'Preventa', type:'Casas', rec:'3 rec.', m2:'', from:'', img:U('1580587771525-78b9dba3b914'), demo:true, feat:'Comunidad planeada con áreas verdes y casa club.'},
+  {name:'Residencial Cancún', cat:'re', plaza:'Cancún', status:'En construcción', type:'Casas', rec:'3 rec.', m2:'', from:'', img:U('1600047509807-ba8f99d2cdde'), demo:true, feat:'Casas amplias con acceso controlado y amenidades familiares.'},
+  {name:'Residencial Reynosa', cat:'re', plaza:'Reynosa', status:'Entrega inmediata', type:'Casas', rec:'3 rec.', m2:'', from:'', img:U('1600585154340-be6161a56a0c'), demo:true, feat:'Privada residencial con seguridad 24/7.'},
+  {name:'Primera Vivienda Reynosa', cat:'pv', plaza:'Reynosa', status:'Entrega inmediata', type:'Casas', rec:'2 rec.', m2:'', from:'', img:U('1605276374104-dee2a0ed3cd6'), demo:true, feat:'Tu casa propia con crédito Infonavit.'},
+  {name:'Primera Vivienda Matamoros', cat:'pv', plaza:'Matamoros', status:'Preventa', type:'Casas', rec:'2 rec.', m2:'', from:'', img:U('1564013799919-ab600027ffc6'), demo:true, feat:'Casas funcionales cerca de escuelas y comercios.'},
+  {name:'Primera Vivienda Juárez', cat:'pv', plaza:'Ciudad Juárez', status:'En construcción', type:'Casas', rec:'2 – 3 rec.', m2:'', from:'', img:U('1570129477492-45c003edd2be'), demo:true, feat:'Comunidad con parques y acceso a vialidades principales.'},
+  {name:'Primera Vivienda Querétaro', cat:'pv', plaza:'Querétaro', status:'Preventa', type:'Departamentos', rec:'2 rec.', m2:'', from:'', img:U('1522708323590-d24dbb6b0267'), demo:true, feat:'Departamentos para estrenar en zona de crecimiento.'},
+  {name:'Primera Vivienda Tampico', cat:'pv', plaza:'Tampico', status:'Entrega inmediata', type:'Casas', rec:'2 rec.', m2:'', from:'', img:U('1560448204-e02f11c3d0e2'), demo:true, feat:'Casas listas para habitar con escrituración ágil.'}
+];
+
+/* Pasos de compra por forma de pago */
+const STEPS = {
+  credito:{acc:'var(--pv)', s:[['Precalifica','Consulta tus puntos y monto de crédito en Mi Cuenta Infonavit o Fovissste.'],['Elige tu hogar','Un asesor te muestra los desarrollos que aplican para tu crédito.'],['Integra tu expediente','Te acompañamos con documentos, avalúo y firma de crédito.'],['Estrena','Escrituras y entrega de tu nueva casa.']]},
+  banco:{acc:'var(--re)', s:[['Define tu presupuesto','Calcula tu enganche y la mensualidad que te acomoda.'],['Aparta tu vivienda','Elige desarrollo y prototipo, y asegura tu unidad.'],['Autoriza tu crédito','Te acercamos con bancos aliados para la mejor tasa.'],['Firma y recibe','Escrituración y entrega con acompañamiento de tu asesor.']]},
+  directo:{acc:'var(--rp)', s:[['Agenda una visita','Recorre el desarrollo o conócelo en tour virtual.'],['Elige tu residencia','Selecciona prototipo, nivel y vista.'],['Plan de pagos','Contado o plan directo con enganche y mensualidades.'],['Entrega','Recibe tu residencia lista para disfrutar.']]}
+};
+
+(() => {
+  const $ = (s,c=document) => c.querySelector(s), $$ = (s,c=document) => [...c.querySelectorAll(s)];
+  const R = s => s.replace(/@@\//g, 'https://velatowerscancun.com/wp-content/uploads/');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const ARROW = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+  const PIN = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></svg>';
+  $('#yr').textContent = new Date().getFullYear();
+  const byCat = c => DEVS.filter(d => d.cat === c);
+
+  /* ---------- Paneles del hero ---------- */
+  $('#panels').innerHTML = Object.entries(CATS).map(([k,c]) => {
+    const n = byCat(k).length, pl = new Set(byCat(k).map(d => d.plaza)).size;
+    return `<article class="panel" data-cat="${k}" tabindex="0">
+      <img src="${R(c.img)}" alt="${c.name}">
+      <div class="pc">
+        <span class="num">${c.num}</span>
+        <h2>${c.name}</h2>
+        <div class="tag">${c.tag}</div>
+        <div class="price">${c.price}</div>
+        <div class="more"><div>
+          <p>${c.desc}</p>
+          <div class="meta"><div><b>${n}</b><span>desarrollos*</span></div><div><b>${pl}</b><span>plazas*</span></div></div>
+          <a class="btn sm go" href="${c.page}" data-go="${k}">Ver desarrollos <span class="arr">→</span></a>
+        </div></div>
+      </div></article>`;
+  }).join('');
+  $$('.panel').forEach(p => p.addEventListener('click', e => {
+    if (e.target.closest('[data-go]')) return;
+    if (innerWidth <= 900 && !p.classList.contains('open')){ $$('.panel').forEach(x => x.classList.toggle('open', x === p)); return; }
+    location.href = CATS[p.dataset.cat].page;
+  }));
+  $$('.panel').forEach(p => p.addEventListener('keydown', e => { if (e.key === 'Enter' && e.target === p) location.href = CATS[p.dataset.cat].page; }));
+
+  /* Intro */
+  const first = $('.panel img');
+  const start = () => document.body.classList.add('loaded');
+  first.complete ? setTimeout(start, 100) : (first.addEventListener('load', start), setTimeout(start, 1500));
+
+  /* ---------- Split y reveal ---------- */
+  $$('[data-split]').forEach(el => { el.innerHTML = el.textContent.trim().split(/\s+/).map((w,i) => `<span class="w"><span style="--i:${i}">${w}</span></span>`).join(' '); });
+  function countUp(el){
+    if (el.dataset.done) return; el.dataset.done = 1;
+    const end = +el.dataset.count, t0 = performance.now(), dur = 1500;
+    if (reduce) return el.textContent = end;
+    const s = t => { const p = Math.min((t-t0)/dur,1); el.textContent = Math.round(end*(1-Math.pow(1-p,4))); if (p<1) requestAnimationFrame(s); };
+    requestAnimationFrame(s);
+  }
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('is-in');
+    if (e.target.matches('[data-count]')) countUp(e.target);
+    e.target.querySelectorAll('[data-count]').forEach(countUp);
+    if (e.target.id === 'mapwrap') setTimeout(() => $$('.plist .bars i').forEach(i => i.style.width = i.dataset.w), 600);
+    io.unobserve(e.target);
+  }), {threshold:.15, rootMargin:'0px 0px -6% 0px'});
+  const observeAll = root => $$('[data-reveal],[data-split],.eyebrow:not(.is-in)', root).forEach(el => io.observe(el));
+
+  /* ---------- Buscador ---------- */
+  const fPlaza = $('#fPlaza'), fStatus = $('#fStatus'), grid = $('#grid');
+  Object.keys(PLAZAS).forEach(p => fPlaza.add(new Option(p, p)));
+  grid.innerHTML = DEVS.map((d,i) => `
+    <a class="card" href="${d.url || '#contacto'}" data-cat="${d.cat}" data-plaza="${d.plaza}" data-status="${d.status}" data-dev="${d.name}" ${d.url ? 'target="_blank" rel="noopener"' : ''} data-reveal="up" style="--d:${(i%3)*.08}s">
+      <div class="ph"><img src="${R(d.img)}" alt="${d.name}" loading="lazy"><span class="cat">${CATS[d.cat].name}</span><span class="st ${d.status==='Entrega inmediata'?'now':''}">${d.status}</span>${d.demo?'<span class="demo">Ejemplo</span>':''}</div>
+      <div class="body">
+        <span class="loc">${PIN}${d.plaza}</span>
+        <h3>${d.name}</h3>
+        <div class="specs"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21V9l8-6 8 6v12M9 21v-6h6v6"/></svg>${d.type}</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 19V8M3 14h18v5M7 14v-3h5v3"/></svg>${d.rec}</span>${d.m2?`<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 10h7v11"/></svg>${d.m2}</span>`:''}</div>
+        <div class="foot"><div class="price"><small>${d.from?'Desde':'Precio'}</small>${d.from?`<b>${d.from}</b>`:'<b class="q">Consultar</b>'}</div><span class="go">${ARROW}</span></div>
+      </div>
+    </a>`).join('');
+  const cards = $$('.card', grid);
+  let fCat = 'all';
+  function applyFilters(animate=true){
+    const pl = fPlaza.value, st = fStatus.value;
+    const before = new Map(cards.map(c => [c, c.getBoundingClientRect()]));
+    let n = 0;
+    cards.forEach(c => {
+      const ok = (fCat==='all'||c.dataset.cat===fCat) && (pl==='all'||c.dataset.plaza===pl) && (st==='all'||c.dataset.status===st);
+      c.classList.toggle('out', !ok); if (ok) n++;
+    });
+    $('#fcount').innerHTML = `<b>${n}</b> ${n===1?'desarrollo':'desarrollos'}`;
+    $('#empty').classList.toggle('show', n===0);
+    if (!animate || reduce) return;
+    cards.forEach(c => {
+      if (c.classList.contains('out')) return;
+      c.classList.add('is-in');
+      const a = before.get(c), b = c.getBoundingClientRect();
+      if (!a.width) return c.animate([{opacity:0,transform:'scale(.92)'},{opacity:1,transform:'none'}],{duration:550,easing:'cubic-bezier(.16,1,.3,1)'});
+      c.animate([{transform:`translate(${a.left-b.left}px,${a.top-b.top}px)`},{transform:'none'}],{duration:650,easing:'cubic-bezier(.16,1,.3,1)'});
+    });
+  }
+  const setCat = c => { fCat = c; $$('#catChips .chip').forEach(x => x.classList.toggle('on', x.dataset.c === c)); applyFilters(); };
+  $$('#catChips .chip').forEach(b => b.addEventListener('click', () => setCat(b.dataset.c)));
+  [fPlaza, fStatus].forEach(s => s.addEventListener('change', () => applyFilters()));
+  $('#reset').addEventListener('click', () => { fPlaza.value='all'; fStatus.value='all'; setCat('all'); });
+  function goCat(c, plaza){
+    fCat = c || 'all'; if (plaza) fPlaza.value = plaza;
+    $$('#catChips .chip').forEach(x => x.classList.toggle('on', x.dataset.c === fCat));
+    $('#desarrollos').scrollIntoView({behavior: reduce ? 'auto' : 'smooth'});
+    setTimeout(() => applyFilters(), 450);
+    document.body.classList.remove('nav-open');
+  }
+  /* Cada categoría tiene su propia página (pvivienda/, residencial/, residencialp/) */
+  document.addEventListener('click', e => {
+    const a = e.target.closest('[data-go]'); if (!a) return;
+    if (a.href && (e.ctrlKey || e.metaKey || e.shiftKey || e.button === 1)) return; // abrir en pestaña nueva
+    e.preventDefault(); location.href = CATS[a.dataset.go].page;
+  });
+  applyFilters(false);
+
+  /* ---------- Comparativa ---------- */
+  const ICO = ['<path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM4 21c1-4 4-6 8-6s7 2 8 6"/>','<rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/>','<path d="M4 21V9l8-6 8 6v12M9 21v-6h6v6"/>','<path d="M12 4l2.5 5 5.5.8-4 3.9.9 5.5L12 16.6 7.1 19.2 8 13.7 4 9.8l5.5-.8z"/>'];
+  $('#cmp').innerHTML = Object.entries(CATS).map(([k,c],i) => `
+    <div class="cc" data-cat="${k}" data-reveal="up" style="--d:${i*.1}s${k==='rp'?';--cc:#8a6d45':''}">
+      <div class="top"><span class="cat">${c.num}</span><h3>${c.name}</h3><div class="tl">${c.tag}</div></div>
+      <ul>${c.rows.map((r,j) => `<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">${ICO[j]}</svg><div><b>${r[0]}</b>${r[1]}</div></li>`).join('')}</ul>
+      <div class="ft"><button class="btn" data-go="${k}">Ver ${byCat(k).length} desarrollos* <span class="arr">→</span></button></div>
+    </div>`).join('');
+
+  /* ---------- Quiz ---------- */
+  const score = {pv:0, re:0, rp:0}; let step = 0;
+  const bars = $$('.qbar i'), qs = $$('.qstep');
+  $$('.qopts button').forEach(b => b.addEventListener('click', () => {
+    b.dataset.v.split(',').forEach(p => { const [k,v] = p.split(':'); score[k] += +v; });
+    bars[step].classList.add('on');
+    qs[step].classList.remove('on'); qs[step].classList.add('done');
+    step++;
+    if (step === 3){
+      const win = Object.entries(score).sort((a,b) => b[1]-a[1])[0][0], c = CATS[win];
+      $('#qres').innerHTML = `<span class="cat" data-cat="${win}" style="background:rgba(255,255,255,.95)">Tu categoría ideal</span>
+        <div class="qt">${c.name}</div><p style="opacity:.8;font-size:14.5px;margin-bottom:18px">${c.desc}</p>
+        <div class="row"><button class="btn light" data-go="${win}">Ver desarrollos <span class="arr">→</span></button><button class="again" id="qagain">Repetir test</button></div>`;
+      $('#fcat').value = win; $$('#formCats .chip').forEach(x => x.classList.toggle('on', x.dataset.c === win));
+      $('#qagain').addEventListener('click', () => { step = 0; Object.keys(score).forEach(k => score[k]=0); bars.forEach(b => b.classList.remove('on')); qs.forEach((q,i) => { q.classList.remove('done'); q.classList.toggle('on', i===0); }); });
+      window.dataLayer && dataLayer.push({event:'quiz_categoria', categoria:win});
+    }
+    qs[step].classList.add('on');
+  }));
+
+  /* ---------- Mapa de plazas ---------- */
+  const OUT = [[32.53,-117.12],[32.72,-114.72],[31.33,-111.07],[31.33,-108.21],[31.78,-106.53],[30.6,-105],[29.56,-104.4],[29.1,-103.1],[29.78,-101.4],[28.7,-100.52],[27.5,-99.5],[26.09,-98.3],[25.95,-97.15],[24,-97.7],[22.3,-97.8],[21,-97.3],[19.2,-96.1],[18.5,-94.5],[18.65,-92.5],[18.65,-91.8],[19.8,-90.6],[21.1,-90.3],[21.35,-88.2],[21.55,-87.05],[21.15,-86.8],[20.2,-87.4],[19.3,-87.5],[18.5,-88.3],[17.8,-89.15],[17.8,-90.98],[17.25,-91.4],[16.07,-90.45],[15.9,-91.7],[14.55,-92.2],[15.7,-93.8],[16.2,-95.2],[15.7,-96.5],[16.1,-98.0],[16.8,-99.9],[17.6,-101.5],[18.0,-102.5],[18.9,-103.9],[19.2,-104.7],[20.6,-105.3],[21.5,-105.3],[23.2,-106.4],[24.8,-107.8],[25.6,-109.1],[27.0,-110.0],[27.9,-110.9],[29.1,-112.2],[30.3,-112.8],[31.3,-113.5],[31.8,-114.8],[30.0,-114.5],[28.9,-113.5],[27.3,-112.3],[26.0,-111.3],[24.5,-110.3],[23.05,-109.45],[22.88,-109.92],[23.5,-110.3],[24.7,-112.2],[26.7,-113.2],[27.8,-114.9],[28.9,-114.3],[29.9,-115.8],[31.8,-116.65]];
+  const P = (lat,lon) => [((lon+118)*24.5)+10, ((33-lat)*26)+20];
+  const mx = $('#mx');
+  mx.setAttribute('d', 'M' + OUT.map(([a,b]) => P(a,b).map(v => v.toFixed(1)).join(',')).join('L') + 'Z');
+  mx.style.setProperty('--len', mx.getTotalLength());
+  const LBL = {'Cancún':[-4,-14,'end'],'Playa del Carmen':[-12,16,'end'],'Tampico':[12,4,'start'],'Reynosa':[-12,-6,'end'],'Matamoros':[12,4,'start'],'Los Cabos':[12,4,'start'],'Querétaro':[-12,4,'end'],'Ciudad Juárez':[12,4,'start']};
+  $('#cities').innerHTML = Object.entries(PLAZAS).map(([n,p],i) => {
+    const [x,y] = P(p.lat,p.lon), [dx,dy,an] = LBL[n];
+    return `<g class="city" data-plaza="${n}" style="--d:${(i*.12).toFixed(2)}s"><circle class="halo" cx="${x}" cy="${y}" r="10"/><circle class="dot" cx="${x}" cy="${y}" r="7"/><text x="${x+dx}" y="${y+dy}" text-anchor="${an}">${n}</text></g>`;
+  }).join('');
+  const maxN = Math.max(...Object.keys(PLAZAS).map(p => DEVS.filter(d => d.plaza===p).length));
+  $('#plist').innerHTML = Object.keys(PLAZAS).map((p,i) => {
+    const ds = DEVS.filter(d => d.plaza===p), c = k => ds.filter(d => d.cat===k).length;
+    return `<li data-plaza="${p}" data-reveal="right" style="--d:${i*.05}s"><span class="n">${p}</span><span class="c">${ds.length} ${ds.length===1?'desarrollo':'desarrollos'}*</span>
+      <span class="bars">${['pv','re','rp'].map(k => c(k)?`<i class="${k}" data-w="${c(k)/maxN*100}%"></i>`:'').join('')}</span></li>`;
+  }).join('');
+  const hot = p => { $$('.city').forEach(x => x.classList.toggle('hot', x.dataset.plaza===p)); $$('.plist li').forEach(x => x.classList.toggle('hot', x.dataset.plaza===p)); };
+  $$('.city,.plist li').forEach(el => {
+    el.addEventListener('mouseenter', () => hot(el.dataset.plaza));
+    el.addEventListener('mouseleave', () => hot(null));
+    el.addEventListener('click', () => goCat('all', el.dataset.plaza));
+  });
+  io.observe($('#mapwrap'));
+  $('#fplazas').innerHTML = Object.keys(PLAZAS).map(p => `<a href="#desarrollos" data-plz="${p}">${p}</a>`).join('');
+  $$('[data-plz]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); goCat('all', a.dataset.plz); }));
+
+  /* ---------- Destacados ---------- */
+  const featured = [DEVS[0], ...['re','pv'].map(k => byCat(k)[0]), DEVS[1], byCat('re')[1], byCat('pv')[1]].filter(Boolean);
+  const hs = $('#hscroll');
+  hs.innerHTML = featured.map(d => `
+    <a class="fc" data-cat="${d.cat}" href="${d.url || '#contacto'}" ${d.url?'target="_blank" rel="noopener"':''} data-dev="${d.name}">
+      <img src="${R(d.img)}" alt="${d.name}" loading="lazy" draggable="false">
+      <div class="in"><span class="cat">${CATS[d.cat].name}</span><h3>${d.name}</h3><p>${d.feat}</p>
+      <div class="row"><div><small>${d.plaza} · ${d.status}</small><b>${d.from ? 'Desde ' + d.from : 'Consultar precio'}</b></div><span class="go">${ARROW}</span></div></div>
+    </a>`).join('');
+  const prog = $('#hprog');
+  const upd = () => { const max = hs.scrollWidth - hs.clientWidth; const w = hs.clientWidth/hs.scrollWidth; prog.style.width = (w*100)+'%'; prog.style.transform = `translateX(${max ? hs.scrollLeft/max*(1/w-1)*100 : 0}%)`; };
+  hs.addEventListener('scroll', upd, {passive:true}); addEventListener('resize', upd); setTimeout(upd, 300);
+  const stepW = () => $('.fc', hs).offsetWidth + 22;
+  $('#hPrev').addEventListener('click', () => hs.scrollBy({left:-stepW(), behavior:'smooth'}));
+  $('#hNext').addEventListener('click', () => hs.scrollBy({left:stepW(), behavior:'smooth'}));
+  let down = false, sx = 0, sl = 0, moved = false;
+  hs.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse') return; down = true; moved = false; sx = e.clientX; sl = hs.scrollLeft; hs.classList.add('drag'); });
+  addEventListener('pointermove', e => { if (!down) return; const dx = e.clientX - sx; if (Math.abs(dx) > 5) moved = true; hs.scrollLeft = sl - dx; });
+  addEventListener('pointerup', () => { down = false; hs.classList.remove('drag'); });
+  hs.addEventListener('click', e => { if (moved){ e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
+
+  /* ---------- Cómo comprar ---------- */
+  const tl = $('#tlsteps');
+  const renderSteps = k => {
+    const s = STEPS[k];
+    tl.style.setProperty('--acc', s.acc);
+    tl.innerHTML = s.s.map((x,i) => `<div class="ts" style="--acc:${s.acc}"><span class="n">${i+1}</span><b>${x[0]}</b><p>${x[1]}</p></div>`).join('');
+    tl.style.setProperty('--w','0%'); requestAnimationFrame(() => requestAnimationFrame(() => tl.style.setProperty('--w','100%')));
+  };
+  const ptabs = $('#ptabs'), ppill = $('.pill', ptabs);
+  const movePill = b => { ppill.style.width = b.offsetWidth+'px'; ppill.style.transform = `translateX(${b.offsetLeft-5}px)`; ppill.style.background = STEPS[b.dataset.p].acc === 'var(--rp)' ? '#8a6d45' : STEPS[b.dataset.p].acc; };
+  $$('button', ptabs).forEach(b => b.addEventListener('click', () => {
+    $$('button', ptabs).forEach(x => x.classList.toggle('on', x===b)); movePill(b);
+    tl.classList.add('swapping'); setTimeout(() => { renderSteps(b.dataset.p); tl.classList.remove('swapping'); }, 350);
+  }));
+  const initPill = () => movePill($('button.on', ptabs));
+  addEventListener('load', initPill); addEventListener('resize', initPill); document.fonts && document.fonts.ready.then(initPill); setTimeout(initPill, 300);
+  const stepObs = new IntersectionObserver(es => { if (es[0].isIntersecting){ renderSteps('credito'); stepObs.disconnect(); } }, {threshold:.3});
+  stepObs.observe(tl);
+
+  /* Marquee */
+  const track = $('#track'); track.innerHTML += track.innerHTML;
+
+  /* ---------- Formulario ---------- */
+  const fpl = $('#fpl'); fpl.add(new Option('Aún no lo sé', '')); Object.keys(PLAZAS).forEach(p => fpl.add(new Option(p, p)));
+  $$('#formCats .chip').forEach(b => b.addEventListener('click', () => { $$('#formCats .chip').forEach(x => x.classList.toggle('on', x===b)); $('#fcat').value = b.dataset.c; }));
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href="#contacto"][data-dev]'); if (!a) return;
+    const d = DEVS.find(x => x.name === a.dataset.dev); if (!d) return;
+    $('#fdev').value = d.name; fpl.value = d.plaza; $('#fcat').value = d.cat;
+    $$('#formCats .chip').forEach(x => x.classList.toggle('on', x.dataset.c === d.cat));
+  });
+  const qp = new URLSearchParams(location.search);
+  ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','fbclid'].forEach(k => { const f = $(`#form [name="${k}"]`); if (f && qp.get(k)) f.value = qp.get(k); });
+  $('#form').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = e.currentTarget; let bad = false;
+    [$('#fn'), $('#fp')].forEach(i => { const ok = i.value.trim().length > 2; i.style.borderColor = ok ? '' : '#c0392b'; if (!ok) bad = true; });
+    if (bad) return f.animate([{transform:'translateX(0)'},{transform:'translateX(-8px)'},{transform:'translateX(8px)'},{transform:'translateX(0)'}],{duration:350});
+    const data = Object.fromEntries(new FormData(f));
+    console.log('Lead Grupo Velas:', data); // TODO: enviar al CRM y rutear por plaza + categoría
+    window.dataLayer && dataLayer.push({event:'lead_grupo_velas', categoria:data.categoria, plaza:data.plaza});
+    f.classList.add('sent');
+  });
+  $$('[data-wa]').forEach(a => { a.href = `https://api.whatsapp.com/send/?phone=${WHATSAPP}&text=${encodeURIComponent('Hola, me interesa conocer los desarrollos de Grupo Velas.')}`; a.target = '_blank'; a.rel = 'noopener'; });
+
+  /* ---------- Scroll global ---------- */
+  const header = $('#top'), progress = $('#progress'), para = $$('[data-parallax]'), wa = $('#wa');
+  let lastY = 0, tick = false;
+  const onScroll = () => {
+    const y = scrollY, h = document.documentElement.scrollHeight - innerHeight, vh = innerHeight;
+    progress.style.transform = `scaleX(${y/h})`;
+    header.classList.toggle('scrolled', y > 60);
+    header.classList.toggle('hide', y > 700 && y > lastY && !document.body.classList.contains('nav-open'));
+    lastY = y;
+    wa.classList.toggle('show', y > vh*.7);
+    if (!reduce) para.forEach(el => {
+      const r = el.parentElement.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > vh) return;
+      el.style.transform = `translateY(${(r.top + r.height/2 - vh/2) * -(+el.dataset.parallax)}px)`;
+    });
+    tick = false;
+  };
+  addEventListener('scroll', () => { if (!tick){ requestAnimationFrame(onScroll); tick = true; } }, {passive:true});
+  onScroll();
+  $('#burger').addEventListener('click', () => document.body.classList.toggle('nav-open'));
+  $$('.menu a').forEach(a => a.addEventListener('click', () => document.body.classList.remove('nav-open')));
+
+  observeAll(document);
+})();
+</script>
+</body>
+</html>
