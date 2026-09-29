@@ -10,13 +10,14 @@
 
    - data-base: ruta hacia la raíz del sitio. Vacío en el home, "../" en subpáginas.
    - data-cat:  categoría de la subpágina (resalta Proyectos y su categoría).
+   - data-city: ciudad del desarrollo (la resalta en el submenú de Ciudades).
    Home: el header se vuelve sólido al hacer scroll y se esconde al bajar.
    Subpágina: el header se oculta al hacer scroll para dar paso al navbar
    propio del desarrollo (header.top de la página).
    ===================================================================== */
 (() => {
   const me = document.currentScript;
-  const BASE = me.dataset.base || '', HOME = !BASE, CAT = me.dataset.cat || '';
+  const BASE = me.dataset.base || '', HOME = !BASE, CAT = me.dataset.cat || '', CITY = me.dataset.city || '';
   const URL_EN = ''; // TODO: URL de la versión en inglés
   const THRESHOLD = 60;
 
@@ -28,7 +29,11 @@
     {n:'YouTube', url:'https://www.youtube.com/channel/UC9dB8d8vtl6cUay-5QSYxdg', ico:'<path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4a2.5 2.5 0 0 0-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8ZM10 15V9l5.2 3Z"/>'}
   ];
   const CATS = [['pv','Primera Vivienda','pvivienda/index.html'],['re','Residencial','residencial/index.html'],['rp','Residencial Plus','residencialp/index.html']];
-  const CIUDADES = ['Cancún','Playa del Carmen','Tampico','Reynosa','Matamoros','Los Cabos','Querétaro','Ciudad Juárez'];
+  /* Mismas plazas y orden que grupovelas.com.mx/ciudades */
+  const CIUDADES = [
+    ['Cancún','Quintana Roo'], ['Ciudad Juárez','Chihuahua'], ['Los Cabos','Baja California Sur'], ['Matamoros','Tamaulipas'],
+    ['Playa del Carmen','Quintana Roo'], ['Querétaro','Querétaro'], ['Reynosa','Tamaulipas'], ['Tampico','Tamaulipas']
+  ];
   const REVISTA = 'https://horizonte.grupovelas.com/';
 
   /* En el home los enlaces son anclas; desde una subpágina apuntan al home */
@@ -37,8 +42,8 @@
   const NAV = [
     {t:'Inicio', h:H('#inicio'), spy:'inicio'},
     {t:'Nosotros', h:H('#grupo-velas'), spy:'nosotros'},
-    {t:'Proyectos', h:H('#desarrollos'), spy:'proyectos', dd:true},
-    {t:'Ciudades', h:H('#plazas'), spy:'ciudades'},
+    {t:'Proyectos', h:H('#desarrollos'), spy:'proyectos', dd:() => catLinks()},
+    {t:'Ciudades', h:H('#plazas'), spy:'ciudades', dd:() => cityLinks()},
     {t:'Sostenibilidad', h:'https://grupovelas.com.mx/sostenibilidad', ext:true},
     {t:'Únete', h:'https://vacantes.grupovelas.com/', ext:true},
     {t:'Contacto', h:H('#contacto'), spy:'contacto'}
@@ -48,6 +53,11 @@
 
   const catLinks = () => `<a href="${H('#desarrollos')}"><i></i>Todos los desarrollos</a>` +
     CATS.map(([k,n,p]) => `<a href="${BASE + p}" data-c="${k}"${k === CAT ? ' aria-current="page"' : ''}><i></i>${n}</a>`).join('');
+  const PIN = '<svg class="gvh-pin" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></svg>';
+  /* En el home filtra el buscador sin recargar (data-plz); desde una subpágina abre el home con ?plaza= */
+  const cityAttrs = c => HOME ? `href="#desarrollos" data-plz="${c}"` : `href="${BASE}index.html?plaza=${encodeURIComponent(c)}#desarrollos"`;
+  const cityLinks = () => `<a href="${H('#plazas')}"><i></i>Todas las ciudades</a>` +
+    CIUDADES.map(([c,e]) => `<a ${cityAttrs(c)}${c === CITY ? ' aria-current="page"' : ''}>${PIN}${c}<small>${e}</small></a>`).join('');
   const lang = () => `<div class="gvh-lang" aria-label="Idioma"><a href="#" class="on" aria-current="true" lang="es">ES</a><span>/</span><a href="${URL_EN || '#'}" hreflang="en" lang="en">EN</a></div>`;
   const revista = () => `<a class="gvh-rev" href="${REVISTA}" ${EXT}>${BOOK}Revista Horizonte <span class="arr">↗</span></a>`;
   const social = () => `<div class="gvh-social">${SOCIAL.map(s => `<a href="${s.url}" ${EXT} aria-label="${s.n}"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">${s.ico}</svg></a>`).join('')}</div>`;
@@ -62,7 +72,7 @@
       <a href="${H('#inicio')}" class="gvh-logo" aria-label="Grupo Velas · Inicio">${LOGO}</a>
       <nav class="gvh-menu" id="gvhMenu" aria-label="Grupo Velas">
         ${NAV.map(n => n.dd
-          ? `<div class="gvh-dd"><a href="${n.h}" class="gvh-dd-t" data-spy="${n.spy}" aria-haspopup="true">${n.t} ${CHEV}</a><div class="gvh-dd-m"><div>${catLinks()}</div></div></div>`
+          ? `<div class="gvh-dd"><a href="${n.h}" class="gvh-dd-t" data-spy="${n.spy}" aria-haspopup="true" aria-expanded="false">${n.t} ${CHEV}</a><div class="gvh-dd-m"><div>${n.dd()}</div></div></div>`
           : `<a href="${n.h}"${n.spy ? ` data-spy="${n.spy}"` : ''}${n.ext ? ' ' + EXT : ''}>${n.t}</a>`).join('')}
         <div class="gvh-extra">${lang()}${revista()}${social()}</div>
       </nav>
@@ -80,7 +90,15 @@
       onScroll();
     };
     burger.addEventListener('click', () => setOpen(!isOpen()));
-    head.querySelectorAll('.gvh-menu a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+    /* En móvil, Proyectos y Ciudades abren/cierran su submenú en lugar de navegar */
+    const mobile = matchMedia('(max-width:1100px)');
+    head.querySelectorAll('.gvh-dd-t').forEach(t => t.addEventListener('click', e => {
+      if (!mobile.matches) return;
+      e.preventDefault();
+      const dd = t.parentElement, open = !dd.classList.contains('is-open');
+      head.querySelectorAll('.gvh-dd').forEach(x => { x.classList.toggle('is-open', x === dd && open); x.firstElementChild.setAttribute('aria-expanded', x === dd && open); });
+    }));
+    head.querySelectorAll('.gvh-menu a').forEach(a => a.addEventListener('click', e => { if (!e.defaultPrevented) setOpen(false); }));
     addEventListener('keydown', e => { if (e.key === 'Escape' && isOpen()) setOpen(false); });
 
     /* Scroll */
@@ -116,7 +134,6 @@
   if (foot){
     foot.classList.add('gvf');
     const col = (title, links) => `<div class="gvf-col"><h4>${title}</h4>${links}</div>`;
-    const city = c => HOME ? `<a href="#desarrollos" data-plz="${c}">${c}</a>` : `<a href="${BASE}index.html?plaza=${encodeURIComponent(c)}#desarrollos">${c}</a>`;
     foot.innerHTML = `<div class="gvh-wrap">
       <div class="gvf-grid">
         <div class="gvf-about">
@@ -126,7 +143,7 @@
         </div>
         ${col('Grupo Velas', NAV.filter(n => !n.dd).map(n => `<a href="${n.h}"${n.ext ? ' ' + EXT : ''}>${n.t}</a>`).join('') + `<a href="${REVISTA}" ${EXT}>Revista Horizonte <span class="arr">↗</span></a>`)}
         ${col('Proyectos', catLinks())}
-        ${col('Ciudades', CIUDADES.map(city).join(''))}
+        ${col('Ciudades', CIUDADES.map(([c]) => `<a ${cityAttrs(c)}>${c}</a>`).join(''))}
       </div>
       <div class="gvf-fine">
         <span>© ${new Date().getFullYear()} Grupo Velas Desarrollos. Todos los derechos reservados. · <a href="#">Aviso de privacidad</a></span>
