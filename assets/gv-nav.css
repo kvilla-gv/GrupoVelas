@@ -13,6 +13,8 @@
   -webkit-font-smoothing:antialiased;
 }
 .gvh a,.gvf a{color:inherit;text-decoration:none}
+/* El header queda fijo: las anclas (#contacto, #plazas…) no deben quedar debajo de él */
+html{scroll-padding-top:70px}
 .gvh-wrap{width:min(var(--wrap,1240px),100% - 32px);margin-inline:auto}
 .gvh [data-c="pv"],.gvf [data-c="pv"]{--cc:#c8643f;--cs:#f7e7df}
 .gvh [data-c="re"],.gvf [data-c="re"]{--cc:#2f6f9f;--cs:#e2edf5}
@@ -64,6 +66,20 @@
 .gvh-dd-m a:hover{transform:translateX(3px)}
 .gvh-dd-m a i{width:8px;height:8px;border-radius:50%;background:var(--cc,var(--g-navy));flex:none}
 .gvh-dd-m a:first-child{border-bottom:1px solid var(--g-line);border-radius:9px 9px 0 0;margin-bottom:4px}
+/* Proyectos: mega menú con todos los desarrollos agrupados por ciudad */
+.gvh-dd-m.is-mega>div{width:max-content}
+@media (min-width:1101px){
+  /* Centrado bajo "Proyectos" para que quepa en pantallas angostas */
+  .gvh-dd-m.is-mega{left:50%;transform:translate(-50%,8px)}
+  .gvh-dd:hover .gvh-dd-m.is-mega,.gvh-dd:focus-within .gvh-dd-m.is-mega{transform:translate(-50%,0)}
+}
+.gvh-mega{columns:3;column-gap:6px}
+.gvh-mg{break-inside:avoid;padding-bottom:6px}
+.gvh-mg b{display:flex;align-items:center;gap:6px;padding:8px 12px 4px;font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--g-gold)}
+.gvh-mg b .gvh-pin{width:12px;height:12px}
+.gvh-dd-m .gvh-mg a{padding:7px 12px;font-weight:500}
+.gvh-dd-m .gvh-mg a[aria-current]{font-weight:700}
+.gvh-ext{font-size:10px;color:var(--g-muted);margin-left:auto;padding-left:10px}
 /* Ciudades: pin + estado */
 .gvh-dd-m .gvh-pin{width:14px;height:14px;color:var(--g-gold);flex:none}
 .gvh-dd-m a small{margin-left:auto;padding-left:18px;font-size:11px;font-weight:500;color:var(--g-muted);white-space:nowrap}
@@ -101,6 +117,8 @@
   .gvh-dd.is-open .gvh-dd-m{grid-template-rows:1fr}
   .gvh-dd-m>div{border:0;box-shadow:none;padding:0;min-width:0;overflow:hidden;border-radius:0}
   .gvh-dd.is-open .gvh-dd-m>div{padding-block:6px 10px}
+  .gvh-dd-m.is-mega>div{width:auto}
+  .gvh-mega{columns:1}
   .gvh-dd-m a{font-size:15px;font-weight:500;padding:9px 12px}
   .gvh-dd-m a:first-child{border-bottom:0;margin-bottom:0}
   .gvh-extra{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:20px;color:var(--g-navy)}

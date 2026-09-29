@@ -9,9 +9,9 @@
      <script src="[base]assets/gv-nav.js" data-base="[base]" data-cat="pv|re|rp"></script>
 
    - data-base: ruta hacia la raíz del sitio. Vacío en el home, "../" en subpáginas.
-   - data-cat:  categoría de la subpágina (resalta Proyectos y su categoría).
+   - data-cat:  categoría de la subpágina (resalta su proyecto en el submenú).
    - data-city: ciudad del desarrollo (la resalta en el submenú de Ciudades).
-   Home: el header se vuelve sólido al hacer scroll y se esconde al bajar.
+   Home: el header se vuelve sólido al hacer scroll y permanece siempre visible.
    Subpágina: el header se oculta al hacer scroll para dar paso al navbar
    propio del desarrollo (header.top de la página).
    ===================================================================== */
@@ -35,6 +35,30 @@
     ['Playa del Carmen','Quintana Roo'], ['Querétaro','Querétaro'], ['Reynosa','Tamaulipas'], ['Tampico','Tamaulipas']
   ];
   const REVISTA = 'https://horizonte.grupovelas.com/';
+  /* Proyectos de grupovelas.com.mx/desarrollos, agrupados por ciudad.
+     [nombre, slug en el sitio corporativo, ciudad, página en este sitio, categoría].
+     Los que no tienen página propia aquí abren su ficha en el sitio corporativo. */
+  const PROYECTOS = [
+    ['Vela Towers Cancún','vela-towers-cancun','Cancún','residencialp/index.html','rp'],
+    ['Punta Vela Residencial','punta-vela-residencial','Ciudad Juárez'],
+    ['Vistavela III','vistavela-iii','Los Cabos'],
+    ['Vistavela Sunset','vistavela-sunset','Los Cabos'],
+    ['Fraccionamiento Arecas','fraccionamiento-arecas','Matamoros','pvivienda/index.html','pv'],
+    ['Selvanova Residencial','selvanova-residencial','Playa del Carmen','residencial/index.html','re'],
+    ['Velasur','velasur','Querétaro'],
+    ['Loma Bonita','loma-bonita-reynosa','Reynosa'],
+    ['Florencia Residencial','florencia-residencial','Reynosa'],
+    ['Fraccionamiento Loma Bonita','fraccionamiento-loma-bonita','Tampico'],
+    ['Encinos Residencial','encinos-residencial','Tampico'],
+    ['Torre 829','torre-829','Tampico'],
+    ['Coto Jade','coto-jade','Tampico'],
+    ['Valle Esmeralda','valle-esmeralda','Tampico'],
+    ['Vista Laguna','vista-laguna','Tampico'],
+    ['Conjunto Roma 401','conjunto-roma-401','Tampico'],
+    ['Arecas','arecas','Tampico'],
+    ['Townhouses Velamar II','townhouses-velamar-ii','Tampico'],
+    ['Torre Milos','torre-milos','Tampico']
+  ];
 
   /* En el home los enlaces son anclas; desde una subpágina apuntan al home */
   const H = hash => HOME ? hash : BASE + 'index.html' + (hash === '#inicio' ? '' : hash);
@@ -42,7 +66,7 @@
   const NAV = [
     {t:'Inicio', h:H('#inicio'), spy:'inicio'},
     {t:'Nosotros', h:H('#grupo-velas'), spy:'nosotros'},
-    {t:'Proyectos', h:H('#desarrollos'), spy:'proyectos', dd:() => catLinks()},
+    {t:'Proyectos', h:H('#desarrollos'), spy:'proyectos', dd:() => projLinks(), mega:true},
     {t:'Ciudades', h:H('#plazas'), spy:'ciudades', dd:() => cityLinks()},
     {t:'Sostenibilidad', h:'https://grupovelas.com.mx/sostenibilidad', ext:true},
     {t:'Únete', h:'https://vacantes.grupovelas.com/', ext:true},
@@ -58,6 +82,12 @@
   const cityAttrs = c => HOME ? `href="#desarrollos" data-plz="${c}"` : `href="${BASE}index.html?plaza=${encodeURIComponent(c)}#desarrollos"`;
   const cityLinks = () => `<a href="${H('#plazas')}"><i></i>Todas las ciudades</a>` +
     CIUDADES.map(([c,e]) => `<a ${cityAttrs(c)}${c === CITY ? ' aria-current="page"' : ''}>${PIN}${c}<small>${e}</small></a>`).join('');
+  const projLink = ([n,slug,,page,cat]) => page
+    ? `<a href="${BASE + page}"${cat === CAT ? ' aria-current="page"' : ''}>${n}</a>`
+    : `<a href="https://grupovelas.com.mx/desarrollo/${slug}" ${EXT}>${n}<span class="gvh-ext" aria-hidden="true">↗</span></a>`;
+  const projLinks = () => `<a href="${H('#desarrollos')}"><i></i>Todos los desarrollos</a><div class="gvh-mega">` +
+    CIUDADES.map(([c]) => PROYECTOS.filter(x => x[2] === c)).filter(g => g.length)
+      .map(g => `<div class="gvh-mg"><b>${PIN}${g[0][2]}</b>${g.map(projLink).join('')}</div>`).join('') + '</div>';
   const lang = () => `<div class="gvh-lang" aria-label="Idioma"><a href="#" class="on" aria-current="true" lang="es">ES</a><span>/</span><a href="${URL_EN || '#'}" hreflang="en" lang="en">EN</a></div>`;
   const revista = () => `<a class="gvh-rev" href="${REVISTA}" ${EXT}>${BOOK}Revista Horizonte <span class="arr">↗</span></a>`;
   const social = () => `<div class="gvh-social">${SOCIAL.map(s => `<a href="${s.url}" ${EXT} aria-label="${s.n}"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">${s.ico}</svg></a>`).join('')}</div>`;
@@ -72,7 +102,7 @@
       <a href="${H('#inicio')}" class="gvh-logo" aria-label="Grupo Velas · Inicio">${LOGO}</a>
       <nav class="gvh-menu" id="gvhMenu" aria-label="Grupo Velas">
         ${NAV.map(n => n.dd
-          ? `<div class="gvh-dd"><a href="${n.h}" class="gvh-dd-t" data-spy="${n.spy}" aria-haspopup="true" aria-expanded="false">${n.t} ${CHEV}</a><div class="gvh-dd-m"><div>${n.dd()}</div></div></div>`
+          ? `<div class="gvh-dd"><a href="${n.h}" class="gvh-dd-t" data-spy="${n.spy}" aria-haspopup="true" aria-expanded="false">${n.t} ${CHEV}</a><div class="gvh-dd-m${n.mega ? ' is-mega' : ''}"><div>${n.dd()}</div></div></div>`
           : `<a href="${n.h}"${n.spy ? ` data-spy="${n.spy}"` : ''}${n.ext ? ' ' + EXT : ''}>${n.t}</a>`).join('')}
         <div class="gvh-extra">${lang()}${revista()}${social()}</div>
       </nav>
@@ -102,16 +132,15 @@
     addEventListener('keydown', e => { if (e.key === 'Escape' && isOpen()) setOpen(false); });
 
     /* Scroll */
-    let lastY = 0, tick = false;
+    let tick = false;
     function onScroll(){
       const y = scrollY, open = isOpen();
       if (HOME){
         head.classList.toggle('is-solid', y > THRESHOLD);
-        head.classList.toggle('is-hidden', y > 700 && y > lastY && !open);
       } else {
         head.classList.toggle('is-hidden', y > THRESHOLD && !open);
       }
-      lastY = y; tick = false;
+      tick = false;
     }
     addEventListener('scroll', () => { if (!tick){ requestAnimationFrame(onScroll); tick = true; } }, {passive:true});
     onScroll();
