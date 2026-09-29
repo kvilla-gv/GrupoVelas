@@ -699,7 +699,8 @@ section{position:relative}
 <script>
 /* =====================================================================
    DATOS — reemplazar con el inventario real de los 30 desarrollos.
-   Solo Vela Towers tiene datos reales; el resto son EJEMPLOS (demo:true).
+   Primera Vivienda y Residencial tienen datos reales; en Residencial Plus
+   solo Vela Towers, el resto son EJEMPLOS (demo:true).
    ===================================================================== */
 const U = s => 'https://images.unsplash.com/photo-' + s + '?w=1000&q=70&auto=format&fit=crop';
 const WHATSAPP = '520000000000'; // número general / call center
@@ -746,11 +747,13 @@ const DEVS = [
   {name:'Los Encinos Residencial', cat:'re', plaza:'Tampico', zona:'Altamira', status:'', type:'', rec:'3 rec.', m2:'163.52 m²', from:'', img:'https://backend.grupovelas.com/uploads/Guest_Reviews_1080aac18c.webp', url:'https://grupovelas.com.mx/desarrollo/encinos-residencial', feat:'Un hogar seguro y sostenible, con modelos variados y acabados modernos.'},
   {name:'Torre 829 Faja de Oro', cat:'re', plaza:'Tampico', status:'Preventa', type:'Departamentos', rec:'3 rec.', m2:'220.86 m²', from:'', img:'https://backend.grupovelas.com/uploads/Guest_Reviews_86078fd359.webp', url:'https://grupovelas.com.mx/desarrollo/torre-829', feat:'Departamentos con walk-in closet, cuarto de servicio con baño y amplia terraza.'},
   {name:'Conjunto Cárdenas 807', cat:'re', plaza:'Tampico', status:'', type:'Departamentos', rec:'3 rec.', m2:'79.68 m²', from:'', img:'', feat:'Conjunto de 12 departamentos.'},
-  {name:'Primera Vivienda Reynosa', cat:'pv', plaza:'Reynosa', status:'Entrega inmediata', type:'Casas', rec:'2 rec.', m2:'', from:'', img:U('1605276374104-dee2a0ed3cd6'), demo:true, feat:'Tu casa propia con crédito Infonavit.'},
-  {name:'Primera Vivienda Matamoros', cat:'pv', plaza:'Matamoros', status:'Preventa', type:'Casas', rec:'2 rec.', m2:'', from:'', img:U('1564013799919-ab600027ffc6'), demo:true, feat:'Casas funcionales cerca de escuelas y comercios.'},
-  {name:'Primera Vivienda Juárez', cat:'pv', plaza:'Ciudad Juárez', status:'En construcción', type:'Casas', rec:'2 – 3 rec.', m2:'', from:'', img:U('1570129477492-45c003edd2be'), demo:true, feat:'Comunidad con parques y acceso a vialidades principales.'},
-  {name:'Primera Vivienda Querétaro', cat:'pv', plaza:'Querétaro', status:'Preventa', type:'Departamentos', rec:'2 rec.', m2:'', from:'', img:U('1522708323590-d24dbb6b0267'), demo:true, feat:'Departamentos para estrenar en zona de crecimiento.'},
-  {name:'Primera Vivienda Tampico', cat:'pv', plaza:'Tampico', status:'Entrega inmediata', type:'Casas', rec:'2 rec.', m2:'', from:'', img:U('1560448204-e02f11c3d0e2'), demo:true, feat:'Casas listas para habitar con escrituración ágil.'}
+  /* Primera Vivienda: desarrollos reales. Fuentes: grupovelas.com.mx (ficha, API y /mapa) y la página propia de Arecas.
+     Campos vacíos = dato aún no confirmado; la tarjeta los omite (sin foto muestra un marcador). */
+  {name:'Valencia', cat:'pv', plaza:'Ciudad Juárez', status:'', type:'Casas', rec:'2 – 3 rec.', m2:'', from:'', img:'', feat:'Casas de una planta con opciones de 2 y 3 recámaras.'},
+  {name:'Fraccionamiento Arecas', cat:'pv', plaza:'Matamoros', status:'', type:'Casas', rec:'2 rec.', m2:'46.92 m²', from:'$770,000', img:'https://backend.grupovelas.com/uploads/fraccionamiento_arecas_matamoros_1b434b6261.jpg', url:'pvivienda/index.html', feat:'Estrena casa con tu crédito Infonavit, entregada equipada y con escuela dentro del fraccionamiento.'},
+  {name:'Florencia', cat:'pv', plaza:'Reynosa', status:'', type:'Departamentos', rec:'2 rec.', m2:'72 m²', from:'', img:'https://backend.grupovelas.com/uploads/Guest_Views_6eedef2884.jpg', url:'https://grupovelas.com.mx/desarrollo/florencia-residencial', feat:'36 departamentos en 8 edificios, con canchas deportivas y áreas verdes.'},
+  {name:'Arecas', cat:'pv', plaza:'Tampico', zona:'Altamira', status:'', type:'Casas', rec:'2 rec.', m2:'87.20 m²', from:'', img:'https://backend.grupovelas.com/uploads/Carrusel_01_5_54fb926eb6.webp', url:'https://grupovelas.com.mx/desarrollo/arecas', feat:'Desarrollo de 12 casas en Altamira, con tranquilidad y seguridad.'},
+  {name:'Vista Laguna', cat:'pv', plaza:'Tampico', zona:'Altamira', status:'Vendido', type:'Casas y departamentos', rec:'2 rec.', m2:'80.39 m²', from:'', img:'https://backend.grupovelas.com/uploads/Slider_02_6_b7d8ddcef9.webp', url:'https://grupovelas.com.mx/desarrollo/vista-laguna', feat:'Casas y departamentos con vistas a la laguna, áreas verdes y cercanía a servicios.'},
 ];
 
 /* Pasos de compra por forma de pago */
