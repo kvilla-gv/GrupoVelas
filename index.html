@@ -698,9 +698,8 @@ section{position:relative}
 <script src="assets/gv-nav.js"></script>
 <script>
 /* =====================================================================
-   DATOS — reemplazar con el inventario real de los 30 desarrollos.
-   Primera Vivienda y Residencial tienen datos reales; en Residencial Plus
-   solo Vela Towers, el resto son EJEMPLOS (demo:true).
+   DATOS — inventario real de desarrollos por categoría.
+   Campos vacíos = dato aún no confirmado. demo:true marca una entrada de ejemplo.
    ===================================================================== */
 const U = s => 'https://images.unsplash.com/photo-' + s + '?w=1000&q=70&auto=format&fit=crop';
 const WHATSAPP = '520000000000'; // número general / call center
@@ -727,9 +726,13 @@ const PLAZAS = {
 };
 
 const DEVS = [
-  {name:'Vela Towers', cat:'rp', plaza:'Cancún', status:'Entrega inmediata', type:'Departamentos', rec:'3 rec.', m2:'207 – 264 m²', from:'$9 MDP', img:'https://velatowerscancun.com/wp-content/uploads/2024/11/Sin-ti%CC%81tulo-1-09-scaled-1-1.jpg', url:'https://velatowerscancun.com/', feat:'Amenidades de resort, Sky Bar y cancha de pádel en una de las zonas con mayor plusvalía de Cancún.'},
-  {name:'Velamar Los Cabos', cat:'rp', plaza:'Los Cabos', status:'Preventa', type:'Departamentos', rec:'2 – 3 rec.', m2:'', from:'', img:U('1613490493576-7fde63acd811'), demo:true, feat:'Diseño contemporáneo frente al Pacífico con amenidades exclusivas.'},
-  {name:'Residencial Plus Playa', cat:'rp', plaza:'Playa del Carmen', status:'En construcción', type:'Departamentos', rec:'2 – 3 rec.', m2:'', from:'', img:U('1600607687939-ce8a6c25118c'), demo:true, feat:'A minutos de la Quinta Avenida y el mar Caribe.'},
+  {name:'Vela Towers', cat:'rp', plaza:'Cancún', status:'Entrega inmediata', type:'Departamentos', rec:'3 rec.', m2:'207 – 264 m²', from:'$9 MDP', img:'https://velatowerscancun.com/wp-content/uploads/2024/11/Sin-ti%CC%81tulo-1-09-scaled-1-1.jpg', url:'residencialp/index.html', feat:'Amenidades de resort, Sky Bar y cancha de pádel en una de las zonas con mayor plusvalía de Cancún.'},
+  {name:'Vistavela III', cat:'rp', plaza:'Los Cabos', status:'Vendido', type:'Departamentos', rec:'', m2:'', from:'', img:'https://backend.grupovelas.com/uploads/Review_d57c2aceb2.webp', url:'https://grupovelas.com.mx/desarrollo/vistavela-iii', feat:'274 departamentos con estilo de vida de resort en el corazón de Cabo San Lucas.'},
+  {name:'Vistavela Sunset', cat:'rp', plaza:'Los Cabos', status:'Preventa', type:'Departamentos', rec:'', m2:'', from:'', img:'https://backend.grupovelas.com/uploads/Review_74f3e83745.webp', url:'https://grupovelas.com.mx/desarrollo/vistavela-sunset', feat:'Elegancia, confort y exclusividad en un entorno privilegiado de Los Cabos.'},
+  {name:'Manila', cat:'rp', plaza:'Tampico', status:'', type:'', rec:'', m2:'', from:'', img:'', feat:''},
+  {name:'Torre Milos', cat:'rp', plaza:'Tampico', zona:'Altamira', status:'Preventa', type:'Departamentos', rec:'2 rec.', m2:'153 m²', from:'', img:'https://backend.grupovelas.com/uploads/Guest_Reviews_54544c819e.webp', url:'https://grupovelas.com.mx/desarrollo/torre-milos', feat:'Departamentos con vista al Golfo de México y acceso directo a la playa.'},
+  {name:'Townhouses', cat:'rp', plaza:'Tampico', zona:'Altamira', status:'', type:'Casas', rec:'3 rec.', m2:'327.20 m²', from:'', img:'https://backend.grupovelas.com/uploads/Amenidades_5_bca9c12f0c.webp', url:'https://grupovelas.com.mx/desarrollo/townhouses-velamar-ii', feat:'Casas frente al mar en La Escondida Velamar.'},
+  {name:'Sorrento Velamar', cat:'rp', plaza:'Tampico', zona:'Altamira', status:'', type:'Departamentos', rec:'3 rec.', m2:'149.37 m²', from:'', img:'', feat:'Torre frente al mar en Residencial Velamar.'},
   /* Residencial: desarrollos reales. Fuentes: grupovelas.com.mx (ficha, API y /mapa) y aryve.com.mx.
      Campos vacíos = dato aún no confirmado; la tarjeta los omite (sin foto muestra un marcador). */
   {name:'Cima Peñaflor', cat:'re', plaza:'Querétaro', status:'', type:'Departamentos', rec:'', m2:'', from:'', img:'', feat:'15 torres y 280 departamentos en la zona noroeste de Querétaro.'},
@@ -936,7 +939,7 @@ const STEPS = {
 
   /* ---------- Destacados ---------- */
   const withImg = k => byCat(k).filter(d => d.img);
-  const featured = [DEVS[0], withImg('re')[0], withImg('pv')[0], DEVS[1], withImg('re')[1], withImg('pv')[1]].filter(Boolean);
+  const featured = [0, 1].flatMap(i => ['rp', 're', 'pv'].map(k => withImg(k)[i])).filter(Boolean);
   const hs = $('#hscroll');
   hs.innerHTML = featured.map(d => `
     <a class="fc" data-cat="${d.cat}" href="${d.url || '#contacto'}" ${EXTERNAL(d)} data-dev="${d.name}">
