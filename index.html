@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Grupo Velas Desarrollos · Primera Vivienda, Residencial y Residencial Plus en México</title>
-<meta name="description" content="Encuentra tu hogar con Grupo Velas: 30 desarrollos en 8 plazas de México, en tres categorías (Primera Vivienda, Residencial y Residencial Plus). Más de 40 años construyendo.">
+<meta name="description" content="Encuentra tu hogar con Grupo Velas: 27 desarrollos en 8 plazas de México, en tres categorías (Primera Vivienda, Residencial y Residencial Plus). Más de 40 años construyendo.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -466,7 +466,7 @@ section{position:relative}
 <!-- ============ STATS ============ -->
 <section class="stats-band">
   <div class="wrap">
-    <div class="sb" data-reveal="up"><b data-count="30">0</b><span>desarrollos<br>en México</span></div>
+    <div class="sb" data-reveal="up"><b data-count="27" id="devCount">0</b><span>desarrollos<br>en México</span></div>
     <div class="sb" data-reveal="up" style="--d:.08s"><b data-count="8">0</b><span>plazas<br>en 5 estados</span></div>
     <div class="sb" data-reveal="up" style="--d:.16s"><b>+<span data-count="40">0</span></b><span>años<br>construyendo</span></div>
     <div class="sb" data-reveal="up" style="--d:.24s"><b data-count="3">0</b><span>categorías<br>de vivienda</span></div>
@@ -773,6 +773,7 @@ const STEPS = {
   const ARROW = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
   const PIN = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></svg>';
   const byCat = c => DEVS.filter(d => d.cat === c);
+  $('#devCount').dataset.count = DEVS.length; // la cifra sigue al inventario
 
   /* ---------- Paneles del hero ---------- */
   $('#panels').innerHTML = Object.entries(CATS).map(([k,c]) => {
