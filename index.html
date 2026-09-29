@@ -759,6 +759,20 @@ const DEVS = [
   {name:'Vista Laguna', cat:'pv', plaza:'Tampico', zona:'Altamira', status:'Vendido', type:'Casas y departamentos', rec:'2 rec.', m2:'80.39 m²', from:'', img:'https://backend.grupovelas.com/uploads/Slider_02_6_b7d8ddcef9.webp', url:'https://grupovelas.com.mx/desarrollo/vista-laguna', feat:'Casas y departamentos con vistas a la laguna, áreas verdes y cercanía a servicios.'},
 ];
 
+/* Imágenes locales para desarrollos sin foto (img/categorias/...).
+   La clave debe ser igual al name de DEVS; la ruta, idéntica al archivo (mayúsculas incluidas). */
+const IMG_LOCAL = {
+  'Valencia':           'primera_vivienda/valencia.jpeg',
+  'Ballesta':           'residencial/ballesta.jpg',        // convertido desde .HEIC
+  'Cima Peñaflor':      'residencial/cima_penaflor.jpg',   // renombrado sin ñ
+  'Coto Báltico':       'residencial/coto_baltico.png',
+  'Lavanda II':         'residencial/lavanda.jpg',
+  'Paseos de Floresta': 'residencial/pasos_de_floresta.JPG',
+  'Manila':             'residencial_plus/manila.png',
+  'Sorrento Velamar':   'residencial_plus/sorrento.jpg',
+};
+DEVS.forEach(d => { if (!d.img && IMG_LOCAL[d.name]) d.img = 'img/categorias/' + IMG_LOCAL[d.name]; });
+
 /* Pasos de compra por forma de pago */
 const STEPS = {
   credito:{acc:'var(--pv)', s:[['Precalifica','Consulta tus puntos y monto de crédito en Mi Cuenta Infonavit o Fovissste.'],['Elige tu hogar','Un asesor te muestra los desarrollos que aplican para tu crédito.'],['Integra tu expediente','Te acompañamos con documentos, avalúo y firma de crédito.'],['Estrena','Escrituras y entrega de tu nueva casa.']]},
@@ -842,6 +856,8 @@ const STEPS = {
       </div>
     </a>`).join('');
   const cards = $$('.card', grid);
+  /* Si una imagen no carga, se muestra el marcador "Imagen próximamente" */
+  $$('.card .ph img', grid).forEach(img => img.addEventListener('error', () => img.outerHTML = NOIMG, {once:true}));
   let fCat = 'all';
   function applyFilters(animate=true){
     const pl = fPlaza.value, st = fStatus.value;
@@ -949,6 +965,7 @@ const STEPS = {
       <div class="row"><div><small>${[d.zona || d.plaza, d.status].filter(Boolean).join(' · ')}</small><b>${d.from ? 'Desde ' + d.from : 'Consultar precio'}</b></div><span class="go">${ARROW}</span></div></div>
     </a>`).join('');
   const prog = $('#hprog');
+  $$('.fc img', hs).forEach(img => img.addEventListener('error', () => { img.closest('.fc').remove(); upd(); }, {once:true}));
   const upd = () => { const max = hs.scrollWidth - hs.clientWidth; const w = hs.clientWidth/hs.scrollWidth; prog.style.width = (w*100)+'%'; prog.style.transform = `translateX(${max ? hs.scrollLeft/max*(1/w-1)*100 : 0}%)`; };
   hs.addEventListener('scroll', upd, {passive:true}); addEventListener('resize', upd); setTimeout(upd, 300);
   const stepW = () => $('.fc', hs).offsetWidth + 22;
