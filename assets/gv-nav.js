@@ -9,7 +9,8 @@
      <script src="[base]assets/gv-nav.js" data-base="[base]" data-cat="pv|re|rp"></script>
 
    - data-base: ruta hacia la raíz del sitio. Vacío en el home, "../" en subpáginas.
-   - data-cat:  categoría de la subpágina (resalta su proyecto en el submenú).
+   - data-cat:  categoría de la subpágina (la resalta en el footer). El proyecto
+                actual se resalta en el submenú comparando la ruta de la página.
    - data-city: ciudad del desarrollo (la resalta en el submenú de Ciudades).
    Home: el header se vuelve sólido al hacer scroll y permanece siempre visible.
    Subpágina: el header se oculta al hacer scroll para dar paso al navbar
@@ -35,29 +36,40 @@
     ['Playa del Carmen','Quintana Roo'], ['Querétaro','Querétaro'], ['Reynosa','Tamaulipas'], ['Tampico','Tamaulipas']
   ];
   const REVISTA = 'https://horizonte.grupovelas.com/';
-  /* Proyectos de grupovelas.com.mx/desarrollos, agrupados por ciudad.
+  /* Proyectos agrupados por ciudad: los de grupovelas.com.mx/desarrollos más el resto del inventario.
      [nombre, slug en el sitio corporativo, ciudad, página en este sitio, categoría].
      Los que no tienen página propia aquí abren su ficha en el sitio corporativo. */
   const PROYECTOS = [
     ['Vela Towers Cancún','vela-towers-cancun','Cancún','residencialp/index.html','rp'],
-    ['Punta Vela Residencial','punta-vela-residencial','Ciudad Juárez'],
-    ['Vistavela III','vistavela-iii','Los Cabos'],
-    ['Vistavela Sunset','vistavela-sunset','Los Cabos'],
+    ['Punta Vela Residencial','punta-vela-residencial','Ciudad Juárez','residencial/punta-vela/index.html','re'],
+    ['Valencia','','Ciudad Juárez','pvivienda/valencia/index.html','pv'],
+    ['Vistavela III','vistavela-iii','Los Cabos','residencialp/vistavela-iii/index.html','rp'],
+    ['Vistavela Sunset','vistavela-sunset','Los Cabos','residencialp/vistavela-sunset/index.html','rp'],
     ['Fraccionamiento Arecas','fraccionamiento-arecas','Matamoros','pvivienda/index.html','pv'],
+    ['Lavanda II','','Matamoros','residencial/lavanda-ii/index.html','re'],
     ['Selvanova Residencial','selvanova-residencial','Playa del Carmen','residencial/index.html','re'],
-    ['Velasur','velasur','Querétaro'],
-    ['Loma Bonita','loma-bonita-reynosa','Reynosa'],
-    ['Florencia Residencial','florencia-residencial','Reynosa'],
-    ['Fraccionamiento Loma Bonita','fraccionamiento-loma-bonita','Tampico'],
-    ['Encinos Residencial','encinos-residencial','Tampico'],
-    ['Torre 829','torre-829','Tampico'],
+    ['Velasur','velasur','Querétaro','residencial/velasur/index.html','re'],
+    ['Cima Peñaflor','','Querétaro','residencial/cima-penaflor/index.html','re'],
+    ['Ballesta','','Querétaro','residencial/ballesta/index.html','re'],
+    ['Loma Bonita','loma-bonita-reynosa','Reynosa','residencial/loma-bonita-reynosa/index.html','re'],
+    ['Florencia Residencial','florencia-residencial','Reynosa','pvivienda/florencia/index.html','pv'],
+    ['Loma del Jazmín','','Reynosa','residencial/loma-del-jazmin/index.html','re'],
+    ['Fraccionamiento Loma Bonita','fraccionamiento-loma-bonita','Tampico','residencial/fraccionamiento-loma-bonita/index.html','re'],
+    ['Encinos Residencial','encinos-residencial','Tampico','residencial/los-encinos/index.html','re'],
+    ['Torre 829','torre-829','Tampico','residencial/torre-829/index.html','re'],
     ['Coto Jade','coto-jade','Tampico'],
     ['Valle Esmeralda','valle-esmeralda','Tampico'],
-    ['Vista Laguna','vista-laguna','Tampico'],
+    ['Vista Laguna','vista-laguna','Tampico','pvivienda/vista-laguna/index.html','pv'],
     ['Conjunto Roma 401','conjunto-roma-401','Tampico'],
-    ['Arecas','arecas','Tampico'],
-    ['Townhouses Velamar II','townhouses-velamar-ii','Tampico'],
-    ['Torre Milos','torre-milos','Tampico']
+    ['Arecas','arecas','Tampico','pvivienda/arecas-altamira/index.html','pv'],
+    ['Townhouses Velamar II','townhouses-velamar-ii','Tampico','residencialp/townhouses-velamar-ii/index.html','rp'],
+    ['Torre Milos','torre-milos','Tampico','residencialp/torre-milos/index.html','rp'],
+    ['Manila','','Tampico','residencialp/manila/index.html','rp'],
+    ['Sorrento Velamar','','Tampico','residencialp/sorrento-velamar/index.html','rp'],
+    ['Paseos de Floresta','','Tampico','residencial/paseos-de-floresta/index.html','re'],
+    ['Zafiro Residencial','','Tampico','residencial/zafiro-residencial/index.html','re'],
+    ['Coto Báltico','','Tampico','residencial/coto-baltico/index.html','re'],
+    ['Conjunto Cárdenas 807','','Tampico','residencial/conjunto-cardenas-807/index.html','re']
   ];
 
   /* En el home los enlaces son anclas; desde una subpágina apuntan al home */
@@ -82,8 +94,11 @@
   const cityAttrs = c => HOME ? `href="#desarrollos" data-plz="${c}"` : `href="${BASE}index.html?plaza=${encodeURIComponent(c)}#desarrollos"`;
   const cityLinks = () => `<a href="${H('#plazas')}"><i></i>Todas las ciudades</a>` +
     CIUDADES.map(([c,e]) => `<a ${cityAttrs(c)}${c === CITY ? ' aria-current="page"' : ''}>${PIN}${c}<small>${e}</small></a>`).join('');
-  const projLink = ([n,slug,,page,cat]) => page
-    ? `<a href="${BASE + page}"${cat === CAT ? ' aria-current="page"' : ''}>${n}</a>`
+  /* Página actual: compara rutas (varias páginas comparten categoría) */
+  const HERE = location.pathname.replace(/index\.html$/, '');
+  const isHere = page => HERE.endsWith('/' + page.replace(/index\.html$/, ''));
+  const projLink = ([n,slug,,page]) => page
+    ? `<a href="${BASE + page}"${isHere(page) ? ' aria-current="page"' : ''}>${n}</a>`
     : `<a href="https://grupovelas.com.mx/desarrollo/${slug}" ${EXT}>${n}<span class="gvh-ext" aria-hidden="true">↗</span></a>`;
   const projLinks = () => `<a href="${H('#desarrollos')}"><i></i>Todos los desarrollos</a><div class="gvh-mega">` +
     CIUDADES.map(([c]) => PROYECTOS.filter(x => x[2] === c)).filter(g => g.length)
