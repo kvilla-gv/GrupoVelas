@@ -665,7 +665,7 @@ function build(d){
   ].filter(Boolean);
   const formExtra = d.cat === 'pv'
     ? `<div class="two">
-        <div class="fld"><select id="fc" name="credito"><option>Sí tengo crédito</option><option>No sé si tengo</option><option>No tengo crédito</option></select><label for="fc">Crédito Infonavit / Fovissste / bancario</label></div>
+        <div class="fld"><select id="fc" name="credito"><option>Sí tengo crédito</option><option>No sé si tengo</option><option>No tengo crédito</option></select><label for="fc">¿Tienes crédito?</label></div>
         <div class="fld"><select id="fh" name="horario"><option>9 am – 2 pm</option><option>2 pm – 6 pm</option></select><label for="fh">Horario para llamarte</label></div>
       </div>
       <input type="hidden" name="prototipo" id="fproto" value="${esc(protos[0] ? protos[0].unit : '')}">`
@@ -715,31 +715,8 @@ function build(d){
   </div>
 </section>`);
 
-  /* ===== PIE DEL DESARROLLO ===== */
-  const footer = `<!-- ============ FOOTER ============ -->
-<footer>
-  <div class="wrap">
-    <div class="fgrid">
-      <div>
-        <img src="${GV_LOGO}" alt="Grupo Velas" loading="lazy" style="filter:brightness(0) opacity(.85);height:44px">
-        <p style="margin-top:14px;max-width:38ch">${esc(d.name)}: ${d.sub || d.desc || g.welcome ? esc(firstSentences(desc, 150).replace(/([^.…])$/, '$1.')) + ' ' : ''}${esc(C.name)} de Grupo Velas en ${esc(where)}.</p>
-      </div>
-      <div>
-        <h4>Contacto</h4>
-        <p>${esc(address.replace(/<br>/g, ' '))}</p>
-        <a href="#" data-wa>WhatsApp</a>
-        ${tel ? `<a href="${telHref(tel)}">(+52) ${esc(tel)}</a>` : ''}
-        ${mail ? `<a href="mailto:${esc(mail)}">${esc(mail)}</a>` : ''}
-      </div>
-      <div>
-        <h4>Explora</h4>
-        ${menu.filter(([id]) => id !== 'contacto').map(([id, l]) => `<a href="#${id}">${esc(l)}</a>`).join('\n        ')}
-        <a href="${BASE}index.html?plaza=${encodeURIComponent(d.plaza)}#desarrollos">Más desarrollos en ${esc(d.plaza)}</a>
-      </div>
-    </div>
-    <div class="fine"><span>© <span id="yr"></span> ${esc(d.name)} · Grupo Velas. Todos los derechos reservados.</span><span>Imágenes ilustrativas. Precios en MXN sujetos a cambio y disponibilidad.</span></div>
-  </div>
-</footer>
+  /* ===== PIE: solo el corporativo (assets/gv-nav.js), igual que en el home ===== */
+  const footer = `<!-- ============ FOOTER (corporativo, igual que en el home) ============ -->
 <div data-gv-footer></div>`;
 
   /* ===== DOCUMENTO ===== */
