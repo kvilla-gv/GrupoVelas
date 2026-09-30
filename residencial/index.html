@@ -545,6 +545,10 @@ footer .fine{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);f
 .btn.wa{--bg:#25d366;--fg:#fff;border-color:#25d366}
 .btn.wa::before{background:#1a9e4d}
 .btn.wa:hover{border-color:#1a9e4d}
+/* Los botones "btn wa" heredaban el estilo del botón flotante (.wa) y quedaban ocultos */
+.btn.wa{position:relative;right:auto;bottom:auto;z-index:auto;width:auto;height:auto;border-radius:6px;display:inline-flex;transform:none;box-shadow:none}
+.btn.wa::after{display:none}
+.btn.wa svg{width:17px;height:17px}
 .logo{display:flex;align-items:center;gap:12px}
 header.top .logo img{height:40px}
 header.top.scrolled .logo img{filter:brightness(0) opacity(.85);height:34px}
@@ -942,7 +946,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85);height:34px}
       </div>
       <div class="f" data-for="banco">
         <div class="range-row"><span>Plazo del crédito</span><b id="yrV"></b></div>
-        <input type="range" id="yr" min="5" max="20" step="5" value="20" aria-label="Plazo en años">
+        <input type="range" id="yrs" min="5" max="20" step="5" value="20" aria-label="Plazo en años">
       </div>
       <div class="f" data-for="banco"><div class="rate"><span>Tasa anual de referencia</span><span><input type="number" id="rate" value="11" min="6" max="18" step="0.1"> %</span></div></div>
       <div class="f" data-for="directo">
@@ -1291,7 +1295,7 @@ const PLACES = [
   });
 
   /* ===== Calculadora (3 formas de pago) ===== */
-  const pr = $('#pr'), eng = $('#eng'), yr = $('#yr'), plz = $('#plz'), rate = $('#rate'); let mode = 'banco';
+  const pr = $('#pr'), eng = $('#eng'), yr = $('#yrs'), plz = $('#plz'), rate = $('#rate'); let mode = 'banco';
   const tween = (el, to) => { const from = +(el.dataset.v || 0), t0 = performance.now(); el.dataset.v = to; const s = t => { const q = Math.min((t-t0)/500,1); el.textContent = fmt(from + (to-from)*(1-Math.pow(1-q,3))); if (q<1) requestAnimationFrame(s); }; requestAnimationFrame(s); };
   const setP = i => i.style.setProperty('--p', ((i.value-i.min)/(i.max-i.min)*100)+'%');
   function calc(){
