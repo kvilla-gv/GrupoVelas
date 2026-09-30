@@ -1,0 +1,1526 @@
+{
+ "arecas": {
+  "name": "Arecas",
+  "source": "https://grupovelas.com.mx/desarrollo/arecas",
+  "welcome": "ARECAS es el nuevo desarrollo residencial que te ofrece un hogar en perfecta armonía con la tranquilidad y seguridad. Ubicado en Altamira, este proyecto de 12 casas está diseñado para brindarte un estilo de vida pleno, rodeado de amplias áreas verdes y con acceso rápido a todos los servicios que necesitas. Descubre la calidez de un hogar moderno y la promesa de una inversión inteligente avalada por Grupo Velas.",
+  "location": {
+   "title": "Desarrollos inmobiliarios en Tampico",
+   "text": "Tampico ofrece un clima ideal, atractivos turísticos y una conectividadinsuperable . En nuestros desarrollos inmobiliarios en México encontrarás proyectos que combinan diseño, seguridad y alta plusvalía, con amenidades exclusivas y espacios verdes pensados para tu bienestar. Descubre las mejores oportunidades en bienes raíces en México en esta ciudad estratégica, donde cada día se vive con confort y estilo."
+  },
+  "mapText": "Cerca del Tecnológico de Monterrey, Soriana, Arteli y HEB.\nHospitales Bene y Ángeles a minutos.\nDisfruta de Playa Miramar y diversas opciones de cafés y restaurantes como Plaza Arenas.\nFácil acceso a la Carretera Tampico-Mante.",
+  "facts": [
+   {
+    "cat": "welcome",
+    "n": 12,
+    "t": "Casas"
+   },
+   {
+    "cat": "welcome",
+    "n": 2,
+    "t": "Espacios de Estacionamiento"
+   },
+   {
+    "cat": "welcome",
+    "n": 3,
+    "t": "Recámaras"
+   },
+   {
+    "cat": "welcome",
+    "n": null,
+    "t": "Excelente ubicación"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Tranquilidad"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Conveniencia"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Diseño"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Inversión"
+   }
+  ],
+  "amenities": [
+   {
+    "t": "Amplias Áreas Verdes",
+    "s": "Extensos jardines y espacios naturales perfectos para relajarse, pasear o disfrutar del aire libre.",
+    "img": ""
+   }
+  ],
+  "images": [
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_04_7_e5d82e7c51.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_03_7_e5f63011d1.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_01_8_66cd38fcbd.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_06_6_f3de6074af.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_05_6_616625420b.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_04_6_4150c9c783.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Carrusel_03_6_7d0df19d4e.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Carrusel_01_6_d2fbdd8513.webp"
+   }
+  ],
+  "video": "",
+  "catalog": ""
+ },
+ "encinos-residencial": {
+  "name": "Encinos Residencial",
+  "source": "https://grupovelas.com.mx/desarrollo/encinos-residencial",
+  "welcome": "Encinos Residencial te ofrece un hogar seguro, sostenible y en conexión con la naturaleza. Con modelos variados, acabados modernos y espacios diseñados para tu comodidad, este desarrollo inmobiliario es ideal para disfrutar de una vida plena en familia.",
+  "location": {
+   "title": "Desarrollos inmobiliarios en Tampico",
+   "text": "Tampico ofrece un clima ideal, atractivos turísticos y una conectividad insuperable. En nuestros desarrollos inmobiliarios en México encontrarás proyectos que combinan diseño, seguridad y alta plusvalía, con amenidades exclusivas y espacios verdes pensados para tu bienestar. Descubre las mejores oportunidades en bienes raíces en México en esta ciudad estratégica, donde cada día se vive con confort y estilo."
+  },
+  "mapText": "A minutos de la Carretera Tampico-Mante\nA 20 minutos de HEB\nA 20 minutos de playa Miramar\nA 8 minutos de Plaza Arenas",
+  "facts": [
+   {
+    "cat": "welcome",
+    "n": 2500,
+    "t": "litros en la cisterna"
+   },
+   {
+    "cat": "welcome",
+    "n": 24,
+    "t": "hrs Caseta de seguridad"
+   },
+   {
+    "cat": "welcome",
+    "n": 3,
+    "t": "Recámaras"
+   },
+   {
+    "cat": "welcome",
+    "n": 2,
+    "t": "Baños por unidad"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Ubicación privilegiada"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Clima ideal"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Atractivo turístico"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Oportunidades de inversión"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Diversidad de compradores"
+   }
+  ],
+  "amenities": [
+   {
+    "t": "Áreas Verdes",
+    "s": "Jardines y senderos diseñados para relajarte y conectarte con la naturaleza.",
+    "img": ""
+   },
+   {
+    "t": "Club Deportivo",
+    "s": "Espacios equipados para entrenamiento y actividades en comunidad.",
+    "img": ""
+   },
+   {
+    "t": "Alberca Piscina familiar ideal para el descanso y la diversión al aire libre.",
+    "s": "Piscina familiar ideal para el descanso y la diversión al aire libre.",
+    "img": ""
+   },
+   {
+    "t": "Salón de Usos Múltiples",
+    "s": "Área flexible para eventos, reuniones y celebraciones.",
+    "img": ""
+   }
+  ],
+  "images": [
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_03_1_b6eee92377.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_02_3_097f2a5d2f.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_04_1_a81f5a15ec.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_06_1c67e17151.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_05_2bc6046442.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_04_e5ec048e09.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_03_d0d56f67f3.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_01_69eb2b0618.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_02_1_c206614e2d.webp"
+   }
+  ],
+  "video": "https://drive.google.com/file/d/1zAZMU9vWw4BuXRQAH4w8Pch6lZlCiMce/preview",
+  "catalog": ""
+ },
+ "florencia-residencial": {
+  "name": "Florencia Residencial",
+  "source": "https://grupovelas.com.mx/desarrollo/florencia-residencial",
+  "welcome": "Florencia Residencial te ofrece departamentos en venta en Reynosa. Este desarrollo cuenta con 36 departamentos distribuidos en 8 edificios, cada uno con 2 habitaciones y 72 m² de construcción.\nEstarás a minutos de centros comerciales, hospitales y escuelas. Disfruta de canchas deportivas, amplias áreas verdes y áreas de juegos para niños, todo en un ambiente seguro y familiar respaldado por Grupo Velas.",
+  "location": {
+   "title": "Departamentos en venta en Reynosa",
+   "text": "Invertir en Reynosa es una decisión estratégica. Esta ciudad tamaulipeca ofrece un crecimiento industrial y comercial constante, impulsando un mercado laboral dinámico y una economía robusta. Además, su posición fronteriza representa una gran ventaja para la logística y el comercio. Vivir en Reynosa te brinda acceso a una infraestructura en desarrollo, opciones educativas y de salud, y una comunidad vibrante, haciendo de ella un lugar ideal para asegurar tu patrimonio y construir un futuro próspero para tu familia."
+  },
+  "mapText": "Centros Comerciales: Plaza Sendero Periférico (5 minutos en coche)\nSupermercados: Bodega Aurrera Express, Smart, Soriana, Cinepolis\nHospitales: Materno-infantil y Christus Muguerza. (2 minutos en coche)\nPlayas: N/A\nCafés y Restaurantes: The Italian Coffee (2 minutos en coche)\nGimnasios: Power Gym (2 minutos en coche)\nEscuelas: Escuela Primaria Nueva Creación (2 minutos en coche).\nPrincipales Avenidas: Av. Tamaulipas y Viaducto Reynosa",
+  "facts": [
+   {
+    "cat": "welcome",
+    "n": 36,
+    "t": "Departamentos"
+   },
+   {
+    "cat": "welcome",
+    "n": 8,
+    "t": "Edificios"
+   },
+   {
+    "cat": "welcome",
+    "n": 72,
+    "t": "?m² en construcción"
+   },
+   {
+    "cat": "welcome",
+    "n": 2,
+    "t": "Habitaciones"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Ubicación Estratégica"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Diseño de Vanguardia"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Plusvalía Garantizada"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Ambiente Familiar y Seguro"
+   }
+  ],
+  "amenities": [
+   {
+    "t": "Canchas Deportivas",
+    "s": "Disfruta de espacios dedicados para practicar tus deportes favoritos. Perfectas para fútbol, baloncesto o cualquier actividad que te mantenga activo.",
+    "img": ""
+   },
+   {
+    "t": "Áreas Verdes",
+    "s": "Amplios jardines y zonas naturales ideales para relajarte, pasear o simplemente disfrutar del aire libre en un entorno tranquilo.",
+    "img": ""
+   },
+   {
+    "t": "Áreas de Juegos para Niños",
+    "s": "Zonas seguras y divertidas, equipadas con juegos para que los más pequeños se diviertan, exploren y socialicen.",
+    "img": ""
+   }
+  ],
+  "images": [
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_04_1_c390a48607.jpg"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_03_a70fc1d401.jpg"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_01_05fd4530fd.jpg"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_06_fedf39a102.jpg"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_05_502f9ed9f0.jpg"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_04_21e0ba58e2.jpg"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_03_642d1ef7a0.jpg"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_02_4105525a0a.jpg"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_01_c380ef9470.jpg"
+   }
+  ],
+  "video": "",
+  "catalog": ""
+ },
+ "fraccionamiento-loma-bonita": {
+  "name": "Fraccionamiento Loma Bonita",
+  "source": "https://grupovelas.com.mx/desarrollo/fraccionamiento-loma-bonita",
+  "welcome": "Fraccionamiento Loma Bonita te ofrece casas diseñadas a tu gusto, en un entorno seguro y completamente bardeado. Con estacionamiento, jardín y acabados de calidad, este desarrollo inmobiliario en Tampico es perfecto para quienes buscan confort y bienestar familiar.",
+  "location": {
+   "title": "",
+   "text": ""
+  },
+  "mapText": "",
+  "facts": [
+   {
+    "cat": "welcome",
+    "n": 4,
+    "t": "recámaras por unidad"
+   },
+   {
+    "cat": "welcome",
+    "n": 5,
+    "t": "baños en cada casa"
+   },
+   {
+    "cat": "welcome",
+    "n": 2,
+    "t": "estacionamientos incluidos"
+   },
+   {
+    "cat": "welcome",
+    "n": 2,
+    "t": "litros en la cisterna"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Ubicación Privilegiada"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Espacios de Esparcimiento"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Commercial Appreciation"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Diseño a Tu Medida"
+   }
+  ],
+  "amenities": [],
+  "images": [
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_03_2_b28f49fefb.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_02_4_3a8e16858d.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_01_3_663b8a015d.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_04_2_1_11zon_a61f44b223.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_06_1_7a62435581.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_05_1_3e3367d12e.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_04_1_413a1310a0.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_03_1_23dc3c790c.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_02_2_d3dc079a8f.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_01_1_7c92c6fd51.webp"
+   }
+  ],
+  "video": "",
+  "catalog": ""
+ },
+ "loma-bonita-reynosa": {
+  "name": "Loma Bonita",
+  "source": "https://grupovelas.com.mx/desarrollo/loma-bonita-reynosa",
+  "welcome": "Fraccionamiento Loma Bonita te ofrece casas diseñadas a tu gusto, en un entorno seguro y completamente bardeado. Con estacionamiento, jardín y acabados de calidad, este desarrollo inmobiliario en Reynosa es perfecto para quienes buscan confort y bienestar familiar.\n\nDOS TIPOS DE CASAS\nMALLORCA: 156 m² de construcción, 3 baños. 3 Recamaras, Patio, Area de Lavado,Vitropiso 60*60, Cocina, Cubierta de quarzo, canceleria en baños y escaleras   Precio desde $2,385,000 Mxn\n\nCOLIBRI:114 m² de construcción, 3.5 baños. 3 Recamaras, Vitropiso, Cocina, canceleria en baños y escalera, Area de Lavado, patio, Precio desde $2,935,000 Mxn\n\nCaracterísticas adicionales\n- Tanque Elevado y casa casa con un tinaco\n\nCaracterísticas Interiores\n- Gabinetes de Cocina: Amplios y elegantes,con cubierta de cuarzo\n- Pisos: Porcelanato de 60cmx60cm\n- Canceleria en escaleras y baños\n- Vanity en Baño\n\nOpciones de Pago\n- Pago de contado (Pagas el 30% y te damos hasta 2 meses para terminar de pagar)\n- Crédito Hipotecario\n- Crédito Infonavit\n- Crédito Fovissste",
+  "location": {
+   "title": "Casas en venta en Reynosa",
+   "text": "Invertir en Reynosa es una decisión estratégica. Esta ciudad tamaulipeca ofrece un crecimiento industrial y comercial constante, impulsando un mercado laboral dinámico y una economía robusta. Además, su posición fronteriza representa una gran ventaja para la logística y el comercio. Vivir en Reynosa te brinda acceso a una infraestructura en desarrollo, opciones educativas y de salud, y una comunidad vibrante, haciendo de ella un lugar ideal para asegurar tu patrimonio y construir un futuro próspero para tu familia."
+  },
+  "mapText": "Centros Comerciales:\nPlaza Sendero Periférico (5 minutos en coche)\n\nSupermercados:\nSmart, Soriana, Mi tiendita del Ahorro, Cinepolis, Ferreteria Blanquita.\n\nHospitales:\nMaterno-infantil y Christus Muguerza. (2 minutos en coche)\n\nCerca de puentes internacionales\n\nCafés y Restaurantes:\nThe Italian Coffee (2 minutos en coche)\n\nGimnasios:\nPower Gym (2 minutos en coche)\n\nEscuelas:\nEscuela Primaria Nueva Creación (2 minutos en coche).\n\nPrincipales Avenidas:\nCarretera Reynosa Monterrey",
+  "facts": [
+   {
+    "cat": "welcome",
+    "n": 3,
+    "t": "Recamaras"
+   },
+   {
+    "cat": "welcome",
+    "n": 3,
+    "t": "Baños"
+   },
+   {
+    "cat": "welcome",
+    "n": 2,
+    "t": "Estacionamiento incluido"
+   },
+   {
+    "cat": "welcome",
+    "n": 1,
+    "t": "Cocina Integral"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Ubicación Privilegiada"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Espacios de Esparcimiento"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Plusvalía Sobresaliente"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Interiores de Alta Calidad"
+   }
+  ],
+  "amenities": [
+   {
+    "t": "Doble filtro de seguridad",
+    "s": "Accesos controlados",
+    "img": "https://backend.grupovelas.com/uploads/Sitio_GV_Amenidades_1080x1080_c97e5c4bd6.png"
+   },
+   {
+    "t": "Casa Club",
+    "s": "El centro social del desarrollo, ideal para reuniones y eventos comunitarios.",
+    "img": "https://backend.grupovelas.com/uploads/Sitio_GV_Amenidades_1080x1080_7e7ca48ab9.jpg"
+   },
+   {
+    "t": "Áreas de Esparcimiento",
+    "s": "Espacios dedicados a la relajación y el ocio, perfectos para desconectar.",
+    "img": "https://backend.grupovelas.com/uploads/Sitio_GV_Amenidades_1080x1080_2_57bcfbf208.jpg"
+   },
+   {
+    "t": "Áreas Verdes",
+    "s": "Amplios jardines para pasear, relajarse y disfrutar de la naturaleza.",
+    "img": "https://backend.grupovelas.com/uploads/Sitio_GV_Amenidades_1080x1080_2_1be1a02eac.jpg"
+   },
+   {
+    "t": "Áreas de Juegos para Niños",
+    "s": "Zonas seguras y divertidas con equipo para que los pequeños jueguen.",
+    "img": "https://backend.grupovelas.com/uploads/Sitio_GV_Amenidades_1080x1080_5_5c29ac54fb.jpg"
+   },
+   {
+    "t": "Fitness Center",
+    "s": "",
+    "img": "https://backend.grupovelas.com/uploads/Sitio_GV_Amenidades_1080x1080_1_139e8e7ff4.jpg"
+   },
+   {
+    "t": "Seguridad 24/7",
+    "s": "",
+    "img": "https://backend.grupovelas.com/uploads/Sitio_GV_Amenidades_1080x1080_3_e1130b14dd.jpg"
+   }
+  ],
+  "images": [
+   {
+    "src": "https://backend.grupovelas.com/uploads/Sitio_GV_Slider_principal_proyectos_5c1a5e9b19.jpg"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Sitio_GV_Slider_principal_proyectos_1_0ba83a06b2.jpg"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Sitio_GV_Slider_principal_proyectos_2_e27ce88a1f.jpg"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Sitio_GV_Slider_principal_proyectos_3_b26884b464.jpg"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/20a69446_a4c4_4677_9d20_883b914d6086_bcf0a5ed2a.jpg"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/307126428_776700536775528_2071051306545178009_n_e47e3f7c54.jpg"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/307164672_776700253442223_1873737494670078348_n_336c513f08.jpg"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/7aa35458_ed43_4ff6_b173_e4c317240e70_11f7ac9679.jpg"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/b1217e48_d7d4_4ac5_a36f_4156d37383f4_31e70fddf6.jpg"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/4dfa9aac_cff3_4842_a7ce_ab8c77222d2a_233d396f58.jpg"
+   }
+  ],
+  "video": "",
+  "catalog": "https://drive.google.com/file/d/1Z7RS4lFq1xT3k30Ys6n1tFCNMXGc3pQ4/view?usp=sharing"
+ },
+ "punta-vela-residencial": {
+  "name": "Punta Vela Residencial",
+  "source": "https://grupovelas.com.mx/desarrollo/punta-vela-residencial",
+  "welcome": "Punta Vela Residencial de Grupo Velas te ofrece el hogar ideal en Ciudad Juárez. Este desarrollo cuenta con solo 63 casas distribuidas en 3 modelos diferentes, todas con 3.5 baños y más de 5 amenidades. Ubicado estratégicamente en esta ciudad fronteriza, Punta Vela te posiciona cerca de todo, desde centros comerciales hasta el aeropuerto, asegurando la plusvalía de tu inversión.",
+  "location": {
+   "title": "Casas en venta en Ciudad Juárez",
+   "text": "Descubre por qué comprar una casa en Ciudad Juárez con Grupo Velas es una decisión estratégica. Esta ciudad ofrece crecimiento constante, un mercado laboral dinámico y una ubicación clave que impulsa tu inversión. Encuentra el hogar perfecto y asegura tu patrimonio en una ciudad con gran potencial."
+  },
+  "mapText": "1 minuto de Mundo Acuático Anita\n10 minutos de plaza Sendero\n14 minutos de Puente Zaragoza\n15 minutos de Walmart\n25 minutos del aeropuerto internacional Ciudad Juárez",
+  "facts": [
+   {
+    "cat": "welcome",
+    "n": 63,
+    "t": "Casas"
+   },
+   {
+    "cat": "welcome",
+    "n": 2,
+    "t": "modelos de casa"
+   },
+   {
+    "cat": "welcome",
+    "n": 3,
+    "t": "Baños"
+   },
+   {
+    "cat": "welcome",
+    "n": 5,
+    "t": "Amenidades"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Ubicación"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Amenidades"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Plusvalía"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Comunidad"
+   }
+  ],
+  "amenities": [
+   {
+    "t": "Casa Club",
+    "s": "El corazón de la comunidad, ideal para reuniones y eventos sociales.",
+    "img": ""
+   },
+   {
+    "t": "Gimnasio",
+    "s": "Mantente en forma con equipo moderno, sin salir de casa.",
+    "img": ""
+   },
+   {
+    "t": "Área de Asadores",
+    "s": "Perfecta para parrilladas y reuniones al aire libre con amigos.",
+    "img": ""
+   },
+   {
+    "t": "Salón de Eventos",
+    "s": "Espacio amplio y elegante para tus celebraciones especiales.",
+    "img": ""
+   },
+   {
+    "t": "Cuarto de Juegos",
+    "s": "Diversión garantizada para niños y adolescentes con varias actividades.",
+    "img": ""
+   },
+   {
+    "t": "Piñatero",
+    "s": "Área dedicada para celebrar cumpleaños y fiestas infantiles.",
+    "img": ""
+   },
+   {
+    "t": "Terraza de Estar",
+    "s": "Un cómodo espacio al aire libre para relajarse y disfrutar del ambiente.",
+    "img": ""
+   }
+  ],
+  "images": [
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_04_10_57fc6e7f0c.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_03_10_be85c6a973.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_02_12_e21b356b93.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_01_11_303b82bae2.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_06_10_17e21413cb.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_05_10_1806d55a63.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_04_10_1b634d8a99.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_03_10_e4547bfa66.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_02_11_e5a3ea9851.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_01_9_4c2b51bf59.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria06_e9d71745c0.webp",
+    "cat": "Avance de Obra"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_04_f8c860695c.webp",
+    "cat": "Avance de Obra"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_05_0407912c27.webp",
+    "cat": "Avance de Obra"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_01_5f56be4380.webp",
+    "cat": "Amenidades"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_03_35f76cae32.webp",
+    "cat": "Amenidades"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_02_03ae05bc0d.webp",
+    "cat": "Amenidades"
+   }
+  ],
+  "video": "",
+  "catalog": ""
+ },
+ "torre-829": {
+  "name": "Torre 829",
+  "source": "https://grupovelas.com.mx/desarrollo/torre-829",
+  "welcome": "Torre 829 es tu oportunidad en preventa para vivir en Tampico con estilo y confort. Sus departamentos de 3 recámaras incluyen walk-in closet, cuarto de servicio con baño, amplia terraza y acabados de lujo.",
+  "location": {
+   "title": "",
+   "text": ""
+  },
+  "mapText": "",
+  "facts": [
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Diseño Vanguardista"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Ubicación Privilegiada"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Plusvalía Garantizada"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Respaldo Premium"
+   }
+  ],
+  "amenities": [
+   {
+    "t": "Caseta de vigilancia",
+    "s": "Control de acceso y seguridad permanente para tu tranquilidad.",
+    "img": ""
+   },
+   {
+    "t": "Kids’ Club",
+    "s": "Espacio lúdico seguro donde los niños pueden jugar y socializar.",
+    "img": ""
+   },
+   {
+    "t": "Roof Top",
+    "s": "Terraza panorámica para disfrutar vistas espectaculares de la ciudad.",
+    "img": ""
+   },
+   {
+    "t": "Gym Area",
+    "s": "Zona equipada para mantener tu rutina de ejercicio sin salir de casa.",
+    "img": ""
+   },
+   {
+    "t": "Sky Bar",
+    "s": "Bar en altura para deleitarte con tus bebidas favoritas al atardecer.",
+    "img": ""
+   },
+   {
+    "t": "Alberca en Roof Garden",
+    "s": "Piscina con atmósfera urbana, ideal para relajarte y compartir.",
+    "img": ""
+   },
+   {
+    "t": "Salón de Usos Múltiples",
+    "s": "Espacio versátil para eventos, reuniones y celebraciones familiares.",
+    "img": ""
+   },
+   {
+    "t": "Área de Asador",
+    "s": "Zona preparada para parrilladas y convivios al aire libre.",
+    "img": ""
+   },
+   {
+    "t": "2 Elevadores",
+    "s": "Acceso rápido y cómodo a cada nivel de tu hogar.",
+    "img": ""
+   },
+   {
+    "t": "Simulador de Golf",
+    "s": "Amenidad única para practicar y perfeccionar tu swing sin salir de casa.",
+    "img": ""
+   }
+  ],
+  "images": [
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_01_1_d15cb700d7.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_02_2_2948be0aad.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Carrusel_01_4_348a162637.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Carrusel_02_4_bc051f27ff.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Carrusel_03_4_25cf4ec05e.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Carrusel_04_cb2cd82ad1.webp"
+   }
+  ],
+  "video": "",
+  "catalog": ""
+ },
+ "torre-milos": {
+  "name": "Torre Milos",
+  "source": "https://grupovelas.com.mx/desarrollo/torre-milos",
+  "welcome": "Ubicado a solo 20 minutos de Tampico, este exclusivo fraccionamiento residencial ofrece una de las mejores vistas al Golfo de México.\nDisfruta de hermosos amaneceres y acceso directo a la playa. Este lugar es perfecto para vacacionar, relajarte a la orilla del mar o simplemente disfrutar de momentos de calidad en familia.\nOfrecemos seguridad y tranquilidad para ti y los tuyos. Además de contar con todas estas amenidades, aseguramos la plusvalía de tu inversión",
+  "location": {
+   "title": "Desarrollos inmobiliarios en Tampico",
+   "text": "Tampico ofrece un clima ideal, atractivos turísticos y una conectividad insuperable. En nuestros desarrollos inmobiliarios en México encontrarás proyectos que combinan diseño, seguridad y alta plusvalía, con amenidades exclusivas y espacios verdes pensados para tu bienestar. Descubre las mejores oportunidades en bienes raíces en México en esta ciudad estratégica, donde cada día se vive con confort y estilo."
+  },
+  "mapText": "Supermercados: Walmart, Soriana, Arteli\nPlayas: Playa Miramar\nCafés y Restaurantes: Velas 10\nPrincipales Avenidas: Corredor Urbano Luis Donaldo Colosio",
+  "facts": [
+   {
+    "cat": "welcome",
+    "n": 71,
+    "t": "Departamentos"
+   },
+   {
+    "cat": "welcome",
+    "n": 16,
+    "t": "Niveles"
+   },
+   {
+    "cat": "welcome",
+    "n": null,
+    "t": "Rooftop"
+   },
+   {
+    "cat": "welcome",
+    "n": null,
+    "t": "Acceso a la palya"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Conexión"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Actividades"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Comunidad"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Resort"
+   }
+  ],
+  "amenities": [
+   {
+    "t": "Traslado directo a la playa",
+    "s": "Para la comodidad de los residentes contaremos con un exclusivo carrito de golf con capacidad para hasta 10 pasajeros, ofreciendo un traslado cómodo y seguro a la playa.",
+    "img": ""
+   },
+   {
+    "t": "Terraza",
+    "s": "Disfruta de reuniones al aire libre y momentos de relax.",
+    "img": ""
+   },
+   {
+    "t": "Alberca",
+    "s": "Date un chapuzón en la piscina para disfrutar del calor y la diversión.",
+    "img": ""
+   },
+   {
+    "t": "Área de Asadores",
+    "s": "Perfecta para tus parrilladas y eventos sociales al aire libre.",
+    "img": ""
+   },
+   {
+    "t": "Salón de Eventos",
+    "s": "Un espacio dedicado para tus celebraciones y reuniones.",
+    "img": ""
+   },
+   {
+    "t": "Gimnasio",
+    "s": "Mantente activo con acceso conveniente a un gimnasio bien equipado.",
+    "img": ""
+   },
+   {
+    "t": "Firepit",
+    "s": "Reúnete alrededor del firepit para noches acogedoras.",
+    "img": ""
+   }
+  ],
+  "images": [
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_03_9_056cf138d5.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_04_9_2fb203b579.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_01_10_11zon_0e829e44ce.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_02_11_11zon_2513575893.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_06_8_0612a2aa60.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_04_8_2fa1cf4e48.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_05_8_a0e29b3d1a.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_03_7_d945df904d.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_02_9_484731ac12.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_01_7_0e71d6582f.webp"
+   }
+  ],
+  "video": "",
+  "catalog": ""
+ },
+ "townhouses-velamar-ii": {
+  "name": "Townhouses Velamar II",
+  "source": "https://grupovelas.com.mx/desarrollo/townhouses-velamar-ii",
+  "welcome": "ive e invierte en uno de los destinos turísticos más importantes de Tamaulipas. Disfruta la paz y tranquilidad de los amaneceres más bellos de México y una privilegiada vista al mar,\nAcceso directo al mar donde podrás realizar distintas actividades como paddle board, yoga en la orilla de la playa, relajarte en la alberca, recorrer nuestras pistas para razor o cuatrimoto e incluso comprar lo que necesites en nuestra tienda de conveniencia.",
+  "location": {
+   "title": "",
+   "text": ""
+  },
+  "mapText": "",
+  "facts": [
+   {
+    "cat": "welcome",
+    "n": 20,
+    "t": "Casas"
+   },
+   {
+    "cat": "welcome",
+    "n": 3,
+    "t": "Recámaras"
+   },
+   {
+    "cat": "welcome",
+    "n": null,
+    "t": "Alberca privada en jardín"
+   },
+   {
+    "cat": "welcome",
+    "n": null,
+    "t": "Excelente ubicación"
+   }
+  ],
+  "amenities": [],
+  "images": [
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_04_8_f29f882edf.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_03_8_f8f8c909f8.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_02_10_2b86ea17c7.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_01_9_33deb77225.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_07_2_79af865de9.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_06_7_8e92f0c963.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_05_7_05fb07f0f8.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_04_7_6926997d60.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_03_6_7c20007379.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_02_8_b41902f0e1.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_01_6_e82475b259.webp"
+   }
+  ],
+  "video": "",
+  "catalog": ""
+ },
+ "velasur": {
+  "name": "Velasur",
+  "source": "https://grupovelas.com.mx/desarrollo/velasur",
+  "welcome": "Velasur es una comunidad residencial y uno de los desarrollos inmobiliarios en Querétaro diseñado para elevar el nivel de calidad de vida en espacios privados. Está rodeado de áreas naturales con diferentes ambientes para la recreación, el acondicionamiento físico y la convivencia familiar en contacto con la naturaleza.",
+  "location": {
+   "title": "Desarrollos inmobiliarios en Querétaro",
+   "text": "Con un crecimiento constante y una calidad de vida excepcional, Querétaro se posiciona como un lugar ideal para invertir en desarrollos inmobiliarios en México.\nSu ubicación estratégica, seguridad y oferta cultural lo convierten en un espacio perfecto para quienes buscan estabilidad y confort."
+  },
+  "mapText": "a 1 minuto de importantes centros de estudio\na 5 minutos del Libramiento Surponiente\na 10 minutos de Av. Constituyentes\na 5 minutos de centros comerciales y salas de cine\na 12 minutos del centro histórico de Querétaro",
+  "facts": [
+   {
+    "cat": "welcome",
+    "n": 40,
+    "t": "hectáreas de desarrollo"
+   },
+   {
+    "cat": "welcome",
+    "n": null,
+    "t": "Acceso controlado"
+   },
+   {
+    "cat": "welcome",
+    "n": 2,
+    "t": "puntos de acceso"
+   },
+   {
+    "cat": "welcome",
+    "n": 9,
+    "t": "Amenidades"
+   },
+   {
+    "cat": "welcome",
+    "n": 2,
+    "t": "Modelos de Casa"
+   },
+   {
+    "cat": "welcome",
+    "n": 3,
+    "t": "Privadas disponibles"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Comunidad"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Naturaleza"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Seguridad"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Conveniencia"
+   }
+  ],
+  "amenities": [
+   {
+    "t": "Casa Club",
+    "s": "El centro de la comunidad para reuniones y eventos sociales.",
+    "img": ""
+   },
+   {
+    "t": "Alberca Privada",
+    "s": "Cada privada tiene su propia alberca, un oasis exclusivo para nadar y relajarse.",
+    "img": ""
+   },
+   {
+    "t": "Juegos Infantiles",
+    "s": "Espacios seguros y divertidos para los más pequeños.",
+    "img": ""
+   },
+   {
+    "t": "Amplias Áreas Verdes",
+    "s": "Más de 1,600 m² por privada y un parque lineal de 8,000 metros para relajación y contacto con la naturaleza.",
+    "img": ""
+   },
+   {
+    "t": "Pet Park",
+    "s": "Un área dedicada para el juego libre de tus mascotas.",
+    "img": ""
+   },
+   {
+    "t": "Área de Picnic y Fogatero",
+    "s": "Ideales para comidas al aire libre y noches acogedoras.",
+    "img": ""
+   },
+   {
+    "t": "Cancha de Pádel",
+    "s": "Perfecta para ejercitarse y socializar.",
+    "img": ""
+   },
+   {
+    "t": "Coworking al Aire Libre",
+    "s": "Espacios innovadores para trabajar o estudiar en un entorno natural.",
+    "img": ""
+   },
+   {
+    "t": "Doble Control de Acceso",
+    "s": "Seguridad avanzada 24/7 para tu tranquilidad y la de tu familia.",
+    "img": ""
+   }
+  ],
+  "images": [
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_01_Velasur_4f2b6e37cf.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_02_Velasur_991d7b8389.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_03_Velasur_8d774b6382.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Carrusel_01_3690d1ab0d.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Carrusel_02_ae8036435f.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Carrusel_03_51be3a06d7.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Carrusel_04_ba2035f912.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_02_3f28417558.webp",
+    "cat": "Avance de obra"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_01_3c239fdec3.webp",
+    "cat": "Avance de obra"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_03_f85148a33e.webp",
+    "cat": "Amenidades"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_04_6bac09612e.webp",
+    "cat": "Amenidades"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_05_a2cba3fbfa.webp",
+    "cat": "ÁREAS COMUNES"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_magnolia_fachada_3f317b5f8d.jpg",
+    "cat": "CASA MAGNOLIA"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_magnolia_sala_fe1e6498eb.jpg",
+    "cat": "CASA MAGNOLIA"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_magnolia_comedor_f24ca8cb89.jpg",
+    "cat": "CASA MAGNOLIA"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_magnolia_living_bf3bab40cf.jpg",
+    "cat": "CASA MAGNOLIA"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_magnolia_recamara_bc0a0e1dcc.jpg",
+    "cat": "CASA MAGNOLIA"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_magnolia_vestidor_fb737bccbe.jpg",
+    "cat": "CASA MAGNOLIA"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_magnolia_bano_d3d1b186eb.jpg",
+    "cat": "CASA MAGNOLIA"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_olivo_fachada_39c2b27606.jpg",
+    "cat": "CASA OLIVO"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_olivo_comedor_3dcdd2e216.jpg",
+    "cat": "CASA OLIVO"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_olivo_cocina_a5ff412c56.jpg",
+    "cat": "CASA OLIVO"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_olivo_estudio_4550d21559.jpg",
+    "cat": "CASA OLIVO"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_olivo_recamara_6bdc1dd8e4.jpg",
+    "cat": "CASA OLIVO"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_olivo_vestidor_d1a11369dd.jpg",
+    "cat": "CASA OLIVO"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_olivo_bano_83e17ac5d3.jpg",
+    "cat": "CASA OLIVO"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_begonia_fachada_07ec48a391.jpg",
+    "cat": "CASA BEGONIA (PRÓXIMAMENTE)"
+   }
+  ],
+  "video": "https://drive.google.com/file/d/1zhx_X88wlZxJ6nZcYQjVKPVQQiceUGYs/view?usp=drive_link",
+  "catalog": "https://drive.google.com/file/d/1j6uhsTQadnfpXQ-6iTies2iKa3QuZZXQ/view?usp=drive_link"
+ },
+ "vista-laguna": {
+  "name": "Vista Laguna",
+  "source": "https://grupovelas.com.mx/desarrollo/vista-laguna",
+  "welcome": "Vista Laguna en Altamira te ofrece una excelente oportunidad en bienes raíces en México. Disfruta de departamentos y casas con vistas a la laguna, privacidad, áreas verdes, y cercanía a servicios. Un proyecto nuevo que combina confort, naturaleza y alta plusvalía para tu inversión.",
+  "location": {
+   "title": "Desarrollos inmobiliarios en Tampico",
+   "text": "Tampico ofrece un clima ideal, atractivos turísticos y una conectividad insuperable. En nuestros desarrollos inmobiliarios en México encontrarás proyectos que combinan diseño, seguridad y alta plusvalía, con amenidades exclusivas y espacios verdes pensados para tu bienestar. Descubre las mejores oportunidades en bienes raíces en México en esta ciudad estratégica, donde cada día se vive con confort y estilo."
+  },
+  "mapText": "Supermercados: Soriana, Arteli\nHospitales: IMSS\nPlayas: Playa Tesoro\nCafés y Restaurantes: Degas Café, El Asador, Plaza Arenas\nPrincipales Avenidas: Carretera Tampico-Mante",
+  "facts": [
+   {
+    "cat": "welcome",
+    "n": 15,
+    "t": "casas"
+   },
+   {
+    "cat": "welcome",
+    "n": 96,
+    "t": "Departamentos"
+   },
+   {
+    "cat": "welcome",
+    "n": 3,
+    "t": "recámaras"
+   },
+   {
+    "cat": "welcome",
+    "n": null,
+    "t": "Áreas Verdes"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Ubicación Exclusiva"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Confort y Naturaleza"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Inversión INeligente"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Estilo de Vida"
+   }
+  ],
+  "amenities": [
+   {
+    "t": "Amplios espacios de esparcimiento",
+    "s": "Lugares para relajarte, disfrutar tu tiempo libre o pasarla bien con familia y amigos.",
+    "img": ""
+   },
+   {
+    "t": "Green areas",
+    "s": "Extensive natural areas perfect for walking, exercising, or simply enjoying the outdoors.",
+    "img": ""
+   }
+  ],
+  "images": [
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_04_5_bf293e2ffe.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_03_5_e6d7939ec8.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_02_7_e0d4becc9b.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_01_6_0df0103dfb.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_09_1_dd51039b80.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_08_1_628a01f98a.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_07_1_f03200d05f.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_06_4_1154dec98b.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_05_4_ddf533b85f.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_04_4_2d3520e8bc.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_03_4_905050fc1c.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_02_5_984f69b924.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_01_4_8a44ffd6eb.webp"
+   }
+  ],
+  "video": "",
+  "catalog": ""
+ },
+ "vistavela-iii": {
+  "name": "Vistavela III",
+  "source": "https://grupovelas.com.mx/desarrollo/vistavela-iii",
+  "welcome": "VistaVela III, un desarrollo inmobiliario en México de Grupo Velas, te ofrece un estilo de vida de resort en el corazón de Cabo San Lucas. Con 274 departamentos listos para entrega, combinamos la belleza natural de la región con amenidades de primer nivel y un diseño impecable. Desde piscinas y gimnasio hasta canchas de pickleball y seguridad 24/7, aquí encontrarás el hogar ideal o la inversión de alta plusvalía que buscas en los desarrollos inmobiliarios en México.",
+  "location": {
+   "title": "Desarrollos inmobiliarios en Los Cabos",
+   "text": "Los Cabos es el escenario perfecto para quienes buscan desarrollos inmobiliarios en México. Con tres exclusivos proyectos que fusionan lujo, confort y paisajes únicos, esta región ofrece un entorno inigualable para disfrutar de la vida y asegurar una inversión inteligente. Además, Los Cabos recibe hasta 157 mil turistas mensuales que buscan alojamiento, lo que lo convierte en el lugar ideal para invertir."
+  },
+  "mapText": "Centros Comerciales: Puerto Paraíso Mall y Plaza San Lucas (con Walmart Plaza).\nSupermercados: Fresko, Costco, Walmart.\nHospitales: H+ Hospital Los Cabos, BlueNet Hospitals.\nPlayas: Playa El Médano (a 15-20 minutos en coche).",
+  "facts": [
+   {
+    "cat": "welcome",
+    "n": 274,
+    "t": "Departamentos"
+   },
+   {
+    "cat": "welcome",
+    "n": 8,
+    "t": "Edificios"
+   },
+   {
+    "cat": "welcome",
+    "n": 5,
+    "t": "Alberca"
+   },
+   {
+    "cat": "welcome",
+    "n": 5,
+    "t": "Amenidades"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Ubicación"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Clima"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Atractivo"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Resort"
+   }
+  ],
+  "amenities": [
+   {
+    "t": "5 Piscinas",
+    "s": "Disfruta de múltiples opciones para nadar y relajarte bajo el sol.",
+    "img": ""
+   },
+   {
+    "t": "Casa Club Multiusos",
+    "s": "Un espacio versátil para reuniones, eventos y actividades comunitarias.",
+    "img": ""
+   },
+   {
+    "t": "Gimnasio (semi-equipado)",
+    "s": "Mantén tu rutina de ejercicio en un espacio conveniente y con lo básico necesario.",
+    "img": ""
+   },
+   {
+    "t": "Jardines",
+    "s": "Amplias zonas verdes diseñadas para el esparcimiento y la conexión con la naturaleza.",
+    "img": ""
+   },
+   {
+    "t": "Parques Infantiles",
+    "s": "Espacios seguros y divertidos para que los más pequeños jueguen libremente.",
+    "img": ""
+   },
+   {
+    "t": "Cancha de Pádel",
+    "s": "Perfecta para los amantes del deporte y para disfrutar de partidos amistosos.",
+    "img": ""
+   },
+   {
+    "t": "Sala de Spa de Bienestar",
+    "s": "Un rincón dedicado a tu relajación y cuidado personal dentro del desarrollo.",
+    "img": ""
+   }
+  ],
+  "images": [
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_01_526797c096.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_02_1_45da5907d6.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_03_cc6bafb672.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_04_5b7defead3.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/vista_vela_iii_167c534458.jpg"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/vista_vela_iii_alberca_3ec2b0d0d8.jpg"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/vista_vela_iii_balcon_70ab2aa4bf.jpg"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/vista_vela_iii_living_785471e35a.jpg"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/vista_vela_iii_recamara_4806951a20.jpg"
+   }
+  ],
+  "video": "",
+  "catalog": ""
+ },
+ "vistavela-sunset": {
+  "name": "Vistavela Sunset",
+  "source": "https://grupovelas.com.mx/desarrollo/vistavela-sunset",
+  "welcome": "VistaVela Sunset combina elegancia, confort y exclusividad en un desarrollo residencial de Grupo Velas diseñado para quienes buscan vivir en un entorno privilegiado.\nCon amplias opciones de departamentos en venta en Los Cabos, este proyecto se adapta a diversos estilos de vida.",
+  "location": {
+   "title": "Desarrollos inmobiliarios en Los Cabos",
+   "text": "Los Cabos es el escenario perfecto para quienes buscan desarrollos inmobiliarios en México. Con tres exclusivos proyectos que fusionan lujo, confort y paisajes únicos, esta región ofrece un entorno inigualable para disfrutar de la vida y asegurar una inversión inteligente. Además, Los Cabos recibe hasta 157 mil turistas mensuales que buscan alojamiento, lo que lo convierte en el lugar ideal para invertir."
+  },
+  "mapText": "Centros Comerciales: Puerto Paraíso Mall y Plaza San Lucas.\nSupermercados: Fresko, Costco, Walmart.\nHospitales: H+ Hospital Los Cabos, BlueNet Hospitals.\nPlayas: Playa El Médano (a 7 minutos en coche).\nPrincipales Avenidas: Acceso fácil a la vía principal Transpeninsular.",
+  "facts": [
+   {
+    "cat": "welcome",
+    "n": 120,
+    "t": "Departamentos"
+   },
+   {
+    "cat": "welcome",
+    "n": 6,
+    "t": "Edificios"
+   },
+   {
+    "cat": "welcome",
+    "n": 31,
+    "t": "casas"
+   },
+   {
+    "cat": "welcome",
+    "n": 9,
+    "t": "Amenidades"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Ubicación"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Plusvalía"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Variedad"
+   },
+   {
+    "cat": "premise",
+    "n": null,
+    "t": "Alquileres"
+   }
+  ],
+  "amenities": [
+   {
+    "t": "6 Piscinas",
+    "s": "Disfruta de múltiples opciones para nadar y relajarte bajo el sol.",
+    "img": ""
+   },
+   {
+    "t": "Casa Club",
+    "s": "Un centro para reuniones sociales, eventos y actividades comunitarias.",
+    "img": ""
+   },
+   {
+    "t": "Gimnasio",
+    "s": "Mantente en forma con un gimnasio bien equipado disponible en el desarrollo.",
+    "img": ""
+   },
+   {
+    "t": "Jardines",
+    "s": "Extensas áreas verdes perfectas para pasear, relajarse y conectar con la naturaleza.",
+    "img": ""
+   },
+   {
+    "t": "Parques Infantiles",
+    "s": "Áreas de juego seguras y divertidas diseñadas para que los niños se entretengan.",
+    "img": ""
+   },
+   {
+    "t": "Cancha de Pickleball",
+    "s": "Una cancha dedicada para disfrutar de este popular deporte en rápido crecimiento.",
+    "img": ""
+   },
+   {
+    "t": "Cancha de Pádel",
+    "s": "Perfecciona tu juego o disfruta de partidos amistosos en la cancha de pádel.",
+    "img": ""
+   },
+   {
+    "t": "Cancha de Fútbol",
+    "s": "Un amplio campo para que los aficionados al fútbol jueguen y practiquen.",
+    "img": ""
+   },
+   {
+    "t": "Cancha de Básquetbol",
+    "s": "Encesta canastas y disfruta de un partido en la cancha de baloncesto.",
+    "img": ""
+   }
+  ],
+  "images": [
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_03_13_0c1f340fef.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_02_16_102f3498a1.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Slider_01_14_91a7d9d8dd.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_06_14_bbd3d1bc82.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_05_13_4ddea37d54.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_04_13_1f1eb1acb2.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_03_14_0c16f26230.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_02_15_9e940b2968.webp"
+   },
+   {
+    "src": "https://backend.grupovelas.com/uploads/Galeria_01_13_66e26b5a78.webp"
+   }
+  ],
+  "video": "",
+  "catalog": ""
+ }
+}

@@ -545,6 +545,10 @@ footer .fine{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);f
 .btn.wa{--bg:#25d366;--fg:#fff;border-color:#25d366}
 .btn.wa::before{background:#1a9e4d}
 .btn.wa:hover{border-color:#1a9e4d}
+/* Los botones "btn wa" heredaban el estilo del botón flotante (.wa) y quedaban ocultos */
+.btn.wa{position:relative;right:auto;bottom:auto;z-index:auto;width:auto;height:auto;border-radius:6px;display:inline-flex;transform:none;box-shadow:none}
+.btn.wa::after{display:none}
+.btn.wa svg{width:17px;height:17px}
 
 /* Header: logo GV + nombre del desarrollo */
 .logo{display:flex;align-items:center;gap:14px}
