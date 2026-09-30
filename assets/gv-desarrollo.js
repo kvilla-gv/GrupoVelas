@@ -14,7 +14,6 @@
   const MSG = D.msgs || {};
   const waURL = t => `https://api.whatsapp.com/send/?phone=${D.whatsapp}&text=${encodeURIComponent(t)}`;
   const track = (event, extra) => window.dataLayer && dataLayer.push(Object.assign({event, desarrollo: D.name}, extra));
-  const yr = $('#yr'); if (yr) yr.textContent = new Date().getFullYear();
   $$('[data-wa]').forEach(a => { a.href = waURL(MSG[a.dataset.msg] || D.waMsg); a.target = '_blank'; a.rel = 'noopener'; });
 
   /* ---------- Intro + carrusel del hero ---------- */
