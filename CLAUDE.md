@@ -52,7 +52,7 @@ ni build. Todo en español. SITE_URL = https://grupovelas.com.mx
 - JSON-LD BreadcrumbList: Inicio → categoría → proyecto.
 
 ## Imágenes
-- Todas locales en `img/`, sin URLs externas (se permiten las de terceros).
+- Todas locales en `img/`. Todas las imágenes externas se descargan a img/, incluidas las de terceros; ninguna se queda con URL externa.
 - WebP, máx. ~1920px de ancho, 200–400 KB. Registro en `img/MANIFEST.md`.
 - Las descargas que fallen se reportan en lista, no se saltan en silencio.
 
