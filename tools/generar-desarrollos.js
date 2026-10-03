@@ -21,10 +21,12 @@ const DEVS = require('./desarrollos.js');
 const GV = require('./data/grupovelas.json');
 const BASE = '../../';
 
+/* Claves de assets/gv-categorias.js. Carpeta y nombre siguen siendo los actuales
+   hasta mover carpetas (paso 3) y cambiar textos (paso 4). */
 const CATS = {
-  pv: {dir: 'pvivienda', name: 'Primera Vivienda', acc: '#c8643f'},
-  re: {dir: 'residencial', name: 'Residencial', acc: '#2f6f9f'},
-  rp: {dir: 'residencialp', name: 'Residencial Plus', acc: '#b8976a'}
+  entrada: {dir: 'pvivienda', name: 'Primera Vivienda', acc: '#c8643f'},
+  media: {dir: 'residencial', name: 'Residencial', acc: '#2f6f9f'},
+  alta: {dir: 'residencialp', name: 'Residencial Plus', acc: '#b8976a'}
 };
 /* Oficinas de venta por plaza y foto de la ciudad (grupovelas.com.mx/ciudades).
    La foto de la ciudad solo se usa si el desarrollo aún no tiene fotos propias. */
@@ -164,7 +166,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
 
 /* ---------- construcción de cada página ---------- */
 function build(d){
-  const C = CATS[d.cat], g = GV[d.gv] || {}, pl = PLAZAS[d.plaza] || {};
+  const C = CATS[d.categoria], g = GV[d.gv] || {}, pl = PLAZAS[d.plaza] || {};
   const estado = d.estado || pl.estado || '';
   const where = d.zona || d.plaza;
   const whereFull = [d.zona, d.plaza !== d.zona ? d.plaza : '', estado].filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).join(', ');
@@ -224,7 +226,7 @@ function build(d){
   const video = d.youtube ? {youtube: d.youtube} : (d.video || g.video) ? {src: String(d.video || g.video).replace(/\/view.*$/, '/preview')} : null;
   const tour = d.tour || '';
   const priceNum = d.price || 0;
-  const calc = priceNum ? (d.cat === 'pv' ? {type: 'pv', price: priceNum} : {type: d.cat}) : null;
+  const calc = priceNum ? (d.categoria === 'entrada' ? {type: 'entrada', price: priceNum} : {type: d.categoria}) : null;
 
   /* Menú del desarrollo */
   const S = [];
@@ -246,8 +248,8 @@ function build(d){
     </div>
   </div>` : '';
   const ctas = `<div class="ctas">
-        ${protos.length ? `<a href="#prototipos" class="btn${d.cat === 'rp' ? ' glass' : '" style="--bg:#fff;--fg:var(--navy)'}">${d.cat === 'pv' ? 'Conoce tu casa' : 'Ver prototipos'} <span class="arr">→</span></a>` : ''}
-        <a href="#contacto" class="btn${d.cat === 'rp' ? '" style="--bg:#fff;--fg:var(--navy)' : protos.length ? ' glass' : '" style="--bg:#fff;--fg:var(--navy)'}" data-unit="Información general">${sold ? 'Ver opciones disponibles' : 'Solicitar información'}${protos.length ? '' : ' <span class="arr">→</span>'}</a>
+        ${protos.length ? `<a href="#prototipos" class="btn${d.categoria === 'alta' ? ' glass' : '" style="--bg:#fff;--fg:var(--navy)'}">${d.categoria === 'entrada' ? 'Conoce tu casa' : 'Ver prototipos'} <span class="arr">→</span></a>` : ''}
+        <a href="#contacto" class="btn${d.categoria === 'alta' ? '" style="--bg:#fff;--fg:var(--navy)' : protos.length ? ' glass' : '" style="--bg:#fff;--fg:var(--navy)'}" data-unit="Información general">${sold ? 'Ver opciones disponibles' : 'Solicitar información'}${protos.length ? '' : ' <span class="arr">→</span>'}</a>
       </div>`;
   const heroInner = `<div class="hero-inner fade-seq">
       <span class="eyebrow is-in">${txt(d.eyebrow || `${C.name} · ${where}`)}</span>
@@ -257,13 +259,13 @@ function build(d){
       ${ctas}${heroPhotos[0] && heroPhotos[0].city ? `\n      <p class="hero-note">Imagen de ${esc(d.plaza)}. Fotos del desarrollo próximamente.</p>` : ''}
     </div>`;
   let heroSide = '';
-  if (d.cat === 're' && (protos.length || d.from)){
+  if (d.categoria === 'media' && (protos.length || d.from)){
     heroSide = `<div class="pick" id="pick">
       ${protos.slice(0, 2).map(p => `<a href="#prototipos"><img src="${esc(p.img)}" alt="" loading="lazy"><div><small>${esc(p.tag.split(' · ')[0] || 'Prototipo')}</small><b>${p.m2 ? `${p.m2} m²` : esc(p.name)}</b><span>${esc(p.m2 ? p.name : p.feats.slice(0, 2).join(' · '))}</span></div><span class="go">→</span></a>`).join('\n      ')}
       ${d.from ? `<div class="price"><span>Desde</span><b>${esc(d.from)}</b></div>` : ''}
     </div>`;
   }
-  if (d.cat === 'pv'){
+  if (d.categoria === 'entrada'){
     const p0 = protos[0];
     heroSide = `<aside class="price-card" id="priceCard">
       <small>${esc(p0 ? p0.name : d.name)} · ${d.from ? 'desde' : 'precio'}</small>
@@ -275,12 +277,12 @@ function build(d){
       <div class="qans" id="qans"><div><p id="qtext"></p><a href="#" class="btn wa" id="qwa" data-wa>${WA_ICO}Escríbenos por WhatsApp</a></div></div>
     </aside>`;
   }
-  const heroMedia = d.cat === 'rp'
+  const heroMedia = d.categoria === 'alta'
     ? `<div class="hero-media"><img src="${esc(url(heroPhotos[0].src))}" alt="${esc(heroAlt(0))}" id="heroImg" fetchpriority="high"></div>`
     : `<div class="slides" id="slides">
     ${heroPhotos.map((p, i) => `<img${i ? '' : ' class="on"'} src="${esc(url(p.src))}" alt="${esc(heroAlt(i))}"${i ? ' loading="lazy"' : ' id="heroImg" fetchpriority="high"'}>`).join('\n    ')}
   </div>`;
-  const dots = d.cat !== 'rp' && heroPhotos.length > 1 ? `\n  <div class="sdots" id="sdots">${heroPhotos.map((p, i) => `<button${i ? '' : ' class="on"'} aria-label="Foto ${i + 1}"><i></i></button>`).join('')}</div>` : '';
+  const dots = d.categoria !== 'alta' && heroPhotos.length > 1 ? `\n  <div class="sdots" id="sdots">${heroPhotos.map((p, i) => `<button${i ? '' : ' class="on"'} aria-label="Foto ${i + 1}"><i></i></button>`).join('')}</div>` : '';
   sec('inicio', '', `<!-- ============ HERO ============ -->
 <section class="hero" id="inicio">
   ${heroMedia}
@@ -310,7 +312,7 @@ function build(d){
     const tabs = many ? `\n      <div class="tabs" id="tabs" data-reveal="up" style="--d:.2s;grid-template-columns:repeat(${protos.length},1fr)"><span class="ind" style="width:calc(${(100 / protos.length).toFixed(3)}% - ${protos.length > 2 ? 2 : 4}px)"></span>${protos.map((p, i) => `<button${i ? '' : ' class="on"'} data-t="${i}">${esc(p.name)}</button>`).join('')}</div>` : '';
     const head = d.protoHead || (d.protos ? [`Conoce ${many ? 'nuestros prototipos' : 'el prototipo'}`, many ? 'Encuentra tu espacio ideal' : `Conoce ${p0.name}`] : ['Ficha del desarrollo', `Así es ${d.name}`]);
     const lead = d.protoLead || (d.protos ? `${many ? `${protos.length} prototipos` : 'Un prototipo'} en ${d.name}. Pide a un asesor planos, precios y disponibilidad actualizada.` : `Estos son los datos confirmados de ${d.name}. Un asesor te comparte prototipos, planos, precios y disponibilidad.`);
-    sec('prototipos', d.cat === 'pv' ? 'La casa' : 'Prototipos', `<!-- ============ PROTOTIPOS ============ -->
+    sec('prototipos', d.categoria === 'entrada' ? 'La casa' : 'Prototipos', `<!-- ============ PROTOTIPOS ============ -->
 <section class="sec proto" id="prototipos">
   <div class="wrap">
     <div class="sec-head">
@@ -336,7 +338,7 @@ function build(d){
           <ul class="flist" id="flist">${p0.feats.map((f, i) => `<li style="--i:${i}" class="${f.endsWith('*') ? 'hl' : ''}">${esc(f.replace('*', ''))}</li>`).join('')}</ul>
         </div>
         <div class="acts">
-          <a href="#contacto" class="btn" id="pCta" data-unit="${esc(p0.unit)}">${sold ? 'Ver opciones disponibles' : d.cat === 'pv' ? 'Quiero esta casa' : 'Solicitar información'} <span class="arr">→</span></a>${g.catalog || d.catalog ? `\n          <a href="${esc(d.catalog || g.catalog)}" class="btn ghost" target="_blank" rel="noopener">Descargar catálogo</a>` : ''}
+          <a href="#contacto" class="btn" id="pCta" data-unit="${esc(p0.unit)}">${sold ? 'Ver opciones disponibles' : d.categoria === 'entrada' ? 'Quiero esta casa' : 'Solicitar información'} <span class="arr">→</span></a>${g.catalog || d.catalog ? `\n          <a href="${esc(d.catalog || g.catalog)}" class="btn ghost" target="_blank" rel="noopener">Descargar catálogo</a>` : ''}
         </div>
         <p class="proto-note">${esc(d.protoNote || 'Imágenes ilustrativas. Medidas aproximadas; precios y disponibilidad sujetos a cambio.')}</p>
       </div>
@@ -372,7 +374,7 @@ function build(d){
       </div>
       <p class="lead" data-reveal="up" style="--d:.1s">Recorre los espacios y amenidades de ${esc(d.name)}.</p>
     </div>
-    <div class="vframe" id="vframe"${d.cat === 'rp' ? '' : ' data-static="1" style="--vs:1;--vr:16px"'}>
+    <div class="vframe" id="vframe"${d.categoria === 'alta' ? '' : ' data-static="1" style="--vs:1;--vr:16px"'}>
       <img src="${esc(url(videoPoster))}" alt="${esc(d.name)}" loading="lazy">
       <button class="play" id="playBtn" aria-label="Reproducir video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4.5v15l13-7.5z"/></svg></button>
       <div class="vlabel"><i></i>${esc(d.name)}</div>
@@ -434,12 +436,12 @@ function build(d){
         ${cats.map(c => `<button data-f="${slug(c)}">${esc(cap({cat: c}))}</button>`).join('\n        ')}
       </div>` : '';
     galHTML = `<!-- ============ GALERÍA ============ -->
-<section class="sec" id="galeria"${d.cat === 're' ? bgSand : ''}>
+<section class="sec" id="galeria"${d.categoria === 'media' ? bgSand : ''}>
   <div class="wrap">
     <div class="sec-head">
       <div>
         <span class="eyebrow" data-reveal="up">Galería</span>
-        <h2 class="split-words" data-split>${esc(d.galTitle || (d.cat === 'pv' ? 'Imagina tu vida aquí' : `Así se vive en ${d.name}`))}</h2>
+        <h2 class="split-words" data-split>${esc(d.galTitle || (d.categoria === 'entrada' ? 'Imagina tu vida aquí' : `Así se vive en ${d.name}`))}</h2>
       </div>${filters}
     </div>
     <div class="gal" id="gal">
@@ -472,7 +474,7 @@ function build(d){
     }
     rest.forEach((a, i) => cards.push(`<div class="am ic${wideIdx.has(i) ? ' wide' : ''}" data-reveal="up" style="--d:${((i % 4) * .06).toFixed(2)}s">${SVG(40, amenIcon(a.t))}<div class="t" style="position:static"><div><b>${esc(a.t)}</b>${a.s ? `<span>${esc(firstSentences(a.s, 80))}</span>` : ''}</div><span class="n">${String(off + i + 1).padStart(2, '0')}</span></div></div>`));
     amenHTML = `<!-- ============ AMENIDADES ============ -->
-<section class="sec" id="amenidades"${d.cat === 're' ? '' : bgSand}>
+<section class="sec" id="amenidades"${d.categoria === 'media' ? '' : bgSand}>
   <div class="wrap">
     <div class="sec-head" style="margin-bottom:0">
       <div>
@@ -489,7 +491,7 @@ function build(d){
   }
 
   /* ===== CÓMO COMPRAR (Primera Vivienda) ===== */
-  const stepsHTML = d.cat === 'pv' ? `<!-- ============ CÓMO COMPRAR ============ -->
+  const stepsHTML = d.categoria === 'entrada' ? `<!-- ============ CÓMO COMPRAR ============ -->
 <section class="sec" id="como-comprar">
   <div class="wrap">
     <div class="center">
@@ -512,13 +514,13 @@ function build(d){
   if (calc){
     const pm = priceNum / 1e6, max = Math.max(pm * 1.6, pm + 1);
     const intro = `<div>
-      <span class="eyebrow" data-reveal="up">${d.cat === 'pv' ? 'Haz tus números' : 'Planes de pago'}</span>
-      <h2 class="split-words" data-split>${d.cat === 'pv' ? '¿Cuánto te falta para estrenar?' : 'Haz tus números en segundos'}</h2>
-      <p class="lead" data-reveal="up" style="--d:.1s">${d.cat === 'pv' ? 'Ingresa el monto de tu crédito y tu ahorro. Te decimos si te alcanza o cuánto te falta.' : `Ajusta el precio de referencia, el enganche y el plazo para conocer una mensualidad estimada en ${esc(d.name)}. Un asesor te comparte los planes vigentes.`}</p>
+      <span class="eyebrow" data-reveal="up">${d.categoria === 'entrada' ? 'Haz tus números' : 'Planes de pago'}</span>
+      <h2 class="split-words" data-split>${d.categoria === 'entrada' ? '¿Cuánto te falta para estrenar?' : 'Haz tus números en segundos'}</h2>
+      <p class="lead" data-reveal="up" style="--d:.1s">${d.categoria === 'entrada' ? 'Ingresa el monto de tu crédito y tu ahorro. Te decimos si te alcanza o cuánto te falta.' : `Ajusta el precio de referencia, el enganche y el plazo para conocer una mensualidad estimada en ${esc(d.name)}. Un asesor te comparte los planes vigentes.`}</p>
       <div style="margin-top:26px;--d:.2s" data-reveal="up"><a href="#contacto" class="link" data-unit="Planes de pago">Quiero mi corrida financiera <span class="arr">→</span></a></div>
     </div>`;
     let card;
-    if (d.cat === 'pv'){
+    if (d.categoria === 'entrada'){
       card = `<div class="calc-card" data-reveal="scale" style="--d:.1s">
       <div class="fixed"><span>${esc(protos[0] ? protos[0].name : d.name)} · desde</span><b>${esc(d.from)}</b></div>
       <div class="f"><div class="range-row"><span>Tu crédito</span><b id="crV"></b></div><input type="range" id="cr" min="200000" max="${Math.round(priceNum * 1.3 / 10000) * 10000}" step="10000" value="${Math.round(priceNum * .75 / 10000) * 10000}" aria-label="Monto de crédito"></div>
@@ -528,20 +530,20 @@ function build(d){
       <p class="disc">Estimación ilustrativa sobre el precio de lista. No incluye gastos de escrituración ni avalúo. El monto de tu crédito lo determina la institución que lo otorga.</p>
     </div>`;
     } else {
-      const re = d.cat === 're';
-      card = `<div class="calc-card" data-reveal="scale" style="--d:.1s">${re ? `
+      const esMedia = d.categoria === 'media';
+      card = `<div class="calc-card" data-reveal="scale" style="--d:.1s">${esMedia ? `
       <div class="pmodes" id="pmodes"><span class="pill"></span><button class="on" data-m="banco">Crédito bancario</button><button data-m="directo">Plan directo</button><button data-m="contado">Contado</button></div>` : ''}
       <div class="f"><div class="range-row"><span>Precio de referencia</span><b id="prV"></b></div><input type="range" id="pr" min="${pm.toFixed(1)}" max="${max.toFixed(1)}" step="0.1" value="${pm.toFixed(1)}" aria-label="Precio de referencia en millones"></div>
-      <div class="f"${re ? ' data-for="banco directo"' : ''}><div class="range-row"><span>Enganche</span><b id="engV"></b></div><input type="range" id="eng" min="${re ? 10 : 20}" max="${re ? 50 : 60}" step="5" value="${re ? 20 : 30}" aria-label="Porcentaje de enganche"></div>${re ? `
+      <div class="f"${esMedia ? ' data-for="banco directo"' : ''}><div class="range-row"><span>Enganche</span><b id="engV"></b></div><input type="range" id="eng" min="${esMedia ? 10 : 20}" max="${esMedia ? 50 : 60}" step="5" value="${esMedia ? 20 : 30}" aria-label="Porcentaje de enganche"></div>${esMedia ? `
       <div class="f" data-for="banco"><div class="range-row"><span>Plazo del crédito</span><b id="yrV"></b></div><input type="range" id="yrs" min="5" max="20" step="5" value="20" aria-label="Plazo en años"></div>
       <div class="f" data-for="banco"><div class="rate"><span>Tasa anual de referencia</span><span><input type="number" id="rate" value="11" min="6" max="18" step="0.1"> %</span></div></div>` : ''}
-      <div class="f"${re ? ' data-for="directo"' : ''}><div class="range-row"><span>Plazo para el saldo</span><b id="plzV"></b></div><input type="range" id="plz" min="6" max="36" step="6" value="24" aria-label="Plazo en meses"></div>
+      <div class="f"${esMedia ? ' data-for="directo"' : ''}><div class="range-row"><span>Plazo para el saldo</span><b id="plzV"></b></div><input type="range" id="plz" min="6" max="36" step="6" value="24" aria-label="Plazo en meses"></div>
       <div class="out"><div><small id="o1L">Enganche</small><b id="o1">$0</b></div><div class="big"><small id="o2L">Mensualidad estimada</small><b id="o2">$0</b></div></div>
       <p class="disc" id="cdisc">Estimación ilustrativa sin intereses; no constituye una oferta. Precios y planes sujetos a cambio y disponibilidad.</p>
     </div>`;
     }
     calcHTML = `<!-- ============ SIMULADOR ============ -->
-<section class="sec" id="financiamiento"${d.cat === 'rp' ? '' : bgSand}>
+<section class="sec" id="financiamiento"${d.categoria === 'alta' ? '' : bgSand}>
   <div class="wrap calc">
     ${intro}
     ${card}
@@ -605,15 +607,15 @@ function build(d){
 
   /* Orden de secciones por categoría (como en su plantilla) */
   const order = {
-    rp: [['video', 'Video', videoHTML], ['tour', 'Tour virtual', tourHTML], ['galeria', 'Galería', galHTML], ['amenidades', 'Amenidades', amenHTML]],
-    re: [['tour', 'Tour virtual', tourHTML], ['amenidades', 'Amenidades', amenHTML], ['galeria', 'Galería', galHTML], ['video', 'Video', videoHTML]],
-    pv: [['galeria', 'Galería', galHTML], ['amenidades', 'Amenidades', amenHTML], ['video', 'Video', videoHTML], ['como-comprar', 'Cómo comprar', stepsHTML]]
-  }[d.cat];
+    alta: [['video', 'Video', videoHTML], ['tour', 'Tour virtual', tourHTML], ['galeria', 'Galería', galHTML], ['amenidades', 'Amenidades', amenHTML]],
+    media: [['tour', 'Tour virtual', tourHTML], ['amenidades', 'Amenidades', amenHTML], ['galeria', 'Galería', galHTML], ['video', 'Video', videoHTML]],
+    entrada: [['galeria', 'Galería', galHTML], ['amenidades', 'Amenidades', amenHTML], ['video', 'Video', videoHTML], ['como-comprar', 'Cómo comprar', stepsHTML]]
+  }[d.categoria];
   const ubic = S.pop(), ubicMenu = menu.pop();
   order.forEach(([id, label, html]) => sec(id, label, html));
-  if (d.cat === 'pv' && calcHTML) sec('financiamiento', '', calcHTML);
+  if (d.categoria === 'entrada' && calcHTML) sec('financiamiento', '', calcHTML);
   S.push(ubic); menu.push(ubicMenu);
-  if (d.cat !== 'pv' && calcHTML) sec('financiamiento', 'Planes de pago', calcHTML);
+  if (d.categoria !== 'entrada' && calcHTML) sec('financiamiento', 'Planes de pago', calcHTML);
 
   /* ===== GRUPO VELAS ===== */
   const gvImg = (photos[3] || photos[1] || photos[0] || heroPhotos[0]).src;
@@ -640,7 +642,7 @@ function build(d){
   else if (specs.length > 1) faqs.push([`¿Qué tipo de vivienda ofrece ${d.name}?`, specs.join(', ') + '.']);
   if (amen.length) faqs.push([`¿Qué amenidades tiene ${d.name}?`, amen.map(a => a.t).join(', ') + '.']);
   if (d.status) faqs.push([`¿En qué etapa está ${d.name}?`, sold ? `${d.name} está vendido.` : `${d.name} se encuentra en ${d.status.toLowerCase()}.`]);
-  if (d.cat === 'pv' || d.credits) faqs.push(['¿Puedo comprar con crédito?', d.credits ? `Sí. ${d.name} acepta: ${d.credits}. Un asesor te acompaña en todo el trámite.` : `Un asesor te indica qué créditos (Infonavit, Fovissste o bancario) aplican para ${d.name} y te acompaña en todo el trámite.`]);
+  if (d.categoria === 'entrada' || d.credits) faqs.push(['¿Puedo comprar con crédito?', d.credits ? `Sí. ${d.name} acepta: ${d.credits}. Un asesor te acompaña en todo el trámite.` : `Un asesor te indica qué créditos (Infonavit, Fovissste o bancario) aplican para ${d.name} y te acompaña en todo el trámite.`]);
   faqs.push([`¿Dónde se ubica ${d.name}?`, `En ${address.replace(/<br>/g, ' ')}.` + (places.length ? ` Está a ${places.slice(0, 3).map(p => `${p.m} minutos de ${p.n.charAt(0).toLowerCase() + p.n.slice(1)}`).join(', ')}.` : '')]);
   faqs.push([`¿Quién desarrolla ${d.name}?`, 'Grupo Velas, empresa mexicana con más de 40 años en la construcción y marca hermana de Velas Resorts.']);
   (d.faq || []).forEach(f => faqs.splice(faqs.length - 1, 0, f));
@@ -663,7 +665,7 @@ function build(d){
     mail && `<li><a href="mailto:${esc(mail)}">${MAIL_ICO}${esc(mail)}</a></li>`,
     `<li>${CLOCK_ICO}Lunes a viernes 9:00 am – 6:00 pm · Sábado 9:00 am – 2:00 pm</li>`
   ].filter(Boolean);
-  const formExtra = d.cat === 'pv'
+  const formExtra = d.categoria === 'entrada'
     ? `<div class="two">
         <div class="fld"><select id="fc" name="credito"><option>Sí tengo crédito</option><option>No sé si tengo</option><option>No tengo crédito</option></select><label for="fc">¿Tienes crédito?</label></div>
         <div class="fld"><select id="fh" name="horario"><option>9 am – 2 pm</option><option>2 pm – 6 pm</option></select><label for="fh">Horario para llamarte</label></div>
@@ -690,7 +692,7 @@ function build(d){
     </div>
 
     <form class="form" id="form" data-reveal="up" style="--d:.15s" novalidate>
-      <h3>${esc(d.cat === 'pv' ? `Quiero mi casa en ${d.name}` : 'Recibe precios y disponibilidad')}</h3>
+      <h3>${esc(d.categoria === 'entrada' ? `Quiero mi casa en ${d.name}` : 'Recibe precios y disponibilidad')}</h3>
       <p class="hint">Un asesor te contacta muy pronto.</p>
       <div class="fld"><input id="fn" name="nombre" placeholder=" " required autocomplete="name"><label for="fn">Nombre completo</label></div>
       <div class="two">
@@ -739,7 +741,7 @@ function build(d){
     name: d.name, whatsapp, waMsg, mapsEmbed,
     protos: protos.map(({name, tag, m2, cap, img, isPlan, photos, feats, unit}) => ({name, tag, m2, cap, img, isPlan, photos, feats, unit})),
     ...(video ? {video} : {}), ...(tour ? {tour} : {}), ...(calc ? {calc} : {}),
-    ...(d.cat === 'pv' ? {
+    ...(d.categoria === 'entrada' ? {
       msgs: {si: `Hola, tengo crédito y me interesa una casa en ${d.name}, ${where}.`, nose: `Hola, quiero saber si mi crédito me alcanza para una casa en ${d.name}, ${where}.`, no: `Hola, no tengo crédito y quiero saber cómo comprar una casa en ${d.name}, ${where}.`},
       qText: {si: `¡Excelente! Escríbenos y revisamos contigo si tu crédito aplica para ${d.name}.`, nose: 'Te ayudamos a revisarlo. Con tu número de seguridad social te orientamos sobre tu precalificación.', no: 'No te preocupes: escríbenos y un asesor te explica qué opciones tienes para comprar tu casa.'}
     } : {})
@@ -766,7 +768,7 @@ ${JSON.stringify(ld, null, 2)}
 
 <link rel="stylesheet" href="${BASE}assets/gv-nav.css">
 <style>
-${tplCSS[d.cat]}
+${tplCSS[d.categoria]}
 ${EXTRA_CSS}
 </style>
 </head>
@@ -793,7 +795,7 @@ ${footer}
 
 <a href="#" class="wa" id="wa" data-wa aria-label="Escríbenos por WhatsApp">${WA_FLOAT}</a>
 <div class="mbar" id="mbar">
-  <a class="btn${d.cat === 'rp' ? ' ghost' : ' wa'}" href="#" data-wa>WhatsApp</a>
+  <a class="btn${d.categoria === 'alta' ? ' ghost' : ' wa'}" href="#" data-wa>WhatsApp</a>
   <a class="btn" href="#contacto">${sold ? 'Ver opciones' : 'Agendar visita'} <span class="arr">→</span></a>
 </div>
 
@@ -808,7 +810,7 @@ ${footer}
   <div class="lbbar"><span id="lbCap"></span><span class="lbcount" id="lbCount"></span></div>
 </dialog>
 
-<script src="${BASE}assets/gv-nav.js" data-base="${BASE}" data-cat="${d.cat}" data-city="${esc(d.plaza)}"></script>
+<script src="${BASE}assets/gv-nav.js" data-base="${BASE}" data-cat="${d.categoria}" data-city="${esc(d.plaza)}"></script>
 <script>
 /* ===== CONFIGURACIÓN DEL DESARROLLO (generada desde tools/desarrollos.js) ===== */
 window.DEV = ${js(DEV)};
@@ -824,9 +826,9 @@ const only = process.argv.slice(2);
 let n = 0;
 for (const d of DEVS){
   if (only.length && !only.includes(d.slug)) continue;
-  if (!CATS[d.cat]) throw new Error(`Categoría inválida en ${d.name}: ${d.cat}`);
+  if (!CATS[d.categoria]) throw new Error(`Categoría inválida en ${d.name}: ${d.categoria}`);
   if (d.gv && !GV[d.gv]) throw new Error(`Sin datos de grupovelas.com.mx para ${d.name} (gv: ${d.gv})`);
-  const out = path.join(ROOT, CATS[d.cat].dir, d.slug, 'index.html');
+  const out = path.join(ROOT, CATS[d.categoria].dir, d.slug, 'index.html');
   fs.mkdirSync(path.dirname(out), {recursive: true});
   fs.writeFileSync(out, build(d));
   n++;

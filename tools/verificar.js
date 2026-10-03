@@ -3,7 +3,8 @@
    Grupo Velas · Verificación del sitio
    Revisa las reglas del CLAUDE.md sin modificar nada:
      1. Nombres retirados de categorías
-     2. Claves viejas de categoría (pv / re / rp)
+     2. Claves viejas de categoría (pv / re / rp) en literales, objetos,
+        puntajes del quiz (pv:2), variables CSS (--pv) y clases (i.pv{)
      3. Rutas viejas (pvivienda/, residencialp/) y carpetas que no
         coinciden con la categoría del desarrollo en tools/desarrollos.js
      4. "Vela Sur" (el nombre correcto es "Velasur")
@@ -25,8 +26,9 @@ const ROOT = path.join(__dirname, '..');
 const TODO = process.argv.includes('--todo');
 const LIMITE = 20;
 
-/* Carpeta de cada clave de categoría (ver tabla del CLAUDE.md) */
-const CARPETAS = {entrada: 'residencial', media: 'residencial-plus', alta: 'premium'};
+/* Carpeta de cada clave de categoría (assets/gv-categorias.js) */
+const CATEGORIAS = require('../assets/gv-categorias.js');
+const CARPETAS = Object.fromEntries(Object.entries(CATEGORIAS).map(([k, c]) => [k, c.carpeta]));
 const CARPETAS_VIEJAS = ['pvivienda', 'residencialp'];
 const RETIRADOS = ['Primera Vivienda', 'Vivienda de Entrada', 'Residencial Medio', 'Residencial Premium'];
 /* Dominios que sirven imágenes aunque la URL no termine en extensión */
@@ -76,9 +78,10 @@ revisar('Nombres retirados', () => {
   return buscar(ARCHIVOS, re, {normalizar: true, nota: m => `"${m[0]}"`});
 });
 
-/* 2. Claves viejas: 'pv' "re" `rp`, pv:{…} y data-cat="pv" */
+/* 2. Claves viejas: 'pv' "re" `rp` (incluye data-cat="pv"), pv:{…} / rp: [[…]],
+   pv:2 y {pv:0} (quiz), --pv / --pv-soft (CSS) e i.pv{ (clase) */
 revisar('Claves viejas (pv / re / rp)', () =>
-  buscar(ARCHIVOS, /(['"`])(pv|re|rp)\1|\b(pv|re|rp)\s*:\s*\{/));
+  buscar(ARCHIVOS, /(['"`])(pv|re|rp)\1|\b(pv|re|rp)\s*:\s*[{[]|\b(pv|re|rp):\d|--(pv|re|rp)(?![a-z0-9_])|\.(pv|re|rp)\s*\{/));
 
 /* 3. Rutas viejas y carpetas incoherentes con la categoría del desarrollo */
 revisar('Rutas viejas y carpetas', () => {
@@ -90,7 +93,7 @@ revisar('Rutas viejas y carpetas', () => {
   const devs = require('./desarrollos.js');
   const porSlug = new Map(devs.map(d => [d.slug, d]));
   for (const d of devs){
-    const clave = 'categoria' in d ? d.categoria : d.cat;
+    const clave = d.categoria;
     if (clave === null) continue; // sin categoría confirmada: no tiene carpeta que comparar
     const dir = CARPETAS[clave];
     if (!dir) out.push(`tools/desarrollos.js  ${d.slug}: clave de categoría desconocida "${clave}"`);
@@ -101,7 +104,7 @@ revisar('Rutas viejas y carpetas', () => {
     const [dir, slug] = r.split('/'), d = porSlug.get(slug);
     if (!d) out.push(`${r}  no corresponde a ningún desarrollo de tools/desarrollos.js`);
     else {
-      const clave = 'categoria' in d ? d.categoria : d.cat, esperado = CARPETAS[clave];
+      const clave = d.categoria, esperado = CARPETAS[clave];
       if (esperado && esperado !== dir) out.push(`${r}  debería estar en ${esperado}/${slug}/ (categoría ${clave})`);
     }
   }
