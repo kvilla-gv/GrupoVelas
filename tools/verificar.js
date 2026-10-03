@@ -15,6 +15,8 @@
      8. Nombres de categoría según assets/gv-categorias.js: textos con
         data-cat, campo oculto "categoria", BreadcrumbList, "Nombre · …" /
         "… · Nombre" / "Categoría Nombre" y la lista del home
+     10. Imágenes locales: cada archivo de img/ está en img/manifest.json y
+        viceversa, con su peso; WebP o SVG de máx. 400 KB; descargas pendientes
      9. Lista única de desarrollos: sin copias de la lista (DEVS = [,
         PROYECTOS = [, IMG_LOCAL o 4+ nombres de desarrollos en un script),
         gv-desarrollos.js cargado antes de gv-nav.js y cifras fijas del home
@@ -133,7 +135,12 @@ revisar('Imágenes externas', () => {
       const u = m[0], host = u.replace(/^https?:\/\//, '').split(/[/?#]/)[0];
       const ctx = l.slice(Math.max(0, m.index - 30), m.index);
       const esImg = EXT_IMG.test(u) || HOSTS_IMG.includes(host) || /\/uploads\//.test(u) ||
-        /(src|srcset|poster)\s*=\s*["']?$|url\(\s*["']?$/i.test(ctx);
+        /(src|srcset|poster)\s*=\s*["']?$|url\(\s*["']?$/i.test(ctx) && !/<iframe[^>]*$/i.test(l.slice(0, m.index)); // un iframe (video) no es imagen
+      /* og:image y JSON-LD usan la URL absoluta del propio sitio: vale si el archivo existe en img/ */
+      if (u.startsWith(SITE_URL + '/')){
+        if (esImg && !fs.existsSync(path.join(ROOT, decodeURIComponent(u.slice(SITE_URL.length + 1))))) out.push(`${f.r}:${i + 1}  ${recorta(u)}  (no existe en el repo)`);
+        continue;
+      }
       if (esImg && !vistos.has(u)){ vistos.add(u); out.push(`${f.r}:${i + 1}  ${recorta(u)}`); }
     }
     /* "@@/" es un marcador que el home cambia por https://velatowerscancun.com/wp-content/uploads/ */
@@ -159,7 +166,11 @@ revisar('Enlaces rotos', () => {
     const dir = path.dirname(f.p), esHtml = f.r.endsWith('.html'), esJs = f.r.endsWith('.js');
     f.lineas.forEach((l, i) => {
       const refs = [];
-      if (esHtml) for (const m of l.matchAll(/\b(href|src|poster|action)\s*=\s*"([^"]*)"/gi)) refs.push([dir, m[2]]);
+      if (esHtml) for (const m of l.matchAll(/\b(href|src|poster|action|data-full)\s*=\s*"([^"]*)"/gi)) refs.push([dir, m[2]]);
+      /* Plantillas con const S = '<carpeta local>': sus listas imgs:[…] y S + '…' son relativas a S (y usan miniatura -800) */
+      const S = esHtml && (f.lineas.join('\n').match(/const S = '(\.\.\/img\/[^']+)'/) || [])[1];
+      if (S) for (const m of l.matchAll(/(?:imgs:\[[^\]]*|S ?\+ ?)'([\w.-]+\.webp)'/g)) refs.push([dir, S + m[1]]);
+      if (S) for (const m of l.matchAll(/imgs:\[([^\]]*)\]/g)) for (const x of m[1].matchAll(/'([\w.-]+)\.webp'/g)) refs.push([dir, `${S}${x[1]}.webp`], [dir, `${S}${x[1]}-800.webp`]);
       if (esHtml) for (const m of l.matchAll(/\bsrcset\s*=\s*"([^"]*)"/gi))
         m[1].split(',').forEach(s => refs.push([dir, s.trim().split(/\s+/)[0]]));
       if (!esJs) for (const m of l.matchAll(/url\(\s*["']?([^"')]+)["']?\s*\)/g)) refs.push([dir, m[1]]);
@@ -192,7 +203,7 @@ function paginasGeneradas(raiz){
 revisar('Páginas generadas al día', () => {
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'gv-verificar-'));
   try {
-    fs.cpSync(ROOT, tmp, {recursive: true, filter: s => !/[\\/](\.git|node_modules)$/.test(s)});
+    fs.cpSync(ROOT, tmp, {recursive: true, filter: s => !/[\\/](\.git|node_modules)$/.test(s) && !/[\\/]img[\\/].+\.(webp|svg)$/.test(s)});
     for (const r of paginasGeneradas(tmp)) fs.rmSync(path.join(tmp, r));
     try {
       execFileSync(process.execPath, [path.join(tmp, 'tools/generar-desarrollos.js')], {cwd: tmp, stdio: 'pipe'});
@@ -215,6 +226,9 @@ revisar('Páginas generadas al día', () => {
     const meta = f => (fs.readFileSync(f, 'utf8').match(/<!-- gv:meta -->[\s\S]*?<!-- \/gv:meta -->/) || [''])[0];
     if (!meta(path.join(ROOT, 'index.html'))) out.push('index.html  sin marcadores <!-- gv:meta --> … <!-- /gv:meta -->');
     else if (meta(path.join(ROOT, 'index.html')) !== meta(path.join(tmp, 'index.html'))) out.push('index.html  meta description (gv:meta) desactualizada');
+    const md = 'img/MANIFEST.md';
+    if (!fs.existsSync(path.join(ROOT, md))) out.push(`${md}  falta (el generador lo crea de img/manifest.json)`);
+    else if (!fs.readFileSync(path.join(ROOT, md)).equals(fs.readFileSync(path.join(tmp, md)))) out.push(`${md}  desactualizado respecto a img/manifest.json`);
     return out;
   } finally {
     fs.rmSync(tmp, {recursive: true, force: true});
@@ -322,6 +336,31 @@ revisar('Lista única de desarrollos', () => {
     if (!m) out.push(`index.html  no se encontró la cifra fija "${que}"`);
     else if (+m[1] !== esperado) out.push(`index.html  ${que}: dice ${m[1]}, los datos dan ${esperado}`);
   }
+  return out;
+});
+
+/* 10. Imágenes locales y manifiesto */
+revisar('Imágenes locales y manifiesto', () => {
+  const out = [], KB400 = 400 * 1024;
+  const man = JSON.parse(fs.readFileSync(path.join(ROOT, 'img/manifest.json'), 'utf8'));
+  const enManifiesto = new Set();
+  for (const e of man){
+    if (e.estado !== 'ok'){ out.push(`img/manifest.json  pendiente de descarga: ${e.ruta} ← ${e.origen}`); continue; }
+    for (const [r, peso] of [[e.ruta, e.despues], ...(e.mini ? [[e.mini.ruta, e.mini.peso]] : [])]){
+      enManifiesto.add(r);
+      const p = path.join(ROOT, r);
+      if (!fs.existsSync(p)){ out.push(`${r}  está en el manifiesto pero no existe`); continue; }
+      const t = fs.statSync(p).size;
+      if (t !== peso) out.push(`${r}  pesa ${t} B; el manifiesto dice ${peso} B`);
+      if (!/\.(webp|svg)$/.test(r)) out.push(`${r}  no es WebP ni SVG`);
+      if (t > KB400) out.push(`${r}  pesa ${Math.round(t / 1024)} KB (máx. 400 KB)`);
+    }
+  }
+  (function recorre(d){ for (const e of fs.readdirSync(path.join(ROOT, d), {withFileTypes: true})){
+    const r = `${d}/${e.name}`;
+    if (e.isDirectory()) recorre(r);
+    else if (!['img/manifest.json', 'img/MANIFEST.md'].includes(r) && !enManifiesto.has(r)) out.push(`${r}  no está en img/manifest.json`);
+  } })('img');
   return out;
 });
 

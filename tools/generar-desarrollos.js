@@ -33,16 +33,15 @@ const ACENTO = {entrada: '#c8643f', media: '#2f6f9f', alta: '#b8976a'};
 const CATS = Object.fromEntries(Object.entries(CATEGORIAS).map(([k, c]) => [k, {dir: c.carpeta, name: c.nombre, acc: ACENTO[k]}]));
 /* Oficinas de venta por plaza y foto de la ciudad (grupovelas.com.mx/ciudades).
    La foto de la ciudad solo se usa si el desarrollo aún no tiene fotos propias. */
-const U = 'https://backend.grupovelas.com/uploads/';
 const PLAZAS = {
-  'Cancún': {estado: 'Quintana Roo', tel: '998 477 5050', mail: 'cancun@grupovelas.com.mx', img: U + 'Cancun_e051393eba.webp'},
-  'Ciudad Juárez': {estado: 'Chihuahua', tel: '656 623 6654', mail: 'ciudadjuarez@grupovelas.com.mx', img: U + 'Ciudad_Juarez_99da4274cb.webp'},
-  'Los Cabos': {estado: 'Baja California Sur', tel: '624 191 9320', mail: 'loscabos@grupovelas.com.mx', img: U + 'Los_Cabos_23ef546d1a.webp'},
-  'Matamoros': {estado: 'Tamaulipas', img: U + 'Matamoros_2_d589877d0d.webp'},
-  'Playa del Carmen': {estado: 'Quintana Roo', tel: '984 106 6243', mail: 'playadelcarmen@grupovelas.com.mx', img: U + 'Playa_del_Carmen_1f8b097814.webp'},
-  'Querétaro': {estado: 'Querétaro', tel: '442 194 0719', mail: 'queretaro@grupovelas.com.mx', img: U + 'Queretaro_968ebae10b.webp'},
-  'Reynosa': {estado: 'Tamaulipas', img: U + 'Reynosa_ff332ee4de.webp'},
-  'Tampico': {estado: 'Tamaulipas', tel: '833 184 5936', mail: 'tampico@grupovelas.com.mx', img: U + 'Tampico_7dc04c8ad5.webp'}
+  'Cancún': {estado: 'Quintana Roo', tel: '998 477 5050', mail: 'cancun@grupovelas.com.mx', img: 'img/ciudades/cancun.webp'},
+  'Ciudad Juárez': {estado: 'Chihuahua', tel: '656 623 6654', mail: 'ciudadjuarez@grupovelas.com.mx', img: 'img/ciudades/ciudad-juarez.webp'},
+  'Los Cabos': {estado: 'Baja California Sur', tel: '624 191 9320', mail: 'loscabos@grupovelas.com.mx', img: 'img/ciudades/los-cabos.webp'},
+  'Matamoros': {estado: 'Tamaulipas', img: 'img/ciudades/matamoros.webp'},
+  'Playa del Carmen': {estado: 'Quintana Roo', tel: '984 106 6243', mail: 'playadelcarmen@grupovelas.com.mx', img: 'img/ciudades/playa-del-carmen.webp'},
+  'Querétaro': {estado: 'Querétaro', tel: '442 194 0719', mail: 'queretaro@grupovelas.com.mx', img: 'img/ciudades/queretaro.webp'},
+  'Reynosa': {estado: 'Tamaulipas', img: 'img/ciudades/reynosa.webp'},
+  'Tampico': {estado: 'Tamaulipas', tel: '833 184 5936', mail: 'tampico@grupovelas.com.mx', img: 'img/ciudades/tampico.webp'}
 };
 const WA_GENERAL = '520000000000'; // mismo número general que el home (index.html) — TODO: WhatsApp real por plaza
 
@@ -50,7 +49,14 @@ const WA_GENERAL = '520000000000'; // mismo número general que el home (index.h
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const txt = s => esc(s).replace(/&lt;(\/?)(em|b)&gt;/g, '<$1$2>'); // permite <em> y <b> en textos del data
 const plain = s => String(s ?? '').replace(/<[^>]+>/g, '');
-const url = s => !s ? '' : /^(https?:|data:)/.test(s) ? s : BASE + s.replace(/^\//, '');
+/* Imágenes: las URLs externas (p. ej. de tools/data/grupovelas.json) se traducen a su ruta local
+   con img/manifest.json; si una descarga quedó pendiente, se conserva la URL original */
+const MANIFEST = require('../img/manifest.json');
+const LOCAL = new Map();
+for (const e of MANIFEST) if (e.estado === 'ok') for (const u of [e.origen, ...(e.variantes || [])]) LOCAL.set(u, e);
+const url = s => !s ? '' : /^data:/.test(s) ? s : /^https?:/.test(s) ? (LOCAL.has(s) ? BASE + LOCAL.get(s).ruta : s) : BASE + s.replace(/^\//, '');
+const mini = s => { const e = LOCAL.get(s) || MANIFEST.find(x => x.ruta === s); return e && e.mini ? url(e.mini.ruta) : url(s); };
+const absoluta = s => { const u = url(s); return /^https?:/.test(u) ? u : `${SITE_URL}/${u.replace(/^(\.\.\/)+/, '')}`; };
 const telHref = t => 'tel:+52' + String(t).replace(/\D/g, '');
 const num = s => { const m = String(s ?? '').replace(/,/g, '').match(/[\d.]+/); return m ? +m[0] : 0; };
 const js = o => JSON.stringify(o, null, 1).replace(/<\//g, '<\\/');
@@ -120,7 +126,7 @@ const PIN_ICO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stro
 const CLOCK_ICO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
 const ZOOM_ICO = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5M11 8v6M8 11h6"/></svg>';
 const HAND_ICO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V12M11 11V4.5a1.5 1.5 0 0 1 3 0V12M14 11.5V6a1.5 1.5 0 0 1 3 0v8c0 4-2.5 7-6 7-2.5 0-4-1.2-5.5-3.2L3.8 15a1.5 1.5 0 0 1 2.4-1.8L8 15"/></svg>';
-const GV_LOGO = 'https://backend.grupovelas.com/uploads/Home_Logo_Head_2273149d_1_98a8ef58d9.svg';
+const GV_LOGO = 'img/comun/logo-grupo-velas.svg';
 
 /* CSS de la plantilla (mismo diseño que la página de la categoría) */
 const tplCSS = {};
@@ -128,7 +134,7 @@ for (const [k, c] of Object.entries(CATS)){
   const html = fs.readFileSync(path.join(ROOT, c.dir, 'index.html'), 'utf8');
   const m = html.match(/<style>([\s\S]*?)<\/style>/);
   if (!m) throw new Error('Sin <style> en ' + c.dir);
-  tplCSS[k] = m[1].trim();
+  tplCSS[k] = m[1].trim().replace(/url\((['"]?)\.\.\//g, `url($1${BASE}`); // rutas de la plantilla (../) a la profundidad de la página
 }
 /* Ajustes para que los componentes de la plantilla funcionen con cualquier cantidad de datos */
 const EXTRA_CSS = `
@@ -448,7 +454,7 @@ function build(d){
       </div>${filters}
     </div>
     <div class="gal" id="gal">
-      ${gal.map((p, i) => `<figure class="g${PATTERN[i] ? ' ' + PATTERN[i] : ''}"${p.cat ? ` data-c="${slug(p.cat)}"` : ''} data-reveal="up"${i % 3 ? ` style="--d:${(i % 3) * .06}s"` : ''}><img src="${esc(url(p.src))}" alt="${esc(cap(p) === d.name ? `${d.name} · foto ${i + 1}` : `${cap(p)} · ${d.name}`)}" loading="lazy"><figcaption>${esc(cap(p))}</figcaption></figure>`).join('\n      ')}
+      ${gal.map((p, i) => `<figure class="g${PATTERN[i] ? ' ' + PATTERN[i] : ''}"${p.cat ? ` data-c="${slug(p.cat)}"` : ''} data-reveal="up"${i % 3 ? ` style="--d:${(i % 3) * .06}s"` : ''}><img src="${esc(mini(p.src))}" data-full="${esc(url(p.src))}" alt="${esc(cap(p) === d.name ? `${d.name} · foto ${i + 1}` : `${cap(p)} · ${d.name}`)}" loading="lazy"><figcaption>${esc(cap(p))}</figcaption></figure>`).join('\n      ')}
     </div>
     <p class="gnote" style="font-size:12px;color:var(--muted);margin-top:14px">Imágenes ilustrativas.</p>
   </div>
@@ -736,8 +742,8 @@ function build(d){
   /* Meta ≤158; la categoría se agrega solo si la frase cabe completa y no está ya en el texto */
   const descBase = firstSentences(desc, 158), catFrase = `Desarrollo ${C.name} de Grupo Velas en ${whereFull}.`;
   const metaDesc = d.metaDesc || (!descBase.includes(C.name) && !descBase.endsWith('…') && `${descBase} ${catFrase}`.length <= 158 ? `${descBase} ${catFrase}` : descBase);
-  /* Vista previa en redes: laescondida.grupovelas.com rechaza clientes automatizados, se prefiere el backend corporativo */
-  const ogImg = url((photos.find(p => /backend\.grupovelas\.com/.test(p.src)) || heroPhotos[0]).src).replace(/^\.\.\/\.\.\//, '');
+  /* Vista previa en redes: misma foto que antes (de preferencia una del backend corporativo), ya local y absoluta */
+  const ogImg = absoluta((photos.find(p => /backend\.grupovelas\.com/.test(p.src)) || heroPhotos[0]).src);
   const ld = {
     '@context': 'https://schema.org', '@type': /departamento/i.test(typeLabel) && !/casa/i.test(typeLabel) ? 'ApartmentComplex' : 'Residence',
     name: d.name, description: plain(desc),
@@ -802,7 +808,7 @@ ${EXTRA_CSS}
 <header data-gv-header></header>
 <header class="top" id="top">
   <div class="wrap nav">
-    <a href="#inicio" class="logo" aria-label="${esc(d.name)} · Grupo Velas"><img src="${GV_LOGO}" alt="Grupo Velas"><span class="dv${logoText.length > 12 ? ' long' : ''}">${esc(logoText)}<small>${esc(where.toUpperCase())}</small></span></a>
+    <a href="#inicio" class="logo" aria-label="${esc(d.name)} · Grupo Velas"><img src="${url(GV_LOGO)}" alt="Grupo Velas"><span class="dv${logoText.length > 12 ? ' long' : ''}">${esc(logoText)}<small>${esc(where.toUpperCase())}</small></span></a>
     <nav class="menu" id="menu">
       ${menu.map(([id, l]) => `<a href="#${id}">${esc(l)}</a>`).join('\n      ')}
     </nav>
@@ -908,3 +914,31 @@ const homeMeta = `Encuentra tu hogar con Grupo Velas: ${RESUMEN.total} desarroll
 const homeNuevo = homeSrc.replace(MARCA, `<!-- gv:meta --><meta name="description" content="${esc(homeMeta)}"><!-- /gv:meta -->`);
 if (homeNuevo !== homeSrc) fs.writeFileSync(HOME, homeNuevo);
 console.log('✓ index.html (meta description)');
+
+/* ---------- img/MANIFEST.md (se genera de img/manifest.json; no editar a mano) ---------- */
+const kb = n => (n / 1024).toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',') + ' KB';
+const okImg = MANIFEST.filter(e => e.estado === 'ok'), pendientes = MANIFEST.filter(e => e.estado !== 'ok');
+const total = k => okImg.reduce((t, e) => t + (k === 'mini' ? (e.mini ? e.mini.peso : 0) : e[k]), 0);
+fs.writeFileSync(path.join(ROOT, 'img/MANIFEST.md'), `# Imágenes · manifiesto
+
+Generado por \`tools/generar-desarrollos.js\` a partir de \`img/manifest.json\` (origen → ruta local → pesos).
+No editar a mano. La URL original de cada imagen solo vive aquí y en \`img/manifest.json\`
+(aparte de los datos crudos de \`tools/data/grupovelas.json\`, que no se tocan).
+
+- ${okImg.length} imágenes locales, ${okImg.filter(e => e.mini).length} con miniatura de 800 px (\`-800.webp\`, solo en galerías y recortes de Selvanova).
+- Peso: ${kb(total('antes'))} antes → ${kb(total('despues'))} después, más ${kb(total('mini'))} de miniaturas.
+- WebP de máx. 1920 px de ancho y ≤400 KB; los SVG se copian tal cual.
+${pendientes.length ? `
+## Pendientes de descarga (conservan su URL original)
+
+| Ruta local esperada | Origen |
+|---|---|
+${pendientes.map(e => `| \`${e.ruta}\` | ${e.origen} |`).join('\n')}
+` : ''}
+## Imágenes
+
+| Ruta local | Origen | Antes | Después | Miniatura |
+|---|---|---:|---:|---:|
+${okImg.map(e => `| \`${e.ruta}\` | ${e.origen}${e.variantes ? ` (+${e.variantes.length} variante${e.variantes.length > 1 ? 's' : ''})` : ''} | ${kb(e.antes)} | ${kb(e.despues)} | ${e.mini ? kb(e.mini.peso) : '—'} |`).join('\n')}
+`);
+console.log('✓ img/MANIFEST.md');

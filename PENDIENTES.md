@@ -1,11 +1,10 @@
 # Pendientes
 
-## Imágenes (paso 6)
-- **Fondo de la sección de contacto.** En `residencial/index.html` y `residencial-plus/index.html`
-  (y en las páginas generadas desde ellas), `.final .bg` es una regla CSS sin uso con
-  `url("@@/2024/10/Copia-de-Roof-top-vista-1-1536x1024.jpg")`; la imagen visible viene del
-  `style` en línea. Se limpia en el paso 6.
-  Lo detecta `tools/verificar.js` (enlaces rotos).
+## Imágenes
+- **Fotos de Unsplash en el home** (de stock, no de Grupo Velas): reemplazarlas por fotos reales.
+  `img/home/unsplash-1502672260266.webp` (panel Residencial), `img/home/unsplash-1600596542815.webp`
+  (panel Residencial Plus) e `img/home/unsplash-1600585154340.webp` (guía "¿Construir desde cero o
+  comprar en preventa?"). Origen en `img/MANIFEST.md`.
 
 ## Datos de desarrollos
 - **Recámaras por verificar.** Fuente: grupovelas.com.mx (`tools/data/grupovelas.json`); el home
