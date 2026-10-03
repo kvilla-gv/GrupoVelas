@@ -880,7 +880,8 @@ const RESUMEN = {
 const primeraFoto = d => { const i = (d.images || [])[0]; return typeof i === 'string' ? i : i ? i.src : ''; };
 const tarjeta = d => ({
   name: d.name, ...(d.nombreCorto ? {nombreCorto: d.nombreCorto} : {}), cat: d.categoria, plaza: d.plaza, zona: d.zona || '',
-  status: d.status || '', type: d.type || '', rec: d.rec || '', m2: d.m2 || '', from: d.from || '',
+  status: d.status || '', type: d.type || '', rec: d.rec || '', m2: d.m2 || '',
+  from: d.price > 0 ? desde(d.price) : d.from || '', // mismo formato que los paneles
   img: d.img || primeraFoto(d), feat: d.feat || '',
   url: d.categoria === null ? '' : d.plantilla ? `${CATS[d.categoria].dir}/index.html` : `${CATS[d.categoria].dir}/${d.slug}/index.html`,
   gv: d.gv || ''
