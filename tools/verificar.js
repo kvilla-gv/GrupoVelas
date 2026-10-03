@@ -17,6 +17,8 @@
         "… · Nombre" / "Categoría Nombre" y la lista del home
      10. Imágenes locales: cada archivo de img/ está en img/manifest.json y
         viceversa, con su peso; WebP o SVG de máx. 400 KB; descargas pendientes
+     11. CTA del header de cada página de desarrollo: "Agendar visita" → #contacto,
+        o "Ver opciones" → #contacto si el desarrollo está vendido
      9. Lista única de desarrollos: sin copias de la lista (DEVS = [,
         PROYECTOS = [, IMG_LOCAL o 4+ nombres de desarrollos en un script),
         gv-desarrollos.js cargado antes de gv-nav.js y cifras fijas del home
@@ -361,6 +363,28 @@ revisar('Imágenes locales y manifiesto', () => {
     if (e.isDirectory()) recorre(r);
     else if (!['img/manifest.json', 'img/MANIFEST.md'].includes(r) && !enManifiesto.has(r)) out.push(`${r}  no está en img/manifest.json`);
   } })('img');
+  return out;
+});
+
+/* 11. CTA del header: "Agendar visita" → #contacto ("Ver opciones" si está vendido); WhatsApp va en el flotante y la barra móvil */
+revisar('CTA del header', () => {
+  const out = [], devs = require('./desarrollos.js');
+  const pagina = {};
+  for (const d of devs) if (d.categoria !== null)
+    pagina[d.plantilla ? `${CARPETAS[d.categoria]}/index.html` : `${CARPETAS[d.categoria]}/${d.slug}/index.html`] = d;
+  for (const [r, d] of Object.entries(pagina)){
+    const f = PUBLICADOS.find(x => x.r === r);
+    if (!f){ out.push(`${r}  no existe`); continue; }
+    const src = f.lineas.join('\n'), i = src.indexOf('<header class="top'), j = src.indexOf('</header>', i);
+    if (i < 0 || j < 0){ out.push(`${r}  sin <header class="top">`); continue; }
+    const ctas = [...src.slice(i, j).matchAll(/<a ([^>]*class="btn[^"]*\bdesk\b[^"]*"[^>]*)>([\s\S]*?)<\/a>/g)];
+    if (ctas.length !== 1){ out.push(`${r}:${src.slice(0, i).split('\n').length}  ${ctas.length} botones .desk en el header (debe haber 1)`); continue; }
+    const [, attrs, cuerpo] = ctas[0], texto = cuerpo.replace(/<[^>]+>/g, '').replace('→', '').trim();
+    const esperado = d.status === 'Vendido' ? 'Ver opciones' : 'Agendar visita', linea = src.slice(0, i + ctas[0].index).split('\n').length;
+    if (texto !== esperado) out.push(`${r}:${linea}  el CTA dice "${texto}"; debe decir "${esperado}"${d.status === 'Vendido' ? ' (vendido)' : ''}`);
+    if (!/\bhref="#contacto"/.test(attrs)) out.push(`${r}:${linea}  el CTA no lleva a #contacto`);
+    if (/\bdata-wa\b/.test(attrs)) out.push(`${r}:${linea}  el CTA abre WhatsApp; WhatsApp va en el botón flotante y la barra móvil`);
+  }
   return out;
 });
 
