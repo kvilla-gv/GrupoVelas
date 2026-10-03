@@ -29,7 +29,7 @@
     {n:'TikTok', url:'https://www.tiktok.com/@grupovelasinmobiliaria', ico:'<path d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.2v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.6h-.8a5.8 5.8 0 1 0 5.8 5.8V9a7.4 7.4 0 0 0 4.3 1.4V7.2a4.3 4.3 0 0 1-3.2-1.4Z"/>'},
     {n:'YouTube', url:'https://www.youtube.com/channel/UC9dB8d8vtl6cUay-5QSYxdg', ico:'<path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4a2.5 2.5 0 0 0-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8ZM10 15V9l5.2 3Z"/>'}
   ];
-  const CATS = [['entrada','Primera Vivienda','pvivienda/index.html'],['media','Residencial','residencial/index.html'],['alta','Residencial Plus','residencialp/index.html']];
+  const CATS = [['entrada','Primera Vivienda','residencial/index.html'],['media','Residencial','residencial-plus/index.html'],['alta','Residencial Plus','premium/index.html']];
   /* Mismas plazas y orden que grupovelas.com.mx/ciudades */
   const CIUDADES = [
     ['Cancún','Quintana Roo'], ['Ciudad Juárez','Chihuahua'], ['Los Cabos','Baja California Sur'], ['Matamoros','Tamaulipas'],
@@ -40,36 +40,36 @@
      [nombre, slug en el sitio corporativo, ciudad, página en este sitio, categoría].
      Los que no tienen página propia aquí abren su ficha en el sitio corporativo. */
   const PROYECTOS = [
-    ['Vela Towers Cancún','vela-towers-cancun','Cancún','residencialp/index.html','alta'],
-    ['Punta Vela Residencial','punta-vela-residencial','Ciudad Juárez','residencial/punta-vela/index.html','media'],
-    ['Valencia','','Ciudad Juárez','pvivienda/valencia/index.html','entrada'],
-    ['Vistavela III','vistavela-iii','Los Cabos','residencialp/vistavela-iii/index.html','alta'],
-    ['Vistavela Sunset','vistavela-sunset','Los Cabos','residencialp/vistavela-sunset/index.html','alta'],
-    ['Fraccionamiento Arecas','fraccionamiento-arecas','Matamoros','pvivienda/index.html','entrada'],
-    ['Lavanda II','','Matamoros','residencial/lavanda-ii/index.html','media'],
-    ['Selvanova Residencial','selvanova-residencial','Playa del Carmen','residencial/index.html','media'],
-    ['Velasur','velasur','Querétaro','residencial/velasur/index.html','media'],
-    ['Cima Peñaflor','','Querétaro','residencial/cima-penaflor/index.html','media'],
-    ['Ballesta','','Querétaro','residencial/ballesta/index.html','media'],
-    ['Loma Bonita','loma-bonita-reynosa','Reynosa','residencial/loma-bonita-reynosa/index.html','media'],
-    ['Florencia Residencial','florencia-residencial','Reynosa','pvivienda/florencia/index.html','entrada'],
-    ['Loma del Jazmín','','Reynosa','residencial/loma-del-jazmin/index.html','media'],
-    ['Fraccionamiento Loma Bonita','fraccionamiento-loma-bonita','Tampico','residencial/fraccionamiento-loma-bonita/index.html','media'],
-    ['Encinos Residencial','encinos-residencial','Tampico','residencial/los-encinos/index.html','media'],
-    ['Torre 829','torre-829','Tampico','residencial/torre-829/index.html','media'],
+    ['Vela Towers Cancún','vela-towers-cancun','Cancún','premium/index.html','alta'],
+    ['Punta Vela Residencial','punta-vela-residencial','Ciudad Juárez','residencial-plus/punta-vela/index.html','media'],
+    ['Valencia','','Ciudad Juárez','residencial/valencia/index.html','entrada'],
+    ['Vistavela III','vistavela-iii','Los Cabos','premium/vistavela-iii/index.html','alta'],
+    ['Vistavela Sunset','vistavela-sunset','Los Cabos','premium/vistavela-sunset/index.html','alta'],
+    ['Fraccionamiento Arecas','fraccionamiento-arecas','Matamoros','residencial/index.html','entrada'],
+    ['Lavanda II','','Matamoros','residencial-plus/lavanda-ii/index.html','media'],
+    ['Selvanova Residencial','selvanova-residencial','Playa del Carmen','residencial-plus/index.html','media'],
+    ['Velasur','velasur','Querétaro','residencial-plus/velasur/index.html','media'],
+    ['Cima Peñaflor','','Querétaro','residencial-plus/cima-penaflor/index.html','media'],
+    ['Ballesta','','Querétaro','residencial-plus/ballesta/index.html','media'],
+    ['Loma Bonita','loma-bonita-reynosa','Reynosa','residencial-plus/loma-bonita-reynosa/index.html','media'],
+    ['Florencia Residencial','florencia-residencial','Reynosa','residencial/florencia/index.html','entrada'],
+    ['Loma del Jazmín','','Reynosa','residencial-plus/loma-del-jazmin/index.html','media'],
+    ['Fraccionamiento Loma Bonita','fraccionamiento-loma-bonita','Tampico','residencial-plus/fraccionamiento-loma-bonita/index.html','media'],
+    ['Encinos Residencial','encinos-residencial','Tampico','residencial-plus/los-encinos/index.html','media'],
+    ['Torre 829','torre-829','Tampico','residencial-plus/torre-829/index.html','media'],
     ['Coto Jade','coto-jade','Tampico'],
     ['Valle Esmeralda','valle-esmeralda','Tampico'],
-    ['Vista Laguna','vista-laguna','Tampico','pvivienda/vista-laguna/index.html','entrada'],
+    ['Vista Laguna','vista-laguna','Tampico','residencial/vista-laguna/index.html','entrada'],
     ['Conjunto Roma 401','conjunto-roma-401','Tampico'],
-    ['Arecas','arecas','Tampico','pvivienda/arecas-altamira/index.html','entrada'],
-    ['Townhouses Velamar II','townhouses-velamar-ii','Tampico','residencialp/townhouses-velamar-ii/index.html','alta'],
-    ['Torre Milos','torre-milos','Tampico','residencialp/torre-milos/index.html','alta'],
-    ['Manila','','Tampico','residencialp/manila/index.html','alta'],
-    ['Sorrento Velamar','','Tampico','residencialp/sorrento-velamar/index.html','alta'],
-    ['Paseos de Floresta','','Tampico','residencial/paseos-de-floresta/index.html','media'],
-    ['Zafiro Residencial','','Tampico','residencial/zafiro-residencial/index.html','media'],
-    ['Coto Báltico','','Tampico','residencial/coto-baltico/index.html','media'],
-    ['Conjunto Cárdenas 807','','Tampico','residencial/conjunto-cardenas-807/index.html','media']
+    ['Arecas','arecas','Tampico','residencial/arecas-altamira/index.html','entrada'],
+    ['Townhouses Velamar II','townhouses-velamar-ii','Tampico','premium/townhouses-velamar-ii/index.html','alta'],
+    ['Torre Milos','torre-milos','Tampico','premium/torre-milos/index.html','alta'],
+    ['Manila','','Tampico','premium/manila/index.html','alta'],
+    ['Sorrento Velamar','','Tampico','premium/sorrento-velamar/index.html','alta'],
+    ['Paseos de Floresta','','Tampico','residencial-plus/paseos-de-floresta/index.html','media'],
+    ['Zafiro Residencial','','Tampico','residencial-plus/zafiro-residencial/index.html','media'],
+    ['Coto Báltico','','Tampico','residencial-plus/coto-baltico/index.html','media'],
+    ['Conjunto Cárdenas 807','','Tampico','residencial-plus/conjunto-cardenas-807/index.html','media']
   ];
 
   /* En el home los enlaces son anclas; desde una subpágina apuntan al home */

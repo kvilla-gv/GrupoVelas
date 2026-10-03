@@ -1,8 +1,8 @@
 /* =====================================================================
    Grupo Velas · Datos de las páginas individuales de desarrollo
    Una entrada por desarrollo de index.html (DEVS), salvo los tres que ya
-   son plantilla: Vela Towers (residencialp/), Selvanova (residencial/) y
-   Fraccionamiento Arecas (pvivienda/).
+   son plantilla: Vela Towers (premium/), Selvanova (residencial-plus/) y
+   Fraccionamiento Arecas (residencial/).
 
    Después de editar:  node tools/generar-desarrollos.js
    La página queda en <categoria>/<slug>/index.html.

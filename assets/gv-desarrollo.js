@@ -1,7 +1,7 @@
 /* =====================================================================
    Grupo Velas · Interacciones de las páginas individuales de desarrollo
    Las páginas se generan con tools/generar-desarrollos.js a partir de las
-   plantillas de cada categoría (pvivienda/, residencial/, residencialp/).
+   plantillas de cada categoría (residencial/, residencial-plus/, premium/).
    Cada página define window.DEV antes de cargar este archivo:
      name, whatsapp, waMsg, msgs{}, mapsEmbed, protos[], video{}, tour, calc{}
    Todo es opcional: si una sección no existe en la página, se omite.

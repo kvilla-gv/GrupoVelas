@@ -2,10 +2,9 @@
 /* =====================================================================
    Grupo Velas · Generador de páginas individuales de desarrollo
    Crea <categoria>/<slug>/index.html para cada desarrollo de
-   tools/desarrollos.js, usando la plantilla de su categoría:
-     pvivienda/index.html    → Primera Vivienda
-     residencial/index.html  → Residencial
-     residencialp/index.html → Residencial Plus
+   tools/desarrollos.js, usando la plantilla de su categoría
+   (<carpeta>/index.html; la carpeta de cada clave sale de
+   assets/gv-categorias.js).
    Reutiliza el CSS de la plantilla tal cual (mismo diseño) y las
    interacciones de assets/gv-desarrollo.js. Las secciones sin datos
    (video, tour, simulador, prototipos) se omiten en lugar de inventarse.
@@ -21,12 +20,13 @@ const DEVS = require('./desarrollos.js');
 const GV = require('./data/grupovelas.json');
 const BASE = '../../';
 
-/* Claves de assets/gv-categorias.js. Carpeta y nombre siguen siendo los actuales
-   hasta mover carpetas (paso 3) y cambiar textos (paso 4). */
+/* Claves de assets/gv-categorias.js. La carpeta se lee de ahí; el nombre sigue
+   siendo el actual hasta cambiar textos (paso 4). */
+const CATEGORIAS = require('../assets/gv-categorias.js');
 const CATS = {
-  entrada: {dir: 'pvivienda', name: 'Primera Vivienda', acc: '#c8643f'},
-  media: {dir: 'residencial', name: 'Residencial', acc: '#2f6f9f'},
-  alta: {dir: 'residencialp', name: 'Residencial Plus', acc: '#b8976a'}
+  entrada: {dir: CATEGORIAS.entrada.carpeta, name: 'Primera Vivienda', acc: '#c8643f'},
+  media: {dir: CATEGORIAS.media.carpeta, name: 'Residencial', acc: '#2f6f9f'},
+  alta: {dir: CATEGORIAS.alta.carpeta, name: 'Residencial Plus', acc: '#b8976a'}
 };
 /* Oficinas de venta por plaza y foto de la ciudad (grupovelas.com.mx/ciudades).
    La foto de la ciudad solo se usa si el desarrollo aún no tiene fotos propias. */
