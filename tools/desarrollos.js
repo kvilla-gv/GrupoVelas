@@ -1,16 +1,23 @@
 /* =====================================================================
-   Grupo Velas · Datos de las páginas individuales de desarrollo
-   Una entrada por desarrollo de index.html (DEVS), salvo los tres que ya
-   son plantilla: Vela Towers (premium/), Selvanova (residencial-plus/) y
-   Fraccionamiento Arecas (residencial/).
+   Grupo Velas · Lista única de desarrollos (fuente de verdad)
+   El home, el navbar y las páginas de desarrollo leen de aquí. El orden es el
+   de las tarjetas del home; el menú los ordena alfabéticamente por plaza.
 
    Después de editar:  node tools/generar-desarrollos.js
-   La página queda en <categoria>/<slug>/index.html.
+   Genera <carpeta>/<slug>/index.html, assets/gv-desarrollos.js (lo que leen
+   el home y el navbar) y la meta description del home (entre <!-- gv:meta -->).
 
    Campos (todos opcionales salvo slug, name, categoria, plaza):
-     categoria   entrada | media | alta (claves de assets/gv-categorias.js)
-     gv          clave en tools/data/grupovelas.json: aporta texto de bienvenida,
-                 fotos, amenidades, video y catálogo de grupovelas.com.mx
+     categoria   entrada | media | alta (claves de assets/gv-categorias.js), o null
+                 si no está confirmada: no tiene página, tarjeta ni conteo; solo
+                 aparece en el navbar, con enlace a su ficha en grupovelas.com.mx
+     plantilla   true en los tres que ya son plantilla (<carpeta>/index.html):
+                 no se generan; sus datos solo alimentan tarjeta, menú y conteos
+     nombreCorto nombre en tarjetas y menú (solo si no se presta a confusión)
+     img, feat   foto y texto de la tarjeta del home (sin img se usa images[0])
+     gv          slug de su ficha en grupovelas.com.mx; si existe en
+                 tools/data/grupovelas.json aporta texto de bienvenida, fotos,
+                 amenidades, video y catálogo
      zona        localidad si difiere de la plaza (p. ej. Altamira en Tampico)
      status      Preventa | En construcción | Entrega inmediata | Vendido
      from/price  precio "desde" (texto) y el mismo en número (activa el simulador)
@@ -33,7 +40,13 @@ const U = 'https://backend.grupovelas.com/uploads/';
 module.exports = [
   /* =========================== PREMIUM =========================== */
   {
+    slug: 'vela-towers-cancun', name: 'Vela Towers Cancún', nombreCorto: 'Vela Towers', categoria: 'alta', plaza: 'Cancún', plantilla: true,
+    status: 'Entrega inmediata', type: 'Departamentos', rec: '3 rec.', m2: '207 – 264 m²', from: '$9 MDP', price: 9000000,
+    img: 'https://velatowerscancun.com/wp-content/uploads/2024/11/Sin-ti%CC%81tulo-1-09-scaled-1-1.jpg', feat: 'Amenidades de resort, Sky Bar y cancha de pádel en una de las zonas con mayor plusvalía de Cancún.'
+  },
+  {
     slug: 'vistavela-iii', name: 'Vistavela III', categoria: 'alta', plaza: 'Los Cabos', zona: 'Cabo San Lucas', gv: 'vistavela-iii',
+    img: 'https://backend.grupovelas.com/uploads/Review_d57c2aceb2.webp', feat: '274 departamentos con estilo de vida de resort en el corazón de Cabo San Lucas.',
     status: 'Vendido', type: 'Departamentos', units: '274 departamentos',
     h1: ['Vistavela III', 'en <em>Cabo San Lucas</em>'],
     sub: 'Un estilo de vida de resort en el corazón de Cabo San Lucas: 274 departamentos con amenidades de primer nivel, rodeados de la belleza natural de Los Cabos.',
@@ -48,6 +61,7 @@ module.exports = [
   },
   {
     slug: 'vistavela-sunset', name: 'Vistavela Sunset', categoria: 'alta', plaza: 'Los Cabos', zona: 'Cabo San Lucas', gv: 'vistavela-sunset',
+    img: 'https://backend.grupovelas.com/uploads/Review_74f3e83745.webp', feat: 'Elegancia, confort y exclusividad en un entorno privilegiado de Los Cabos.',
     status: 'Preventa', type: 'Departamentos y casas', units: '120 departamentos y 31 casas',
     h1: ['Donde el desierto', 'se une con el <em>mar</em>'],
     eyebrow: 'Vistavela Sunset · Cabo San Lucas',
@@ -68,6 +82,7 @@ module.exports = [
   {
     /* Fuentes: laescondida.grupovelas.com/milos y grupovelas.com.mx/desarrollo/torre-milos */
     slug: 'torre-milos', name: 'Torre Milos', categoria: 'alta', plaza: 'Tampico', zona: 'Altamira', gv: 'torre-milos',
+    img: 'https://backend.grupovelas.com/uploads/Guest_Reviews_54544c819e.webp', feat: 'Departamentos con vista al Golfo de México y acceso directo a la playa.',
     status: 'Preventa', type: 'Departamentos', rec: '2 – 3 rec.', m2: 'hasta 231 m²', units: '71 departamentos',
     from: '$7.2 MDP', price: 7200000,
     h1: ['Torre Milos,', 'frente al <em>Golfo</em>'],
@@ -105,6 +120,7 @@ module.exports = [
   {
     /* Fuentes: laescondida.grupovelas.com/townhouses y grupovelas.com.mx/desarrollo/townhouses-velamar-ii */
     slug: 'townhouses-velamar-ii', logoText: 'Townhouses', name: 'Townhouses Velamar II', categoria: 'alta', plaza: 'Tampico', zona: 'Altamira', gv: 'townhouses-velamar-ii',
+    img: 'https://backend.grupovelas.com/uploads/Amenidades_5_bca9c12f0c.webp', feat: 'Casas frente al mar en La Escondida Velamar.',
     type: 'Casas', rec: '3 rec.', m2: 'hasta 449.20 m²', units: '20 casas', from: '$18.3 MDP', price: 18300000,
     h1: ['Vive en un', 'eterno <em>verano</em>'],
     eyebrow: 'Townhouses Velamar II · Altamira',
@@ -136,6 +152,7 @@ module.exports = [
   {
     /* La página oficial ya no existe; descripción y unidades del texto del desarrollador publicado por un broker (geahomes-bienesraices.com) */
     slug: 'sorrento-velamar', name: 'Sorrento Velamar', categoria: 'alta', plaza: 'Tampico', zona: 'Altamira',
+    feat: 'Torre frente al mar en Residencial Velamar.',
     type: 'Departamentos', rec: '3 rec.', m2: '149.37 m²', units: '46 departamentos',
     sub: 'Torre Sorrento en Residencial Velamar: 46 departamentos residenciales con una espectacular vista al mar.',
     address: 'Fraccionamiento Residencial Velamar, Altamira, Tamaulipas',
@@ -146,6 +163,7 @@ module.exports = [
   {
     /* Fuente: aryve.com.mx/fraccionamientos/detalle/cima-penaflor-departamentos (y sus 3 prototipos) */
     slug: 'cima-penaflor', name: 'Cima Peñaflor', categoria: 'media', plaza: 'Querétaro',
+    feat: '15 torres y 280 departamentos en la zona noroeste de Querétaro.',
     type: 'Departamentos', rec: '2 rec.', units: '280 departamentos en 15 torres',
     h1: ['Cima Peñaflor', 'en <em>Querétaro</em>'],
     sub: 'Una comunidad residencial con 15 torres y 280 departamentos, en un entorno privado e inclusivo rodeado de áreas verdes para la recreación, el ejercicio y la convivencia familiar.',
@@ -171,6 +189,7 @@ module.exports = [
   },
   {
     slug: 'punta-vela', name: 'Punta Vela Residencial', categoria: 'media', plaza: 'Ciudad Juárez', gv: 'punta-vela-residencial',
+    nombreCorto: 'Punta Vela', img: 'https://backend.grupovelas.com/uploads/Guest_Reviews_045abb6e8a.webp', feat: 'Solo 63 casas en 3 modelos, todas con 3.5 baños y más de 5 amenidades.',
     status: 'Preventa', type: 'Casas', units: '63 casas',
     h1: ['Punta Vela', 'en <em>Ciudad Juárez</em>'],
     sub: 'Solo 63 casas, todas con 3.5 baños y más de 5 amenidades, en una ubicación estratégica cerca de centros comerciales, del Puente Zaragoza y del aeropuerto.',
@@ -234,7 +253,13 @@ module.exports = [
     slug: 'zafiro-residencial', name: 'Zafiro Residencial', categoria: 'media', plaza: 'Tampico'
   },
   {
+    slug: 'selvanova', name: 'Selvanova Residencial', nombreCorto: 'Selvanova', categoria: 'media', plaza: 'Playa del Carmen', plantilla: true,
+    type: 'Casas y departamentos', rec: '3 rec.', m2: '100 – 155 m²', from: '$3.5 MDP', price: 3500000,
+    img: 'https://backend.grupovelas.com/uploads/Guest_Review_46330f56a6.webp', feat: 'Equilibrio entre naturaleza y vida urbana, con extensas áreas verdes, alberca y seguridad.'
+  },
+  {
     slug: 'velasur', name: 'Velasur', categoria: 'media', plaza: 'Querétaro', gv: 'velasur',
+    img: 'https://backend.grupovelas.com/uploads/Velasur_cfa30aa3c3.webp', feat: 'Comunidad residencial rodeada de áreas naturales para la recreación y la convivencia familiar.',
     status: 'Entrega inmediata', type: 'Casas y terrenos', rec: '3 rec.', m2: '264 m²',
     h1: ['Tu vida en Querétaro', 'comienza en <em>Velasur</em>'],
     sub: 'Comunidad residencial rodeada de áreas naturales, con espacios para la recreación, el acondicionamiento físico y la convivencia familiar en contacto con la naturaleza.',
@@ -262,6 +287,7 @@ module.exports = [
   },
   {
     slug: 'loma-bonita-reynosa', name: 'Loma Bonita', categoria: 'media', plaza: 'Reynosa', gv: 'loma-bonita-reynosa',
+    img: 'https://backend.grupovelas.com/uploads/20a69446_a4c4_4677_9d20_883b914d6086_8aa9b1c8cf.jpg', feat: 'Casas diseñadas a tu gusto en un entorno seguro y completamente bardeado.',
     type: 'Casas', rec: '3 rec.', from: '$2,385,000 MXN', price: 2385000,
     h1: ['Tu hogar a tu manera', 'en <em>Loma Bonita</em>'],
     sub: 'Casas diseñadas a tu gusto en un entorno seguro y completamente bardeado, con estacionamiento, jardín y acabados de calidad en Reynosa.',
@@ -294,6 +320,7 @@ module.exports = [
   },
   {
     slug: 'fraccionamiento-loma-bonita', name: 'Fraccionamiento Loma Bonita', categoria: 'media', plaza: 'Tampico', gv: 'fraccionamiento-loma-bonita',
+    rec: '4 rec.', img: 'https://backend.grupovelas.com/uploads/Guest_reviews_1_38aa114f3e.webp', feat: 'Casas con estacionamiento y jardín en un entorno completamente bardeado.',
     status: 'Vendido', type: 'Casas', m2: '248.89 m²',
     h1: ['Tu hogar a tu manera', 'en <em>Loma Bonita</em>'],
     sub: 'Casas diseñadas a tu gusto en un entorno seguro y completamente bardeado, con estacionamiento, jardín y acabados de calidad en Tampico.',
@@ -322,6 +349,7 @@ module.exports = [
   },
   {
     slug: 'los-encinos', name: 'Los Encinos Residencial', categoria: 'media', plaza: 'Tampico', zona: 'Altamira', gv: 'encinos-residencial',
+    img: 'https://backend.grupovelas.com/uploads/Guest_Reviews_1080aac18c.webp', feat: 'Un hogar seguro y sostenible, con modelos variados y acabados modernos.',
     type: 'Casas', rec: '3 rec.', m2: '163.52 m²',
     h1: ['Tu hogar en armonía', 'con la <em>naturaleza</em>'],
     eyebrow: 'Los Encinos Residencial · Altamira',
@@ -345,6 +373,7 @@ module.exports = [
   },
   {
     slug: 'torre-829', logoText: 'Torre 829', name: 'Torre 829 Faja de Oro', categoria: 'media', plaza: 'Tampico', gv: 'torre-829',
+    nombreCorto: 'Torre 829', img: 'https://backend.grupovelas.com/uploads/Guest_Reviews_86078fd359.webp', feat: 'Departamentos con walk-in closet, cuarto de servicio con baño y amplia terraza.',
     status: 'Preventa', type: 'Departamentos', rec: '3 rec.', m2: '220.86 m²',
     h1: ['Torre 829', 'en <em>Tampico</em>'],
     eyebrow: 'Departamentos en preventa · Tampico',
@@ -361,6 +390,7 @@ module.exports = [
   },
   {
     slug: 'conjunto-cardenas-807', logoText: 'Cárdenas 807', name: 'Conjunto Cárdenas 807', categoria: 'media', plaza: 'Tampico',
+    feat: 'Conjunto de 12 departamentos.',
     type: 'Departamentos', rec: '3 rec.', m2: '79.68 m²', units: '12 departamentos',
     sub: 'Conjunto de 12 departamentos de 3 recámaras en Tampico.'
   },
@@ -368,12 +398,19 @@ module.exports = [
   /* ========================== RESIDENCIAL ========================== */
   {
     slug: 'valencia', name: 'Valencia', categoria: 'entrada', plaza: 'Ciudad Juárez',
+    feat: 'Casas de una planta con opciones de 2 y 3 recámaras.',
     type: 'Casas', rec: '2 – 3 rec.',
     sub: 'Casas de una planta con opciones de 2 y 3 recámaras en Ciudad Juárez.',
     images: ['img/categorias/primera_vivienda/valencia.jpeg']
   },
   {
+    slug: 'fraccionamiento-arecas', name: 'Fraccionamiento Arecas', categoria: 'entrada', plaza: 'Matamoros', plantilla: true,
+    type: 'Casas', rec: '2 rec.', m2: '46.92 m²', from: '$770,000', price: 770000,
+    img: 'https://backend.grupovelas.com/uploads/fraccionamiento_arecas_matamoros_1b434b6261.jpg', feat: 'Estrena casa con tu crédito Infonavit, entregada equipada y con escuela dentro del fraccionamiento.'
+  },
+  {
     slug: 'florencia', name: 'Florencia Residencial', categoria: 'entrada', plaza: 'Reynosa', gv: 'florencia-residencial',
+    nombreCorto: 'Florencia', img: 'https://backend.grupovelas.com/uploads/Guest_Views_6eedef2884.jpg', feat: '36 departamentos en 8 edificios, con canchas deportivas y áreas verdes.',
     type: 'Departamentos', rec: '2 rec.', m2: '72 m²', units: '36 departamentos',
     h1: ['El lugar que', 'estabas <em>buscando</em>'],
     eyebrow: 'Florencia Residencial · Reynosa',
@@ -395,6 +432,7 @@ module.exports = [
   },
   {
     slug: 'arecas-altamira', name: 'Arecas', categoria: 'entrada', plaza: 'Tampico', zona: 'Altamira', gv: 'arecas',
+    rec: '3 rec.', img: 'https://backend.grupovelas.com/uploads/Carrusel_01_5_54fb926eb6.webp', feat: 'Desarrollo de 12 casas en Altamira, con tranquilidad y seguridad.',
     type: 'Casas', m2: '87.20 m²', units: '12 casas',
     h1: ['Tranquilidad', 'en <em>Altamira</em>'],
     sub: 'Un proyecto de 12 casas en perfecta armonía con la tranquilidad y la seguridad, rodeado de amplias áreas verdes y con acceso rápido a todos los servicios.',
@@ -410,6 +448,7 @@ module.exports = [
   },
   {
     slug: 'vista-laguna', name: 'Vista Laguna', categoria: 'entrada', plaza: 'Tampico', zona: 'Altamira', gv: 'vista-laguna',
+    rec: '3 rec.', img: 'https://backend.grupovelas.com/uploads/Slider_02_6_b7d8ddcef9.webp', feat: 'Casas y departamentos con vistas a la laguna, áreas verdes y cercanía a servicios.',
     status: 'Vendido', type: 'Casas y departamentos', m2: '80.39 m²', units: '15 casas y 96 departamentos',
     h1: ['Vista Laguna', 'en <em>Altamira</em>'],
     sub: 'Casas y departamentos con vistas a la laguna, privacidad, áreas verdes y cercanía a servicios: un proyecto que combina confort, naturaleza y plusvalía.',
@@ -425,5 +464,10 @@ module.exports = [
       {t: 'Áreas verdes', s: 'Extensas áreas naturales para caminar, hacer ejercicio o disfrutar del aire libre.'}
     ],
     nearby: ['Supermercados: Soriana y Arteli', 'Hospital: IMSS', 'Playa Tesoro', 'Cafés y restaurantes: Degas Café, El Asador y Plaza Arenas', 'Carretera Tampico–Mante']
-  }
+  },
+
+  /* ============ SIN CATEGORÍA CONFIRMADA (solo navbar; ver PENDIENTES.md) ============ */
+  {slug: 'coto-jade', name: 'Coto Jade', categoria: null, plaza: 'Tampico', gv: 'coto-jade'},
+  {slug: 'valle-esmeralda', name: 'Valle Esmeralda', categoria: null, plaza: 'Tampico', gv: 'valle-esmeralda'},
+  {slug: 'conjunto-roma-401', name: 'Conjunto Roma 401', categoria: null, plaza: 'Tampico', gv: 'conjunto-roma-401'}
 ];

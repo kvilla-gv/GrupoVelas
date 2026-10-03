@@ -15,6 +15,10 @@
      8. Nombres de categoría según assets/gv-categorias.js: textos con
         data-cat, campo oculto "categoria", BreadcrumbList, "Nombre · …" /
         "… · Nombre" / "Categoría Nombre" y la lista del home
+     9. Lista única de desarrollos: sin copias de la lista (DEVS = [,
+        PROYECTOS = [, IMG_LOCAL o 4+ nombres de desarrollos en un script),
+        gv-desarrollos.js cargado antes de gv-nav.js y cifras fijas del home
+        iguales a los datos
 
    Uso:  node tools/verificar.js          (máx. 20 hallazgos por revisión)
          node tools/verificar.js --todo   (todos los hallazgos)
@@ -102,8 +106,8 @@ revisar('Rutas viejas y carpetas', () => {
     if (clave === null) continue; // sin categoría confirmada: no tiene carpeta que comparar
     const dir = CARPETAS[clave];
     if (!dir) out.push(`tools/desarrollos.js  ${d.slug}: clave de categoría desconocida "${clave}"`);
-    else if (!fs.existsSync(path.join(ROOT, dir, d.slug, 'index.html')))
-      out.push(`${dir}/${d.slug}/  falta la página de ${d.name} (categoría ${clave})`);
+    else if (!fs.existsSync(path.join(ROOT, dir, ...(d.plantilla ? [] : [d.slug]), 'index.html')))
+      out.push(`${dir}/${d.plantilla ? '' : d.slug + '/'}  falta la página de ${d.name} (categoría ${clave})`);
   }
   for (const r of paginasGeneradas(ROOT)){
     const [dir, slug] = r.split('/'), d = porSlug.get(slug);
@@ -204,6 +208,13 @@ revisar('Páginas generadas al día', () => {
       else if (!fs.readFileSync(a).equals(fs.readFileSync(path.join(tmp, r)))) out.push(`${r}  desactualizada`);
     }
     for (const r of actuales) if (!nuevas.includes(r)) out.push(`${r}  sobra (el generador ya no la crea)`);
+    /* También genera assets/gv-desarrollos.js y la meta del home entre <!-- gv:meta --> */
+    const datos = 'assets/gv-desarrollos.js';
+    if (!fs.existsSync(path.join(ROOT, datos))) out.push(`${datos}  falta (el generador lo crea)`);
+    else if (!fs.readFileSync(path.join(ROOT, datos)).equals(fs.readFileSync(path.join(tmp, datos)))) out.push(`${datos}  desactualizado`);
+    const meta = f => (fs.readFileSync(f, 'utf8').match(/<!-- gv:meta -->[\s\S]*?<!-- \/gv:meta -->/) || [''])[0];
+    if (!meta(path.join(ROOT, 'index.html'))) out.push('index.html  sin marcadores <!-- gv:meta --> … <!-- /gv:meta -->');
+    else if (meta(path.join(ROOT, 'index.html')) !== meta(path.join(tmp, 'index.html'))) out.push('index.html  meta description (gv:meta) desactualizada');
     return out;
   } finally {
     fs.rmSync(tmp, {recursive: true, force: true});
@@ -266,6 +277,51 @@ revisar('Nombres de categoría según la configuración', () => {
   if (!desc.includes(lista)) out.push(`index.html  la meta description no lista "${lista}"`);
   if (!/"@type":"Organization"[\s\S]*?"description":"[^"]*/.test(hs) || !hs.match(/"@type":"Organization"[\s\S]*?"description":"([^"]*)"/)[1].includes(lista))
     out.push(`index.html  el JSON-LD Organization no lista "${lista}"`);
+  return out;
+});
+
+/* 9. Lista única de desarrollos */
+revisar('Lista única de desarrollos', () => {
+  const out = [];
+  const devs = require('./desarrollos.js');
+  const FUENTES = new Set(['tools/desarrollos.js', 'assets/gv-desarrollos.js']);
+  /* a. Nombres de las listas copiadas que se eliminaron */
+  for (const f of ARCHIVOS) if (!FUENTES.has(f.r) && !f.r.endsWith('.md'))
+    f.lineas.forEach((l, i) => { const m = l.match(/\b(DEVS|PROYECTOS)\s*=\s*\[|\bIMG_LOCAL\b/); if (m) out.push(`${f.r}:${i + 1}  "${m[0]}": la lista vive en tools/desarrollos.js`); });
+  /* b. Scripts con 4 o más nombres de desarrollos entre comillas (posible copia de la lista) */
+  const nombres = [...new Set(devs.flatMap(d => [d.name, d.nombreCorto]).filter(Boolean))];
+  const scripts = f => f.r.endsWith('.js') ? [f.lineas.join('\n')]
+    : [...f.lineas.join('\n').matchAll(/<script(?![^>]*ld\+json)[^>]*>([\s\S]*?)<\/script>/g)].map(m => m[1]);
+  for (const f of ARCHIVOS) if (!FUENTES.has(f.r) && /\.(js|html)$/.test(f.r) && f.r !== 'tools/generar-desarrollos.js')
+    for (const js of scripts(f)){
+      const vistos = nombres.filter(n => ['\'', '"', '`'].some(q => js.includes(q + n + q)));
+      if (vistos.length >= 4) out.push(`${f.r}  ${vistos.length} nombres de desarrollos en un script (${vistos.slice(0, 4).join(', ')}…): ¿copia de la lista?`);
+    }
+  /* c. gv-desarrollos.js se carga antes de gv-nav.js */
+  for (const f of PUBLICADOS.filter(f => f.r.endsWith('.html'))){
+    const src = f.lineas.join('\n'), nav = src.search(/<script src="[^"]*gv-nav\.js"/), dat = src.search(/<script src="[^"]*gv-desarrollos\.js"/);
+    if (nav >= 0 && (dat < 0 || dat > nav)) out.push(`${f.r}  falta cargar assets/gv-desarrollos.js antes de gv-nav.js`);
+  }
+  /* d. Cifras fijas del home = datos (total y plazas de tools/desarrollos.js; estados de GV_RESUMEN) */
+  const conCat = devs.filter(d => d.categoria !== null);
+  const total = conCat.length, plazas = new Set(conCat.map(d => d.plaza)).size, ncat = Object.keys(CATEGORIAS).length;
+  const gvd = (ARCHIVOS.find(f => f.r === 'assets/gv-desarrollos.js') || {lineas: []}).lineas.join('\n');
+  const estados = +((gvd.match(/"estados":(\d+)/) || [])[1]);
+  const hs = ARCHIVOS.find(f => f.r === 'index.html').lineas.join('\n');
+  const fijas = [
+    ['meta description: desarrollos', /<meta name="description" content="[^"]*?(\d+) desarrollos/, total],
+    ['meta description: plazas', /<meta name="description" content="[^"]*?(\d+) plazas/, plazas],
+    ['hero: desarrollos (data-count)', /data-count="(\d+)" id="devCount"/, total],
+    ['hero: plazas (data-count)', /data-count="(\d+)" id="plazaCount"/, plazas],
+    ['hero: estados', /id="estadoCount">(\d+)</, estados],
+    ['hero: categorías (data-count)', /data-count="(\d+)">0<\/b><span>categorías/, ncat],
+    ['título de plazas', /id="plazasTitle">(\d+) plazas/, plazas]
+  ];
+  for (const [que, re, esperado] of fijas){
+    const m = hs.match(re);
+    if (!m) out.push(`index.html  no se encontró la cifra fija "${que}"`);
+    else if (+m[1] !== esperado) out.push(`index.html  ${que}: dice ${m[1]}, los datos dan ${esperado}`);
+  }
   return out;
 });
 

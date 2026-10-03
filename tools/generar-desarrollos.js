@@ -2,12 +2,17 @@
 /* =====================================================================
    Grupo Velas · Generador de páginas individuales de desarrollo
    Crea <categoria>/<slug>/index.html para cada desarrollo de
-   tools/desarrollos.js, usando la plantilla de su categoría
+   tools/desarrollos.js (salvo plantillas y categoria null), usando la
+   plantilla de su categoría
    (<carpeta>/index.html; la carpeta de cada clave sale de
    assets/gv-categorias.js).
    Reutiliza el CSS de la plantilla tal cual (mismo diseño) y las
    interacciones de assets/gv-desarrollo.js. Las secciones sin datos
    (video, tour, simulador, prototipos) se omiten en lugar de inventarse.
+
+   También escribe assets/gv-desarrollos.js (tarjetas, menú y conteos que
+   leen el home y el navbar) y la meta description del home, solo entre
+   <!-- gv:meta --> y <!-- /gv:meta --> en index.html.
 
    Uso:  node tools/generar-desarrollos.js
    Textos, fotos y amenidades de grupovelas.com.mx: tools/data/grupovelas.json
@@ -827,6 +832,7 @@ ${footer}
   <div class="lbbar"><span id="lbCap"></span><span class="lbcount" id="lbCount"></span></div>
 </dialog>
 
+<script src="${BASE}assets/gv-desarrollos.js"></script>
 <script src="${BASE}assets/gv-categorias.js"></script>
 <script src="${BASE}assets/gv-nav.js" data-base="${BASE}" data-cat="${d.categoria}" data-city="${esc(d.plaza)}"></script>
 <script>
@@ -843,8 +849,9 @@ window.DEV = ${js(DEV)};
 const only = process.argv.slice(2);
 let n = 0;
 for (const d of DEVS){
+  if (d.categoria !== null && !CATS[d.categoria]) throw new Error(`Categoría inválida en ${d.name}: ${d.categoria}`);
+  if (d.categoria === null || d.plantilla) continue; // sin categoría confirmada o ya es plantilla: no se genera
   if (only.length && !only.includes(d.slug)) continue;
-  if (!CATS[d.categoria]) throw new Error(`Categoría inválida en ${d.name}: ${d.categoria}`);
   if (d.gv && !GV[d.gv]) throw new Error(`Sin datos de grupovelas.com.mx para ${d.name} (gv: ${d.gv})`);
   const out = path.join(ROOT, CATS[d.categoria].dir, d.slug, 'index.html');
   fs.mkdirSync(path.dirname(out), {recursive: true});
@@ -853,3 +860,50 @@ for (const d of DEVS){
   console.log('✓', path.relative(ROOT, out).replace(/\\/g, '/'));
 }
 console.log(`${n} páginas generadas.`);
+
+/* ---------- datos para el navegador: assets/gv-desarrollos.js ---------- */
+/* "Desde": menos de 1 millón, completo ($770,000); desde 1 millón, MDP truncado
+   a 2 decimales sin ceros sobrantes ($2.38 MDP, $7.2 MDP). Nunca redondea hacia arriba. */
+const desde = p => p < 1e6 ? '$' + p.toLocaleString('en-US') : `$${Math.floor(p / 1e4) / 100} MDP`;
+const conCat = DEVS.filter(d => d.categoria !== null);
+const plazas = [...new Set(conCat.map(d => d.plaza))];
+for (const p of plazas) if (!PLAZAS[p]) throw new Error(`Plaza sin estado en PLAZAS: ${p}`);
+const RESUMEN = {
+  total: conCat.length,
+  plazas: plazas.length,
+  estados: new Set(plazas.map(p => PLAZAS[p].estado)).size,
+  desde: Object.fromEntries(Object.keys(CATS).map(k => {
+    const precios = conCat.filter(d => d.categoria === k && d.price > 0).map(d => d.price);
+    return [k, precios.length ? desde(Math.min(...precios)) : ''];
+  }))
+};
+const primeraFoto = d => { const i = (d.images || [])[0]; return typeof i === 'string' ? i : i ? i.src : ''; };
+const tarjeta = d => ({
+  name: d.name, ...(d.nombreCorto ? {nombreCorto: d.nombreCorto} : {}), cat: d.categoria, plaza: d.plaza, zona: d.zona || '',
+  status: d.status || '', type: d.type || '', rec: d.rec || '', m2: d.m2 || '', from: d.from || '',
+  img: d.img || primeraFoto(d), feat: d.feat || '',
+  url: d.categoria === null ? '' : d.plantilla ? `${CATS[d.categoria].dir}/index.html` : `${CATS[d.categoria].dir}/${d.slug}/index.html`,
+  gv: d.gv || ''
+});
+fs.writeFileSync(path.join(ROOT, 'assets/gv-desarrollos.js'), `/* =====================================================================
+   Grupo Velas · Desarrollos para el navegador — GENERADO, no editar.
+   Sale de tools/desarrollos.js con tools/generar-desarrollos.js.
+   GV_DESARROLLOS: tarjetas del home y menú (cat null = solo en el menú).
+   GV_RESUMEN: total, plazas, estados y precio "desde" por categoría.
+   ===================================================================== */
+window.GV_DESARROLLOS = [
+${DEVS.map(d => '  ' + JSON.stringify(tarjeta(d))).join(',\n')}
+];
+window.GV_RESUMEN = ${JSON.stringify(RESUMEN)};
+`);
+console.log('✓ assets/gv-desarrollos.js');
+
+/* ---------- meta description del home (solo entre los marcadores) ---------- */
+const HOME = path.join(ROOT, 'index.html'), homeSrc = fs.readFileSync(HOME, 'utf8');
+const MARCA = /<!-- gv:meta -->[\s\S]*?<!-- \/gv:meta -->/;
+if (!MARCA.test(homeSrc)) throw new Error('index.html sin marcadores <!-- gv:meta --> … <!-- /gv:meta -->');
+const nombres = Object.values(CATS).map(c => c.name);
+const homeMeta = `Encuentra tu hogar con Grupo Velas: ${RESUMEN.total} desarrollos en ${RESUMEN.plazas} plazas de México, en las categorías ${nombres.slice(0, -1).join(', ')} y ${nombres.at(-1)}.`;
+const homeNuevo = homeSrc.replace(MARCA, `<!-- gv:meta --><meta name="description" content="${esc(homeMeta)}"><!-- /gv:meta -->`);
+if (homeNuevo !== homeSrc) fs.writeFileSync(HOME, homeNuevo);
+console.log('✓ index.html (meta description)');

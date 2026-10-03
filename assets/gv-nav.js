@@ -6,6 +6,7 @@
      <link rel="stylesheet" href="[base]assets/gv-nav.css">
      <header data-gv-header></header>
      <footer data-gv-footer></footer>        (o <div data-gv-footer>)
+     <script src="[base]assets/gv-desarrollos.js"></script>   (generado; lista de desarrollos)
      <script src="[base]assets/gv-categorias.js"></script>
      <script src="[base]assets/gv-nav.js" data-base="[base]" data-cat="entrada|media|alta"></script>
 
@@ -38,41 +39,13 @@
     ['Playa del Carmen','Quintana Roo'], ['Querétaro','Querétaro'], ['Reynosa','Tamaulipas'], ['Tampico','Tamaulipas']
   ];
   const REVISTA = 'https://horizonte.grupovelas.com/';
-  /* Proyectos agrupados por ciudad: los de grupovelas.com.mx/desarrollos más el resto del inventario.
-     [nombre, slug en el sitio corporativo, ciudad, página en este sitio, categoría].
-     Los que no tienen página propia aquí abren su ficha en el sitio corporativo. */
-  const PROYECTOS = [
-    ['Vela Towers Cancún','vela-towers-cancun','Cancún','premium/index.html','alta'],
-    ['Punta Vela Residencial','punta-vela-residencial','Ciudad Juárez','residencial-plus/punta-vela/index.html','media'],
-    ['Valencia','','Ciudad Juárez','residencial/valencia/index.html','entrada'],
-    ['Vistavela III','vistavela-iii','Los Cabos','premium/vistavela-iii/index.html','alta'],
-    ['Vistavela Sunset','vistavela-sunset','Los Cabos','premium/vistavela-sunset/index.html','alta'],
-    ['Fraccionamiento Arecas','fraccionamiento-arecas','Matamoros','residencial/index.html','entrada'],
-    ['Lavanda II','','Matamoros','residencial-plus/lavanda-ii/index.html','media'],
-    ['Selvanova Residencial','selvanova-residencial','Playa del Carmen','residencial-plus/index.html','media'],
-    ['Velasur','velasur','Querétaro','residencial-plus/velasur/index.html','media'],
-    ['Cima Peñaflor','','Querétaro','residencial-plus/cima-penaflor/index.html','media'],
-    ['Ballesta','','Querétaro','residencial-plus/ballesta/index.html','media'],
-    ['Loma Bonita','loma-bonita-reynosa','Reynosa','residencial-plus/loma-bonita-reynosa/index.html','media'],
-    ['Florencia Residencial','florencia-residencial','Reynosa','residencial/florencia/index.html','entrada'],
-    ['Loma del Jazmín','','Reynosa','residencial-plus/loma-del-jazmin/index.html','media'],
-    ['Fraccionamiento Loma Bonita','fraccionamiento-loma-bonita','Tampico','residencial-plus/fraccionamiento-loma-bonita/index.html','media'],
-    ['Encinos Residencial','encinos-residencial','Tampico','residencial-plus/los-encinos/index.html','media'],
-    ['Torre 829','torre-829','Tampico','residencial-plus/torre-829/index.html','media'],
-    ['Coto Jade','coto-jade','Tampico'],
-    ['Valle Esmeralda','valle-esmeralda','Tampico'],
-    ['Vista Laguna','vista-laguna','Tampico','residencial/vista-laguna/index.html','entrada'],
-    ['Conjunto Roma 401','conjunto-roma-401','Tampico'],
-    ['Arecas','arecas','Tampico','residencial/arecas-altamira/index.html','entrada'],
-    ['Townhouses Velamar II','townhouses-velamar-ii','Tampico','premium/townhouses-velamar-ii/index.html','alta'],
-    ['Torre Milos','torre-milos','Tampico','premium/torre-milos/index.html','alta'],
-    ['Manila','','Tampico','premium/manila/index.html','alta'],
-    ['Sorrento Velamar','','Tampico','premium/sorrento-velamar/index.html','alta'],
-    ['Paseos de Floresta','','Tampico','residencial-plus/paseos-de-floresta/index.html','media'],
-    ['Zafiro Residencial','','Tampico','residencial-plus/zafiro-residencial/index.html','media'],
-    ['Coto Báltico','','Tampico','residencial-plus/coto-baltico/index.html','media'],
-    ['Conjunto Cárdenas 807','','Tampico','residencial-plus/conjunto-cardenas-807/index.html','media']
-  ];
+  /* Proyectos por ciudad, de assets/gv-desarrollos.js (generado de tools/desarrollos.js):
+     [nombre visible, slug en el sitio corporativo, ciudad, página en este sitio, categoría],
+     en orden alfabético por nombre visible. Los que no tienen página propia aquí
+     (categoría sin confirmar) abren su ficha en el sitio corporativo. */
+  const PROYECTOS = window.GV_DESARROLLOS
+    .map(d => [d.nombreCorto || d.name, d.gv, d.plaza, d.url, d.cat])
+    .sort((a, b) => a[0].localeCompare(b[0], 'es'));
 
   /* En el home los enlaces son anclas; desde una subpágina apuntan al home */
   const H = hash => HOME ? hash : BASE + 'index.html' + (hash === '#inicio' ? '' : hash);

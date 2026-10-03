@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Desarrollos inmobiliarios en México | Grupo Velas</title>
-<meta name="description" content="Encuentra tu hogar con Grupo Velas: 27 desarrollos en 8 plazas de México, en las categorías Residencial, Residencial Plus y Premium.">
+<!-- gv:meta --><meta name="description" content="Encuentra tu hogar con Grupo Velas: 27 desarrollos en 8 plazas de México, en las categorías Residencial, Residencial Plus y Premium."><!-- /gv:meta -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -467,7 +467,7 @@ section{position:relative}
 <section class="stats-band">
   <div class="wrap">
     <div class="sb" data-reveal="up"><b data-count="27" id="devCount">0</b><span>desarrollos<br>en México</span></div>
-    <div class="sb" data-reveal="up" style="--d:.08s"><b data-count="8">0</b><span>plazas<br>en 5 estados</span></div>
+    <div class="sb" data-reveal="up" style="--d:.08s"><b data-count="8" id="plazaCount">0</b><span>plazas<br>en <span id="estadoCount">5</span> estados</span></div>
     <div class="sb" data-reveal="up" style="--d:.16s"><b>+<span data-count="40">0</span></b><span>años<br>construyendo</span></div>
     <div class="sb" data-reveal="up" style="--d:.24s"><b data-count="3">0</b><span>categorías<br>de vivienda</span></div>
   </div>
@@ -549,7 +549,7 @@ section{position:relative}
     <div class="sec-head">
       <div>
         <span class="eyebrow" data-reveal="up">Presencia nacional</span>
-        <h2 class="split-words" data-split>8 plazas, un mismo respaldo</h2>
+        <h2 class="split-words" data-split id="plazasTitle">8 plazas, un mismo respaldo</h2>
       </div>
       <p class="lead" data-reveal="up" style="--d:.1s">Del Caribe mexicano a la frontera norte. Elige una plaza para ver sus desarrollos.</p>
     </div>
@@ -695,26 +695,27 @@ section{position:relative}
 
 <a href="#" class="wa" id="wa" data-wa aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg></a>
 
+<script src="assets/gv-desarrollos.js"></script>
 <script src="assets/gv-categorias.js"></script>
 <script src="assets/gv-nav.js"></script>
 <script>
 /* =====================================================================
-   DATOS — inventario real de desarrollos por categoría.
-   Campos vacíos = dato aún no confirmado. demo:true marca una entrada de ejemplo.
+   DATOS — categorías y plazas. Los desarrollos y sus cifras (total, plazas,
+   estados, precio "desde") vienen de assets/gv-desarrollos.js.
    ===================================================================== */
 const U = s => 'https://images.unsplash.com/photo-' + s + '?w=1000&q=70&auto=format&fit=crop';
 const WHATSAPP = '520000000000'; // número general / call center
 
 const CATS = {
-  entrada:{name:GV_CATEGORIAS.entrada.nombre, page:'residencial/index.html', tag:'Tu primer gran paso', num:'01', price:'Desde $790,000 MXN',
+  entrada:{name:GV_CATEGORIAS.entrada.nombre, page:'residencial/index.html', tag:'Tu primer gran paso', num:'01', price:GV_RESUMEN.desde.entrada,
       desc:'Casas y departamentos pensados para estrenar patrimonio, con opciones para créditos Infonavit, Fovissste y bancarios.',
       img:U('1502672260266-1c1ef2d93688'),
       rows:[['Ideal para','Quien deja de rentar y compra su primera casa'],['Formas de pago','Infonavit, Fovissste, crédito bancario y cofinanciamientos'],['Producto','Casas y departamentos funcionales en zonas con servicios'],['Lo que más valoras','Una mensualidad que te acomode']]},
-  media:{name:GV_CATEGORIAS.media.nombre, page:'residencial-plus/index.html', tag:'Espacio para crecer', num:'02', price:'Desde $1.5 MDP',
+  media:{name:GV_CATEGORIAS.media.nombre, page:'residencial-plus/index.html', tag:'Espacio para crecer', num:'02', price:GV_RESUMEN.desde.media,
       desc:'Más metros, más amenidades y comunidades planeadas para familias que buscan crecer con comodidad.',
       img:U('1600596542815-ffad4c1539a9'),
       rows:[['Ideal para','Familias en crecimiento que buscan más espacio'],['Formas de pago','Crédito bancario, cofinanciamiento o recursos propios'],['Producto','Casas y departamentos amplios con amenidades'],['Lo que más valoras','Espacio, seguridad y calidad de vida']]},
-  alta:{name:GV_CATEGORIAS.alta.nombre, page:'premium/index.html', tag:'Vivir superior', num:'03', price:'Desde $4.5 MDP',
+  alta:{name:GV_CATEGORIAS.alta.nombre, page:'premium/index.html', tag:'Vivir superior', num:'03', price:GV_RESUMEN.desde.alta,
       desc:'Nuestros desarrollos más exclusivos: diseño de autor, ubicaciones privilegiadas y amenidades con experiencia de resort.',
       img:'https://velatowerscancun.com/wp-content/uploads/2024/10/Portada-1.png',
       rows:[['Ideal para','Quien busca exclusividad o una inversión patrimonial'],['Formas de pago','Recursos propios, planes directos y crédito bancario'],['Producto','Departamentos y residencias de lujo con amenidades de resort'],['Lo que más valoras','Ubicación, diseño y exclusividad']]}
@@ -726,53 +727,9 @@ const PLAZAS = {
   'Los Cabos':{lat:22.89,lon:-109.92}, 'Querétaro':{lat:20.59,lon:-100.39}, 'Ciudad Juárez':{lat:31.69,lon:-106.42}
 };
 
-const DEVS = [
-  {name:'Vela Towers', cat:'alta', plaza:'Cancún', status:'Entrega inmediata', type:'Departamentos', rec:'3 rec.', m2:'207 – 264 m²', from:'$9 MDP', img:'https://velatowerscancun.com/wp-content/uploads/2024/11/Sin-ti%CC%81tulo-1-09-scaled-1-1.jpg', url:'premium/index.html', feat:'Amenidades de resort, Sky Bar y cancha de pádel en una de las zonas con mayor plusvalía de Cancún.'},
-  {name:'Vistavela III', cat:'alta', plaza:'Los Cabos', status:'Vendido', type:'Departamentos', rec:'', m2:'', from:'', img:'https://backend.grupovelas.com/uploads/Review_d57c2aceb2.webp', url:'premium/vistavela-iii/index.html', feat:'274 departamentos con estilo de vida de resort en el corazón de Cabo San Lucas.'},
-  {name:'Vistavela Sunset', cat:'alta', plaza:'Los Cabos', status:'Preventa', type:'Departamentos', rec:'', m2:'', from:'', img:'https://backend.grupovelas.com/uploads/Review_74f3e83745.webp', url:'premium/vistavela-sunset/index.html', feat:'Elegancia, confort y exclusividad en un entorno privilegiado de Los Cabos.'},
-  {name:'Manila', cat:'alta', plaza:'Tampico', status:'', type:'', rec:'', m2:'', from:'', img:'', url:'premium/manila/index.html', feat:''},
-  {name:'Torre Milos', cat:'alta', plaza:'Tampico', zona:'Altamira', status:'Preventa', type:'Departamentos', rec:'2 rec.', m2:'153 m²', from:'', img:'https://backend.grupovelas.com/uploads/Guest_Reviews_54544c819e.webp', url:'premium/torre-milos/index.html', feat:'Departamentos con vista al Golfo de México y acceso directo a la playa.'},
-  {name:'Townhouses', cat:'alta', plaza:'Tampico', zona:'Altamira', status:'', type:'Casas', rec:'3 rec.', m2:'327.20 m²', from:'', img:'https://backend.grupovelas.com/uploads/Amenidades_5_bca9c12f0c.webp', url:'premium/townhouses-velamar-ii/index.html', feat:'Casas frente al mar en La Escondida Velamar.'},
-  {name:'Sorrento Velamar', cat:'alta', plaza:'Tampico', zona:'Altamira', status:'', type:'Departamentos', rec:'3 rec.', m2:'149.37 m²', from:'', img:'', url:'premium/sorrento-velamar/index.html', feat:'Torre frente al mar en Residencial Velamar.'},
-  /* Residencial: desarrollos reales. Fuentes: grupovelas.com.mx (ficha, API y /mapa) y aryve.com.mx.
-     Campos vacíos = dato aún no confirmado; la tarjeta los omite (sin foto muestra un marcador). */
-  {name:'Cima Peñaflor', cat:'media', plaza:'Querétaro', status:'', type:'Departamentos', rec:'', m2:'', from:'', img:'', url:'residencial-plus/cima-penaflor/index.html', feat:'15 torres y 280 departamentos en la zona noroeste de Querétaro.'},
-  {name:'Ballesta', cat:'media', plaza:'Querétaro', status:'', type:'', rec:'', m2:'', from:'', img:'', url:'residencial-plus/ballesta/index.html', feat:''},
-  {name:'Punta Vela', cat:'media', plaza:'Ciudad Juárez', status:'Preventa', type:'Casas', rec:'', m2:'', from:'', img:'https://backend.grupovelas.com/uploads/Guest_Reviews_045abb6e8a.webp', url:'residencial-plus/punta-vela/index.html', feat:'Solo 63 casas en 3 modelos, todas con 3.5 baños y más de 5 amenidades.'},
-  {name:'Lavanda II', cat:'media', plaza:'Matamoros', status:'', type:'', rec:'', m2:'', from:'', img:'', url:'residencial-plus/lavanda-ii/index.html', feat:''},
-  {name:'Paseos de Floresta', cat:'media', plaza:'Tampico', zona:'Altamira', status:'', type:'Casas', rec:'3 rec.', m2:'114.49 m²', from:'', img:'', url:'residencial-plus/paseos-de-floresta/index.html', feat:''},
-  {name:'Zafiro Residencial', cat:'media', plaza:'Tampico', status:'', type:'', rec:'', m2:'', from:'', img:'', url:'residencial-plus/zafiro-residencial/index.html', feat:''},
-  {name:'Selvanova', cat:'media', plaza:'Playa del Carmen', status:'', type:'Casas y departamentos', rec:'3 rec.', m2:'100 – 155 m²', from:'$3.5 MDP', img:'https://backend.grupovelas.com/uploads/Guest_Review_46330f56a6.webp', url:'residencial-plus/index.html', feat:'Equilibrio entre naturaleza y vida urbana, con extensas áreas verdes, alberca y seguridad.'},
-  {name:'Vela Sur', cat:'media', plaza:'Querétaro', status:'Entrega inmediata', type:'Casas y terrenos', rec:'3 rec.', m2:'264 m²', from:'', img:'https://backend.grupovelas.com/uploads/Velasur_cfa30aa3c3.webp', url:'residencial-plus/velasur/index.html', feat:'Comunidad residencial rodeada de áreas naturales para la recreación y la convivencia familiar.'},
-  {name:'Loma Bonita', cat:'media', plaza:'Reynosa', status:'', type:'Casas', rec:'', m2:'', from:'', img:'https://backend.grupovelas.com/uploads/20a69446_a4c4_4677_9d20_883b914d6086_8aa9b1c8cf.jpg', url:'residencial-plus/loma-bonita-reynosa/index.html', feat:'Casas diseñadas a tu gusto en un entorno seguro y completamente bardeado.'},
-  {name:'Loma del Jazmín', cat:'media', plaza:'Reynosa', status:'', type:'', rec:'', m2:'', from:'', img:'', url:'residencial-plus/loma-del-jazmin/index.html', feat:''},
-  {name:'Fraccionamiento Loma Bonita', cat:'media', plaza:'Tampico', status:'Vendido', type:'Casas', rec:'3 rec.', m2:'248.89 m²', from:'', img:'https://backend.grupovelas.com/uploads/Guest_reviews_1_38aa114f3e.webp', url:'residencial-plus/fraccionamiento-loma-bonita/index.html', feat:'Casas con estacionamiento y jardín en un entorno completamente bardeado.'},
-  {name:'Coto Báltico', cat:'media', plaza:'Tampico', zona:'Altamira', status:'', type:'', rec:'3 rec.', m2:'178.62 m²', from:'', img:'', url:'residencial-plus/coto-baltico/index.html', feat:''},
-  {name:'Los Encinos Residencial', cat:'media', plaza:'Tampico', zona:'Altamira', status:'', type:'', rec:'3 rec.', m2:'163.52 m²', from:'', img:'https://backend.grupovelas.com/uploads/Guest_Reviews_1080aac18c.webp', url:'residencial-plus/los-encinos/index.html', feat:'Un hogar seguro y sostenible, con modelos variados y acabados modernos.'},
-  {name:'Torre 829 Faja de Oro', cat:'media', plaza:'Tampico', status:'Preventa', type:'Departamentos', rec:'3 rec.', m2:'220.86 m²', from:'', img:'https://backend.grupovelas.com/uploads/Guest_Reviews_86078fd359.webp', url:'residencial-plus/torre-829/index.html', feat:'Departamentos con walk-in closet, cuarto de servicio con baño y amplia terraza.'},
-  {name:'Conjunto Cárdenas 807', cat:'media', plaza:'Tampico', status:'', type:'Departamentos', rec:'3 rec.', m2:'79.68 m²', from:'', img:'', url:'residencial-plus/conjunto-cardenas-807/index.html', feat:'Conjunto de 12 departamentos.'},
-  /* Residencial (entrada): desarrollos reales. Fuentes: grupovelas.com.mx (ficha, API y /mapa) y la página propia de Arecas.
-     Campos vacíos = dato aún no confirmado; la tarjeta los omite (sin foto muestra un marcador). */
-  {name:'Valencia', cat:'entrada', plaza:'Ciudad Juárez', status:'', type:'Casas', rec:'2 – 3 rec.', m2:'', from:'', img:'', url:'residencial/valencia/index.html', feat:'Casas de una planta con opciones de 2 y 3 recámaras.'},
-  {name:'Fraccionamiento Arecas', cat:'entrada', plaza:'Matamoros', status:'', type:'Casas', rec:'2 rec.', m2:'46.92 m²', from:'$770,000', img:'https://backend.grupovelas.com/uploads/fraccionamiento_arecas_matamoros_1b434b6261.jpg', url:'residencial/index.html', feat:'Estrena casa con tu crédito Infonavit, entregada equipada y con escuela dentro del fraccionamiento.'},
-  {name:'Florencia', cat:'entrada', plaza:'Reynosa', status:'', type:'Departamentos', rec:'2 rec.', m2:'72 m²', from:'', img:'https://backend.grupovelas.com/uploads/Guest_Views_6eedef2884.jpg', url:'residencial/florencia/index.html', feat:'36 departamentos en 8 edificios, con canchas deportivas y áreas verdes.'},
-  {name:'Arecas', cat:'entrada', plaza:'Tampico', zona:'Altamira', status:'', type:'Casas', rec:'2 rec.', m2:'87.20 m²', from:'', img:'https://backend.grupovelas.com/uploads/Carrusel_01_5_54fb926eb6.webp', url:'residencial/arecas-altamira/index.html', feat:'Desarrollo de 12 casas en Altamira, con tranquilidad y seguridad.'},
-  {name:'Vista Laguna', cat:'entrada', plaza:'Tampico', zona:'Altamira', status:'Vendido', type:'Casas y departamentos', rec:'2 rec.', m2:'80.39 m²', from:'', img:'https://backend.grupovelas.com/uploads/Slider_02_6_b7d8ddcef9.webp', url:'residencial/vista-laguna/index.html', feat:'Casas y departamentos con vistas a la laguna, áreas verdes y cercanía a servicios.'},
-];
-
-/* Imágenes locales para desarrollos sin foto (img/categorias/...).
-   La clave debe ser igual al name de DEVS; la ruta, idéntica al archivo (mayúsculas incluidas). */
-const IMG_LOCAL = {
-  'Valencia':           'primera_vivienda/valencia.jpeg',
-  'Ballesta':           'residencial/ballesta.jpg',        // convertido desde .HEIC
-  'Cima Peñaflor':      'residencial/cima_penaflor.jpg',   // renombrado sin ñ
-  'Coto Báltico':       'residencial/coto_baltico.png',
-  'Lavanda II':         'residencial/lavanda.jpg',
-  'Paseos de Floresta': 'residencial/paseos_de_floresta.JPG',
-  'Manila':             'residencial_plus/manila.png',
-  'Sorrento Velamar':   'residencial_plus/sorrento.jpg',
-};
-DEVS.forEach(d => { if (!d.img && IMG_LOCAL[d.name]) d.img = 'img/categorias/' + IMG_LOCAL[d.name]; });
+/* Desarrollos: assets/gv-desarrollos.js (generado de tools/desarrollos.js). Tarjetas, buscador
+   y conteos solo con categoría confirmada; en tarjetas se usa el nombre corto si lo hay. */
+const DEVS = GV_DESARROLLOS.filter(d => d.cat).map(d => ({...d, name: d.nombreCorto || d.name}));
 
 /* Pasos de compra por forma de pago */
 const STEPS = {
@@ -788,7 +745,9 @@ const STEPS = {
   const ARROW = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
   const PIN = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5Z"/></svg>';
   const byCat = c => DEVS.filter(d => d.cat === c);
-  $('#devCount').dataset.count = DEVS.length; // la cifra sigue al inventario
+  /* Cifras del inventario (assets/gv-desarrollos.js); el HTML trae las mismas y verificar.js las compara */
+  $('#devCount').dataset.count = GV_RESUMEN.total; $('#plazaCount').dataset.count = GV_RESUMEN.plazas;
+  $('#estadoCount').textContent = GV_RESUMEN.estados; $('#plazasTitle').textContent = $('#plazasTitle').textContent.replace(/^\d+/, GV_RESUMEN.plazas);
 
   /* ---------- Paneles del hero ---------- */
   $('#panels').innerHTML = Object.entries(CATS).map(([k,c]) => {
@@ -799,7 +758,7 @@ const STEPS = {
         <span class="num">${c.num}</span>
         <h2>${c.name}</h2>
         <div class="tag">${c.tag}</div>
-        <div class="price">${c.price}</div>
+        ${c.price ? `<div class="price">Desde ${c.price}</div>` : ''}
         <div class="more"><div>
           <p>${c.desc}</p>
           <div class="meta"><div><b>${n}</b><span>desarrollos*</span></div><div><b>${pl}</b><span>plazas*</span></div></div>
@@ -847,7 +806,7 @@ const STEPS = {
   const specs = d => { const s = Object.keys(SPEC).filter(k => d[k]).map(k => `<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">${SPEC[k]}</svg>${d[k]}</span>`).join(''); return s ? `<div class="specs">${s}</div>` : ''; };
   const stClass = s => s === 'Entrega inmediata' ? 'now' : s === 'Vendido' ? 'sold' : '';
   grid.innerHTML = DEVS.map((d,i) => `
-    <a class="card" href="${d.url || '#contacto'}" data-cat="${d.cat}" data-plaza="${d.plaza}" data-status="${d.status}" data-dev="${d.name}" ${EXTERNAL(d)} data-reveal="up" style="--d:${(i%3)*.08}s">
+    <a class="card" href="${d.url}" data-cat="${d.cat}" data-plaza="${d.plaza}" data-status="${d.status}" data-dev="${d.name}" ${EXTERNAL(d)} data-reveal="up" style="--d:${(i%3)*.08}s">
       <div class="ph">${d.img ? `<img src="${R(d.img)}" alt="${d.name}" loading="lazy">` : NOIMG}<span class="cat">${CATS[d.cat].name}</span>${d.status ? `<span class="st ${stClass(d.status)}">${d.status}</span>` : ''}${d.demo?'<span class="demo">Ejemplo</span>':''}</div>
       <div class="body">
         <span class="loc">${PIN}${d.zona || d.plaza}</span>
@@ -960,7 +919,7 @@ const STEPS = {
   const featured = [0, 1].flatMap(i => ['alta', 'media', 'entrada'].map(k => withImg(k)[i])).filter(Boolean);
   const hs = $('#hscroll');
   hs.innerHTML = featured.map(d => `
-    <a class="fc" data-cat="${d.cat}" href="${d.url || '#contacto'}" ${EXTERNAL(d)} data-dev="${d.name}">
+    <a class="fc" data-cat="${d.cat}" href="${d.url}" ${EXTERNAL(d)} data-dev="${d.name}">
       <img src="${R(d.img)}" alt="${d.name}" loading="lazy" draggable="false">
       <div class="in"><span class="cat">${CATS[d.cat].name}</span><h3>${d.name}</h3><p>${d.feat}</p>
       <div class="row"><div><small>${[d.zona || d.plaza, d.status].filter(Boolean).join(' · ')}</small><b>${d.from ? 'Desde ' + d.from : 'Consultar precio'}</b></div><span class="go">${ARROW}</span></div></div>
@@ -1003,12 +962,6 @@ const STEPS = {
   /* ---------- Formulario ---------- */
   const fpl = $('#fpl'); fpl.add(new Option('Aún no lo sé', '')); Object.keys(PLAZAS).forEach(p => fpl.add(new Option(p, p)));
   $$('#formCats .chip').forEach(b => b.addEventListener('click', () => { $$('#formCats .chip').forEach(x => x.classList.toggle('on', x===b)); $('#fcat').value = CATS[b.dataset.c].name; }));
-  document.addEventListener('click', e => {
-    const a = e.target.closest('a[href="#contacto"][data-dev]'); if (!a) return;
-    const d = DEVS.find(x => x.name === a.dataset.dev); if (!d) return;
-    $('#fdev').value = d.name; fpl.value = d.plaza; $('#fcat').value = CATS[d.cat].name;
-    $$('#formCats .chip').forEach(x => x.classList.toggle('on', x.dataset.c === d.cat));
-  });
   const qp = new URLSearchParams(location.search);
   ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','fbclid'].forEach(k => { const f = $(`#form [name="${k}"]`); if (f && qp.get(k)) f.value = qp.get(k); });
   $('#form').addEventListener('submit', e => {
