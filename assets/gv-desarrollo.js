@@ -1,7 +1,7 @@
 /* =====================================================================
    Grupo Velas · Interacciones de las páginas individuales de desarrollo
    Las páginas se generan con tools/generar-desarrollos.js a partir de las
-   plantillas de cada categoría (pvivienda/, residencial/, residencialp/).
+   plantillas de cada categoría (residencial/, residencial-plus/, premium/).
    Cada página define window.DEV antes de cargar este archivo:
      name, whatsapp, waMsg, msgs{}, mapsEmbed, protos[], video{}, tour, calc{}
    Todo es opcional: si una sección no existe en la página, se omite.
@@ -29,7 +29,7 @@
     if (!reduce) timer = setTimeout(() => go(1), 6000);
   }
 
-  /* ---------- Pregunta de crédito (Primera Vivienda) ---------- */
+  /* ---------- Pregunta de crédito (Residencial) ---------- */
   const qopts = $('#qopts');
   if (qopts){
     const T = D.qText || {};
@@ -246,7 +246,7 @@
     const setP = i => i.style.setProperty('--p', ((i.value - i.min) / (i.max - i.min) * 100) + '%');
     const ins = $$('.calc-card input[type=range]');
     let mode = 'banco', calc;
-    if (C.type === 'pv'){
+    if (C.type === 'entrada'){
       /* Infonavit: crédito + ahorro contra el precio de lista */
       const cr = $('#cr'), ah = $('#ah');
       calc = () => {
@@ -259,7 +259,7 @@
         $('#cmsg').textContent = ok ? '¡Tu crédito y tu ahorro cubren el precio de la casa! Agenda tu visita.' : `Cubres el ${Math.round(cub / price * 100)}% del precio. Un asesor te ayuda a completar la diferencia.`;
       };
     } else {
-      /* Residencial: crédito bancario / plan directo / contado. Plus: plan directo. */
+      /* Residencial Plus: crédito bancario / plan directo / contado. Premium: plan directo. */
       const pr = $('#pr'), eng = $('#eng'), yr = $('#yrs'), plz = $('#plz'), rate = $('#rate');
       calc = () => {
         const price = +pr.value * 1e6, e = +eng.value;
@@ -268,8 +268,8 @@
         if (plz) $('#plzV').textContent = plz.value + ' meses';
         if (yr) $('#yrV').textContent = yr.value + ' años';
         $$('.calc-card .f[data-for]').forEach(f => f.classList.toggle('hide', !f.dataset.for.split(' ').includes(mode)));
-        if (C.type === 'rp' || mode === 'directo'){
-          $('#o1L').textContent = 'Enganche'; $('#o2L').textContent = C.type === 'rp' ? 'Mensualidad estimada' : 'Mensualidad sin intereses';
+        if (C.type === 'alta' || mode === 'directo'){
+          $('#o1L').textContent = 'Enganche'; $('#o2L').textContent = C.type === 'alta' ? 'Mensualidad estimada' : 'Mensualidad sin intereses';
           tween($('#o1'), price * e / 100); tween($('#o2'), price * (1 - e / 100) / +plz.value);
         } else if (mode === 'banco'){
           const Pv = price * (1 - e / 100), r = (+rate.value / 100) / 12, n = +yr.value * 12, m = r ? Pv * r / (1 - Math.pow(1 + r, -n)) : Pv / n;
@@ -278,7 +278,7 @@
           $('#o1L').textContent = 'Pago total'; $('#o2L').textContent = 'Pregunta por'; tween($('#o1'), price); $('#o2').dataset.v = 0; $('#o2').textContent = 'Beneficios de contado';
         }
         const disc = $('#cdisc');
-        if (disc && C.type === 're') disc.textContent = mode === 'banco' ? 'Estimación ilustrativa con tasa de referencia editable; no constituye una oferta. Tasa, plazo y condiciones las define cada banco. Precios sujetos a cambio.' : mode === 'directo' ? 'Plan directo ilustrativo sin intereses; plazos y enganches vigentes los confirma tu asesor. Precios sujetos a cambio.' : 'Consulta con tu asesor las condiciones y beneficios vigentes por pago de contado. Precios sujetos a cambio.';
+        if (disc && C.type === 'media') disc.textContent = mode === 'banco' ? 'Estimación ilustrativa con tasa de referencia editable; no constituye una oferta. Tasa, plazo y condiciones las define cada banco. Precios sujetos a cambio.' : mode === 'directo' ? 'Plan directo ilustrativo sin intereses; plazos y enganches vigentes los confirma tu asesor. Precios sujetos a cambio.' : 'Consulta con tu asesor las condiciones y beneficios vigentes por pago de contado. Precios sujetos a cambio.';
       };
       rate && rate.addEventListener('input', () => calc());
       pillGroup($('#pmodes'), b => { mode = b.dataset.m; calc(); });

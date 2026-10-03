@@ -1,0 +1,3490 @@
+[
+ {
+  "ruta": "img/ciudades/cancun.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Cancun_e051393eba.webp",
+  "estado": "ok",
+  "antes": 347940,
+  "despues": 287332,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/ciudades/ciudad-juarez.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Ciudad_Juarez_99da4274cb.webp",
+  "estado": "ok",
+  "antes": 82322,
+  "despues": 82322,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/ciudades/los-cabos.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Los_Cabos_23ef546d1a.webp",
+  "estado": "ok",
+  "antes": 124776,
+  "despues": 124776,
+  "ancho": 1024
+ },
+ {
+  "ruta": "img/ciudades/matamoros.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Matamoros_2_d589877d0d.webp",
+  "estado": "ok",
+  "antes": 203234,
+  "despues": 195762,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/ciudades/playa-del-carmen.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Playa_del_Carmen_1f8b097814.webp",
+  "estado": "ok",
+  "antes": 75354,
+  "despues": 75354,
+  "ancho": 1176
+ },
+ {
+  "ruta": "img/ciudades/queretaro.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Queretaro_968ebae10b.webp",
+  "estado": "ok",
+  "antes": 292692,
+  "despues": 292692,
+  "ancho": 1613
+ },
+ {
+  "ruta": "img/ciudades/reynosa.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Reynosa_ff332ee4de.webp",
+  "estado": "ok",
+  "antes": 422702,
+  "despues": 336304,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/ciudades/tampico.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Tampico_7dc04c8ad5.webp",
+  "estado": "ok",
+  "antes": 339918,
+  "despues": 345522,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/comun/copia-de-roof-top-vista-1.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/10/Copia-de-Roof-top-vista-1-scaled.jpg",
+  "variantes": [
+   "https://velatowerscancun.com/wp-content/uploads/2024/10/Copia-de-Roof-top-vista-1-1536x1024.jpg"
+  ],
+  "estado": "ok",
+  "antes": 601757,
+  "despues": 189104,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/comun/copia-de-roof-top-vista-1-800.webp",
+   "peso": 52362
+  }
+ },
+ {
+  "ruta": "img/comun/logo-aldea-serena.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2020/06/logo_aldea_serena.png",
+  "estado": "ok",
+  "antes": 5164,
+  "despues": 1580,
+  "ancho": 221
+ },
+ {
+  "ruta": "img/comun/logo-grupo-velas.svg",
+  "origen": "https://backend.grupovelas.com/uploads/Home_Logo_Head_2273149d_1_98a8ef58d9.svg",
+  "estado": "ok",
+  "antes": 23371,
+  "despues": 23371
+ },
+ {
+  "ruta": "img/comun/logo-gv-1.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/10/logo_GV-1.png",
+  "estado": "ok",
+  "antes": 9884,
+  "despues": 3622,
+  "ancho": 321
+ },
+ {
+  "ruta": "img/comun/logo-selvanova.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2020/06/logo_selvanova.png",
+  "estado": "ok",
+  "antes": 6730,
+  "despues": 2378,
+  "ancho": 221
+ },
+ {
+  "ruta": "img/comun/logo-vela-towers.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/10/logo_vela_towers.png",
+  "estado": "ok",
+  "antes": 5795,
+  "despues": 2020,
+  "ancho": 221
+ },
+ {
+  "ruta": "img/comun/logo-velamar-cabos.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2020/06/logo_velamar_cabos.png",
+  "estado": "ok",
+  "antes": 4855,
+  "despues": 1600,
+  "ancho": 221
+ },
+ {
+  "ruta": "img/comun/logo-velamar-tampico.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2020/06/logo_velamar_tampico.png",
+  "estado": "ok",
+  "antes": 4622,
+  "despues": 1520,
+  "ancho": 221
+ },
+ {
+  "ruta": "img/comun/logo-vistavela.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2020/06/logo_vistavela.png",
+  "estado": "ok",
+  "antes": 5046,
+  "despues": 1806,
+  "ancho": 221
+ },
+ {
+  "ruta": "img/home/destino.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/10/destino.png",
+  "estado": "ok",
+  "antes": 470207,
+  "despues": 45408,
+  "ancho": 578
+ },
+ {
+  "ruta": "img/home/unsplash-1502672260266.webp",
+  "origen": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1000&q=70&auto=format&fit=crop",
+  "estado": "ok",
+  "antes": 78633,
+  "despues": 72184,
+  "ancho": 1000
+ },
+ {
+  "ruta": "img/home/unsplash-1600585154340.webp",
+  "origen": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=70&auto=format&fit=crop",
+  "estado": "ok",
+  "antes": 103106,
+  "despues": 92824,
+  "ancho": 900
+ },
+ {
+  "ruta": "img/home/unsplash-1600596542815.webp",
+  "origen": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1000&q=70&auto=format&fit=crop",
+  "estado": "ok",
+  "antes": 63923,
+  "despues": 58704,
+  "ancho": 1000
+ },
+ {
+  "ruta": "img/premium/manila/manila.webp",
+  "origen": "img/categorias/residencial_plus/manila.png",
+  "estado": "ok",
+  "antes": 13841219,
+  "despues": 408166,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/premium/sorrento-velamar/sorrento.webp",
+  "origen": "img/categorias/residencial_plus/sorrento.jpg",
+  "estado": "ok",
+  "antes": 603562,
+  "despues": 84078,
+  "ancho": 1280
+ },
+ {
+  "ruta": "img/premium/torre-milos/01-sala-comedor.webp",
+  "origen": "https://laescondida.grupovelas.com/wp-content/uploads/2025/04/01-SALA-COMEDOR-scaled.jpg",
+  "estado": "ok",
+  "antes": 684493,
+  "despues": 197318,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/torre-milos/01-sala-comedor-800.webp",
+   "peso": 39136
+  }
+ },
+ {
+  "ruta": "img/premium/torre-milos/02-cocina.webp",
+  "origen": "https://laescondida.grupovelas.com/wp-content/uploads/2025/04/02-COCINA-scaled.jpg",
+  "estado": "ok",
+  "antes": 630091,
+  "despues": 165966,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/torre-milos/02-cocina-800.webp",
+   "peso": 32198
+  }
+ },
+ {
+  "ruta": "img/premium/torre-milos/03-rec.webp",
+  "origen": "https://laescondida.grupovelas.com/wp-content/uploads/2025/04/03-REC-scaled.jpg",
+  "estado": "ok",
+  "antes": 856837,
+  "despues": 299188,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/torre-milos/03-rec-800.webp",
+   "peso": 50242
+  }
+ },
+ {
+  "ruta": "img/premium/torre-milos/cam-3.webp",
+  "origen": "https://laescondida.grupovelas.com/wp-content/uploads/2025/04/CAM_3-scaled.jpg",
+  "estado": "ok",
+  "antes": 863015,
+  "despues": 335614,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/torre-milos/cam-3-800.webp",
+   "peso": 68908
+  }
+ },
+ {
+  "ruta": "img/premium/torre-milos/cam-4.webp",
+  "origen": "https://laescondida.grupovelas.com/wp-content/uploads/2025/04/CAM_4-scaled.jpg",
+  "estado": "ok",
+  "antes": 1024204,
+  "despues": 397542,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/torre-milos/cam-4-800.webp",
+   "peso": 82482
+  }
+ },
+ {
+  "ruta": "img/premium/torre-milos/cam-5.webp",
+  "origen": "https://laescondida.grupovelas.com/wp-content/uploads/2025/04/CAM_5-scaled.jpg",
+  "estado": "ok",
+  "antes": 1281010,
+  "despues": 390034,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/torre-milos/cam-5-800.webp",
+   "peso": 98558
+  }
+ },
+ {
+  "ruta": "img/premium/torre-milos/cam-6.webp",
+  "origen": "https://laescondida.grupovelas.com/wp-content/uploads/2025/04/CAM_6-scaled.jpg",
+  "estado": "ok",
+  "antes": 1331469,
+  "despues": 367226,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/torre-milos/cam-6-800.webp",
+   "peso": 101660
+  }
+ },
+ {
+  "ruta": "img/premium/torre-milos/cocina-dt1.webp",
+  "origen": "https://laescondida.grupovelas.com/wp-content/uploads/2025/04/COCINA_DT1-scaled.jpg",
+  "estado": "ok",
+  "antes": 795062,
+  "despues": 230774,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/torre-milos/cocina-dt1-800.webp",
+   "peso": 41890
+  }
+ },
+ {
+  "ruta": "img/premium/torre-milos/fachada.webp",
+  "origen": "https://laescondida.grupovelas.com/wp-content/uploads/2025/04/FACHADA-scaled.jpg",
+  "estado": "ok",
+  "antes": 1471404,
+  "despues": 403938,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/torre-milos/fachada-800.webp",
+   "peso": 121596
+  }
+ },
+ {
+  "ruta": "img/premium/torre-milos/galeria-04-8-2fa1cf4e48.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_04_8_2fa1cf4e48.webp",
+  "estado": "ok",
+  "antes": 74914,
+  "despues": 74914,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/premium/torre-milos/galeria-04-8-2fa1cf4e48-800.webp",
+   "peso": 75490
+  }
+ },
+ {
+  "ruta": "img/premium/torre-milos/galeria-05-8-a0e29b3d1a.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_05_8_a0e29b3d1a.webp",
+  "estado": "ok",
+  "antes": 41862,
+  "despues": 41862,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/premium/torre-milos/galeria-05-8-a0e29b3d1a-800.webp",
+   "peso": 41780
+  }
+ },
+ {
+  "ruta": "img/premium/torre-milos/galeria-06-8-0612a2aa60.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_06_8_0612a2aa60.webp",
+  "estado": "ok",
+  "antes": 42918,
+  "despues": 42918,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/premium/torre-milos/galeria-06-8-0612a2aa60-800.webp",
+   "peso": 42798
+  }
+ },
+ {
+  "ruta": "img/premium/torre-milos/guest-reviews-54544c819e.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Guest_Reviews_54544c819e.webp",
+  "estado": "ok",
+  "antes": 226370,
+  "despues": 226370,
+  "ancho": 1090
+ },
+ {
+  "ruta": "img/premium/torre-milos/recamara-dt1.webp",
+  "origen": "https://laescondida.grupovelas.com/wp-content/uploads/2025/04/RECAMARA_DT1-scaled.jpg",
+  "estado": "ok",
+  "antes": 775711,
+  "despues": 251572,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/torre-milos/recamara-dt1-800.webp",
+   "peso": 45324
+  }
+ },
+ {
+  "ruta": "img/premium/torre-milos/sala-dt1.webp",
+  "origen": "https://laescondida.grupovelas.com/wp-content/uploads/2025/04/SALA_DT1-scaled.jpg",
+  "estado": "ok",
+  "antes": 732744,
+  "despues": 228640,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/torre-milos/sala-dt1-800.webp",
+   "peso": 47830
+  }
+ },
+ {
+  "ruta": "img/premium/torre-milos/slider-01-10-11zon-0e829e44ce.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_01_10_11zon_0e829e44ce.webp",
+  "estado": "ok",
+  "antes": 261558,
+  "despues": 243776,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/torre-milos/slider-01-10-11zon-0e829e44ce-800.webp",
+   "peso": 45374
+  }
+ },
+ {
+  "ruta": "img/premium/torre-milos/slider-02-11-11zon-2513575893.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_02_11_11zon_2513575893.webp",
+  "estado": "ok",
+  "antes": 252726,
+  "despues": 261758,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/torre-milos/slider-02-11-11zon-2513575893-800.webp",
+   "peso": 69414
+  }
+ },
+ {
+  "ruta": "img/premium/torre-milos/slider-03-9-056cf138d5.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_03_9_056cf138d5.webp",
+  "estado": "ok",
+  "antes": 140216,
+  "despues": 87032,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/torre-milos/slider-03-9-056cf138d5-800.webp",
+   "peso": 19210
+  }
+ },
+ {
+  "ruta": "img/premium/torre-milos/slider-04-9-2fb203b579.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_04_9_2fb203b579.webp",
+  "estado": "ok",
+  "antes": 149530,
+  "despues": 99186,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/torre-milos/slider-04-9-2fb203b579-800.webp",
+   "peso": 24852
+  }
+ },
+ {
+  "ruta": "img/premium/townhouses-velamar-ii/amenidades-5-bca9c12f0c.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Amenidades_5_bca9c12f0c.webp",
+  "estado": "ok",
+  "antes": 140176,
+  "despues": 140176,
+  "ancho": 1472
+ },
+ {
+  "ruta": "img/premium/townhouses-velamar-ii/galeria-02-8-b41902f0e1.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_02_8_b41902f0e1.webp",
+  "estado": "ok",
+  "antes": 22998,
+  "despues": 22998,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/premium/townhouses-velamar-ii/galeria-02-8-b41902f0e1-800.webp",
+   "peso": 22834
+  }
+ },
+ {
+  "ruta": "img/premium/townhouses-velamar-ii/galeria-03-6-7c20007379.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_03_6_7c20007379.webp",
+  "estado": "ok",
+  "antes": 25286,
+  "despues": 25286,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/premium/townhouses-velamar-ii/galeria-03-6-7c20007379-800.webp",
+   "peso": 24720
+  }
+ },
+ {
+  "ruta": "img/premium/townhouses-velamar-ii/galeria-04-7-6926997d60.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_04_7_6926997d60.webp",
+  "estado": "ok",
+  "antes": 29930,
+  "despues": 29930,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/premium/townhouses-velamar-ii/galeria-04-7-6926997d60-800.webp",
+   "peso": 29096
+  }
+ },
+ {
+  "ruta": "img/premium/townhouses-velamar-ii/galeria-05-7-05fb07f0f8.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_05_7_05fb07f0f8.webp",
+  "estado": "ok",
+  "antes": 57972,
+  "despues": 57972,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/premium/townhouses-velamar-ii/galeria-05-7-05fb07f0f8-800.webp",
+   "peso": 57840
+  }
+ },
+ {
+  "ruta": "img/premium/townhouses-velamar-ii/galeria-06-7-8e92f0c963.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_06_7_8e92f0c963.webp",
+  "estado": "ok",
+  "antes": 33500,
+  "despues": 33500,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/premium/townhouses-velamar-ii/galeria-06-7-8e92f0c963-800.webp",
+   "peso": 32928
+  }
+ },
+ {
+  "ruta": "img/premium/townhouses-velamar-ii/galeria-07-2-79af865de9.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_07_2_79af865de9.webp",
+  "estado": "ok",
+  "antes": 41588,
+  "despues": 41588,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/premium/townhouses-velamar-ii/galeria-07-2-79af865de9-800.webp",
+   "peso": 41240
+  }
+ },
+ {
+  "ruta": "img/premium/townhouses-velamar-ii/image00054.webp",
+  "origen": "https://laescondida.grupovelas.com/wp-content/uploads/2025/04/image00054-1536x1152.jpeg",
+  "estado": "ok",
+  "antes": 208687,
+  "despues": 103342,
+  "ancho": 1536,
+  "mini": {
+   "ruta": "img/premium/townhouses-velamar-ii/image00054-800.webp",
+   "peso": 40080
+  }
+ },
+ {
+  "ruta": "img/premium/townhouses-velamar-ii/slider-01-9-33deb77225.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_01_9_33deb77225.webp",
+  "estado": "ok",
+  "antes": 244808,
+  "despues": 184162,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/townhouses-velamar-ii/slider-01-9-33deb77225-800.webp",
+   "peso": 39754
+  }
+ },
+ {
+  "ruta": "img/premium/townhouses-velamar-ii/slider-02-10-2b86ea17c7.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_02_10_2b86ea17c7.webp",
+  "estado": "ok",
+  "antes": 202962,
+  "despues": 138118,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/townhouses-velamar-ii/slider-02-10-2b86ea17c7-800.webp",
+   "peso": 30822
+  }
+ },
+ {
+  "ruta": "img/premium/townhouses-velamar-ii/slider-03-8-f8f8c909f8.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_03_8_f8f8c909f8.webp",
+  "estado": "ok",
+  "antes": 264446,
+  "despues": 187176,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/townhouses-velamar-ii/slider-03-8-f8f8c909f8-800.webp",
+   "peso": 41260
+  }
+ },
+ {
+  "ruta": "img/premium/townhouses-velamar-ii/slider-04-8-f29f882edf.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_04_8_f29f882edf.webp",
+  "estado": "ok",
+  "antes": 251982,
+  "despues": 170708,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/townhouses-velamar-ii/slider-04-8-f29f882edf-800.webp",
+   "peso": 39186
+  }
+ },
+ {
+  "ruta": "img/premium/townhouses-velamar-ii/townhouses-01-1.webp",
+  "origen": "https://laescondida.grupovelas.com/wp-content/uploads/2025/04/Townhouses_01-1-scaled.jpg",
+  "estado": "ok",
+  "antes": 588515,
+  "despues": 175678,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/townhouses-velamar-ii/townhouses-01-1-800.webp",
+   "peso": 47162
+  }
+ },
+ {
+  "ruta": "img/premium/townhouses-velamar-ii/townhouses-02-1.webp",
+  "origen": "https://laescondida.grupovelas.com/wp-content/uploads/2025/04/Townhouses_02-1-scaled.jpg",
+  "estado": "ok",
+  "antes": 537970,
+  "despues": 167198,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/townhouses-velamar-ii/townhouses-02-1-800.webp",
+   "peso": 42314
+  }
+ },
+ {
+  "ruta": "img/premium/townhouses-velamar-ii/townhouses-03-1.webp",
+  "origen": "https://laescondida.grupovelas.com/wp-content/uploads/2025/04/Townhouses_03-1-scaled.jpg",
+  "estado": "ok",
+  "antes": 611325,
+  "despues": 280136,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/townhouses-velamar-ii/townhouses-03-1-800.webp",
+   "peso": 65232
+  }
+ },
+ {
+  "ruta": "img/premium/townhouses-velamar-ii/townhouses-04-1.webp",
+  "origen": "https://laescondida.grupovelas.com/wp-content/uploads/2025/04/Townhouses_04-1-scaled.jpg",
+  "estado": "ok",
+  "antes": 653156,
+  "despues": 210928,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/townhouses-velamar-ii/townhouses-04-1-800.webp",
+   "peso": 52748
+  }
+ },
+ {
+  "ruta": "img/premium/townhouses-velamar-ii/townhouses-05-1.webp",
+  "origen": "https://laescondida.grupovelas.com/wp-content/uploads/2025/04/Townhouses_05-1-scaled.jpg",
+  "estado": "ok",
+  "antes": 747365,
+  "despues": 376082,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/townhouses-velamar-ii/townhouses-05-1-800.webp",
+   "peso": 86800
+  }
+ },
+ {
+  "ruta": "img/premium/townhouses-velamar-ii/townhouses-06-1.webp",
+  "origen": "https://laescondida.grupovelas.com/wp-content/uploads/2025/04/Townhouses_06-1-scaled.jpg",
+  "estado": "ok",
+  "antes": 630678,
+  "despues": 179168,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/townhouses-velamar-ii/townhouses-06-1-800.webp",
+   "peso": 43966
+  }
+ },
+ {
+  "ruta": "img/premium/townhouses-velamar-ii/townhouses-07-1.webp",
+  "origen": "https://laescondida.grupovelas.com/wp-content/uploads/2025/04/Townhouses_07-1-scaled.jpg",
+  "estado": "ok",
+  "antes": 598424,
+  "despues": 138196,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/townhouses-velamar-ii/townhouses-07-1-800.webp",
+   "peso": 37386
+  }
+ },
+ {
+  "ruta": "img/premium/vela-towers-cancun/copia-de-gym-vista-3.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/10/Copia-de-Gym-vista-3-scaled.jpg",
+  "variantes": [
+   "https://velatowerscancun.com/wp-content/uploads/2024/10/Copia-de-Gym-vista-3-1024x683.jpg"
+  ],
+  "estado": "ok",
+  "antes": 512865,
+  "despues": 149226,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vela-towers-cancun/copia-de-gym-vista-3-800.webp",
+   "peso": 47960
+  }
+ },
+ {
+  "ruta": "img/premium/vela-towers-cancun/grupo-velas-foto.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/10/grupo_velas_foto.png",
+  "estado": "ok",
+  "antes": 521771,
+  "despues": 40484,
+  "ancho": 578
+ },
+ {
+  "ruta": "img/premium/vela-towers-cancun/gym-vista-1.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/10/Gym-vista-1-scaled.jpg",
+  "variantes": [
+   "https://velatowerscancun.com/wp-content/uploads/2024/10/Gym-vista-1-1024x683.jpg"
+  ],
+  "estado": "ok",
+  "antes": 553709,
+  "despues": 173382,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vela-towers-cancun/gym-vista-1-800.webp",
+   "peso": 48378
+  }
+ },
+ {
+  "ruta": "img/premium/vela-towers-cancun/logo-vela-towers-1500x1500-1.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/11/logo_vela_towers_1500x1500-1.png",
+  "estado": "ok",
+  "antes": 5084,
+  "despues": 3188,
+  "ancho": 200
+ },
+ {
+  "ruta": "img/premium/vela-towers-cancun/mg-8004.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/10/MG_8004-scaled.jpg",
+  "variantes": [
+   "https://velatowerscancun.com/wp-content/uploads/2024/10/MG_8004-1536x1024.jpg"
+  ],
+  "estado": "ok",
+  "antes": 543797,
+  "despues": 169928,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vela-towers-cancun/mg-8004-800.webp",
+   "peso": 48590
+  }
+ },
+ {
+  "ruta": "img/premium/vela-towers-cancun/mg-8009.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/10/MG_8009-scaled.jpg",
+  "variantes": [
+   "https://velatowerscancun.com/wp-content/uploads/2024/10/MG_8009-1024x683.jpg"
+  ],
+  "estado": "ok",
+  "antes": 573222,
+  "despues": 174602,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vela-towers-cancun/mg-8009-800.webp",
+   "peso": 48800
+  }
+ },
+ {
+  "ruta": "img/premium/vela-towers-cancun/mg-8019.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/10/MG_8019-scaled.jpg",
+  "variantes": [
+   "https://velatowerscancun.com/wp-content/uploads/2024/10/MG_8019-1024x683.jpg"
+  ],
+  "estado": "ok",
+  "antes": 506306,
+  "despues": 143294,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vela-towers-cancun/mg-8019-800.webp",
+   "peso": 37962
+  }
+ },
+ {
+  "ruta": "img/premium/vela-towers-cancun/mg-8199.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/10/MG_8199-1536x1024.jpg",
+  "estado": "ok",
+  "antes": 258411,
+  "despues": 131058,
+  "ancho": 1536
+ },
+ {
+  "ruta": "img/premium/vela-towers-cancun/mg-8201.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/10/MG_8201-scaled.jpg",
+  "variantes": [
+   "https://velatowerscancun.com/wp-content/uploads/2024/10/MG_8201-1024x683.jpg"
+  ],
+  "estado": "ok",
+  "antes": 462175,
+  "despues": 129138,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vela-towers-cancun/mg-8201-800.webp",
+   "peso": 34802
+  }
+ },
+ {
+  "ruta": "img/premium/vela-towers-cancun/mg-8204.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/10/MG_8204-scaled.jpg",
+  "variantes": [
+   "https://velatowerscancun.com/wp-content/uploads/2024/10/MG_8204-1024x683.jpg"
+  ],
+  "estado": "ok",
+  "antes": 495875,
+  "despues": 156370,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vela-towers-cancun/mg-8204-800.webp",
+   "peso": 42342
+  }
+ },
+ {
+  "ruta": "img/premium/vela-towers-cancun/mg-8206.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/10/MG_8206-scaled.jpg",
+  "variantes": [
+   "https://velatowerscancun.com/wp-content/uploads/2024/10/MG_8206-1024x683.jpg"
+  ],
+  "estado": "ok",
+  "antes": 517950,
+  "despues": 165144,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vela-towers-cancun/mg-8206-800.webp",
+   "peso": 39302
+  }
+ },
+ {
+  "ruta": "img/premium/vela-towers-cancun/mg-8207.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/10/MG_8207-scaled.jpg",
+  "variantes": [
+   "https://velatowerscancun.com/wp-content/uploads/2024/10/MG_8207-1024x683.jpg"
+  ],
+  "estado": "ok",
+  "antes": 529718,
+  "despues": 167930,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vela-towers-cancun/mg-8207-800.webp",
+   "peso": 47498
+  }
+ },
+ {
+  "ruta": "img/premium/vela-towers-cancun/mg-8217.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/10/MG_8217-scaled.jpg",
+  "variantes": [
+   "https://velatowerscancun.com/wp-content/uploads/2024/10/MG_8217-1024x683.jpg"
+  ],
+  "estado": "ok",
+  "antes": 395755,
+  "despues": 101134,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vela-towers-cancun/mg-8217-800.webp",
+   "peso": 29776
+  }
+ },
+ {
+  "ruta": "img/premium/vela-towers-cancun/plano-modelo-garden.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/11/plano_modelo_garden.png",
+  "estado": "ok",
+  "antes": 3133767,
+  "despues": 206450,
+  "ancho": 1454
+ },
+ {
+  "ruta": "img/premium/vela-towers-cancun/plano-modelo-vela.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/11/plano_modelo_vela.png",
+  "estado": "ok",
+  "antes": 3168822,
+  "despues": 220662,
+  "ancho": 1454
+ },
+ {
+  "ruta": "img/premium/vela-towers-cancun/portada-1.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/10/Portada-1.png",
+  "estado": "ok",
+  "antes": 3618443,
+  "despues": 284046,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/premium/vela-towers-cancun/sin-titulo-1-09-scaled-1-1.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/11/Sin-ti%CC%81tulo-1-09-scaled-1-1.jpg",
+  "estado": "ok",
+  "antes": 364698,
+  "despues": 185704,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vela-towers-cancun/sin-titulo-1-09-scaled-1-1-800.webp",
+   "peso": 54102
+  }
+ },
+ {
+  "ruta": "img/premium/vela-towers-cancun/sin-titulo-1-11-1.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/11/Sin-ti%CC%81tulo-1-11-scaled-1.jpg",
+  "estado": "ok",
+  "antes": 655566,
+  "despues": 359764,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vela-towers-cancun/sin-titulo-1-11-1-800.webp",
+   "peso": 118822
+  }
+ },
+ {
+  "ruta": "img/premium/vela-towers-cancun/sky-bar.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/10/Sky-Bar--scaled.jpg",
+  "variantes": [
+   "https://velatowerscancun.com/wp-content/uploads/2024/10/Sky-Bar--1024x683.jpg"
+  ],
+  "estado": "ok",
+  "antes": 565638,
+  "despues": 169502,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vela-towers-cancun/sky-bar-800.webp",
+   "peso": 46296
+  }
+ },
+ {
+  "ruta": "img/premium/vela-towers-cancun/vela.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/10/VELA-scaled.jpg",
+  "variantes": [
+   "https://velatowerscancun.com/wp-content/uploads/2024/10/VELA-1024x683.jpg"
+  ],
+  "estado": "ok",
+  "antes": 472262,
+  "despues": 121888,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vela-towers-cancun/vela-800.webp",
+   "peso": 33596
+  }
+ },
+ {
+  "ruta": "img/premium/vela-towers-cancun/vela2.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/10/VELA2-scaled.jpg",
+  "variantes": [
+   "https://velatowerscancun.com/wp-content/uploads/2024/10/VELA2-1024x683.jpg"
+  ],
+  "estado": "ok",
+  "antes": 429064,
+  "despues": 109998,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vela-towers-cancun/vela2-800.webp",
+   "peso": 32266
+  }
+ },
+ {
+  "ruta": "img/premium/vela-towers-cancun/vela6.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/10/VELA6-scaled.jpg",
+  "variantes": [
+   "https://velatowerscancun.com/wp-content/uploads/2024/10/VELA6-1024x683.jpg"
+  ],
+  "estado": "ok",
+  "antes": 634811,
+  "despues": 216970,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vela-towers-cancun/vela6-800.webp",
+   "peso": 57444
+  }
+ },
+ {
+  "ruta": "img/premium/vela-towers-cancun/zona-asadores-1-1.webp",
+  "origen": "https://velatowerscancun.com/wp-content/uploads/2024/10/Zona-Asadores-1-1-scaled.jpg",
+  "variantes": [
+   "https://velatowerscancun.com/wp-content/uploads/2024/10/Zona-Asadores-1-1-1024x683.jpg"
+  ],
+  "estado": "ok",
+  "antes": 688880,
+  "despues": 222832,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vela-towers-cancun/zona-asadores-1-1-800.webp",
+   "peso": 56554
+  }
+ },
+ {
+  "ruta": "img/premium/vistavela-iii/review-d57c2aceb2.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Review_d57c2aceb2.webp",
+  "estado": "ok",
+  "antes": 107780,
+  "despues": 107780,
+  "ancho": 1090
+ },
+ {
+  "ruta": "img/premium/vistavela-iii/slider-01-526797c096.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_01_526797c096.webp",
+  "estado": "ok",
+  "antes": 107630,
+  "despues": 76642,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vistavela-iii/slider-01-526797c096-800.webp",
+   "peso": 21738
+  }
+ },
+ {
+  "ruta": "img/premium/vistavela-iii/slider-02-1-45da5907d6.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_02_1_45da5907d6.webp",
+  "estado": "ok",
+  "antes": 166388,
+  "despues": 121284,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vistavela-iii/slider-02-1-45da5907d6-800.webp",
+   "peso": 35656
+  }
+ },
+ {
+  "ruta": "img/premium/vistavela-iii/slider-03-cc6bafb672.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_03_cc6bafb672.webp",
+  "estado": "ok",
+  "antes": 151852,
+  "despues": 111442,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vistavela-iii/slider-03-cc6bafb672-800.webp",
+   "peso": 33278
+  }
+ },
+ {
+  "ruta": "img/premium/vistavela-iii/slider-04-5b7defead3.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_04_5b7defead3.webp",
+  "estado": "ok",
+  "antes": 106960,
+  "despues": 81486,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vistavela-iii/slider-04-5b7defead3-800.webp",
+   "peso": 24522
+  }
+ },
+ {
+  "ruta": "img/premium/vistavela-iii/vista-vela-iii-167c534458.webp",
+  "origen": "https://backend.grupovelas.com/uploads/vista_vela_iii_167c534458.jpg",
+  "estado": "ok",
+  "antes": 190112,
+  "despues": 144964,
+  "ancho": 1280,
+  "mini": {
+   "ruta": "img/premium/vistavela-iii/vista-vela-iii-167c534458-800.webp",
+   "peso": 68492
+  }
+ },
+ {
+  "ruta": "img/premium/vistavela-iii/vista-vela-iii-alberca-3ec2b0d0d8.webp",
+  "origen": "https://backend.grupovelas.com/uploads/vista_vela_iii_alberca_3ec2b0d0d8.jpg",
+  "estado": "ok",
+  "antes": 157720,
+  "despues": 109806,
+  "ancho": 1280,
+  "mini": {
+   "ruta": "img/premium/vistavela-iii/vista-vela-iii-alberca-3ec2b0d0d8-800.webp",
+   "peso": 50740
+  }
+ },
+ {
+  "ruta": "img/premium/vistavela-iii/vista-vela-iii-balcon-70ab2aa4bf.webp",
+  "origen": "https://backend.grupovelas.com/uploads/vista_vela_iii_balcon_70ab2aa4bf.jpg",
+  "estado": "ok",
+  "antes": 137787,
+  "despues": 83240,
+  "ancho": 1280,
+  "mini": {
+   "ruta": "img/premium/vistavela-iii/vista-vela-iii-balcon-70ab2aa4bf-800.webp",
+   "peso": 41560
+  }
+ },
+ {
+  "ruta": "img/premium/vistavela-iii/vista-vela-iii-living-785471e35a.webp",
+  "origen": "https://backend.grupovelas.com/uploads/vista_vela_iii_living_785471e35a.jpg",
+  "estado": "ok",
+  "antes": 110672,
+  "despues": 62360,
+  "ancho": 1280,
+  "mini": {
+   "ruta": "img/premium/vistavela-iii/vista-vela-iii-living-785471e35a-800.webp",
+   "peso": 33990
+  }
+ },
+ {
+  "ruta": "img/premium/vistavela-iii/vista-vela-iii-recamara-4806951a20.webp",
+  "origen": "https://backend.grupovelas.com/uploads/vista_vela_iii_recamara_4806951a20.jpg",
+  "estado": "ok",
+  "antes": 134384,
+  "despues": 85224,
+  "ancho": 1280,
+  "mini": {
+   "ruta": "img/premium/vistavela-iii/vista-vela-iii-recamara-4806951a20-800.webp",
+   "peso": 41384
+  }
+ },
+ {
+  "ruta": "img/premium/vistavela-sunset/galeria-01-13-66e26b5a78.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_01_13_66e26b5a78.webp",
+  "estado": "ok",
+  "antes": 31780,
+  "despues": 31780,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/premium/vistavela-sunset/galeria-01-13-66e26b5a78-800.webp",
+   "peso": 31828
+  }
+ },
+ {
+  "ruta": "img/premium/vistavela-sunset/galeria-02-15-9e940b2968.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_02_15_9e940b2968.webp",
+  "estado": "ok",
+  "antes": 45606,
+  "despues": 45606,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/premium/vistavela-sunset/galeria-02-15-9e940b2968-800.webp",
+   "peso": 46056
+  }
+ },
+ {
+  "ruta": "img/premium/vistavela-sunset/galeria-03-14-0c16f26230.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_03_14_0c16f26230.webp",
+  "estado": "ok",
+  "antes": 43352,
+  "despues": 43352,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/premium/vistavela-sunset/galeria-03-14-0c16f26230-800.webp",
+   "peso": 43344
+  }
+ },
+ {
+  "ruta": "img/premium/vistavela-sunset/galeria-04-13-1f1eb1acb2.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_04_13_1f1eb1acb2.webp",
+  "estado": "ok",
+  "antes": 27480,
+  "despues": 27480,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/premium/vistavela-sunset/galeria-04-13-1f1eb1acb2-800.webp",
+   "peso": 27014
+  }
+ },
+ {
+  "ruta": "img/premium/vistavela-sunset/galeria-05-13-4ddea37d54.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_05_13_4ddea37d54.webp",
+  "estado": "ok",
+  "antes": 29482,
+  "despues": 29482,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/premium/vistavela-sunset/galeria-05-13-4ddea37d54-800.webp",
+   "peso": 29666
+  }
+ },
+ {
+  "ruta": "img/premium/vistavela-sunset/galeria-06-14-bbd3d1bc82.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_06_14_bbd3d1bc82.webp",
+  "estado": "ok",
+  "antes": 37246,
+  "despues": 37246,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/premium/vistavela-sunset/galeria-06-14-bbd3d1bc82-800.webp",
+   "peso": 37080
+  }
+ },
+ {
+  "ruta": "img/premium/vistavela-sunset/review-74f3e83745.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Review_74f3e83745.webp",
+  "estado": "ok",
+  "antes": 61230,
+  "despues": 61230,
+  "ancho": 1090
+ },
+ {
+  "ruta": "img/premium/vistavela-sunset/slider-01-14-91a7d9d8dd.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_01_14_91a7d9d8dd.webp",
+  "estado": "ok",
+  "antes": 107630,
+  "despues": 76642,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vistavela-sunset/slider-01-14-91a7d9d8dd-800.webp",
+   "peso": 21738
+  }
+ },
+ {
+  "ruta": "img/premium/vistavela-sunset/slider-02-16-102f3498a1.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_02_16_102f3498a1.webp",
+  "estado": "ok",
+  "antes": 166388,
+  "despues": 121284,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vistavela-sunset/slider-02-16-102f3498a1-800.webp",
+   "peso": 35656
+  }
+ },
+ {
+  "ruta": "img/premium/vistavela-sunset/slider-03-13-0c1f340fef.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_03_13_0c1f340fef.webp",
+  "estado": "ok",
+  "antes": 151852,
+  "despues": 111442,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/premium/vistavela-sunset/slider-03-13-0c1f340fef-800.webp",
+   "peso": 33278
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/ballesta/ballesta.webp",
+  "origen": "img/categorias/residencial/ballesta.jpg",
+  "estado": "ok",
+  "antes": 2285445,
+  "despues": 222470,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/residencial-plus/cima-penaflor/1.webp",
+  "origen": "https://www.aryve.com.mx/storage/developments/June2026/1.jpg",
+  "estado": "ok",
+  "antes": 287138,
+  "despues": 204306,
+  "ancho": 1770,
+  "mini": {
+   "ruta": "img/residencial-plus/cima-penaflor/1-800.webp",
+   "peso": 65746
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/cima-penaflor/2.webp",
+  "origen": "https://www.aryve.com.mx/storage/developments/June2026/2.jpg",
+  "estado": "ok",
+  "antes": 140281,
+  "despues": 62792,
+  "ancho": 1770,
+  "mini": {
+   "ruta": "img/residencial-plus/cima-penaflor/2-800.webp",
+   "peso": 23554
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/cima-penaflor/3.webp",
+  "origen": "https://www.aryve.com.mx/storage/developments/June2026/3.jpg",
+  "estado": "ok",
+  "antes": 177626,
+  "despues": 101418,
+  "ancho": 1770,
+  "mini": {
+   "ruta": "img/residencial-plus/cima-penaflor/3-800.webp",
+   "peso": 37110
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/cima-penaflor/cima-penaflor.webp",
+  "origen": "img/categorias/residencial/cima_penaflor.jpg",
+  "estado": "ok",
+  "antes": 7010940,
+  "despues": 390660,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/cima-penaflor/cima-penaflor-800.webp",
+   "peso": 74118
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/cima-penaflor/gal1.webp",
+  "origen": "https://www.aryve.com.mx/storage/developments/June2026/gal1.jpg",
+  "estado": "ok",
+  "antes": 177534,
+  "despues": 144282,
+  "ancho": 1024,
+  "mini": {
+   "ruta": "img/residencial-plus/cima-penaflor/gal1-800.webp",
+   "peso": 103378
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/cima-penaflor/gal2.webp",
+  "origen": "https://www.aryve.com.mx/storage/developments/June2026/gal2.jpg",
+  "estado": "ok",
+  "antes": 116348,
+  "despues": 77898,
+  "ancho": 1024,
+  "mini": {
+   "ruta": "img/residencial-plus/cima-penaflor/gal2-800.webp",
+   "peso": 57418
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/cima-penaflor/gal3.webp",
+  "origen": "https://www.aryve.com.mx/storage/developments/June2026/gal3.jpg",
+  "estado": "ok",
+  "antes": 136562,
+  "despues": 93024,
+  "ancho": 1024,
+  "mini": {
+   "ruta": "img/residencial-plus/cima-penaflor/gal3-800.webp",
+   "peso": 68538
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/cima-penaflor/gal4.webp",
+  "origen": "https://www.aryve.com.mx/storage/developments/June2026/gal4.jpg",
+  "estado": "ok",
+  "antes": 74545,
+  "despues": 35960,
+  "ancho": 1024,
+  "mini": {
+   "ruta": "img/residencial-plus/cima-penaflor/gal4-800.webp",
+   "peso": 26202
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/cima-penaflor/gal5.webp",
+  "origen": "https://www.aryve.com.mx/storage/developments/June2026/gal5.jpg",
+  "estado": "ok",
+  "antes": 158831,
+  "despues": 122728,
+  "ancho": 1024,
+  "mini": {
+   "ruta": "img/residencial-plus/cima-penaflor/gal5-800.webp",
+   "peso": 88986
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/cima-penaflor/prototipo1.webp",
+  "origen": "https://www.aryve.com.mx/storage/prototypes/June2026/prototipo1.jpg",
+  "estado": "ok",
+  "antes": 401872,
+  "despues": 141380,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/residencial-plus/cima-penaflor/prototipo2.webp",
+  "origen": "https://www.aryve.com.mx/storage/prototypes/June2026/prototipo2.jpg",
+  "estado": "ok",
+  "antes": 392371,
+  "despues": 146072,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/residencial-plus/cima-penaflor/prototipo3.webp",
+  "origen": "https://www.aryve.com.mx/storage/prototypes/June2026/prototipo3.jpg",
+  "estado": "ok",
+  "antes": 248774,
+  "despues": 86566,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/residencial-plus/coto-baltico/coto-baltico.webp",
+  "origen": "img/categorias/residencial/coto_baltico.png",
+  "estado": "ok",
+  "antes": 3548964,
+  "despues": 331722,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/residencial-plus/fraccionamiento-loma-bonita/galeria-01-1-7c92c6fd51.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_01_1_7c92c6fd51.webp",
+  "estado": "ok",
+  "antes": 35734,
+  "despues": 35734,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/fraccionamiento-loma-bonita/galeria-01-1-7c92c6fd51-800.webp",
+   "peso": 35738
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/fraccionamiento-loma-bonita/galeria-02-2-d3dc079a8f.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_02_2_d3dc079a8f.webp",
+  "estado": "ok",
+  "antes": 29150,
+  "despues": 29150,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/fraccionamiento-loma-bonita/galeria-02-2-d3dc079a8f-800.webp",
+   "peso": 29170
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/fraccionamiento-loma-bonita/galeria-03-1-23dc3c790c.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_03_1_23dc3c790c.webp",
+  "estado": "ok",
+  "antes": 20904,
+  "despues": 20904,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/fraccionamiento-loma-bonita/galeria-03-1-23dc3c790c-800.webp",
+   "peso": 20730
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/fraccionamiento-loma-bonita/galeria-04-1-413a1310a0.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_04_1_413a1310a0.webp",
+  "estado": "ok",
+  "antes": 45476,
+  "despues": 45476,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/fraccionamiento-loma-bonita/galeria-04-1-413a1310a0-800.webp",
+   "peso": 45770
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/fraccionamiento-loma-bonita/galeria-05-1-3e3367d12e.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_05_1_3e3367d12e.webp",
+  "estado": "ok",
+  "antes": 26400,
+  "despues": 26400,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/fraccionamiento-loma-bonita/galeria-05-1-3e3367d12e-800.webp",
+   "peso": 26132
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/fraccionamiento-loma-bonita/galeria-06-1-7a62435581.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_06_1_7a62435581.webp",
+  "estado": "ok",
+  "antes": 56484,
+  "despues": 56484,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/fraccionamiento-loma-bonita/galeria-06-1-7a62435581-800.webp",
+   "peso": 57028
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/fraccionamiento-loma-bonita/guest-reviews-1-38aa114f3e.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Guest_reviews_1_38aa114f3e.webp",
+  "estado": "ok",
+  "antes": 86098,
+  "despues": 86098,
+  "ancho": 1090
+ },
+ {
+  "ruta": "img/residencial-plus/fraccionamiento-loma-bonita/slider-01-3-663b8a015d.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_01_3_663b8a015d.webp",
+  "estado": "ok",
+  "antes": 77644,
+  "despues": 60758,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/fraccionamiento-loma-bonita/slider-01-3-663b8a015d-800.webp",
+   "peso": 19116
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/fraccionamiento-loma-bonita/slider-02-4-3a8e16858d.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_02_4_3a8e16858d.webp",
+  "estado": "ok",
+  "antes": 149640,
+  "despues": 107158,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/fraccionamiento-loma-bonita/slider-02-4-3a8e16858d-800.webp",
+   "peso": 26234
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/fraccionamiento-loma-bonita/slider-03-2-b28f49fefb.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_03_2_b28f49fefb.webp",
+  "estado": "ok",
+  "antes": 170882,
+  "despues": 134600,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/fraccionamiento-loma-bonita/slider-03-2-b28f49fefb-800.webp",
+   "peso": 34136
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/fraccionamiento-loma-bonita/slider-04-2-1-11zon-a61f44b223.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_04_2_1_11zon_a61f44b223.webp",
+  "estado": "ok",
+  "antes": 393418,
+  "despues": 281522,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/fraccionamiento-loma-bonita/slider-04-2-1-11zon-a61f44b223-800.webp",
+   "peso": 38320
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/lavanda-ii/lavanda.webp",
+  "origen": "img/categorias/residencial/lavanda.jpg",
+  "estado": "ok",
+  "antes": 776191,
+  "despues": 86226,
+  "ancho": 1193
+ },
+ {
+  "ruta": "img/residencial-plus/loma-bonita-reynosa/20a69446-a4c4-4677-9d20-883b914d6086-8aa9b1c8cf.webp",
+  "origen": "https://backend.grupovelas.com/uploads/20a69446_a4c4_4677_9d20_883b914d6086_8aa9b1c8cf.jpg",
+  "estado": "ok",
+  "antes": 160042,
+  "despues": 118804,
+  "ancho": 960
+ },
+ {
+  "ruta": "img/residencial-plus/loma-bonita-reynosa/20a69446-a4c4-4677-9d20-883b914d6086-bcf0a5ed2a.webp",
+  "origen": "https://backend.grupovelas.com/uploads/20a69446_a4c4_4677_9d20_883b914d6086_bcf0a5ed2a.jpg",
+  "estado": "ok",
+  "antes": 160042,
+  "despues": 118804,
+  "ancho": 960,
+  "mini": {
+   "ruta": "img/residencial-plus/loma-bonita-reynosa/20a69446-a4c4-4677-9d20-883b914d6086-bcf0a5ed2a-800.webp",
+   "peso": 90232
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/loma-bonita-reynosa/307126428-776700536775528-2071051306545178009-n-e47e3f7c54.webp",
+  "origen": "https://backend.grupovelas.com/uploads/307126428_776700536775528_2071051306545178009_n_e47e3f7c54.jpg",
+  "estado": "ok",
+  "antes": 85182,
+  "despues": 58042,
+  "ancho": 1024,
+  "mini": {
+   "ruta": "img/residencial-plus/loma-bonita-reynosa/307126428-776700536775528-2071051306545178009-n-e47e3f7c54-800.webp",
+   "peso": 40336
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/loma-bonita-reynosa/307164672-776700253442223-1873737494670078348-n-336c513f08.webp",
+  "origen": "https://backend.grupovelas.com/uploads/307164672_776700253442223_1873737494670078348_n_336c513f08.jpg",
+  "estado": "ok",
+  "antes": 87938,
+  "despues": 58822,
+  "ancho": 1024,
+  "mini": {
+   "ruta": "img/residencial-plus/loma-bonita-reynosa/307164672-776700253442223-1873737494670078348-n-336c513f08-800.webp",
+   "peso": 40114
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/loma-bonita-reynosa/4dfa9aac-cff3-4842-a7ce-ab8c77222d2a-233d396f58.webp",
+  "origen": "https://backend.grupovelas.com/uploads/4dfa9aac_cff3_4842_a7ce_ab8c77222d2a_233d396f58.jpg",
+  "estado": "ok",
+  "antes": 113782,
+  "despues": 91096,
+  "ancho": 768,
+  "mini": {
+   "ruta": "img/residencial-plus/loma-bonita-reynosa/4dfa9aac-cff3-4842-a7ce-ab8c77222d2a-233d396f58-800.webp",
+   "peso": 91096
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/loma-bonita-reynosa/7aa35458-ed43-4ff6-b173-e4c317240e70-11f7ac9679.webp",
+  "origen": "https://backend.grupovelas.com/uploads/7aa35458_ed43_4ff6_b173_e4c317240e70_11f7ac9679.jpg",
+  "estado": "ok",
+  "antes": 103345,
+  "despues": 69942,
+  "ancho": 720,
+  "mini": {
+   "ruta": "img/residencial-plus/loma-bonita-reynosa/7aa35458-ed43-4ff6-b173-e4c317240e70-11f7ac9679-800.webp",
+   "peso": 69942
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/loma-bonita-reynosa/b1217e48-d7d4-4ac5-a36f-4156d37383f4-31e70fddf6.webp",
+  "origen": "https://backend.grupovelas.com/uploads/b1217e48_d7d4_4ac5_a36f_4156d37383f4_31e70fddf6.jpg",
+  "estado": "ok",
+  "antes": 88525,
+  "despues": 48044,
+  "ancho": 1280,
+  "mini": {
+   "ruta": "img/residencial-plus/loma-bonita-reynosa/b1217e48-d7d4-4ac5-a36f-4156d37383f4-31e70fddf6-800.webp",
+   "peso": 25290
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/loma-bonita-reynosa/sitio-gv-amenidades-1080x1080-1-139e8e7ff4.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Sitio_GV_Amenidades_1080x1080_1_139e8e7ff4.jpg",
+  "estado": "ok",
+  "antes": 230663,
+  "despues": 186386,
+  "ancho": 1080
+ },
+ {
+  "ruta": "img/residencial-plus/loma-bonita-reynosa/sitio-gv-amenidades-1080x1080-2-1be1a02eac.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Sitio_GV_Amenidades_1080x1080_2_1be1a02eac.jpg",
+  "estado": "ok",
+  "antes": 97541,
+  "despues": 57508,
+  "ancho": 1080
+ },
+ {
+  "ruta": "img/residencial-plus/loma-bonita-reynosa/sitio-gv-amenidades-1080x1080-2-57bcfbf208.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Sitio_GV_Amenidades_1080x1080_2_57bcfbf208.jpg",
+  "estado": "ok",
+  "antes": 97541,
+  "despues": 57508,
+  "ancho": 1080
+ },
+ {
+  "ruta": "img/residencial-plus/loma-bonita-reynosa/sitio-gv-amenidades-1080x1080-3-e1130b14dd.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Sitio_GV_Amenidades_1080x1080_3_e1130b14dd.jpg",
+  "estado": "ok",
+  "antes": 107358,
+  "despues": 60078,
+  "ancho": 1080
+ },
+ {
+  "ruta": "img/residencial-plus/loma-bonita-reynosa/sitio-gv-amenidades-1080x1080-5-5c29ac54fb.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Sitio_GV_Amenidades_1080x1080_5_5c29ac54fb.jpg",
+  "estado": "ok",
+  "antes": 154476,
+  "despues": 108924,
+  "ancho": 1080
+ },
+ {
+  "ruta": "img/residencial-plus/loma-bonita-reynosa/sitio-gv-amenidades-1080x1080-7e7ca48ab9.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Sitio_GV_Amenidades_1080x1080_7e7ca48ab9.jpg",
+  "estado": "ok",
+  "antes": 268859,
+  "despues": 246544,
+  "ancho": 1080
+ },
+ {
+  "ruta": "img/residencial-plus/loma-bonita-reynosa/sitio-gv-amenidades-1080x1080-c97e5c4bd6.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Sitio_GV_Amenidades_1080x1080_c97e5c4bd6.png",
+  "estado": "ok",
+  "antes": 262241,
+  "despues": 103428,
+  "ancho": 1080
+ },
+ {
+  "ruta": "img/residencial-plus/loma-bonita-reynosa/sitio-gv-slider-principal-proyectos-1-0ba83a06b2.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Sitio_GV_Slider_principal_proyectos_1_0ba83a06b2.jpg",
+  "estado": "ok",
+  "antes": 94591,
+  "despues": 57252,
+  "ancho": 1500,
+  "mini": {
+   "ruta": "img/residencial-plus/loma-bonita-reynosa/sitio-gv-slider-principal-proyectos-1-0ba83a06b2-800.webp",
+   "peso": 23898
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/loma-bonita-reynosa/sitio-gv-slider-principal-proyectos-2-e27ce88a1f.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Sitio_GV_Slider_principal_proyectos_2_e27ce88a1f.jpg",
+  "estado": "ok",
+  "antes": 104077,
+  "despues": 64072,
+  "ancho": 1500,
+  "mini": {
+   "ruta": "img/residencial-plus/loma-bonita-reynosa/sitio-gv-slider-principal-proyectos-2-e27ce88a1f-800.webp",
+   "peso": 26978
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/loma-bonita-reynosa/sitio-gv-slider-principal-proyectos-3-b26884b464.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Sitio_GV_Slider_principal_proyectos_3_b26884b464.jpg",
+  "estado": "ok",
+  "antes": 114271,
+  "despues": 75800,
+  "ancho": 1500,
+  "mini": {
+   "ruta": "img/residencial-plus/loma-bonita-reynosa/sitio-gv-slider-principal-proyectos-3-b26884b464-800.webp",
+   "peso": 32364
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/loma-bonita-reynosa/sitio-gv-slider-principal-proyectos-5c1a5e9b19.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Sitio_GV_Slider_principal_proyectos_5c1a5e9b19.jpg",
+  "estado": "ok",
+  "antes": 98818,
+  "despues": 63602,
+  "ancho": 1500,
+  "mini": {
+   "ruta": "img/residencial-plus/loma-bonita-reynosa/sitio-gv-slider-principal-proyectos-5c1a5e9b19-800.webp",
+   "peso": 27292
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/los-encinos/galeria-01-69eb2b0618.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_01_69eb2b0618.webp",
+  "estado": "ok",
+  "antes": 31642,
+  "despues": 31642,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/los-encinos/galeria-01-69eb2b0618-800.webp",
+   "peso": 31638
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/los-encinos/galeria-02-1-c206614e2d.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_02_1_c206614e2d.webp",
+  "estado": "ok",
+  "antes": 37870,
+  "despues": 37870,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/los-encinos/galeria-02-1-c206614e2d-800.webp",
+   "peso": 37936
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/los-encinos/galeria-03-d0d56f67f3.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_03_d0d56f67f3.webp",
+  "estado": "ok",
+  "antes": 30870,
+  "despues": 30870,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/los-encinos/galeria-03-d0d56f67f3-800.webp",
+   "peso": 30836
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/los-encinos/galeria-04-e5ec048e09.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_04_e5ec048e09.webp",
+  "estado": "ok",
+  "antes": 40162,
+  "despues": 40162,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/los-encinos/galeria-04-e5ec048e09-800.webp",
+   "peso": 40132
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/los-encinos/galeria-05-2bc6046442.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_05_2bc6046442.webp",
+  "estado": "ok",
+  "antes": 21198,
+  "despues": 21198,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/los-encinos/galeria-05-2bc6046442-800.webp",
+   "peso": 21100
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/los-encinos/galeria-06-1c67e17151.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_06_1c67e17151.webp",
+  "estado": "ok",
+  "antes": 23868,
+  "despues": 23868,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/los-encinos/galeria-06-1c67e17151-800.webp",
+   "peso": 23480
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/los-encinos/guest-reviews-1080aac18c.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Guest_Reviews_1080aac18c.webp",
+  "estado": "ok",
+  "antes": 257504,
+  "despues": 257504,
+  "ancho": 1090
+ },
+ {
+  "ruta": "img/residencial-plus/los-encinos/slider-02-3-097f2a5d2f.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_02_3_097f2a5d2f.webp",
+  "estado": "ok",
+  "antes": 131026,
+  "despues": 104992,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/los-encinos/slider-02-3-097f2a5d2f-800.webp",
+   "peso": 34184
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/los-encinos/slider-03-1-b6eee92377.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_03_1_b6eee92377.webp",
+  "estado": "ok",
+  "antes": 154198,
+  "despues": 120274,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/los-encinos/slider-03-1-b6eee92377-800.webp",
+   "peso": 33956
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/los-encinos/slider-04-1-a81f5a15ec.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_04_1_a81f5a15ec.webp",
+  "estado": "ok",
+  "antes": 152030,
+  "despues": 121706,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/los-encinos/slider-04-1-a81f5a15ec-800.webp",
+   "peso": 36106
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/paseos-de-floresta/6mfoeulhugyweorr1blz.webp",
+  "origen": "https://www.aryve.com.mx/storage/developments/May2018/6MFOEULhUGywEorr1bLz.jpg",
+  "estado": "ok",
+  "antes": 255754,
+  "despues": 244776,
+  "ancho": 1500,
+  "mini": {
+   "ruta": "img/residencial-plus/paseos-de-floresta/6mfoeulhugyweorr1blz-800.webp",
+   "peso": 83522
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/paseos-de-floresta/af8dxqtwsantbnujlyfk.webp",
+  "origen": "https://www.aryve.com.mx/storage/prototypes/August2022/Af8dxQtWSanTBNuJLYfk.jpg",
+  "estado": "ok",
+  "antes": 213907,
+  "despues": 163794,
+  "ancho": 1650,
+  "mini": {
+   "ruta": "img/residencial-plus/paseos-de-floresta/af8dxqtwsantbnujlyfk-800.webp",
+   "peso": 52150
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/paseos-de-floresta/b4vov4njlzikvjd41xy6.webp",
+  "origen": "https://www.aryve.com.mx/storage/developments/January2020/b4vOv4NJlZiKvJd41xy6.JPG",
+  "estado": "ok",
+  "antes": 189528,
+  "despues": 189322,
+  "ancho": 1200,
+  "mini": {
+   "ruta": "img/residencial-plus/paseos-de-floresta/b4vov4njlzikvjd41xy6-800.webp",
+   "peso": 90602
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/paseos-de-floresta/dbpzop8nj2ee4gyvtthc.webp",
+  "origen": "https://www.aryve.com.mx/storage/prototypes/August2022/DbPzOp8nJ2Ee4GYVTThC.png",
+  "estado": "ok",
+  "antes": 1056558,
+  "despues": 56132,
+  "ancho": 815
+ },
+ {
+  "ruta": "img/residencial-plus/paseos-de-floresta/kslpfbm82wzaxmedc1ev.webp",
+  "origen": "https://www.aryve.com.mx/storage/prototypes/August2022/KsLPfbm82WZAXmEdc1ev.png",
+  "estado": "ok",
+  "antes": 933965,
+  "despues": 61814,
+  "ancho": 829
+ },
+ {
+  "ruta": "img/residencial-plus/paseos-de-floresta/nfprre7dw5q3b6sqjhln.webp",
+  "origen": "https://www.aryve.com.mx/storage/prototypes/August2022/nFpRre7dW5Q3b6sqjHlN.png",
+  "estado": "ok",
+  "antes": 3150905,
+  "despues": 181688,
+  "ancho": 1650,
+  "mini": {
+   "ruta": "img/residencial-plus/paseos-de-floresta/nfprre7dw5q3b6sqjhln-800.webp",
+   "peso": 55548
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/paseos-de-floresta/p2s0fepx0qp7xsu3ph3o.webp",
+  "origen": "https://www.aryve.com.mx/storage/developments/March2022/p2s0fepX0Qp7XSu3Ph3o.JPG",
+  "estado": "ok",
+  "antes": 1267225,
+  "despues": 331352,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/paseos-de-floresta/p2s0fepx0qp7xsu3ph3o-800.webp",
+   "peso": 77476
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/paseos-de-floresta/paseos-de-floresta.webp",
+  "origen": "img/categorias/residencial/paseos_de_floresta.JPG",
+  "estado": "ok",
+  "antes": 1415763,
+  "despues": 212322,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/paseos-de-floresta/paseos-de-floresta-800.webp",
+   "peso": 41994
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/paseos-de-floresta/tjtwtjyaudzwrgxrvxcr.webp",
+  "origen": "https://www.aryve.com.mx/storage/developments/January2020/TjtWtjyAuDzWRgxrVXCR.JPG",
+  "estado": "ok",
+  "antes": 185965,
+  "despues": 185780,
+  "ancho": 1200,
+  "mini": {
+   "ruta": "img/residencial-plus/paseos-de-floresta/tjtwtjyaudzwrgxrvxcr-800.webp",
+   "peso": 88218
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/paseos-de-floresta/tjvlcwss4zqwk4sfybg0.webp",
+  "origen": "https://www.aryve.com.mx/storage/prototypes/August2022/tjVlCwSs4zQWk4SfybG0.png",
+  "estado": "ok",
+  "antes": 2941144,
+  "despues": 194146,
+  "ancho": 1651,
+  "mini": {
+   "ruta": "img/residencial-plus/paseos-de-floresta/tjvlcwss4zqwk4sfybg0-800.webp",
+   "peso": 62902
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/paseos-de-floresta/vlnkzzff5cfugfrpicyg.webp",
+  "origen": "https://www.aryve.com.mx/storage/developments/January2020/vLNkzZfF5cfuGfRpicyG.jpg",
+  "estado": "ok",
+  "antes": 171577,
+  "despues": 164772,
+  "ancho": 1200,
+  "mini": {
+   "ruta": "img/residencial-plus/paseos-de-floresta/vlnkzzff5cfugfrpicyg-800.webp",
+   "peso": 82660
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/paseos-de-floresta/xyzxkoldkefvmltt8up4.webp",
+  "origen": "https://www.aryve.com.mx/storage/prototypes/August2022/XYZXKOLdKefVmltT8uP4.png",
+  "estado": "ok",
+  "antes": 2839870,
+  "despues": 165518,
+  "ancho": 1651,
+  "mini": {
+   "ruta": "img/residencial-plus/paseos-de-floresta/xyzxkoldkefvmltt8up4-800.webp",
+   "peso": 53028
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/paseos-de-floresta/y297kb9tiazpp5ayjggl.webp",
+  "origen": "https://www.aryve.com.mx/storage/developments/August2022/y297kb9tiazpP5ayJgGL.png",
+  "estado": "ok",
+  "antes": 24598,
+  "despues": 8882,
+  "ancho": 500,
+  "mini": {
+   "ruta": "img/residencial-plus/paseos-de-floresta/y297kb9tiazpp5ayjggl-800.webp",
+   "peso": 8882
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/paseos-de-floresta/ytnfelam8g9xl0xechyp.webp",
+  "origen": "https://www.aryve.com.mx/storage/prototypes/August2022/YTnFeLaM8g9Xl0xEcHyP.png",
+  "estado": "ok",
+  "antes": 3238819,
+  "despues": 204408,
+  "ancho": 1651,
+  "mini": {
+   "ruta": "img/residencial-plus/paseos-de-floresta/ytnfelam8g9xl0xechyp-800.webp",
+   "peso": 58898
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/punta-vela/galeria-01-5f56be4380.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_01_5f56be4380.webp",
+  "estado": "ok",
+  "antes": 35890,
+  "despues": 35890,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/punta-vela/galeria-01-5f56be4380-800.webp",
+   "peso": 35520
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/punta-vela/galeria-01-9-4c2b51bf59.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_01_9_4c2b51bf59.webp",
+  "estado": "ok",
+  "antes": 35208,
+  "despues": 35208,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/punta-vela/galeria-01-9-4c2b51bf59-800.webp",
+   "peso": 35116
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/punta-vela/galeria-02-03ae05bc0d.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_02_03ae05bc0d.webp",
+  "estado": "ok",
+  "antes": 17286,
+  "despues": 17286,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/punta-vela/galeria-02-03ae05bc0d-800.webp",
+   "peso": 17094
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/punta-vela/galeria-02-11-e5a3ea9851.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_02_11_e5a3ea9851.webp",
+  "estado": "ok",
+  "antes": 17336,
+  "despues": 17336,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/punta-vela/galeria-02-11-e5a3ea9851-800.webp",
+   "peso": 17104
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/punta-vela/galeria-03-10-e4547bfa66.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_03_10_e4547bfa66.webp",
+  "estado": "ok",
+  "antes": 29570,
+  "despues": 29570,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/punta-vela/galeria-03-10-e4547bfa66-800.webp",
+   "peso": 29256
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/punta-vela/galeria-03-35f76cae32.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_03_35f76cae32.webp",
+  "estado": "ok",
+  "antes": 29352,
+  "despues": 29352,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/punta-vela/galeria-03-35f76cae32-800.webp",
+   "peso": 29152
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/punta-vela/galeria-04-10-1b634d8a99.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_04_10_1b634d8a99.webp",
+  "estado": "ok",
+  "antes": 29806,
+  "despues": 29806,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/punta-vela/galeria-04-10-1b634d8a99-800.webp",
+   "peso": 29516
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/punta-vela/galeria-04-f8c860695c.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_04_f8c860695c.webp",
+  "estado": "ok",
+  "antes": 31120,
+  "despues": 31120,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/punta-vela/galeria-04-f8c860695c-800.webp",
+   "peso": 31064
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/punta-vela/galeria-05-0407912c27.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_05_0407912c27.webp",
+  "estado": "ok",
+  "antes": 35696,
+  "despues": 35696,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/punta-vela/galeria-05-0407912c27-800.webp",
+   "peso": 35390
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/punta-vela/galeria-05-10-1806d55a63.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_05_10_1806d55a63.webp",
+  "estado": "ok",
+  "antes": 35650,
+  "despues": 35650,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/punta-vela/galeria-05-10-1806d55a63-800.webp",
+   "peso": 34970
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/punta-vela/galeria-06-10-17e21413cb.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_06_10_17e21413cb.webp",
+  "estado": "ok",
+  "antes": 35650,
+  "despues": 35650,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/punta-vela/galeria-06-10-17e21413cb-800.webp",
+   "peso": 34970
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/punta-vela/galeria06-e9d71745c0.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria06_e9d71745c0.webp",
+  "estado": "ok",
+  "antes": 35696,
+  "despues": 35696,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/punta-vela/galeria06-e9d71745c0-800.webp",
+   "peso": 35390
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/punta-vela/guest-reviews-045abb6e8a.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Guest_Reviews_045abb6e8a.webp",
+  "estado": "ok",
+  "antes": 88812,
+  "despues": 88812,
+  "ancho": 1090
+ },
+ {
+  "ruta": "img/residencial-plus/punta-vela/slider-01-11-303b82bae2.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_01_11_303b82bae2.webp",
+  "estado": "ok",
+  "antes": 164470,
+  "despues": 111572,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/punta-vela/slider-01-11-303b82bae2-800.webp",
+   "peso": 26420
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/punta-vela/slider-02-12-e21b356b93.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_02_12_e21b356b93.webp",
+  "estado": "ok",
+  "antes": 72244,
+  "despues": 54534,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/punta-vela/slider-02-12-e21b356b93-800.webp",
+   "peso": 19456
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/punta-vela/slider-03-10-be85c6a973.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_03_10_be85c6a973.webp",
+  "estado": "ok",
+  "antes": 94134,
+  "despues": 68054,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/punta-vela/slider-03-10-be85c6a973-800.webp",
+   "peso": 21168
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/punta-vela/slider-04-10-57fc6e7f0c.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_04_10_57fc6e7f0c.webp",
+  "estado": "ok",
+  "antes": 175210,
+  "despues": 120762,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/punta-vela/slider-04-10-57fc6e7f0c-800.webp",
+   "peso": 28464
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/a85i2324-1.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/A85I2324-1-scaled.jpg",
+  "variantes": [
+   "https://selvanova.mx/wp-content/uploads/2024/11/A85I2324-1-584x438.jpg"
+  ],
+  "estado": "ok",
+  "antes": 2360577,
+  "despues": 220654,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/a85i2324-1-800.webp",
+   "peso": 58036
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/a85i2409-mejorado-nr-1.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/A85I2409-Mejorado-NR-1-scaled.jpg",
+  "estado": "ok",
+  "antes": 1855585,
+  "despues": 168492,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/a85i2616-1.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/A85I2616-1-scaled.jpg",
+  "variantes": [
+   "https://selvanova.mx/wp-content/uploads/2024/11/A85I2616-1-584x438.jpg"
+  ],
+  "estado": "ok",
+  "antes": 5338430,
+  "despues": 359290,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/a85i2616-1-800.webp",
+   "peso": 98772
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/a85i2638.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/A85I2638-scaled.jpg",
+  "variantes": [
+   "https://selvanova.mx/wp-content/uploads/2024/11/A85I2638-584x438.jpg"
+  ],
+  "estado": "ok",
+  "antes": 4648647,
+  "despues": 395318,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/a85i2638-800.webp",
+   "peso": 86156
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/a85i2694-hdr-1.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/A85I2694-HDR-1-scaled.jpg",
+  "variantes": [
+   "https://selvanova.mx/wp-content/uploads/2024/11/A85I2694-HDR-1-584x438.jpg"
+  ],
+  "estado": "ok",
+  "antes": 2280366,
+  "despues": 221056,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/a85i2694-hdr-1-800.webp",
+   "peso": 53760
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/casa-encino-plus-selvanova-residencial-coto-9.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2021/10/Casa-Encino-Plus-Selvanova-Residencial-Coto-9.png",
+  "estado": "ok",
+  "antes": 119248,
+  "despues": 39498,
+  "ancho": 800
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/cocina-vista-desde-desayunador-1-1.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/Cocina-vista-desde-desayunador-1-1-800x800.png",
+  "estado": "ok",
+  "antes": 761470,
+  "despues": 51976,
+  "ancho": 800,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/cocina-vista-desde-desayunador-1-1-800.webp",
+   "peso": 51976
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/coto-11-2.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/Coto-11-2-scaled.jpg",
+  "variantes": [
+   "https://selvanova.mx/wp-content/uploads/2024/11/Coto-11-2-584x438.jpg"
+  ],
+  "estado": "ok",
+  "antes": 4644849,
+  "despues": 382400,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/coto-11-2-800.webp",
+   "peso": 83302
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/fraccionamiento-con-piscina-en-playa-del-carmen.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2021/10/Fraccionamiento-con-piscina-en-Playa-del-Carmen.jpg",
+  "estado": "ok",
+  "antes": 174731,
+  "despues": 397520,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/guest-review-46330f56a6.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Guest_Review_46330f56a6.webp",
+  "estado": "ok",
+  "antes": 75854,
+  "despues": 75854,
+  "ancho": 1090
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/image-1-1.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2026/07/image-1-1-592x444.png",
+  "estado": "ok",
+  "antes": 369095,
+  "despues": 31230,
+  "ancho": 592
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/image1-1.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2026/08/image1-1-592x444.jpg",
+  "estado": "ok",
+  "antes": 193959,
+  "despues": 36926,
+  "ancho": 592
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/mg-5876-hdr.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2025/06/MG_5876-HDR-scaled.jpg",
+  "estado": "ok",
+  "antes": 3297786,
+  "despues": 377930,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/mg-5906-copia.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2025/06/MG_5906-copia-scaled.jpg",
+  "estado": "ok",
+  "antes": 3014723,
+  "despues": 391256,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/mg-5926-hdr-1.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2025/06/MG_5926-HDR-1-scaled.jpg",
+  "variantes": [
+   "https://selvanova.mx/wp-content/uploads/2025/06/MG_5926-HDR-1-584x438.jpg"
+  ],
+  "estado": "ok",
+  "antes": 2756556,
+  "despues": 365874,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/mg-5926-hdr-1-800.webp",
+   "peso": 91756
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/mg-5968.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2025/06/MG_5968-scaled.jpg",
+  "estado": "ok",
+  "antes": 3414755,
+  "despues": 357662,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/mg-9620-hdr.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/MG_9620-HDR-scaled-800x800.jpg",
+  "estado": "ok",
+  "antes": 601506,
+  "despues": 63474,
+  "ancho": 800,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/mg-9620-hdr-800.webp",
+   "peso": 63474
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/mg-9633-hdr.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/MG_9633-HDR-scaled.jpg",
+  "variantes": [
+   "https://selvanova.mx/wp-content/uploads/2024/11/MG_9633-HDR-584x438.jpg"
+  ],
+  "estado": "ok",
+  "antes": 3126082,
+  "despues": 201044,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/mg-9633-hdr-800.webp",
+   "peso": 54430
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/mg-9642-hdr-1.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/MG_9642-HDR-1-scaled-800x800.jpg",
+  "estado": "ok",
+  "antes": 502831,
+  "despues": 90494,
+  "ancho": 800,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/mg-9642-hdr-1-800.webp",
+   "peso": 90494
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/mg-9648.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/MG_9648-scaled-800x800.jpg",
+  "estado": "ok",
+  "antes": 578508,
+  "despues": 121446,
+  "ancho": 800,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/mg-9648-800.webp",
+   "peso": 121446
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/mg-9659-hdr.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/MG_9659-HDR-scaled-800x800.jpg",
+  "estado": "ok",
+  "antes": 617905,
+  "despues": 56214,
+  "ancho": 800,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/mg-9659-hdr-800.webp",
+   "peso": 56214
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/mg-9675-hdr-1.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/MG_9675-HDR-1-scaled-800x800.jpg",
+  "estado": "ok",
+  "antes": 482300,
+  "despues": 39748,
+  "ancho": 800,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/mg-9675-hdr-1-800.webp",
+   "peso": 39748
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/mg-9686-hdr.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/MG_9686-HDR-scaled.jpg",
+  "variantes": [
+   "https://selvanova.mx/wp-content/uploads/2024/11/MG_9686-HDR-584x438.jpg"
+  ],
+  "estado": "ok",
+  "antes": 2540329,
+  "despues": 191620,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/mg-9686-hdr-800.webp",
+   "peso": 38232
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/mg-9698-hdr-1.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/MG_9698-HDR-1-scaled-800x800.jpg",
+  "estado": "ok",
+  "antes": 659008,
+  "despues": 60712,
+  "ancho": 800,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/mg-9698-hdr-1-800.webp",
+   "peso": 60712
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/mg-9708-hdr.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/MG_9708-HDR-scaled-800x800.jpg",
+  "estado": "ok",
+  "antes": 521349,
+  "despues": 41630,
+  "ancho": 800,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/mg-9708-hdr-800.webp",
+   "peso": 41630
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/mg-9712.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/MG_9712-scaled-800x800.jpg",
+  "estado": "ok",
+  "antes": 521524,
+  "despues": 86870,
+  "ancho": 800,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/mg-9712-800.webp",
+   "peso": 86870
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/mg-9713.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/MG_9713-scaled.jpg",
+  "variantes": [
+   "https://selvanova.mx/wp-content/uploads/2024/11/MG_9713-584x438.jpg"
+  ],
+  "estado": "ok",
+  "antes": 3398442,
+  "despues": 366054,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/mg-9713-800.webp",
+   "peso": 106100
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/mg-9730.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/MG_9730-scaled-800x800.jpg",
+  "estado": "ok",
+  "antes": 405639,
+  "despues": 31908,
+  "ancho": 800,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/mg-9730-800.webp",
+   "peso": 31908
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/mg-9735-hdr.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/MG_9735-HDR-scaled-800x800.jpg",
+  "estado": "ok",
+  "antes": 465628,
+  "despues": 35560,
+  "ancho": 800,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/mg-9735-hdr-800.webp",
+   "peso": 35560
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/mg-9736-hdr.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/MG_9736-HDR-scaled-800x800.jpg",
+  "estado": "ok",
+  "antes": 404523,
+  "despues": 25708,
+  "ancho": 800,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/mg-9736-hdr-800.webp",
+   "peso": 25708
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/mg-9752.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/MG_9752-scaled.jpg",
+  "variantes": [
+   "https://selvanova.mx/wp-content/uploads/2024/11/MG_9752-584x438.jpg"
+  ],
+  "estado": "ok",
+  "antes": 4132590,
+  "despues": 400104,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/mg-9752-800.webp",
+   "peso": 145294
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/mg-9754.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/MG_9754-584x438.jpg",
+  "estado": "ok",
+  "antes": 332280,
+  "despues": 60438,
+  "ancho": 584
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/mg-9758.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/MG_9758-scaled.jpg",
+  "variantes": [
+   "https://selvanova.mx/wp-content/uploads/2024/11/MG_9758-584x438.jpg"
+  ],
+  "estado": "ok",
+  "antes": 3793690,
+  "despues": 397372,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/mg-9758-800.webp",
+   "peso": 128006
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/pasillo-planta-alta-2-1.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/Pasillo-Planta-alta-2-1-800x800.png",
+  "estado": "ok",
+  "antes": 532700,
+  "despues": 22884,
+  "ancho": 800,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/pasillo-planta-alta-2-1-800.webp",
+   "peso": 22884
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/planos-vectores-coto-9-2.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2021/10/planos-vectores-coto-9-2.jpg",
+  "estado": "ok",
+  "antes": 9719,
+  "despues": 12680,
+  "ancho": 500
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/planos-vectores-coto-9.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2021/10/planos-vectores-coto-9.jpg",
+  "estado": "ok",
+  "antes": 9416,
+  "despues": 12454,
+  "ancho": 500
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/planta-baja-vista-general-1.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/Planta-baja-vista-general-1-800x800.png",
+  "estado": "ok",
+  "antes": 811654,
+  "despues": 68526,
+  "ancho": 800,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/planta-baja-vista-general-1-800.webp",
+   "peso": 68526
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/recamara-1-vista-2-1.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/Recamara-1-vista-2-1-800x800.png",
+  "estado": "ok",
+  "antes": 721650,
+  "despues": 42622,
+  "ancho": 800,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/recamara-1-vista-2-1-800.webp",
+   "peso": 42622
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/recamara-principal-vista-1-1-1.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/Recamara-Principal-vista-1-1-1-800x800.png",
+  "estado": "ok",
+  "antes": 700322,
+  "despues": 41322,
+  "ancho": 800,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/recamara-principal-vista-1-1-1-800.webp",
+   "peso": 41322
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/sala-vista-3-1.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2024/11/Sala-vista-3-1-800x800.png",
+  "estado": "ok",
+  "antes": 828411,
+  "despues": 66490,
+  "ancho": 800,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/sala-vista-3-1-800.webp",
+   "peso": 66490
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/sauce-plus.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2021/10/sauce-plus.png",
+  "estado": "ok",
+  "antes": 130613,
+  "despues": 42236,
+  "ancho": 800
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/selvanova-alberca-03-1.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2026/08/Selvanova_Alberca_03-scaled-1-592x444.jpg",
+  "estado": "ok",
+  "antes": 379537,
+  "despues": 47492,
+  "ancho": 592
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/selvanova-logo-horizontal-alta-3.webp",
+  "origen": "https://selvanova.mx/wp-content/uploads/2021/08/selvanova-logo-horizontal-alta-3.png",
+  "estado": "ok",
+  "antes": 8526,
+  "despues": 6642,
+  "ancho": 462
+ },
+ {
+  "ruta": "img/residencial-plus/torre-829/carrusel-01-4-348a162637.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Carrusel_01_4_348a162637.webp",
+  "estado": "ok",
+  "antes": 140492,
+  "despues": 140492,
+  "ancho": 1280,
+  "mini": {
+   "ruta": "img/residencial-plus/torre-829/carrusel-01-4-348a162637-800.webp",
+   "peso": 59420
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/torre-829/carrusel-02-4-bc051f27ff.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Carrusel_02_4_bc051f27ff.webp",
+  "estado": "ok",
+  "antes": 120704,
+  "despues": 120704,
+  "ancho": 1280,
+  "mini": {
+   "ruta": "img/residencial-plus/torre-829/carrusel-02-4-bc051f27ff-800.webp",
+   "peso": 44168
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/torre-829/carrusel-03-4-25cf4ec05e.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Carrusel_03_4_25cf4ec05e.webp",
+  "estado": "ok",
+  "antes": 160644,
+  "despues": 160644,
+  "ancho": 1280,
+  "mini": {
+   "ruta": "img/residencial-plus/torre-829/carrusel-03-4-25cf4ec05e-800.webp",
+   "peso": 57668
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/torre-829/carrusel-04-cb2cd82ad1.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Carrusel_04_cb2cd82ad1.webp",
+  "estado": "ok",
+  "antes": 122488,
+  "despues": 122488,
+  "ancho": 1280,
+  "mini": {
+   "ruta": "img/residencial-plus/torre-829/carrusel-04-cb2cd82ad1-800.webp",
+   "peso": 44492
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/torre-829/guest-reviews-86078fd359.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Guest_Reviews_86078fd359.webp",
+  "estado": "ok",
+  "antes": 148260,
+  "despues": 148260,
+  "ancho": 1090
+ },
+ {
+  "ruta": "img/residencial-plus/torre-829/slider-01-1-d15cb700d7.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_01_1_d15cb700d7.webp",
+  "estado": "ok",
+  "antes": 224452,
+  "despues": 159392,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/torre-829/slider-01-1-d15cb700d7-800.webp",
+   "peso": 34616
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/torre-829/slider-02-2-2948be0aad.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_02_2_2948be0aad.webp",
+  "estado": "ok",
+  "antes": 211436,
+  "despues": 150918,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/torre-829/slider-02-2-2948be0aad-800.webp",
+   "peso": 34622
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/carrusel-01-3690d1ab0d.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Carrusel_01_3690d1ab0d.webp",
+  "estado": "ok",
+  "antes": 131110,
+  "despues": 131110,
+  "ancho": 1280,
+  "mini": {
+   "ruta": "img/residencial-plus/velasur/carrusel-01-3690d1ab0d-800.webp",
+   "peso": 59322
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/carrusel-02-ae8036435f.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Carrusel_02_ae8036435f.webp",
+  "estado": "ok",
+  "antes": 87144,
+  "despues": 87144,
+  "ancho": 1280,
+  "mini": {
+   "ruta": "img/residencial-plus/velasur/carrusel-02-ae8036435f-800.webp",
+   "peso": 41536
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/carrusel-03-51be3a06d7.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Carrusel_03_51be3a06d7.webp",
+  "estado": "ok",
+  "antes": 80400,
+  "despues": 80400,
+  "ancho": 1280,
+  "mini": {
+   "ruta": "img/residencial-plus/velasur/carrusel-03-51be3a06d7-800.webp",
+   "peso": 36382
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/carrusel-04-ba2035f912.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Carrusel_04_ba2035f912.webp",
+  "estado": "ok",
+  "antes": 137424,
+  "despues": 137424,
+  "ancho": 1280,
+  "mini": {
+   "ruta": "img/residencial-plus/velasur/carrusel-04-ba2035f912-800.webp",
+   "peso": 56842
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/galeria-01-3c239fdec3.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_01_3c239fdec3.webp",
+  "estado": "ok",
+  "antes": 30580,
+  "despues": 30580,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/velasur/galeria-01-3c239fdec3-800.webp",
+   "peso": 30464
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/galeria-02-3f28417558.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_02_3f28417558.webp",
+  "estado": "ok",
+  "antes": 40548,
+  "despues": 40548,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/velasur/galeria-02-3f28417558-800.webp",
+   "peso": 40354
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/galeria-03-f85148a33e.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_03_f85148a33e.webp",
+  "estado": "ok",
+  "antes": 22326,
+  "despues": 22326,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/velasur/galeria-03-f85148a33e-800.webp",
+   "peso": 22374
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/galeria-04-6bac09612e.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_04_6bac09612e.webp",
+  "estado": "ok",
+  "antes": 36196,
+  "despues": 36196,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/velasur/galeria-04-6bac09612e-800.webp",
+   "peso": 35914
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/galeria-05-a2cba3fbfa.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_05_a2cba3fbfa.webp",
+  "estado": "ok",
+  "antes": 62834,
+  "despues": 62834,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial-plus/velasur/galeria-05-a2cba3fbfa-800.webp",
+   "peso": 62666
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/slider-01-velasur-4f2b6e37cf.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_01_Velasur_4f2b6e37cf.webp",
+  "estado": "ok",
+  "antes": 115528,
+  "despues": 89802,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/velasur/slider-01-velasur-4f2b6e37cf-800.webp",
+   "peso": 25972
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/slider-02-velasur-991d7b8389.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_02_Velasur_991d7b8389.webp",
+  "estado": "ok",
+  "antes": 82004,
+  "despues": 63418,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/velasur/slider-02-velasur-991d7b8389-800.webp",
+   "peso": 18878
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/slider-03-velasur-8d774b6382.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_03_Velasur_8d774b6382.webp",
+  "estado": "ok",
+  "antes": 71572,
+  "despues": 54566,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/velasur/slider-03-velasur-8d774b6382-800.webp",
+   "peso": 17130
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-bano-d3d1b186eb.webp",
+  "origen": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_magnolia_bano_d3d1b186eb.jpg",
+  "estado": "ok",
+  "antes": 168941,
+  "despues": 94964,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-comedor-f24ca8cb89.webp",
+  "origen": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_magnolia_comedor_f24ca8cb89.jpg",
+  "estado": "ok",
+  "antes": 228583,
+  "despues": 128804,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-comedor-f24ca8cb89-800.webp",
+   "peso": 27950
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-fachada-3f317b5f8d.webp",
+  "origen": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_magnolia_fachada_3f317b5f8d.jpg",
+  "estado": "ok",
+  "antes": 226700,
+  "despues": 141802,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-fachada-3f317b5f8d-800.webp",
+   "peso": 32298
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-living-bf3bab40cf.webp",
+  "origen": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_magnolia_living_bf3bab40cf.jpg",
+  "estado": "ok",
+  "antes": 219371,
+  "despues": 118042,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-living-bf3bab40cf-800.webp",
+   "peso": 25424
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-recamara-bc0a0e1dcc.webp",
+  "origen": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_magnolia_recamara_bc0a0e1dcc.jpg",
+  "estado": "ok",
+  "antes": 268807,
+  "despues": 183934,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-recamara-bc0a0e1dcc-800.webp",
+   "peso": 38952
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-sala-fe1e6498eb.webp",
+  "origen": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_magnolia_sala_fe1e6498eb.jpg",
+  "estado": "ok",
+  "antes": 236146,
+  "despues": 137178,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-sala-fe1e6498eb-800.webp",
+   "peso": 22960
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-vestidor-fb737bccbe.webp",
+  "origen": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_magnolia_vestidor_fb737bccbe.jpg",
+  "estado": "ok",
+  "antes": 252593,
+  "despues": 149432,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-vestidor-fb737bccbe-800.webp",
+   "peso": 19762
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/velasur-casas-queretaro-olivo-bano-83e17ac5d3.webp",
+  "origen": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_olivo_bano_83e17ac5d3.jpg",
+  "estado": "ok",
+  "antes": 258663,
+  "despues": 157708,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/velasur-casas-queretaro-olivo-cocina-a5ff412c56.webp",
+  "origen": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_olivo_cocina_a5ff412c56.jpg",
+  "estado": "ok",
+  "antes": 257453,
+  "despues": 158050,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/velasur-casas-queretaro-olivo-comedor-3dcdd2e216.webp",
+  "origen": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_olivo_comedor_3dcdd2e216.jpg",
+  "estado": "ok",
+  "antes": 279784,
+  "despues": 195370,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/velasur-casas-queretaro-olivo-estudio-4550d21559.webp",
+  "origen": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_olivo_estudio_4550d21559.jpg",
+  "estado": "ok",
+  "antes": 296234,
+  "despues": 208946,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/velasur-casas-queretaro-olivo-fachada-39c2b27606.webp",
+  "origen": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_olivo_fachada_39c2b27606.jpg",
+  "estado": "ok",
+  "antes": 271334,
+  "despues": 170522,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/velasur-casas-queretaro-olivo-recamara-6bdc1dd8e4.webp",
+  "origen": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_olivo_recamara_6bdc1dd8e4.jpg",
+  "estado": "ok",
+  "antes": 259203,
+  "despues": 171724,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/velasur-casas-queretaro-olivo-vestidor-d1a11369dd.webp",
+  "origen": "https://backend.grupovelas.com/uploads/velasur_casas_queretaro_olivo_vestidor_d1a11369dd.jpg",
+  "estado": "ok",
+  "antes": 230135,
+  "despues": 124998,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/residencial-plus/velasur/velasur-cfa30aa3c3.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Velasur_cfa30aa3c3.webp",
+  "estado": "ok",
+  "antes": 40436,
+  "despues": 40436,
+  "ancho": 712
+ },
+ {
+  "ruta": "img/residencial/arecas-altamira/carrusel-01-5-54fb926eb6.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Carrusel_01_5_54fb926eb6.webp",
+  "estado": "ok",
+  "antes": 135554,
+  "despues": 135554,
+  "ancho": 1280
+ },
+ {
+  "ruta": "img/residencial/arecas-altamira/carrusel-01-6-d2fbdd8513.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Carrusel_01_6_d2fbdd8513.webp",
+  "estado": "ok",
+  "antes": 135554,
+  "despues": 135554,
+  "ancho": 1280,
+  "mini": {
+   "ruta": "img/residencial/arecas-altamira/carrusel-01-6-d2fbdd8513-800.webp",
+   "peso": 49472
+  }
+ },
+ {
+  "ruta": "img/residencial/arecas-altamira/carrusel-03-6-7d0df19d4e.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Carrusel_03_6_7d0df19d4e.webp",
+  "estado": "ok",
+  "antes": 89404,
+  "despues": 89404,
+  "ancho": 1280,
+  "mini": {
+   "ruta": "img/residencial/arecas-altamira/carrusel-03-6-7d0df19d4e-800.webp",
+   "peso": 39778
+  }
+ },
+ {
+  "ruta": "img/residencial/arecas-altamira/galeria-04-6-4150c9c783.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_04_6_4150c9c783.webp",
+  "estado": "ok",
+  "antes": 27154,
+  "despues": 27154,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/arecas-altamira/galeria-04-6-4150c9c783-800.webp",
+   "peso": 26934
+  }
+ },
+ {
+  "ruta": "img/residencial/arecas-altamira/galeria-05-6-616625420b.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_05_6_616625420b.webp",
+  "estado": "ok",
+  "antes": 32812,
+  "despues": 32812,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/arecas-altamira/galeria-05-6-616625420b-800.webp",
+   "peso": 32644
+  }
+ },
+ {
+  "ruta": "img/residencial/arecas-altamira/galeria-06-6-f3de6074af.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_06_6_f3de6074af.webp",
+  "estado": "ok",
+  "antes": 32140,
+  "despues": 32140,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/arecas-altamira/galeria-06-6-f3de6074af-800.webp",
+   "peso": 31714
+  }
+ },
+ {
+  "ruta": "img/residencial/arecas-altamira/slider-01-8-66cd38fcbd.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_01_8_66cd38fcbd.webp",
+  "estado": "ok",
+  "antes": 76542,
+  "despues": 55906,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial/arecas-altamira/slider-01-8-66cd38fcbd-800.webp",
+   "peso": 15198
+  }
+ },
+ {
+  "ruta": "img/residencial/arecas-altamira/slider-03-7-e5f63011d1.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_03_7_e5f63011d1.webp",
+  "estado": "ok",
+  "antes": 131230,
+  "despues": 97898,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial/arecas-altamira/slider-03-7-e5f63011d1-800.webp",
+   "peso": 27886
+  }
+ },
+ {
+  "ruta": "img/residencial/arecas-altamira/slider-04-7-e5d82e7c51.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_04_7_e5d82e7c51.webp",
+  "estado": "ok",
+  "antes": 61994,
+  "despues": 48026,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial/arecas-altamira/slider-04-7-e5d82e7c51-800.webp",
+   "peso": 15202
+  }
+ },
+ {
+  "ruta": "img/residencial/florencia/galeria-01-c380ef9470.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_01_c380ef9470.jpg",
+  "estado": "ok",
+  "antes": 43158,
+  "despues": 33492,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/florencia/galeria-01-c380ef9470-800.webp",
+   "peso": 33492
+  }
+ },
+ {
+  "ruta": "img/residencial/florencia/galeria-02-4105525a0a.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_02_4105525a0a.jpg",
+  "estado": "ok",
+  "antes": 44970,
+  "despues": 35752,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/florencia/galeria-02-4105525a0a-800.webp",
+   "peso": 35752
+  }
+ },
+ {
+  "ruta": "img/residencial/florencia/galeria-03-642d1ef7a0.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_03_642d1ef7a0.jpg",
+  "estado": "ok",
+  "antes": 39207,
+  "despues": 28710,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/florencia/galeria-03-642d1ef7a0-800.webp",
+   "peso": 28710
+  }
+ },
+ {
+  "ruta": "img/residencial/florencia/galeria-04-21e0ba58e2.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_04_21e0ba58e2.jpg",
+  "estado": "ok",
+  "antes": 45090,
+  "despues": 37332,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/florencia/galeria-04-21e0ba58e2-800.webp",
+   "peso": 37332
+  }
+ },
+ {
+  "ruta": "img/residencial/florencia/galeria-05-502f9ed9f0.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_05_502f9ed9f0.jpg",
+  "estado": "ok",
+  "antes": 44430,
+  "despues": 38012,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/florencia/galeria-05-502f9ed9f0-800.webp",
+   "peso": 38012
+  }
+ },
+ {
+  "ruta": "img/residencial/florencia/galeria-06-fedf39a102.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_06_fedf39a102.jpg",
+  "estado": "ok",
+  "antes": 29404,
+  "despues": 21250,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/florencia/galeria-06-fedf39a102-800.webp",
+   "peso": 21250
+  }
+ },
+ {
+  "ruta": "img/residencial/florencia/guest-views-6eedef2884.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Guest_Views_6eedef2884.jpg",
+  "estado": "ok",
+  "antes": 107505,
+  "despues": 80518,
+  "ancho": 1090
+ },
+ {
+  "ruta": "img/residencial/florencia/slider-01-05fd4530fd.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_01_05fd4530fd.jpg",
+  "estado": "ok",
+  "antes": 149415,
+  "despues": 69760,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial/florencia/slider-01-05fd4530fd-800.webp",
+   "peso": 19994
+  }
+ },
+ {
+  "ruta": "img/residencial/florencia/slider-03-a70fc1d401.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_03_a70fc1d401.jpg",
+  "estado": "ok",
+  "antes": 175061,
+  "despues": 87882,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial/florencia/slider-03-a70fc1d401-800.webp",
+   "peso": 22586
+  }
+ },
+ {
+  "ruta": "img/residencial/florencia/slider-04-1-c390a48607.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_04_1_c390a48607.jpg",
+  "estado": "ok",
+  "antes": 249485,
+  "despues": 135864,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial/florencia/slider-04-1-c390a48607-800.webp",
+   "peso": 27094
+  }
+ },
+ {
+  "ruta": "img/residencial/fraccionamiento-arecas/carrusel-01-8-5e8bc85c47.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Carrusel_01_8_5e8bc85c47.webp",
+  "estado": "ok",
+  "antes": 135554,
+  "despues": 135554,
+  "ancho": 1280,
+  "mini": {
+   "ruta": "img/residencial/fraccionamiento-arecas/carrusel-01-8-5e8bc85c47-800.webp",
+   "peso": 49472
+  }
+ },
+ {
+  "ruta": "img/residencial/fraccionamiento-arecas/fraccionamiento-arecas-matamoros-1b434b6261.webp",
+  "origen": "https://backend.grupovelas.com/uploads/fraccionamiento_arecas_matamoros_1b434b6261.jpg",
+  "estado": "ok",
+  "antes": 72590,
+  "despues": 37546,
+  "ancho": 1280
+ },
+ {
+  "ruta": "img/residencial/fraccionamiento-arecas/galeria-01-14-d3fc51e4ff.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_01_14_d3fc51e4ff.webp",
+  "estado": "ok",
+  "antes": 24172,
+  "despues": 24172,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/fraccionamiento-arecas/galeria-01-14-d3fc51e4ff-800.webp",
+   "peso": 23976
+  }
+ },
+ {
+  "ruta": "img/residencial/fraccionamiento-arecas/galeria-02-16-88bb733fa8.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_02_16_88bb733fa8.webp",
+  "estado": "ok",
+  "antes": 37744,
+  "despues": 37744,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/fraccionamiento-arecas/galeria-02-16-88bb733fa8-800.webp",
+   "peso": 37756
+  }
+ },
+ {
+  "ruta": "img/residencial/fraccionamiento-arecas/galeria-03-15-1029dedc39.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_03_15_1029dedc39.webp",
+  "estado": "ok",
+  "antes": 42232,
+  "despues": 42232,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/fraccionamiento-arecas/galeria-03-15-1029dedc39-800.webp",
+   "peso": 42170
+  }
+ },
+ {
+  "ruta": "img/residencial/fraccionamiento-arecas/galeria-04-14-3e892487d4.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_04_14_3e892487d4.webp",
+  "estado": "ok",
+  "antes": 27154,
+  "despues": 27154,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/fraccionamiento-arecas/galeria-04-14-3e892487d4-800.webp",
+   "peso": 26934
+  }
+ },
+ {
+  "ruta": "img/residencial/fraccionamiento-arecas/galeria-05-14-0ffc6beaa1.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_05_14_0ffc6beaa1.webp",
+  "estado": "ok",
+  "antes": 32812,
+  "despues": 32812,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/fraccionamiento-arecas/galeria-05-14-0ffc6beaa1-800.webp",
+   "peso": 32644
+  }
+ },
+ {
+  "ruta": "img/residencial/fraccionamiento-arecas/galeria-06-15-22bd52d95e.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_06_15_22bd52d95e.webp",
+  "estado": "ok",
+  "antes": 32140,
+  "despues": 32140,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/fraccionamiento-arecas/galeria-06-15-22bd52d95e-800.webp",
+   "peso": 31714
+  }
+ },
+ {
+  "ruta": "img/residencial/fraccionamiento-arecas/slider-01-15-641244cf39.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_01_15_641244cf39.webp",
+  "estado": "ok",
+  "antes": 76542,
+  "despues": 55906,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial/fraccionamiento-arecas/slider-01-15-641244cf39-800.webp",
+   "peso": 15198
+  }
+ },
+ {
+  "ruta": "img/residencial/fraccionamiento-arecas/slider-03-15-84c19a6e8e.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_03_15_84c19a6e8e.webp",
+  "estado": "ok",
+  "antes": 131230,
+  "despues": 97898,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial/fraccionamiento-arecas/slider-03-15-84c19a6e8e-800.webp",
+   "peso": 27886
+  }
+ },
+ {
+  "ruta": "img/residencial/fraccionamiento-arecas/slider-04-16-d07e05c2a6.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_04_16_d07e05c2a6.webp",
+  "estado": "ok",
+  "antes": 61994,
+  "despues": 48026,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial/fraccionamiento-arecas/slider-04-16-d07e05c2a6-800.webp",
+   "peso": 15202
+  }
+ },
+ {
+  "ruta": "img/residencial/valencia/valencia.webp",
+  "origen": "img/categorias/primera_vivienda/valencia.jpeg",
+  "estado": "ok",
+  "antes": 271598,
+  "despues": 133102,
+  "ancho": 1280
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/galeria-01-4-8a44ffd6eb.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_01_4_8a44ffd6eb.webp",
+  "estado": "ok",
+  "antes": 56710,
+  "despues": 56710,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/vista-laguna/galeria-01-4-8a44ffd6eb-800.webp",
+   "peso": 56734
+  }
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/galeria-02-5-984f69b924.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_02_5_984f69b924.webp",
+  "estado": "ok",
+  "antes": 23152,
+  "despues": 23152,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/vista-laguna/galeria-02-5-984f69b924-800.webp",
+   "peso": 23152
+  }
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/galeria-03-4-905050fc1c.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_03_4_905050fc1c.webp",
+  "estado": "ok",
+  "antes": 50700,
+  "despues": 50700,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/vista-laguna/galeria-03-4-905050fc1c-800.webp",
+   "peso": 50082
+  }
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/galeria-04-4-2d3520e8bc.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_04_4_2d3520e8bc.webp",
+  "estado": "ok",
+  "antes": 42116,
+  "despues": 42116,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/vista-laguna/galeria-04-4-2d3520e8bc-800.webp",
+   "peso": 42132
+  }
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/galeria-05-4-ddf533b85f.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_05_4_ddf533b85f.webp",
+  "estado": "ok",
+  "antes": 41542,
+  "despues": 41542,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/vista-laguna/galeria-05-4-ddf533b85f-800.webp",
+   "peso": 40874
+  }
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/galeria-06-4-1154dec98b.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_06_4_1154dec98b.webp",
+  "estado": "ok",
+  "antes": 49464,
+  "despues": 49464,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/vista-laguna/galeria-06-4-1154dec98b-800.webp",
+   "peso": 49528
+  }
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/galeria-07-1-f03200d05f.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_07_1_f03200d05f.webp",
+  "estado": "ok",
+  "antes": 39678,
+  "despues": 39678,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/vista-laguna/galeria-07-1-f03200d05f-800.webp",
+   "peso": 39006
+  }
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/galeria-08-1-628a01f98a.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_08_1_628a01f98a.webp",
+  "estado": "ok",
+  "antes": 49226,
+  "despues": 49226,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/vista-laguna/galeria-08-1-628a01f98a-800.webp",
+   "peso": 49236
+  }
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/galeria-09-1-dd51039b80.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Galeria_09_1_dd51039b80.webp",
+  "estado": "ok",
+  "antes": 48338,
+  "despues": 48338,
+  "ancho": 710,
+  "mini": {
+   "ruta": "img/residencial/vista-laguna/galeria-09-1-dd51039b80-800.webp",
+   "peso": 48288
+  }
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/slider-01-6-0df0103dfb.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_01_6_0df0103dfb.webp",
+  "estado": "ok",
+  "antes": 150720,
+  "despues": 117252,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial/vista-laguna/slider-01-6-0df0103dfb-800.webp",
+   "peso": 31982
+  }
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/slider-02-6-b7d8ddcef9.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_02_6_b7d8ddcef9.webp",
+  "estado": "ok",
+  "antes": 237130,
+  "despues": 170502,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/slider-02-7-e0d4becc9b.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_02_7_e0d4becc9b.webp",
+  "estado": "ok",
+  "antes": 165268,
+  "despues": 120482,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial/vista-laguna/slider-02-7-e0d4becc9b-800.webp",
+   "peso": 30880
+  }
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/slider-03-5-e6d7939ec8.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_03_5_e6d7939ec8.webp",
+  "estado": "ok",
+  "antes": 148678,
+  "despues": 109858,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial/vista-laguna/slider-03-5-e6d7939ec8-800.webp",
+   "peso": 26842
+  }
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/slider-04-5-bf293e2ffe.webp",
+  "origen": "https://backend.grupovelas.com/uploads/Slider_04_5_bf293e2ffe.webp",
+  "estado": "ok",
+  "antes": 148636,
+  "despues": 112588,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial/vista-laguna/slider-04-5-bf293e2ffe-800.webp",
+   "peso": 28396
+  }
+ }
+]

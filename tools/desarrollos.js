@@ -1,15 +1,23 @@
 /* =====================================================================
-   Grupo Velas · Datos de las páginas individuales de desarrollo
-   Una entrada por desarrollo de index.html (DEVS), salvo los tres que ya
-   son plantilla: Vela Towers (residencialp/), Selvanova (residencial/) y
-   Fraccionamiento Arecas (pvivienda/).
+   Grupo Velas · Lista única de desarrollos (fuente de verdad)
+   El home, el navbar y las páginas de desarrollo leen de aquí. El orden es el
+   de las tarjetas del home; el menú los ordena alfabéticamente por plaza.
 
    Después de editar:  node tools/generar-desarrollos.js
-   La página queda en <categoria>/<slug>/index.html.
+   Genera <carpeta>/<slug>/index.html, assets/gv-desarrollos.js (lo que leen
+   el home y el navbar) y la meta description del home (entre <!-- gv:meta -->).
 
-   Campos (todos opcionales salvo slug, name, cat, plaza):
-     gv          clave en tools/data/grupovelas.json: aporta texto de bienvenida,
-                 fotos, amenidades, video y catálogo de grupovelas.com.mx
+   Campos (todos opcionales salvo slug, name, categoria, plaza):
+     categoria   entrada | media | alta (claves de assets/gv-categorias.js), o null
+                 si no está confirmada: no tiene página, tarjeta ni conteo; solo
+                 aparece en el navbar, con enlace a su ficha en grupovelas.com.mx
+     plantilla   true en los tres que ya son plantilla (<carpeta>/index.html):
+                 no se generan; sus datos solo alimentan tarjeta, menú y conteos
+     nombreCorto nombre en tarjetas y menú (solo si no se presta a confusión)
+     img, feat   foto y texto de la tarjeta del home (sin img se usa images[0])
+     gv          slug de su ficha en grupovelas.com.mx; si existe en
+                 tools/data/grupovelas.json aporta texto de bienvenida, fotos,
+                 amenidades, video y catálogo
      zona        localidad si difiere de la plaza (p. ej. Altamira en Tampico)
      status      Preventa | En construcción | Entrega inmediata | Vendido
      from/price  precio "desde" (texto) y el mismo en número (activa el simulador)
@@ -27,12 +35,17 @@
      address, lat, lon, mapsQuery, tel, mail, whatsapp, credits, faq[[p, r]]
    Datos sin confirmar se dejan vacíos: la sección correspondiente se omite.
    ===================================================================== */
-const U = 'https://backend.grupovelas.com/uploads/';
 
 module.exports = [
-  /* ======================= RESIDENCIAL PLUS ======================= */
+  /* =========================== PREMIUM =========================== */
   {
-    slug: 'vistavela-iii', name: 'Vistavela III', cat: 'rp', plaza: 'Los Cabos', zona: 'Cabo San Lucas', gv: 'vistavela-iii',
+    slug: 'vela-towers-cancun', name: 'Vela Towers Cancún', nombreCorto: 'Vela Towers', categoria: 'alta', plaza: 'Cancún', plantilla: true,
+    status: 'Entrega inmediata', type: 'Departamentos', rec: '3 rec.', m2: '207 – 264 m²', from: '$9 MDP', price: 9000000,
+    img: 'img/premium/vela-towers-cancun/sin-titulo-1-09-scaled-1-1.webp', feat: 'Amenidades de resort, Sky Bar y cancha de pádel en una de las zonas con mayor plusvalía de Cancún.'
+  },
+  {
+    slug: 'vistavela-iii', name: 'Vistavela III', categoria: 'alta', plaza: 'Los Cabos', zona: 'Cabo San Lucas', gv: 'vistavela-iii',
+    img: 'img/premium/vistavela-iii/review-d57c2aceb2.webp', feat: '274 departamentos con estilo de vida de resort en el corazón de Cabo San Lucas.',
     status: 'Vendido', type: 'Departamentos', units: '274 departamentos',
     h1: ['Vistavela III', 'en <em>Cabo San Lucas</em>'],
     sub: 'Un estilo de vida de resort en el corazón de Cabo San Lucas: 274 departamentos con amenidades de primer nivel, rodeados de la belleza natural de Los Cabos.',
@@ -46,7 +59,8 @@ module.exports = [
     nearby: ['Centros comerciales: Puerto Paraíso Mall y Plaza San Lucas', 'Supermercados: Fresko, Costco y Walmart', 'Hospitales: H+ Hospital Los Cabos y BlueNet Hospitals', 'Playa El Médano, a 15–20 minutos en coche']
   },
   {
-    slug: 'vistavela-sunset', name: 'Vistavela Sunset', cat: 'rp', plaza: 'Los Cabos', zona: 'Cabo San Lucas', gv: 'vistavela-sunset',
+    slug: 'vistavela-sunset', name: 'Vistavela Sunset', categoria: 'alta', plaza: 'Los Cabos', zona: 'Cabo San Lucas', gv: 'vistavela-sunset',
+    img: 'img/premium/vistavela-sunset/review-74f3e83745.webp', feat: 'Elegancia, confort y exclusividad en un entorno privilegiado de Los Cabos.',
     status: 'Preventa', type: 'Departamentos y casas', units: '120 departamentos y 31 casas',
     h1: ['Donde el desierto', 'se une con el <em>mar</em>'],
     eyebrow: 'Vistavela Sunset · Cabo San Lucas',
@@ -61,12 +75,13 @@ module.exports = [
     nearby: ['Playa El Médano, a 7 minutos en coche', 'Centros comerciales: Puerto Paraíso Mall y Plaza San Lucas', 'Supermercados: Fresko, Costco y Walmart', 'Hospitales: H+ Hospital Los Cabos y BlueNet Hospitals', 'Acceso fácil a la carretera Transpeninsular']
   },
   {
-    slug: 'manila', name: 'Manila', cat: 'rp', plaza: 'Tampico',
-    images: ['img/categorias/residencial_plus/manila.png']
+    slug: 'manila', name: 'Manila', categoria: 'alta', plaza: 'Tampico',
+    images: ['img/premium/manila/manila.webp']
   },
   {
     /* Fuentes: laescondida.grupovelas.com/milos y grupovelas.com.mx/desarrollo/torre-milos */
-    slug: 'torre-milos', name: 'Torre Milos', cat: 'rp', plaza: 'Tampico', zona: 'Altamira', gv: 'torre-milos',
+    slug: 'torre-milos', name: 'Torre Milos', categoria: 'alta', plaza: 'Tampico', zona: 'Altamira', gv: 'torre-milos',
+    img: 'img/premium/torre-milos/guest-reviews-54544c819e.webp', feat: 'Departamentos con vista al Golfo de México y acceso directo a la playa.',
     status: 'Preventa', type: 'Departamentos', rec: '2 – 3 rec.', m2: 'hasta 231 m²', units: '71 departamentos',
     from: '$7.2 MDP', price: 7200000,
     h1: ['Torre Milos,', 'frente al <em>Golfo</em>'],
@@ -98,12 +113,13 @@ module.exports = [
     ],
     nearby: ['Cafés y restaurantes: Velas 10'],
     whatsapp: '528333430381', tel: '833 343 0381',
-    hero: ['https://laescondida.grupovelas.com/wp-content/uploads/2025/04/FACHADA-scaled.jpg', 'https://laescondida.grupovelas.com/wp-content/uploads/2025/04/CAM_3-scaled.jpg', 'https://laescondida.grupovelas.com/wp-content/uploads/2025/04/CAM_4-scaled.jpg'],
-    images: ['FACHADA', 'CAM_3', 'CAM_4', 'CAM_5', 'CAM_6', '01-SALA-COMEDOR', '02-COCINA', '03-REC', 'SALA_DT1', 'COCINA_DT1', 'RECAMARA_DT1'].map(s => `https://laescondida.grupovelas.com/wp-content/uploads/2025/04/${s}-scaled.jpg`)
+    hero: ['img/premium/torre-milos/fachada.webp', 'img/premium/torre-milos/cam-3.webp', 'img/premium/torre-milos/cam-4.webp'],
+    images: ['img/premium/torre-milos/fachada.webp', 'img/premium/torre-milos/cam-3.webp', 'img/premium/torre-milos/cam-4.webp', 'img/premium/torre-milos/cam-5.webp', 'img/premium/torre-milos/cam-6.webp', 'img/premium/torre-milos/01-sala-comedor.webp', 'img/premium/torre-milos/02-cocina.webp', 'img/premium/torre-milos/03-rec.webp', 'img/premium/torre-milos/sala-dt1.webp', 'img/premium/torre-milos/cocina-dt1.webp', 'img/premium/torre-milos/recamara-dt1.webp']
   },
   {
     /* Fuentes: laescondida.grupovelas.com/townhouses y grupovelas.com.mx/desarrollo/townhouses-velamar-ii */
-    slug: 'townhouses-velamar-ii', logoText: 'Townhouses', name: 'Townhouses Velamar II', cat: 'rp', plaza: 'Tampico', zona: 'Altamira', gv: 'townhouses-velamar-ii',
+    slug: 'townhouses-velamar-ii', logoText: 'Townhouses', name: 'Townhouses Velamar II', categoria: 'alta', plaza: 'Tampico', zona: 'Altamira', gv: 'townhouses-velamar-ii',
+    img: 'img/premium/townhouses-velamar-ii/amenidades-5-bca9c12f0c.webp', feat: 'Casas frente al mar en La Escondida Velamar.',
     type: 'Casas', rec: '3 rec.', m2: 'hasta 449.20 m²', units: '20 casas', from: '$18.3 MDP', price: 18300000,
     h1: ['Vive en un', 'eterno <em>verano</em>'],
     eyebrow: 'Townhouses Velamar II · Altamira',
@@ -129,22 +145,24 @@ module.exports = [
       {n: 'Arteli Miramar', m: 9, d: '2.7 km'}, {n: 'Malecón Miramar', m: 10, d: '3.5 km'}
     ],
     whatsapp: '528333430381', tel: '833 343 0381',
-    hero: [U + 'Slider_04_8_f29f882edf.webp', U + 'Slider_03_8_f8f8c909f8.webp', U + 'Slider_02_10_2b86ea17c7.webp'],
-    images: [1, 2, 3, 4, 5, 6, 7].map(n => `https://laescondida.grupovelas.com/wp-content/uploads/2025/04/Townhouses_0${n}-1-scaled.jpg`).concat('https://laescondida.grupovelas.com/wp-content/uploads/2025/04/image00054-1536x1152.jpeg')
+    hero: ['img/premium/townhouses-velamar-ii/slider-04-8-f29f882edf.webp', 'img/premium/townhouses-velamar-ii/slider-03-8-f8f8c909f8.webp', 'img/premium/townhouses-velamar-ii/slider-02-10-2b86ea17c7.webp'],
+    images: ['img/premium/townhouses-velamar-ii/townhouses-01-1.webp', 'img/premium/townhouses-velamar-ii/townhouses-02-1.webp', 'img/premium/townhouses-velamar-ii/townhouses-03-1.webp', 'img/premium/townhouses-velamar-ii/townhouses-04-1.webp', 'img/premium/townhouses-velamar-ii/townhouses-05-1.webp', 'img/premium/townhouses-velamar-ii/townhouses-06-1.webp', 'img/premium/townhouses-velamar-ii/townhouses-07-1.webp'].concat('img/premium/townhouses-velamar-ii/image00054.webp')
   },
   {
     /* La página oficial ya no existe; descripción y unidades del texto del desarrollador publicado por un broker (geahomes-bienesraices.com) */
-    slug: 'sorrento-velamar', name: 'Sorrento Velamar', cat: 'rp', plaza: 'Tampico', zona: 'Altamira',
+    slug: 'sorrento-velamar', name: 'Sorrento Velamar', categoria: 'alta', plaza: 'Tampico', zona: 'Altamira',
+    feat: 'Torre frente al mar en Residencial Velamar.',
     type: 'Departamentos', rec: '3 rec.', m2: '149.37 m²', units: '46 departamentos',
     sub: 'Torre Sorrento en Residencial Velamar: 46 departamentos residenciales con una espectacular vista al mar.',
     address: 'Fraccionamiento Residencial Velamar, Altamira, Tamaulipas',
-    images: ['img/categorias/residencial_plus/sorrento.jpg']
+    images: ['img/premium/sorrento-velamar/sorrento.webp']
   },
 
-  /* ========================== RESIDENCIAL ========================== */
+  /* ======================= RESIDENCIAL PLUS ======================= */
   {
     /* Fuente: aryve.com.mx/fraccionamientos/detalle/cima-penaflor-departamentos (y sus 3 prototipos) */
-    slug: 'cima-penaflor', name: 'Cima Peñaflor', cat: 're', plaza: 'Querétaro',
+    slug: 'cima-penaflor', name: 'Cima Peñaflor', categoria: 'media', plaza: 'Querétaro',
+    feat: '15 torres y 280 departamentos en la zona noroeste de Querétaro.',
     type: 'Departamentos', rec: '2 rec.', units: '280 departamentos en 15 torres',
     h1: ['Cima Peñaflor', 'en <em>Querétaro</em>'],
     sub: 'Una comunidad residencial con 15 torres y 280 departamentos, en un entorno privado e inclusivo rodeado de áreas verdes para la recreación, el ejercicio y la convivencia familiar.',
@@ -155,21 +173,22 @@ module.exports = [
       {ic: 'building', t: '15 torres de 4 pisos', s: '280 departamentos y 308 cajones de estacionamiento.'},
       {ic: 'key', t: 'Formas de pago', s: 'Infonavit, Fovissste, crédito bancario o contado.'}
     ],
-    protos: [1, 2, 3].map(n => ({name: `Prototipo ${n}`, type: 'Departamento', rec: 2, ban: 1, plan: `https://www.aryve.com.mx/storage/prototypes/June2026/prototipo${n}.jpg`,
+    protos: [1, 2, 3].map(n => ({name: `Prototipo ${n}`, type: 'Departamento', rec: 2, ban: 1, plan: ['img/residencial-plus/cima-penaflor/prototipo1.webp', 'img/residencial-plus/cima-penaflor/prototipo2.webp', 'img/residencial-plus/cima-penaflor/prototipo3.webp'][n - 1],
       feats: ['2 recámaras', '1 baño', 'En un nivel', 'Estacionamiento']})),
     protoLead: 'Tres prototipos de departamento de 2 recámaras en un solo nivel. Toca la planta para ampliarla.',
     protoNote: 'Plantas ilustrativas. Pide a un asesor superficies, precios y disponibilidad por prototipo.',
     amenities: ['Casa club', 'Alberca', 'Roof top', 'Juegos infantiles', 'Teens club', 'Áreas verdes'],
     credits: 'Infonavit, Fovissste, crédito bancario y contado',
     address: 'Blvd. Peñaflor S/N, Col. Ciudad del Sol, 76116 Santiago de Querétaro, Qro.',
-    images: ['img/categorias/residencial/cima_penaflor.jpg'].concat(['1', '2', '3', 'gal1', 'gal2', 'gal3', 'gal4', 'gal5'].map(s => `https://www.aryve.com.mx/storage/developments/June2026/${s}.jpg`))
+    images: ['img/residencial-plus/cima-penaflor/cima-penaflor.webp'].concat(['img/residencial-plus/cima-penaflor/1.webp', 'img/residencial-plus/cima-penaflor/2.webp', 'img/residencial-plus/cima-penaflor/3.webp', 'img/residencial-plus/cima-penaflor/gal1.webp', 'img/residencial-plus/cima-penaflor/gal2.webp', 'img/residencial-plus/cima-penaflor/gal3.webp', 'img/residencial-plus/cima-penaflor/gal4.webp', 'img/residencial-plus/cima-penaflor/gal5.webp'])
   },
   {
-    slug: 'ballesta', name: 'Ballesta', cat: 're', plaza: 'Querétaro',
-    images: ['img/categorias/residencial/ballesta.jpg']
+    slug: 'ballesta', name: 'Ballesta', categoria: 'media', plaza: 'Querétaro',
+    images: ['img/residencial-plus/ballesta/ballesta.webp']
   },
   {
-    slug: 'punta-vela', name: 'Punta Vela Residencial', cat: 're', plaza: 'Ciudad Juárez', gv: 'punta-vela-residencial',
+    slug: 'punta-vela', name: 'Punta Vela Residencial', categoria: 'media', plaza: 'Ciudad Juárez', gv: 'punta-vela-residencial',
+    nombreCorto: 'Punta Vela', img: 'img/residencial-plus/punta-vela/guest-reviews-045abb6e8a.webp', feat: 'Solo 63 casas en 3 modelos, todas con 3.5 baños y más de 5 amenidades.',
     status: 'Preventa', type: 'Casas', units: '63 casas',
     h1: ['Punta Vela', 'en <em>Ciudad Juárez</em>'],
     sub: 'Solo 63 casas, todas con 3.5 baños y más de 5 amenidades, en una ubicación estratégica cerca de centros comerciales, del Puente Zaragoza y del aeropuerto.',
@@ -186,13 +205,13 @@ module.exports = [
     ]
   },
   {
-    slug: 'lavanda-ii', name: 'Lavanda II', cat: 're', plaza: 'Matamoros',
-    images: ['img/categorias/residencial/lavanda.jpg']
+    slug: 'lavanda-ii', name: 'Lavanda II', categoria: 'media', plaza: 'Matamoros',
+    images: ['img/residencial-plus/lavanda-ii/lavanda.webp']
   },
   {
     /* Fuente: aryve.com.mx/fraccionamientos/detalle/paseos-floresta (y prototipos Mallorca y Colibrí).
        Ahí no aparece la cifra de 114.49 m² del inventario del home: se muestran las superficies por prototipo. */
-    slug: 'paseos-de-floresta', name: 'Paseos de Floresta', cat: 're', plaza: 'Tampico', zona: 'Altamira',
+    slug: 'paseos-de-floresta', name: 'Paseos de Floresta', categoria: 'media', plaza: 'Tampico', zona: 'Altamira',
     type: 'Casas', rec: '3 rec.',
     h1: ['Paseos de Floresta', 'en <em>Altamira</em>'],
     sub: 'Fraccionamiento con arco de acceso, alberca, áreas verdes, banquetas en todas las calles y servicios de agua y luz subterráneos, a unas cuadras del IEST.',
@@ -204,9 +223,9 @@ module.exports = [
       {ic: 'pin', t: 'A unas cuadras del IEST', s: 'Entre Tampico y Altamira, a espaldas del Libramiento Poniente.'}
     ],
     protos: [
-      {name: 'Mallorca', type: 'Casa', m2: 102.84, rec: 3, ban: '2.5', img: 'https://www.aryve.com.mx/storage/prototypes/August2022/KsLPfbm82WZAXmEdc1ev.png',
+      {name: 'Mallorca', type: 'Casa', m2: 102.84, rec: 3, ban: '2.5', img: 'img/residencial-plus/paseos-de-floresta/kslpfbm82wzaxmedc1ev.webp',
         feats: ['3 recámaras', '2.5 baños', 'Dos niveles', 'Cochera para 1 vehículo', 'Piso cerámico y pintura']},
-      {name: 'Colibrí', type: 'Casa', m2: 156.84, rec: 3, ban: '3.5', img: 'https://www.aryve.com.mx/storage/prototypes/August2022/DbPzOp8nJ2Ee4GYVTThC.png',
+      {name: 'Colibrí', type: 'Casa', m2: 156.84, rec: 3, ban: '3.5', img: 'img/residencial-plus/paseos-de-floresta/dbpzop8nj2ee4gyvtthc.webp',
         feats: ['3 recámaras', '3.5 baños', 'Dos niveles', 'Cochera techada para 2 vehículos*', 'Piso cerámico y pintura']}
     ],
     protoNote: 'Fachadas publicadas por el desarrollo. Pide a un asesor planos, precios y disponibilidad.',
@@ -216,24 +235,30 @@ module.exports = [
     address: 'Calle Divisoria Tampico–Altamira, a espaldas del Libramiento Poniente, Altamira, Tamps.',
     lat: 22.323046725826, lon: -97.887652198384,
     nearby: ['IEST, a unas cuadras', 'Libramiento Poniente'],
-    images: ['img/categorias/residencial/paseos_de_floresta.JPG',
-      'https://www.aryve.com.mx/storage/developments/May2018/6MFOEULhUGywEorr1bLz.jpg',
-      'https://www.aryve.com.mx/storage/developments/January2020/vLNkzZfF5cfuGfRpicyG.jpg',
-      'https://www.aryve.com.mx/storage/developments/January2020/TjtWtjyAuDzWRgxrVXCR.JPG',
-      'https://www.aryve.com.mx/storage/developments/January2020/b4vOv4NJlZiKvJd41xy6.JPG',
-      'https://www.aryve.com.mx/storage/developments/March2022/p2s0fepX0Qp7XSu3Ph3o.JPG',
-      'https://www.aryve.com.mx/storage/developments/August2022/y297kb9tiazpP5ayJgGL.png',
-      'https://www.aryve.com.mx/storage/prototypes/August2022/XYZXKOLdKefVmltT8uP4.png',
-      'https://www.aryve.com.mx/storage/prototypes/August2022/Af8dxQtWSanTBNuJLYfk.jpg',
-      'https://www.aryve.com.mx/storage/prototypes/August2022/tjVlCwSs4zQWk4SfybG0.png',
-      'https://www.aryve.com.mx/storage/prototypes/August2022/YTnFeLaM8g9Xl0xEcHyP.png',
-      'https://www.aryve.com.mx/storage/prototypes/August2022/nFpRre7dW5Q3b6sqjHlN.png']
+    images: ['img/residencial-plus/paseos-de-floresta/paseos-de-floresta.webp',
+      'img/residencial-plus/paseos-de-floresta/6mfoeulhugyweorr1blz.webp',
+      'img/residencial-plus/paseos-de-floresta/vlnkzzff5cfugfrpicyg.webp',
+      'img/residencial-plus/paseos-de-floresta/tjtwtjyaudzwrgxrvxcr.webp',
+      'img/residencial-plus/paseos-de-floresta/b4vov4njlzikvjd41xy6.webp',
+      'img/residencial-plus/paseos-de-floresta/p2s0fepx0qp7xsu3ph3o.webp',
+      'img/residencial-plus/paseos-de-floresta/y297kb9tiazpp5ayjggl.webp',
+      'img/residencial-plus/paseos-de-floresta/xyzxkoldkefvmltt8up4.webp',
+      'img/residencial-plus/paseos-de-floresta/af8dxqtwsantbnujlyfk.webp',
+      'img/residencial-plus/paseos-de-floresta/tjvlcwss4zqwk4sfybg0.webp',
+      'img/residencial-plus/paseos-de-floresta/ytnfelam8g9xl0xechyp.webp',
+      'img/residencial-plus/paseos-de-floresta/nfprre7dw5q3b6sqjhln.webp']
   },
   {
-    slug: 'zafiro-residencial', name: 'Zafiro Residencial', cat: 're', plaza: 'Tampico'
+    slug: 'zafiro-residencial', name: 'Zafiro Residencial', categoria: 'media', plaza: 'Tampico'
   },
   {
-    slug: 'velasur', name: 'Velasur', cat: 're', plaza: 'Querétaro', gv: 'velasur',
+    slug: 'selvanova', name: 'Selvanova Residencial', nombreCorto: 'Selvanova', categoria: 'media', plaza: 'Playa del Carmen', plantilla: true,
+    type: 'Casas y departamentos', rec: '3 rec.', m2: '100 – 155 m²', from: '$3.5 MDP', price: 3500000,
+    img: 'img/residencial-plus/selvanova/guest-review-46330f56a6.webp', feat: 'Equilibrio entre naturaleza y vida urbana, con extensas áreas verdes, alberca y seguridad.'
+  },
+  {
+    slug: 'velasur', name: 'Velasur', categoria: 'media', plaza: 'Querétaro', gv: 'velasur',
+    img: 'img/residencial-plus/velasur/velasur-cfa30aa3c3.webp', feat: 'Comunidad residencial rodeada de áreas naturales para la recreación y la convivencia familiar.',
     status: 'Entrega inmediata', type: 'Casas y terrenos', rec: '3 rec.', m2: '264 m²',
     h1: ['Tu vida en Querétaro', 'comienza en <em>Velasur</em>'],
     sub: 'Comunidad residencial rodeada de áreas naturales, con espacios para la recreación, el acondicionamiento físico y la convivencia familiar en contacto con la naturaleza.',
@@ -245,11 +270,11 @@ module.exports = [
       {ic: 'pin', t: 'Conectado', s: 'A 5 minutos del Libramiento Surponiente y 12 del centro histórico.'}
     ],
     protos: [
-      {name: 'Casa Magnolia', type: 'Casa', img: U + 'velasur_casas_queretaro_magnolia_fachada_3f317b5f8d.jpg',
-        photos: ['fachada_3f317b5f8d', 'sala_fe1e6498eb', 'comedor_f24ca8cb89', 'living_bf3bab40cf', 'recamara_bc0a0e1dcc', 'vestidor_fb737bccbe', 'bano_d3d1b186eb'].map(s => U + 'velasur_casas_queretaro_magnolia_' + s + '.jpg'),
+      {name: 'Casa Magnolia', type: 'Casa', img: 'img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-fachada-3f317b5f8d.webp',
+        photos: ['img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-fachada-3f317b5f8d.webp', 'img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-sala-fe1e6498eb.webp', 'img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-comedor-f24ca8cb89.webp', 'img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-living-bf3bab40cf.webp', 'img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-recamara-bc0a0e1dcc.webp', 'img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-vestidor-fb737bccbe.webp', 'img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-bano-d3d1b186eb.webp'],
         feats: ['Sala', 'Comedor', 'Living', 'Recámara con vestidor*', 'Baño']},
-      {name: 'Casa Olivo', type: 'Casa', img: U + 'velasur_casas_queretaro_olivo_fachada_39c2b27606.jpg',
-        photos: ['fachada_39c2b27606', 'comedor_3dcdd2e216', 'cocina_a5ff412c56', 'estudio_4550d21559', 'recamara_6bdc1dd8e4', 'vestidor_d1a11369dd', 'bano_83e17ac5d3'].map(s => U + 'velasur_casas_queretaro_olivo_' + s + '.jpg'),
+      {name: 'Casa Olivo', type: 'Casa', img: 'img/residencial-plus/velasur/velasur-casas-queretaro-olivo-fachada-39c2b27606.webp',
+        photos: ['img/residencial-plus/velasur/velasur-casas-queretaro-olivo-fachada-39c2b27606.webp', 'img/residencial-plus/velasur/velasur-casas-queretaro-olivo-comedor-3dcdd2e216.webp', 'img/residencial-plus/velasur/velasur-casas-queretaro-olivo-cocina-a5ff412c56.webp', 'img/residencial-plus/velasur/velasur-casas-queretaro-olivo-estudio-4550d21559.webp', 'img/residencial-plus/velasur/velasur-casas-queretaro-olivo-recamara-6bdc1dd8e4.webp', 'img/residencial-plus/velasur/velasur-casas-queretaro-olivo-vestidor-d1a11369dd.webp', 'img/residencial-plus/velasur/velasur-casas-queretaro-olivo-bano-83e17ac5d3.webp'],
         feats: ['Comedor', 'Cocina', 'Estudio*', 'Recámara con vestidor', 'Baño']}
     ],
     protoLead: 'Dos modelos de casa en privadas con alberca propia; la Casa Begonia llegará próximamente. Toca la foto para ver cada espacio.',
@@ -260,7 +285,8 @@ module.exports = [
     ]
   },
   {
-    slug: 'loma-bonita-reynosa', name: 'Loma Bonita', cat: 're', plaza: 'Reynosa', gv: 'loma-bonita-reynosa',
+    slug: 'loma-bonita-reynosa', name: 'Loma Bonita', categoria: 'media', plaza: 'Reynosa', gv: 'loma-bonita-reynosa',
+    img: 'img/residencial-plus/loma-bonita-reynosa/20a69446-a4c4-4677-9d20-883b914d6086-8aa9b1c8cf.webp', feat: 'Casas diseñadas a tu gusto en un entorno seguro y completamente bardeado.',
     type: 'Casas', rec: '3 rec.', from: '$2,385,000 MXN', price: 2385000,
     h1: ['Tu hogar a tu manera', 'en <em>Loma Bonita</em>'],
     sub: 'Casas diseñadas a tu gusto en un entorno seguro y completamente bardeado, con estacionamiento, jardín y acabados de calidad en Reynosa.',
@@ -289,10 +315,11 @@ module.exports = [
     address: 'Carretera a Monterrey, Reynosa, Tamps.', lat: 26.0477755, lon: -98.3959864
   },
   {
-    slug: 'loma-del-jazmin', name: 'Loma del Jazmín', cat: 're', plaza: 'Reynosa'
+    slug: 'loma-del-jazmin', name: 'Loma del Jazmín', categoria: 'media', plaza: 'Reynosa'
   },
   {
-    slug: 'fraccionamiento-loma-bonita', name: 'Fraccionamiento Loma Bonita', cat: 're', plaza: 'Tampico', gv: 'fraccionamiento-loma-bonita',
+    slug: 'fraccionamiento-loma-bonita', name: 'Fraccionamiento Loma Bonita', categoria: 'media', plaza: 'Tampico', gv: 'fraccionamiento-loma-bonita',
+    rec: '4 rec.', img: 'img/residencial-plus/fraccionamiento-loma-bonita/guest-reviews-1-38aa114f3e.webp', feat: 'Casas con estacionamiento y jardín en un entorno completamente bardeado.',
     status: 'Vendido', type: 'Casas', m2: '248.89 m²',
     h1: ['Tu hogar a tu manera', 'en <em>Loma Bonita</em>'],
     sub: 'Casas diseñadas a tu gusto en un entorno seguro y completamente bardeado, con estacionamiento, jardín y acabados de calidad en Tampico.',
@@ -307,7 +334,7 @@ module.exports = [
   {
     /* Fuente: copia archivada (jun. 2025) de grupovelas.com.mx/desarrollo/velamar, titulada "Coto Báltico".
        Ahí el prototipo mide 153.96 – 170.38 m²; el inventario del home dice 178.62 m². */
-    slug: 'coto-baltico', name: 'Coto Báltico', cat: 're', plaza: 'Tampico', zona: 'Altamira',
+    slug: 'coto-baltico', name: 'Coto Báltico', categoria: 'media', plaza: 'Tampico', zona: 'Altamira',
     type: 'Casas', rec: '3 rec.',
     h1: ['Vive la playa', 'a tu <em>manera</em>'],
     eyebrow: 'Coto Báltico · Residencial Velamar',
@@ -317,10 +344,11 @@ module.exports = [
       feats: ['3 recámaras', '2.5 baños', '2 estacionamientos', 'De 153.96 a 170.38 m² de construcción']}],
     tourLink: 'https://primeraraiz.com/intro/138',
     address: 'Residencial Velamar, Corredor Urbano Luis Donaldo Colosio, Altamira, Tamps.',
-    images: ['img/categorias/residencial/coto_baltico.png']
+    images: ['img/residencial-plus/coto-baltico/coto-baltico.webp']
   },
   {
-    slug: 'los-encinos', name: 'Los Encinos Residencial', cat: 're', plaza: 'Tampico', zona: 'Altamira', gv: 'encinos-residencial',
+    slug: 'los-encinos', name: 'Los Encinos Residencial', categoria: 'media', plaza: 'Tampico', zona: 'Altamira', gv: 'encinos-residencial',
+    img: 'img/residencial-plus/los-encinos/guest-reviews-1080aac18c.webp', feat: 'Un hogar seguro y sostenible, con modelos variados y acabados modernos.',
     type: 'Casas', rec: '3 rec.', m2: '163.52 m²',
     h1: ['Tu hogar en armonía', 'con la <em>naturaleza</em>'],
     eyebrow: 'Los Encinos Residencial · Altamira',
@@ -343,7 +371,8 @@ module.exports = [
     nearby: ['A minutos de la carretera Tampico–Mante']
   },
   {
-    slug: 'torre-829', logoText: 'Torre 829', name: 'Torre 829 Faja de Oro', cat: 're', plaza: 'Tampico', gv: 'torre-829',
+    slug: 'torre-829', logoText: 'Torre 829', name: 'Torre 829 Faja de Oro', categoria: 'media', plaza: 'Tampico', gv: 'torre-829',
+    nombreCorto: 'Torre 829', img: 'img/residencial-plus/torre-829/guest-reviews-86078fd359.webp', feat: 'Departamentos con walk-in closet, cuarto de servicio con baño y amplia terraza.',
     status: 'Preventa', type: 'Departamentos', rec: '3 rec.', m2: '220.86 m²',
     h1: ['Torre 829', 'en <em>Tampico</em>'],
     eyebrow: 'Departamentos en preventa · Tampico',
@@ -353,26 +382,34 @@ module.exports = [
       {ic: 'building', t: 'Diseño vanguardista', s: 'Departamentos con amplia terraza y acabados de lujo.'},
       {ic: 'star', t: 'Roof garden con alberca', s: 'Además de Sky Bar, gimnasio y simulador de golf.'},
       {ic: 'pin', t: 'Ubicación privilegiada', s: 'En Faja de Oro, Tampico.'},
-      {ic: 'shield', t: 'Respaldo premium', s: 'Más de 40 años de Grupo Velas construyendo.'}
+      {ic: 'shield', t: 'Respaldo de calidad', s: 'Más de 40 años de Grupo Velas construyendo.'}
     ],
     protos: [{name: 'Departamento tipo', type: 'Departamento', m2: 220.86, rec: 3,
       feats: ['3 recámaras', 'Walk-in closet*', 'Cuarto de servicio con baño', 'Amplia terraza', 'Acabados de lujo', '2 elevadores en la torre']}]
   },
   {
-    slug: 'conjunto-cardenas-807', logoText: 'Cárdenas 807', name: 'Conjunto Cárdenas 807', cat: 're', plaza: 'Tampico',
+    slug: 'conjunto-cardenas-807', logoText: 'Cárdenas 807', name: 'Conjunto Cárdenas 807', categoria: 'media', plaza: 'Tampico',
+    feat: 'Conjunto de 12 departamentos.',
     type: 'Departamentos', rec: '3 rec.', m2: '79.68 m²', units: '12 departamentos',
     sub: 'Conjunto de 12 departamentos de 3 recámaras en Tampico.'
   },
 
-  /* ======================= PRIMERA VIVIENDA ======================= */
+  /* ========================== RESIDENCIAL ========================== */
   {
-    slug: 'valencia', name: 'Valencia', cat: 'pv', plaza: 'Ciudad Juárez',
+    slug: 'valencia', name: 'Valencia', categoria: 'entrada', plaza: 'Ciudad Juárez',
+    feat: 'Casas de una planta con opciones de 2 y 3 recámaras.',
     type: 'Casas', rec: '2 – 3 rec.',
     sub: 'Casas de una planta con opciones de 2 y 3 recámaras en Ciudad Juárez.',
-    images: ['img/categorias/primera_vivienda/valencia.jpeg']
+    images: ['img/residencial/valencia/valencia.webp']
   },
   {
-    slug: 'florencia', name: 'Florencia Residencial', cat: 'pv', plaza: 'Reynosa', gv: 'florencia-residencial',
+    slug: 'fraccionamiento-arecas', name: 'Fraccionamiento Arecas', categoria: 'entrada', plaza: 'Matamoros', plantilla: true,
+    type: 'Casas', rec: '2 rec.', m2: '46.92 m²', from: '$770,000', price: 770000,
+    img: 'img/residencial/fraccionamiento-arecas/fraccionamiento-arecas-matamoros-1b434b6261.webp', feat: 'Estrena casa con tu crédito Infonavit, entregada equipada y con escuela dentro del fraccionamiento.'
+  },
+  {
+    slug: 'florencia', name: 'Florencia Residencial', categoria: 'entrada', plaza: 'Reynosa', gv: 'florencia-residencial',
+    nombreCorto: 'Florencia', img: 'img/residencial/florencia/guest-views-6eedef2884.webp', feat: '36 departamentos en 8 edificios, con canchas deportivas y áreas verdes.',
     type: 'Departamentos', rec: '2 rec.', m2: '72 m²', units: '36 departamentos',
     h1: ['El lugar que', 'estabas <em>buscando</em>'],
     eyebrow: 'Florencia Residencial · Reynosa',
@@ -393,10 +430,10 @@ module.exports = [
     nearby: ['Supermercados: Bodega Aurrera Express, Smart y Soriana', 'Av. Tamaulipas y Viaducto Reynosa']
   },
   {
-    slug: 'arecas-altamira', name: 'Arecas', cat: 'pv', plaza: 'Tampico', zona: 'Altamira', gv: 'arecas',
+    slug: 'arecas-altamira', name: 'Arecas', categoria: 'entrada', plaza: 'Tampico', zona: 'Altamira', gv: 'arecas',
+    rec: '3 rec.', img: 'img/residencial/arecas-altamira/carrusel-01-5-54fb926eb6.webp', feat: 'Desarrollo de 12 casas en Altamira, con tranquilidad y seguridad.',
     type: 'Casas', m2: '87.20 m²', units: '12 casas',
     h1: ['Tranquilidad', 'en <em>Altamira</em>'],
-    eyebrow: 'Arecas · Primera Vivienda en Altamira',
     sub: 'Un proyecto de 12 casas en perfecta armonía con la tranquilidad y la seguridad, rodeado de amplias áreas verdes y con acceso rápido a todos los servicios.',
     stats: [{n: 12, l: 'casas'}, {n: 87.2, l: 'm² de construcción'}, {n: 2, l: 'estacionamientos'}, {t: 'Áreas verdes', l: 'amplias'}],
     perks: [
@@ -409,7 +446,8 @@ module.exports = [
     logoText: 'Arecas'
   },
   {
-    slug: 'vista-laguna', name: 'Vista Laguna', cat: 'pv', plaza: 'Tampico', zona: 'Altamira', gv: 'vista-laguna',
+    slug: 'vista-laguna', name: 'Vista Laguna', categoria: 'entrada', plaza: 'Tampico', zona: 'Altamira', gv: 'vista-laguna',
+    rec: '3 rec.', img: 'img/residencial/vista-laguna/slider-02-6-b7d8ddcef9.webp', feat: 'Casas y departamentos con vistas a la laguna, áreas verdes y cercanía a servicios.',
     status: 'Vendido', type: 'Casas y departamentos', m2: '80.39 m²', units: '15 casas y 96 departamentos',
     h1: ['Vista Laguna', 'en <em>Altamira</em>'],
     sub: 'Casas y departamentos con vistas a la laguna, privacidad, áreas verdes y cercanía a servicios: un proyecto que combina confort, naturaleza y plusvalía.',
@@ -425,5 +463,10 @@ module.exports = [
       {t: 'Áreas verdes', s: 'Extensas áreas naturales para caminar, hacer ejercicio o disfrutar del aire libre.'}
     ],
     nearby: ['Supermercados: Soriana y Arteli', 'Hospital: IMSS', 'Playa Tesoro', 'Cafés y restaurantes: Degas Café, El Asador y Plaza Arenas', 'Carretera Tampico–Mante']
-  }
+  },
+
+  /* ============ SIN CATEGORÍA CONFIRMADA (solo navbar; ver PENDIENTES.md) ============ */
+  {slug: 'coto-jade', name: 'Coto Jade', categoria: null, plaza: 'Tampico', gv: 'coto-jade'},
+  {slug: 'valle-esmeralda', name: 'Valle Esmeralda', categoria: null, plaza: 'Tampico', gv: 'valle-esmeralda'},
+  {slug: 'conjunto-roma-401', name: 'Conjunto Roma 401', categoria: null, plaza: 'Tampico', gv: 'conjunto-roma-401'}
 ];

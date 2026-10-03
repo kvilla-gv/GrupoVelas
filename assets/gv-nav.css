@@ -16,9 +16,9 @@
 /* El header queda fijo: las anclas (#contacto, #plazas…) no deben quedar debajo de él */
 html{scroll-padding-top:70px}
 .gvh-wrap{width:min(var(--wrap,1240px),100% - 32px);margin-inline:auto}
-.gvh [data-c="pv"],.gvf [data-c="pv"]{--cc:#c8643f;--cs:#f7e7df}
-.gvh [data-c="re"],.gvf [data-c="re"]{--cc:#2f6f9f;--cs:#e2edf5}
-.gvh [data-c="rp"],.gvf [data-c="rp"]{--cc:#8a6d45;--cs:#f3ebdd}
+.gvh [data-c="entrada"],.gvf [data-c="entrada"]{--cc:#c8643f;--cs:#f7e7df}
+.gvh [data-c="media"],.gvf [data-c="media"]{--cc:#2f6f9f;--cs:#e2edf5}
+.gvh [data-c="alta"],.gvf [data-c="alta"]{--cc:#8a6d45;--cs:#f3ebdd}
 
 /* ---------- Header ---------- */
 .gvh{position:fixed;inset:0 0 auto;z-index:55;color:#fff;transition:transform .5s var(--g-ease),background .5s var(--g-ease),box-shadow .5s var(--g-ease),color .5s}
