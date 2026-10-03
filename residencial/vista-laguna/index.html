@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vista Laguna · Casas y departamentos en Altamira | Grupo Velas</title>
+<title>Vista Laguna · Altamira | Grupo Velas</title>
 <meta name="description" content="Casas y departamentos con vistas a la laguna, privacidad, áreas verdes y cercanía a servicios: un proyecto que combina confort, naturaleza y plusvalía.">
-<meta property="og:title" content="Vista Laguna · Primera Vivienda en Altamira">
+<meta property="og:title" content="Vista Laguna · Altamira | Grupo Velas">
 <meta property="og:description" content="Casas y departamentos con vistas a la laguna, privacidad, áreas verdes y cercanía a servicios: un proyecto que combina confort, naturaleza y plusvalía.">
 <meta property="og:image" content="https://backend.grupovelas.com/uploads/Slider_04_5_bf293e2ffe.webp">
 <!-- Generado con tools/generar-desarrollos.js a partir de residencial/index.html. Edita tools/desarrollos.js y vuelve a generar. -->
@@ -46,13 +46,39 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://grupovelas.com.mx/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Residencial",
+      "item": "https://grupovelas.com.mx/residencial/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Vista Laguna",
+      "item": "https://grupovelas.com.mx/residencial/vista-laguna/"
+    }
+  ]
+}
+</script>
 
 <link rel="stylesheet" href="../../assets/gv-nav.css">
 <style>
 :root{
   --navy:#0f2340; --navy-2:#1d3561; --deep:#0a1830; --ink:#1d2433; --muted:#667085;
   --sand:#f4efe8; --sand-2:#ebe3d7; --line:#e4ddd2; --white:#fff;
-  /* --acc y --acc-2 = acento de la categoría (ver bloque Primera Vivienda) */
+  /* --acc y --acc-2 = acento de la categoría (ver bloque Residencial) */
   --serif:"Cormorant Garamond", Georgia, serif;
   --sans:"Manrope", system-ui, -apple-system, Segoe UI, sans-serif;
   --ease:cubic-bezier(.22,.8,.2,1);
@@ -544,14 +570,14 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 }
 
 /* =====================================================================
-   CATEGORÍA · PRIMERA VIVIENDA
-   Mismo sistema que Residencial Plus (Vela Towers): tipografías, retícula,
+   CATEGORÍA · RESIDENCIAL
+   Mismo sistema que Premium (Vela Towers): tipografías, retícula,
    botones, componentes y animaciones. Cambian el acento, el orden de las
    secciones y los módulos propios de la categoría (precio + crédito,
    equipamiento, garantías, pasos Infonavit y documentos).
    ===================================================================== */
 :root{
-  --acc:#c8643f;      /* terracota Primera Vivienda (Plus = #b8976a, Residencial = #2f6f9f) */
+  --acc:#c8643f;      /* terracota Residencial (Premium = #b8976a, Residencial Plus = #2f6f9f) */
   --acc-2:#f2b79f;    /* acento sobre fondos oscuros */
   --acc-soft:#f7e7df;
   --green:#5f8d66; --green-soft:#e6efe7;
@@ -573,7 +599,7 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 header.top:not(.scrolled) .logo .dv{color:#fff}
 header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
 
-/* Hero Primera Vivienda: mismo lenguaje que Plus, pero texto a la izquierda y tarjeta de precio + crédito */
+/* Hero Residencial: mismo lenguaje que Premium, pero texto a la izquierda y tarjeta de precio + crédito */
 .hero .slides{position:absolute;inset:0}
 .hero .slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.12);transition:opacity 1.6s ease,transform 7s linear}
 .hero .slides img.on{opacity:1;transform:scale(1.02)}
@@ -605,7 +631,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
 .sdots button.on i{animation:fillx 6s linear forwards}
 @keyframes fillx{to{transform:scaleX(1)}}
 
-/* Planta con puntos interactivos (sobre el componente proto-card de Plus) */
+/* Planta con puntos interactivos (sobre el componente proto-card de Premium) */
 .plan{cursor:default}
 .plan .pwrap{position:relative;width:100%}
 .plan .pwrap img{width:100%;border-radius:8px}
@@ -638,7 +664,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
 .eq.cta svg,.eq.cta b{color:#fff}
 .eq.cta:hover{background:var(--navy);border-color:var(--navy)}
 
-/* Garantías (sección oscura, mismo tratamiento que el bloque de video de Plus) */
+/* Garantías (sección oscura, mismo tratamiento que el bloque de video de Premium) */
 .warr .wgrid{display:grid;grid-template-columns:1fr;gap:22px}
 .wcard .src{display:inline-block;font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:20px;margin-left:6px;vertical-align:1px;white-space:nowrap}
 .wcard>p .src{margin-left:0}
@@ -688,7 +714,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
 .cdone.show{display:block;animation:popin .5s cubic-bezier(.34,1.56,.64,1)}
 @keyframes popin{from{opacity:0;transform:scale(.9)}}
 
-/* Calculadora "¿Cuánto te falta?" (mismo componente calc-card de Plus) */
+/* Calculadora "¿Cuánto te falta?" (mismo componente calc-card de Premium) */
 .calc-card .fixed{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:20px;margin-bottom:22px;border-bottom:1px solid rgba(255,255,255,.15)}
 .calc-card .fixed span{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
 .calc-card .fixed b{font-family:var(--serif);font-size:34px;font-weight:600}
@@ -696,7 +722,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
 .calc-msg{font-size:13px;margin-top:14px;padding:12px 14px;border-radius:8px;background:rgba(255,255,255,.08);transition:background .4s}
 .calc-msg.ok{background:rgba(95,141,102,.35)}
 
-/* Accesos (misma caja de mapa de Plus) */
+/* Accesos (misma caja de mapa de Premium) */
 .acc-svg .rd{fill:none;stroke:#fff;stroke-width:14;stroke-linecap:round}
 .acc-svg .rl{fill:none;stroke:var(--navy);stroke-width:3;stroke-linecap:round;stroke-dasharray:var(--len);stroke-dashoffset:var(--len);transition:stroke-dashoffset 2s var(--ease-out);transition-delay:var(--d,0s)}
 .mapbox.is-in .acc-svg .rl{stroke-dashoffset:0}
@@ -803,7 +829,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
   </div>
   <div class="wrap">
     <div class="hero-inner fade-seq">
-      <span class="eyebrow is-in">Primera Vivienda · Altamira</span>
+      <span class="eyebrow is-in">Residencial · Altamira</span>
       <h1><span class="line"><span>Vista Laguna</span></span><span class="line"><span>en <em>Altamira</em></span></span></h1>
       <p class="sub">Casas y departamentos con vistas a la laguna, privacidad, áreas verdes y cercanía a servicios: un proyecto que combina confort, naturaleza y plusvalía.</p>
       <div class="chips">
@@ -1033,7 +1059,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
         <div class="fld"><select id="fh" name="horario"><option>9 am – 2 pm</option><option>2 pm – 6 pm</option></select><label for="fh">Horario para llamarte</label></div>
       </div>
       <input type="hidden" name="prototipo" id="fproto" value="Casas y departamentos">
-      <input type="hidden" name="desarrollo" value="Vista Laguna"><input type="hidden" name="categoria" value="Primera Vivienda"><input type="hidden" name="plaza" value="Tampico">
+      <input type="hidden" name="desarrollo" value="Vista Laguna"><input type="hidden" name="categoria" value="Residencial"><input type="hidden" name="plaza" value="Tampico">
       <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="utm_content"><input type="hidden" name="utm_term"><input type="hidden" name="gclid"><input type="hidden" name="fbclid">
       <button class="btn" type="submit">Hablar con un asesor <span class="arr">→</span></button>
       <div class="alt">
@@ -1070,6 +1096,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
   <div class="lbbar"><span id="lbCap"></span><span class="lbcount" id="lbCount"></span></div>
 </dialog>
 
+<script src="../../assets/gv-categorias.js"></script>
 <script src="../../assets/gv-nav.js" data-base="../../" data-cat="entrada" data-city="Tampico"></script>
 <script>
 /* ===== CONFIGURACIÓN DEL DESARROLLO (generada desde tools/desarrollos.js) ===== */

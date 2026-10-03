@@ -20,14 +20,12 @@ const DEVS = require('./desarrollos.js');
 const GV = require('./data/grupovelas.json');
 const BASE = '../../';
 
-/* Claves de assets/gv-categorias.js. La carpeta se lee de ahí; el nombre sigue
-   siendo el actual hasta cambiar textos (paso 4). */
+const SITE_URL = 'https://grupovelas.com.mx';
+
+/* Claves de assets/gv-categorias.js: carpeta y nombre visible se leen de ahí */
 const CATEGORIAS = require('../assets/gv-categorias.js');
-const CATS = {
-  entrada: {dir: CATEGORIAS.entrada.carpeta, name: 'Primera Vivienda', acc: '#c8643f'},
-  media: {dir: CATEGORIAS.media.carpeta, name: 'Residencial', acc: '#2f6f9f'},
-  alta: {dir: CATEGORIAS.alta.carpeta, name: 'Residencial Plus', acc: '#b8976a'}
-};
+const ACENTO = {entrada: '#c8643f', media: '#2f6f9f', alta: '#b8976a'};
+const CATS = Object.fromEntries(Object.entries(CATEGORIAS).map(([k, c]) => [k, {dir: c.carpeta, name: c.nombre, acc: ACENTO[k]}]));
 /* Oficinas de venta por plaza y foto de la ciudad (grupovelas.com.mx/ciudades).
    La foto de la ciudad solo se usa si el desarrollo aún no tiene fotos propias. */
 const U = 'https://backend.grupovelas.com/uploads/';
@@ -490,7 +488,7 @@ function build(d){
 </section>`;
   }
 
-  /* ===== CÓMO COMPRAR (Primera Vivienda) ===== */
+  /* ===== CÓMO COMPRAR (Residencial) ===== */
   const stepsHTML = d.categoria === 'entrada' ? `<!-- ============ CÓMO COMPRAR ============ -->
 <section class="sec" id="como-comprar">
   <div class="wrap">
@@ -723,8 +721,16 @@ function build(d){
 
   /* ===== DOCUMENTO ===== */
   const logoText = d.logoText || d.name.replace(/^Fraccionamiento\s+/i, '').replace(/\s+Residencial$/i, '');
-  const title = d.title || `${d.name} · ${typeLabel ? typeLabel + ' en ' : ''}${where}${d.from ? ' desde ' + d.from : ''} | Grupo Velas`;
-  const metaDesc = d.metaDesc || firstSentences(`${desc} ${C.name} de Grupo Velas en ${whereFull}.`, 158);
+  /* Título ≤60 sin categoría; si se pasa, se recorta " MXN", luego el tipo y luego el precio */
+  const mkTitle = (t, p) => `${d.name} · ${t ? t + ' en ' : ''}${where}${p ? ' desde ' + p : ''} | Grupo Velas`;
+  let tTipo = typeLabel, tPrecio = d.from || '';
+  if (mkTitle(tTipo, tPrecio).length > 60) tPrecio = tPrecio.replace(/ MXN$/, '');
+  if (mkTitle(tTipo, tPrecio).length > 60) tTipo = '';
+  if (mkTitle(tTipo, tPrecio).length > 60) tPrecio = '';
+  const title = d.title || mkTitle(tTipo, tPrecio);
+  /* Meta ≤158; la categoría se agrega solo si la frase cabe completa y no está ya en el texto */
+  const descBase = firstSentences(desc, 158), catFrase = `Desarrollo ${C.name} de Grupo Velas en ${whereFull}.`;
+  const metaDesc = d.metaDesc || (!descBase.includes(C.name) && !descBase.endsWith('…') && `${descBase} ${catFrase}`.length <= 158 ? `${descBase} ${catFrase}` : descBase);
   /* Vista previa en redes: laescondida.grupovelas.com rechaza clientes automatizados, se prefiere el backend corporativo */
   const ogImg = url((photos.find(p => /backend\.grupovelas\.com/.test(p.src)) || heroPhotos[0]).src).replace(/^\.\.\/\.\.\//, '');
   const ld = {
@@ -736,6 +742,14 @@ function build(d){
     ...(tel ? {telephone: '+52 ' + tel} : {}),
     ...(amen.length ? {amenityFeature: amen.map(a => ({'@type': 'LocationFeatureSpecification', name: a.t, value: true}))} : {}),
     brand: {'@type': 'Organization', name: 'Grupo Velas'}
+  };
+  const breadcrumb = {
+    '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+    itemListElement: [
+      {'@type': 'ListItem', position: 1, name: 'Inicio', item: `${SITE_URL}/`},
+      {'@type': 'ListItem', position: 2, name: C.name, item: `${SITE_URL}/${C.dir}/`},
+      {'@type': 'ListItem', position: 3, name: d.name, item: `${SITE_URL}/${C.dir}/${d.slug}/`}
+    ]
   };
   const DEV = {
     name: d.name, whatsapp, waMsg, mapsEmbed,
@@ -754,7 +768,7 @@ function build(d){
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(metaDesc)}">
-<meta property="og:title" content="${esc(d.name + ' · ' + C.name + ' en ' + where)}">
+<meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(metaDesc)}">
 ${/^https?:/.test(ogImg) ? `<meta property="og:image" content="${esc(ogImg)}">\n` : ''}<!-- Generado con tools/generar-desarrollos.js a partir de ${C.dir}/index.html. Edita tools/desarrollos.js y vuelve a generar. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -764,6 +778,9 @@ ${/^https?:/.test(ogImg) ? `<meta property="og:image" content="${esc(ogImg)}">\n
 
 <script type="application/ld+json">
 ${JSON.stringify(ld, null, 2)}
+</script>
+<script type="application/ld+json">
+${JSON.stringify(breadcrumb, null, 2)}
 </script>
 
 <link rel="stylesheet" href="${BASE}assets/gv-nav.css">
@@ -810,6 +827,7 @@ ${footer}
   <div class="lbbar"><span id="lbCap"></span><span class="lbcount" id="lbCount"></span></div>
 </dialog>
 
+<script src="${BASE}assets/gv-categorias.js"></script>
 <script src="${BASE}assets/gv-nav.js" data-base="${BASE}" data-cat="${d.categoria}" data-city="${esc(d.plaza)}"></script>
 <script>
 /* ===== CONFIGURACIÓN DEL DESARROLLO (generada desde tools/desarrollos.js) ===== */

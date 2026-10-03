@@ -12,6 +12,9 @@
      6. Enlaces locales rotos (href/src/url() y rutas en JS)
      7. Páginas generadas al día con tools/generar-desarrollos.js
         (se corre el generador en una copia temporal del sitio)
+     8. Nombres de categoría según assets/gv-categorias.js: textos con
+        data-cat, campo oculto "categoria", BreadcrumbList, "Nombre · …" /
+        "… · Nombre" / "Categoría Nombre" y la lista del home
 
    Uso:  node tools/verificar.js          (máx. 20 hallazgos por revisión)
          node tools/verificar.js --todo   (todos los hallazgos)
@@ -29,6 +32,8 @@ const LIMITE = 20;
 /* Carpeta de cada clave de categoría (assets/gv-categorias.js) */
 const CATEGORIAS = require('../assets/gv-categorias.js');
 const CARPETAS = Object.fromEntries(Object.entries(CATEGORIAS).map(([k, c]) => [k, c.carpeta]));
+const NOMBRES = Object.fromEntries(Object.entries(CATEGORIAS).map(([k, c]) => [k, c.nombre]));
+const SITE_URL = 'https://grupovelas.com.mx';
 const CARPETAS_VIEJAS = ['pvivienda', 'residencialp'];
 const RETIRADOS = ['Primera Vivienda', 'Vivienda de Entrada', 'Residencial Medio', 'Residencial Premium'];
 /* Dominios que sirven imágenes aunque la URL no termine en extensión */
@@ -203,6 +208,65 @@ revisar('Páginas generadas al día', () => {
   } finally {
     fs.rmSync(tmp, {recursive: true, force: true});
   }
+});
+
+/* 8. Nombres de categoría según la configuración */
+revisar('Nombres de categoría según la configuración', () => {
+  const out = [];
+  const reEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  /* Cualquier nombre de categoría, vigente o retirado; los largos primero ("Residencial Plus" antes que "Residencial") */
+  const CAND = [...new Set([...Object.values(NOMBRES), ...RETIRADOS])].sort((a, b) => b.length - a.length);
+  const ALT = CAND.map(reEsc).join('|');
+  const linea = (src, i) => src.slice(0, i).split('\n').length;
+  for (const f of PUBLICADOS.filter(f => f.r.endsWith('.html'))){
+    const src = f.lineas.join('\n');
+    /* a. Elementos con data-cat cuyo texto es un nombre de categoría */
+    for (const m of src.matchAll(/<[^>]*\bdata-cat="([a-z]+)"[^>]*>(?:<i><\/i>)?([^<]*)</g)){
+      const t = m[2].trim();
+      if (CAND.includes(t) && t !== NOMBRES[m[1]]) out.push(`${f.r}:${linea(src, m.index)}  data-cat="${m[1]}" dice "${t}"; debe ser "${NOMBRES[m[1]]}"`);
+    }
+    /* Páginas con categoría: la toma del data-cat de la etiqueta de gv-nav.js */
+    const pc = src.match(/gv-nav\.js"[^>]*\bdata-cat="([a-z]+)"/), k = pc && pc[1];
+    if (k){
+      const nombre = NOMBRES[k], carpeta = CARPETAS[k];
+      if (!nombre){ out.push(`${f.r}  data-cat="${k}" no existe en la configuración`); continue; }
+      if (!/gv-categorias\.js"><\/script>\s*<script src="[^"]*gv-nav\.js"/.test(src)) out.push(`${f.r}  falta cargar assets/gv-categorias.js antes de gv-nav.js`);
+      /* b. Campo oculto "categoria" */
+      const ocultos = [...src.matchAll(/<input type="hidden" name="categoria" value="([^"]*)"/g)];
+      if (!ocultos.length) out.push(`${f.r}  sin campo oculto "categoria"`);
+      for (const m of ocultos) if (m[1] !== nombre) out.push(`${f.r}:${linea(src, m.index)}  campo categoria="${m[1]}"; debe ser "${nombre}"`);
+      /* c. BreadcrumbList: Inicio → categoría → proyecto */
+      const bcs = [...src.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+        .map(m => { try { return JSON.parse(m[1]); } catch { return null; } }).filter(j => j && j['@type'] === 'BreadcrumbList');
+      if (bcs.length !== 1) out.push(`${f.r}  ${bcs.length} BreadcrumbList (debe haber 1)`);
+      else {
+        const it = bcs[0].itemListElement || [], [dir, slug] = f.r.split('/');
+        const esperado = [['Inicio', `${SITE_URL}/`], [nombre, `${SITE_URL}/${carpeta}/`]];
+        if (it.length !== 3) out.push(`${f.r}  BreadcrumbList con ${it.length} elementos (deben ser 3)`);
+        esperado.forEach(([n, u], i) => { if (!it[i] || it[i].position !== i + 1 || it[i].name !== n || it[i].item !== u)
+          out.push(`${f.r}  BreadcrumbList ${i + 1}: debe ser "${n}" → ${u}`); });
+        const ultimo = it[2], esGenerada = slug !== 'index.html';
+        if (!ultimo || ultimo.position !== 3 || !ultimo.name) out.push(`${f.r}  BreadcrumbList 3: falta el proyecto`);
+        else if (esGenerada && ultimo.item !== `${SITE_URL}/${dir}/${slug}/`) out.push(`${f.r}  BreadcrumbList 3: debe apuntar a ${SITE_URL}/${dir}/${slug}/`);
+        else if (!esGenerada && 'item' in ultimo) out.push(`${f.r}  BreadcrumbList 3: en la plantilla va sin item (misma URL que la categoría)`);
+      }
+      /* d. "Nombre · …", "… · Nombre" y "Categoría Nombre" en el texto */
+      for (const m of src.matchAll(new RegExp(`>(${ALT}) · |· (${ALT})<|Categoría (${ALT})<`, 'g'))){
+        const t = m[1] || m[2] || m[3];
+        if (t !== nombre) out.push(`${f.r}:${linea(src, m.index)}  "${t}" en una página ${nombre}`);
+      }
+    }
+  }
+  /* e. Home: la lista de las tres categorías sigue la configuración (meta description y JSON-LD) */
+  const home = ARCHIVOS.find(f => f.r === 'index.html'), hs = home.lineas.join('\n');
+  const lista = `${NOMBRES.entrada}, ${NOMBRES.media} y ${NOMBRES.alta}`;
+  for (const m of hs.matchAll(new RegExp(`(${ALT}), (${ALT}) y (${ALT})`, 'g')))
+    if (m[0] !== lista) out.push(`index.html:${linea(hs, m.index)}  "${m[0]}"; debe ser "${lista}"`);
+  const desc = (hs.match(/<meta name="description" content="([^"]*)"/) || [])[1] || '';
+  if (!desc.includes(lista)) out.push(`index.html  la meta description no lista "${lista}"`);
+  if (!/"@type":"Organization"[\s\S]*?"description":"[^"]*/.test(hs) || !hs.match(/"@type":"Organization"[\s\S]*?"description":"([^"]*)"/)[1].includes(lista))
+    out.push(`index.html  el JSON-LD Organization no lista "${lista}"`);
+  return out;
 });
 
 /* ---------- reporte ---------- */

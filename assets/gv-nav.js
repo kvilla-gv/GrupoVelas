@@ -6,6 +6,7 @@
      <link rel="stylesheet" href="[base]assets/gv-nav.css">
      <header data-gv-header></header>
      <footer data-gv-footer></footer>        (o <div data-gv-footer>)
+     <script src="[base]assets/gv-categorias.js"></script>
      <script src="[base]assets/gv-nav.js" data-base="[base]" data-cat="entrada|media|alta"></script>
 
    - data-base: ruta hacia la raíz del sitio. Vacío en el home, "../" en subpáginas.
@@ -29,7 +30,8 @@
     {n:'TikTok', url:'https://www.tiktok.com/@grupovelasinmobiliaria', ico:'<path d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.2v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.6h-.8a5.8 5.8 0 1 0 5.8 5.8V9a7.4 7.4 0 0 0 4.3 1.4V7.2a4.3 4.3 0 0 1-3.2-1.4Z"/>'},
     {n:'YouTube', url:'https://www.youtube.com/channel/UC9dB8d8vtl6cUay-5QSYxdg', ico:'<path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4a2.5 2.5 0 0 0-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8ZM10 15V9l5.2 3Z"/>'}
   ];
-  const CATS = [['entrada','Primera Vivienda','residencial/index.html'],['media','Residencial','residencial-plus/index.html'],['alta','Residencial Plus','premium/index.html']];
+  const G = window.GV_CATEGORIAS; // nombres visibles (assets/gv-categorias.js)
+  const CATS = [['entrada',G.entrada.nombre,'residencial/index.html'],['media',G.media.nombre,'residencial-plus/index.html'],['alta',G.alta.nombre,'premium/index.html']];
   /* Mismas plazas y orden que grupovelas.com.mx/ciudades */
   const CIUDADES = [
     ['Cancún','Quintana Roo'], ['Ciudad Juárez','Chihuahua'], ['Los Cabos','Baja California Sur'], ['Matamoros','Tamaulipas'],

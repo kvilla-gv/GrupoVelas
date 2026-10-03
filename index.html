@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Grupo Velas Desarrollos · Primera Vivienda, Residencial y Residencial Plus en México</title>
-<meta name="description" content="Encuentra tu hogar con Grupo Velas: 27 desarrollos en 8 plazas de México, en tres categorías (Primera Vivienda, Residencial y Residencial Plus). Más de 40 años construyendo.">
+<title>Desarrollos inmobiliarios en México | Grupo Velas</title>
+<meta name="description" content="Encuentra tu hogar con Grupo Velas: 27 desarrollos en 8 plazas de México, en las categorías Residencial, Residencial Plus y Premium.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
   "@context":"https://schema.org",
   "@type":"Organization",
   "name":"Grupo Velas Desarrollos",
-  "description":"Desarrolladora inmobiliaria mexicana con más de 40 años de experiencia y marca hermana de Velas Resorts. Vivienda en tres categorías: Primera Vivienda, Residencial y Residencial Plus.",
+  "description":"Desarrolladora inmobiliaria mexicana con más de 40 años de experiencia y marca hermana de Velas Resorts. Vivienda en tres categorías: Residencial, Residencial Plus y Premium.",
   "logo":"https://velatowerscancun.com/wp-content/uploads/2024/10/logo_GV-1.png",
   "areaServed":["Cancún","Playa del Carmen","Tampico","Reynosa","Matamoros","Los Cabos","Querétaro","Ciudad Juárez"],
   "sameAs":["https://www.facebook.com/people/Grupo-Velas-Inmobiliaria/61584865130339/","https://www.instagram.com/grupovelasinmobiliaria/","https://www.tiktok.com/@grupovelasinmobiliaria","https://www.youtube.com/channel/UC9dB8d8vtl6cUay-5QSYxdg"]
@@ -29,9 +29,9 @@
   --sand:#f4efe8; --sand-2:#ebe3d7; --line:#e4ddd2; --white:#fff;
   --gold:#b8976a; --gold-2:#d7bf98;
   /* Acento por categoría */
-  --entrada:#c8643f;  --entrada-soft:#f7e7df;   /* Primera Vivienda: terracota cálido */
-  --media:#2f6f9f;  --media-soft:#e2edf5;   /* Residencial: azul costa */
-  --alta:#b8976a;  --alta-soft:#f3ebdd;   /* Residencial Plus: dorado Vela */
+  --entrada:#c8643f;  --entrada-soft:#f7e7df;   /* Residencial: terracota cálido */
+  --media:#2f6f9f;  --media-soft:#e2edf5;   /* Residencial Plus: azul costa */
+  --alta:#b8976a;  --alta-soft:#f3ebdd;   /* Premium: dorado Vela */
   --serif:"Cormorant Garamond", Georgia, serif;
   --sans:"Manrope", system-ui, -apple-system, Segoe UI, sans-serif;
   --ease:cubic-bezier(.22,.8,.2,1);
@@ -487,9 +487,9 @@ section{position:relative}
     <div class="fbar" id="fbar" data-reveal="up" style="--d:.15s">
       <div class="chips" id="catChips">
         <button class="chip on" data-c="all">Todas</button>
-        <button class="chip" data-c="entrada" data-cat="entrada"><i></i>Primera Vivienda</button>
-        <button class="chip" data-c="media" data-cat="media"><i></i>Residencial</button>
-        <button class="chip" data-c="alta" data-cat="alta"><i></i>Residencial Plus</button>
+        <button class="chip" data-c="entrada" data-cat="entrada"><i></i>Residencial</button>
+        <button class="chip" data-c="media" data-cat="media"><i></i>Residencial Plus</button>
+        <button class="chip" data-c="alta" data-cat="alta"><i></i>Premium</button>
       </div>
       <div class="sel"><select id="fPlaza" aria-label="Plaza"><option value="all">Todas las plazas</option></select></div>
       <div class="sel"><select id="fStatus" aria-label="Etapa"><option value="all">Cualquier etapa</option><option>Preventa</option><option>En construcción</option><option>Entrega inmediata</option></select></div>
@@ -523,7 +523,7 @@ section{position:relative}
         <div class="qsteps" id="qsteps">
           <div class="qstep on" data-s="0">
             <div class="q">Pregunta 1 de 3</div>
-            <div class="qt">¿Es tu primera vivienda?</div>
+            <div class="qt">¿Es tu primera casa?</div>
             <div class="qopts"><button data-v="entrada:2">Sí, es mi primera casa<small>Quiero dejar de rentar</small></button><button data-v="media:1,alta:1">Ya tengo una<small>Busco algo mejor o una inversión</small></button></div>
           </div>
           <div class="qstep" data-s="1">
@@ -562,7 +562,7 @@ section{position:relative}
       </div>
       <div>
         <ul class="plist" id="plist"></ul>
-        <div class="legend"><span data-cat="entrada">Primera Vivienda</span><span data-cat="media">Residencial</span><span data-cat="alta" style="--cc:var(--alta)">Residencial Plus</span></div>
+        <div class="legend"><span data-cat="entrada">Residencial</span><span data-cat="media">Residencial Plus</span><span data-cat="alta" style="--cc:var(--alta)">Premium</span></div>
       </div>
     </div>
   </div>
@@ -632,8 +632,8 @@ section{position:relative}
     </div>
     <div class="guides">
       <a class="guide" data-reveal="up" href="https://velatowerscancun.com/construir-desde-cero-o-comprar-en-preventa-la-guia-para-una-inversion-inteligente/" target="_blank" rel="noopener"><div class="ph"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=70&auto=format&fit=crop" alt="" loading="lazy"></div><div class="b"><span class="cat" data-cat="media">Inversión</span><h3>¿Construir desde cero o comprar en preventa? La guía para una inversión inteligente</h3><span class="link">Leer guía <span class="arr">→</span></span></div></a>
-      <a class="guide" data-reveal="up" style="--d:.1s" href="https://velatowerscancun.com/la-importancia-de-la-ubicacion-en-una-inversion-inmobiliaria-de-lujo-en-cancun-2/" target="_blank" rel="noopener"><div class="ph"><img src="https://velatowerscancun.com/wp-content/uploads/2024/10/destino.png" alt="" loading="lazy"></div><div class="b"><span class="cat" data-cat="alta">Residencial Plus</span><h3>La importancia de la ubicación en una inversión inmobiliaria de lujo en Cancún</h3><span class="link">Leer guía <span class="arr">→</span></span></div></a>
-      <a class="guide" data-reveal="up" style="--d:.2s" href="https://velatowerscancun.com/departamentos-en-vela-towers-vive-la-experiencia-de-un-resort/" target="_blank" rel="noopener"><div class="ph"><img src="https://velatowerscancun.com/wp-content/uploads/2024/10/Sky-Bar--1024x683.jpg" alt="" loading="lazy"></div><div class="b"><span class="cat" data-cat="alta">Residencial Plus</span><h3>Departamentos en Vela Towers: vive la experiencia de un resort</h3><span class="link">Leer guía <span class="arr">→</span></span></div></a>
+      <a class="guide" data-reveal="up" style="--d:.1s" href="https://velatowerscancun.com/la-importancia-de-la-ubicacion-en-una-inversion-inmobiliaria-de-lujo-en-cancun-2/" target="_blank" rel="noopener"><div class="ph"><img src="https://velatowerscancun.com/wp-content/uploads/2024/10/destino.png" alt="" loading="lazy"></div><div class="b"><span class="cat" data-cat="alta">Premium</span><h3>La importancia de la ubicación en una inversión inmobiliaria de lujo en Cancún</h3><span class="link">Leer guía <span class="arr">→</span></span></div></a>
+      <a class="guide" data-reveal="up" style="--d:.2s" href="https://velatowerscancun.com/departamentos-en-vela-towers-vive-la-experiencia-de-un-resort/" target="_blank" rel="noopener"><div class="ph"><img src="https://velatowerscancun.com/wp-content/uploads/2024/10/Sky-Bar--1024x683.jpg" alt="" loading="lazy"></div><div class="b"><span class="cat" data-cat="alta">Premium</span><h3>Departamentos en Vela Towers: vive la experiencia de un resort</h3><span class="link">Leer guía <span class="arr">→</span></span></div></a>
     </div>
   </div>
 </section>
@@ -645,7 +645,7 @@ section{position:relative}
     <h2 class="split-words" data-split>Lo que necesitas saber</h2>
   </div>
   <div class="wrap faq">
-    <details data-reveal="up"><summary>¿Qué diferencia hay entre Primera Vivienda, Residencial y Residencial Plus?<i></i></summary><div class="ans"><div><p>Primera Vivienda está pensada para quien compra su primera casa, con opciones compatibles con créditos como Infonavit y Fovissste. Residencial ofrece más espacio y amenidades para familias que buscan crecer. Residencial Plus reúne nuestros desarrollos con mayor nivel de diseño, ubicación y amenidades, como Vela Towers Cancún.</p></div></div></details>
+    <details data-reveal="up"><summary>¿Qué diferencia hay entre Residencial, Residencial Plus y Premium?<i></i></summary><div class="ans"><div><p>Residencial está pensada para quien compra su primera casa, con opciones compatibles con créditos como Infonavit y Fovissste. Residencial Plus ofrece más espacio y amenidades para familias que buscan crecer. Premium reúne nuestros desarrollos con mayor nivel de diseño, ubicación y amenidades, como Vela Towers Cancún.</p></div></div></details>
     <details data-reveal="up" style="--d:.06s"><summary>¿En qué ciudades tiene desarrollos Grupo Velas?<i></i></summary><div class="ans"><div><p>Cancún, Playa del Carmen, Tampico, Reynosa, Matamoros, Los Cabos, Querétaro y Ciudad Juárez.</p></div></div></details>
     <details data-reveal="up" style="--d:.12s"><summary>¿Puedo comprar con crédito Infonavit o Fovissste?<i></i></summary><div class="ans"><div><p>Sí, en los desarrollos que lo permiten. Un asesor te indicará qué desarrollos y prototipos aplican para tu tipo de crédito.</p></div></div></details>
     <details data-reveal="up" style="--d:.18s"><summary>¿Tienen viviendas con entrega inmediata?<i></i></summary><div class="ans"><div><p>Sí. Usa el filtro "Entrega inmediata" en el buscador para ver los desarrollos disponibles para mudarte ya.</p></div></div></details>
@@ -667,9 +667,9 @@ section{position:relative}
       <h3>Recibe asesoría personalizada</h3>
       <p class="hint">Elige tu categoría de interés</p>
       <div class="chips" id="formCats">
-        <button type="button" class="chip" data-c="entrada" data-cat="entrada"><i></i>Primera Vivienda</button>
-        <button type="button" class="chip" data-c="media" data-cat="media"><i></i>Residencial</button>
-        <button type="button" class="chip" data-c="alta" data-cat="alta"><i></i>Residencial Plus</button>
+        <button type="button" class="chip" data-c="entrada" data-cat="entrada"><i></i>Residencial</button>
+        <button type="button" class="chip" data-c="media" data-cat="media"><i></i>Residencial Plus</button>
+        <button type="button" class="chip" data-c="alta" data-cat="alta"><i></i>Premium</button>
       </div>
       <input type="hidden" name="categoria" id="fcat">
       <div class="fld"><input id="fn" name="nombre" placeholder=" " required autocomplete="name"><label for="fn">Nombre completo</label></div>
@@ -695,6 +695,7 @@ section{position:relative}
 
 <a href="#" class="wa" id="wa" data-wa aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg></a>
 
+<script src="assets/gv-categorias.js"></script>
 <script src="assets/gv-nav.js"></script>
 <script>
 /* =====================================================================
@@ -705,15 +706,15 @@ const U = s => 'https://images.unsplash.com/photo-' + s + '?w=1000&q=70&auto=for
 const WHATSAPP = '520000000000'; // número general / call center
 
 const CATS = {
-  entrada:{name:'Primera Vivienda', page:'residencial/index.html', tag:'Tu primer gran paso', num:'01', price:'Desde $790,000 MXN',
+  entrada:{name:GV_CATEGORIAS.entrada.nombre, page:'residencial/index.html', tag:'Tu primer gran paso', num:'01', price:'Desde $790,000 MXN',
       desc:'Casas y departamentos pensados para estrenar patrimonio, con opciones para créditos Infonavit, Fovissste y bancarios.',
       img:U('1502672260266-1c1ef2d93688'),
       rows:[['Ideal para','Quien deja de rentar y compra su primera casa'],['Formas de pago','Infonavit, Fovissste, crédito bancario y cofinanciamientos'],['Producto','Casas y departamentos funcionales en zonas con servicios'],['Lo que más valoras','Una mensualidad que te acomode']]},
-  media:{name:'Residencial', page:'residencial-plus/index.html', tag:'Espacio para crecer', num:'02', price:'Desde $1.5 MDP',
+  media:{name:GV_CATEGORIAS.media.nombre, page:'residencial-plus/index.html', tag:'Espacio para crecer', num:'02', price:'Desde $1.5 MDP',
       desc:'Más metros, más amenidades y comunidades planeadas para familias que buscan crecer con comodidad.',
       img:U('1600596542815-ffad4c1539a9'),
       rows:[['Ideal para','Familias en crecimiento que buscan más espacio'],['Formas de pago','Crédito bancario, cofinanciamiento o recursos propios'],['Producto','Casas y departamentos amplios con amenidades'],['Lo que más valoras','Espacio, seguridad y calidad de vida']]},
-  alta:{name:'Residencial Plus', page:'premium/index.html', tag:'Vivir superior', num:'03', price:'Desde $4.5 MDP',
+  alta:{name:GV_CATEGORIAS.alta.nombre, page:'premium/index.html', tag:'Vivir superior', num:'03', price:'Desde $4.5 MDP',
       desc:'Nuestros desarrollos más exclusivos: diseño de autor, ubicaciones privilegiadas y amenidades con experiencia de resort.',
       img:'https://velatowerscancun.com/wp-content/uploads/2024/10/Portada-1.png',
       rows:[['Ideal para','Quien busca exclusividad o una inversión patrimonial'],['Formas de pago','Recursos propios, planes directos y crédito bancario'],['Producto','Departamentos y residencias de lujo con amenidades de resort'],['Lo que más valoras','Ubicación, diseño y exclusividad']]}
@@ -750,7 +751,7 @@ const DEVS = [
   {name:'Los Encinos Residencial', cat:'media', plaza:'Tampico', zona:'Altamira', status:'', type:'', rec:'3 rec.', m2:'163.52 m²', from:'', img:'https://backend.grupovelas.com/uploads/Guest_Reviews_1080aac18c.webp', url:'residencial-plus/los-encinos/index.html', feat:'Un hogar seguro y sostenible, con modelos variados y acabados modernos.'},
   {name:'Torre 829 Faja de Oro', cat:'media', plaza:'Tampico', status:'Preventa', type:'Departamentos', rec:'3 rec.', m2:'220.86 m²', from:'', img:'https://backend.grupovelas.com/uploads/Guest_Reviews_86078fd359.webp', url:'residencial-plus/torre-829/index.html', feat:'Departamentos con walk-in closet, cuarto de servicio con baño y amplia terraza.'},
   {name:'Conjunto Cárdenas 807', cat:'media', plaza:'Tampico', status:'', type:'Departamentos', rec:'3 rec.', m2:'79.68 m²', from:'', img:'', url:'residencial-plus/conjunto-cardenas-807/index.html', feat:'Conjunto de 12 departamentos.'},
-  /* Primera Vivienda: desarrollos reales. Fuentes: grupovelas.com.mx (ficha, API y /mapa) y la página propia de Arecas.
+  /* Residencial (entrada): desarrollos reales. Fuentes: grupovelas.com.mx (ficha, API y /mapa) y la página propia de Arecas.
      Campos vacíos = dato aún no confirmado; la tarjeta los omite (sin foto muestra un marcador). */
   {name:'Valencia', cat:'entrada', plaza:'Ciudad Juárez', status:'', type:'Casas', rec:'2 – 3 rec.', m2:'', from:'', img:'', url:'residencial/valencia/index.html', feat:'Casas de una planta con opciones de 2 y 3 recámaras.'},
   {name:'Fraccionamiento Arecas', cat:'entrada', plaza:'Matamoros', status:'', type:'Casas', rec:'2 rec.', m2:'46.92 m²', from:'$770,000', img:'https://backend.grupovelas.com/uploads/fraccionamiento_arecas_matamoros_1b434b6261.jpg', url:'residencial/index.html', feat:'Estrena casa con tu crédito Infonavit, entregada equipada y con escuela dentro del fraccionamiento.'},
@@ -921,7 +922,7 @@ const STEPS = {
       $('#qres').innerHTML = `<span class="cat" data-cat="${win}" style="background:rgba(255,255,255,.95)">Tu categoría ideal</span>
         <div class="qt">${c.name}</div><p style="opacity:.8;font-size:14.5px;margin-bottom:18px">${c.desc}</p>
         <div class="row"><button class="btn light" data-go="${win}">Ver desarrollos <span class="arr">→</span></button><button class="again" id="qagain">Repetir test</button></div>`;
-      $('#fcat').value = win; $$('#formCats .chip').forEach(x => x.classList.toggle('on', x.dataset.c === win));
+      $('#fcat').value = c.name; $$('#formCats .chip').forEach(x => x.classList.toggle('on', x.dataset.c === win));
       $('#qagain').addEventListener('click', () => { step = 0; Object.keys(score).forEach(k => score[k]=0); bars.forEach(b => b.classList.remove('on')); qs.forEach((q,i) => { q.classList.remove('done'); q.classList.toggle('on', i===0); }); });
       window.dataLayer && dataLayer.push({event:'quiz_categoria', categoria:win});
     }
@@ -1001,11 +1002,11 @@ const STEPS = {
 
   /* ---------- Formulario ---------- */
   const fpl = $('#fpl'); fpl.add(new Option('Aún no lo sé', '')); Object.keys(PLAZAS).forEach(p => fpl.add(new Option(p, p)));
-  $$('#formCats .chip').forEach(b => b.addEventListener('click', () => { $$('#formCats .chip').forEach(x => x.classList.toggle('on', x===b)); $('#fcat').value = b.dataset.c; }));
+  $$('#formCats .chip').forEach(b => b.addEventListener('click', () => { $$('#formCats .chip').forEach(x => x.classList.toggle('on', x===b)); $('#fcat').value = CATS[b.dataset.c].name; }));
   document.addEventListener('click', e => {
     const a = e.target.closest('a[href="#contacto"][data-dev]'); if (!a) return;
     const d = DEVS.find(x => x.name === a.dataset.dev); if (!d) return;
-    $('#fdev').value = d.name; fpl.value = d.plaza; $('#fcat').value = d.cat;
+    $('#fdev').value = d.name; fpl.value = d.plaza; $('#fcat').value = CATS[d.cat].name;
     $$('#formCats .chip').forEach(x => x.classList.toggle('on', x.dataset.c === d.cat));
   });
   const qp = new URLSearchParams(location.search);

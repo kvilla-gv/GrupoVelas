@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Paseos de Floresta · Casas en Altamira | Grupo Velas</title>
 <meta name="description" content="Fraccionamiento con arco de acceso, alberca, áreas verdes, banquetas en todas las calles y servicios de agua y luz subterráneos, a unas cuadras del IEST.">
-<meta property="og:title" content="Paseos de Floresta · Residencial en Altamira">
+<meta property="og:title" content="Paseos de Floresta · Casas en Altamira | Grupo Velas">
 <meta property="og:description" content="Fraccionamiento con arco de acceso, alberca, áreas verdes, banquetas en todas las calles y servicios de agua y luz subterráneos, a unas cuadras del IEST.">
 <!-- Generado con tools/generar-desarrollos.js a partir de residencial-plus/index.html. Edita tools/desarrollos.js y vuelve a generar. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,6 +78,32 @@
     "@type": "Organization",
     "name": "Grupo Velas"
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://grupovelas.com.mx/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Residencial Plus",
+      "item": "https://grupovelas.com.mx/residencial-plus/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Paseos de Floresta",
+      "item": "https://grupovelas.com.mx/residencial-plus/paseos-de-floresta/"
+    }
+  ]
 }
 </script>
 
@@ -578,14 +604,14 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 }
 
 /* =====================================================================
-   CATEGORÍA · RESIDENCIAL
-   Mismo sistema que Plus (Vela Towers) y Primera Vivienda (Arecas).
+   CATEGORÍA · RESIDENCIAL PLUS
+   Mismo sistema que Premium (Vela Towers) y Residencial (Arecas).
    Cambian el acento, el hero (selector casas/departamentos), el comparador
    de prototipos, el tour por prototipo, la sección de inversión y la
    calculadora con 3 formas de pago.
    ===================================================================== */
 :root{
-  --acc:#2f6f9f;      /* azul costa Residencial (Plus = #b8976a, Primera Vivienda = #c8643f) */
+  --acc:#2f6f9f;      /* azul costa Residencial Plus (Premium = #b8976a, Residencial = #c8643f) */
   --acc-2:#a9cbe6;
   --acc-soft:#e2edf5;
 }
@@ -600,7 +626,7 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 header.top .logo img{height:40px}
 header.top.scrolled .logo img{filter:brightness(0) opacity(.85);height:34px}
 
-/* Hero Residencial: carrusel + selector casas / departamentos */
+/* Hero Residencial Plus: carrusel + selector casas / departamentos */
 .hero .slides{position:absolute;inset:0}
 .hero .slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.12);transition:opacity 1.6s ease,transform 7s linear}
 .hero .slides img.on{opacity:1;transform:scale(1.02)}
@@ -772,7 +798,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
   </div>
   <div class="wrap">
     <div class="hero-inner fade-seq">
-      <span class="eyebrow is-in">Residencial · Altamira</span>
+      <span class="eyebrow is-in">Residencial Plus · Altamira</span>
       <h1><span class="line"><span>Paseos de Floresta</span></span><span class="line"><span>en <em>Altamira</em></span></span></h1>
       <p class="sub">Fraccionamiento con arco de acceso, alberca, áreas verdes, banquetas en todas las calles y servicios de agua y luz subterráneos, a unas cuadras del IEST.</p>
       <div class="chips"></div>
@@ -945,7 +971,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
     <div class="stats">
       <div class="stat" data-reveal="up" style="--d:.1s"><b>+<span data-count="40">0</span></b><span>años en la construcción</span></div>
       <div class="stat" data-reveal="up" style="--d:.2s"><b>+<span data-count="100">0</span><small style="font-size:.5em"> mil</small></b><span>familias confían en nosotros</span></div>
-      <div class="stat" data-reveal="up" style="--d:.3s"><b>R</b><span>Categoría Residencial</span></div>
+      <div class="stat" data-reveal="up" style="--d:.3s"><b>RP</b><span>Categoría Residencial Plus</span></div>
     </div>
   </div>
 </section>
@@ -996,7 +1022,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
         <div class="fld"><select id="fu" name="interes"><option>Cualquier prototipo</option><option>Casa Mallorca</option><option>Casa Colibrí</option><option>Precios y disponibilidad</option><option>Planes de pago</option><option>Visita al desarrollo</option></select><label for="fu">Me interesa</label></div>
         <div class="fld"><select id="fo" name="objetivo"><option>Para vivir</option><option>Para invertir</option><option>Ambos</option></select><label for="fo">Lo quiero</label></div>
       </div>
-      <input type="hidden" name="desarrollo" value="Paseos de Floresta"><input type="hidden" name="categoria" value="Residencial"><input type="hidden" name="plaza" value="Tampico">
+      <input type="hidden" name="desarrollo" value="Paseos de Floresta"><input type="hidden" name="categoria" value="Residencial Plus"><input type="hidden" name="plaza" value="Tampico">
       <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="utm_content"><input type="hidden" name="utm_term"><input type="hidden" name="gclid"><input type="hidden" name="fbclid">
       <button class="btn" type="submit">Hablar con un asesor <span class="arr">→</span></button>
       <div class="alt">
@@ -1033,6 +1059,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
   <div class="lbbar"><span id="lbCap"></span><span class="lbcount" id="lbCount"></span></div>
 </dialog>
 
+<script src="../../assets/gv-categorias.js"></script>
 <script src="../../assets/gv-nav.js" data-base="../../" data-cat="media" data-city="Tampico"></script>
 <script>
 /* ===== CONFIGURACIÓN DEL DESARROLLO (generada desde tools/desarrollos.js) ===== */

@@ -29,7 +29,7 @@
     if (!reduce) timer = setTimeout(() => go(1), 6000);
   }
 
-  /* ---------- Pregunta de crédito (Primera Vivienda) ---------- */
+  /* ---------- Pregunta de crédito (Residencial) ---------- */
   const qopts = $('#qopts');
   if (qopts){
     const T = D.qText || {};
@@ -259,7 +259,7 @@
         $('#cmsg').textContent = ok ? '¡Tu crédito y tu ahorro cubren el precio de la casa! Agenda tu visita.' : `Cubres el ${Math.round(cub / price * 100)}% del precio. Un asesor te ayuda a completar la diferencia.`;
       };
     } else {
-      /* Residencial: crédito bancario / plan directo / contado. Plus: plan directo. */
+      /* Residencial Plus: crédito bancario / plan directo / contado. Premium: plan directo. */
       const pr = $('#pr'), eng = $('#eng'), yr = $('#yrs'), plz = $('#plz'), rate = $('#rate');
       calc = () => {
         const price = +pr.value * 1e6, e = +eng.value;

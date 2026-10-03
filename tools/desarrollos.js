@@ -31,7 +31,7 @@
 const U = 'https://backend.grupovelas.com/uploads/';
 
 module.exports = [
-  /* ======================= RESIDENCIAL PLUS ======================= */
+  /* =========================== PREMIUM =========================== */
   {
     slug: 'vistavela-iii', name: 'Vistavela III', categoria: 'alta', plaza: 'Los Cabos', zona: 'Cabo San Lucas', gv: 'vistavela-iii',
     status: 'Vendido', type: 'Departamentos', units: '274 departamentos',
@@ -142,7 +142,7 @@ module.exports = [
     images: ['img/categorias/residencial_plus/sorrento.jpg']
   },
 
-  /* ========================== RESIDENCIAL ========================== */
+  /* ======================= RESIDENCIAL PLUS ======================= */
   {
     /* Fuente: aryve.com.mx/fraccionamientos/detalle/cima-penaflor-departamentos (y sus 3 prototipos) */
     slug: 'cima-penaflor', name: 'Cima Peñaflor', categoria: 'media', plaza: 'Querétaro',
@@ -354,7 +354,7 @@ module.exports = [
       {ic: 'building', t: 'Diseño vanguardista', s: 'Departamentos con amplia terraza y acabados de lujo.'},
       {ic: 'star', t: 'Roof garden con alberca', s: 'Además de Sky Bar, gimnasio y simulador de golf.'},
       {ic: 'pin', t: 'Ubicación privilegiada', s: 'En Faja de Oro, Tampico.'},
-      {ic: 'shield', t: 'Respaldo premium', s: 'Más de 40 años de Grupo Velas construyendo.'}
+      {ic: 'shield', t: 'Respaldo de calidad', s: 'Más de 40 años de Grupo Velas construyendo.'}
     ],
     protos: [{name: 'Departamento tipo', type: 'Departamento', m2: 220.86, rec: 3,
       feats: ['3 recámaras', 'Walk-in closet*', 'Cuarto de servicio con baño', 'Amplia terraza', 'Acabados de lujo', '2 elevadores en la torre']}]
@@ -365,7 +365,7 @@ module.exports = [
     sub: 'Conjunto de 12 departamentos de 3 recámaras en Tampico.'
   },
 
-  /* ======================= PRIMERA VIVIENDA ======================= */
+  /* ========================== RESIDENCIAL ========================== */
   {
     slug: 'valencia', name: 'Valencia', categoria: 'entrada', plaza: 'Ciudad Juárez',
     type: 'Casas', rec: '2 – 3 rec.',
@@ -397,7 +397,6 @@ module.exports = [
     slug: 'arecas-altamira', name: 'Arecas', categoria: 'entrada', plaza: 'Tampico', zona: 'Altamira', gv: 'arecas',
     type: 'Casas', m2: '87.20 m²', units: '12 casas',
     h1: ['Tranquilidad', 'en <em>Altamira</em>'],
-    eyebrow: 'Arecas · Primera Vivienda en Altamira',
     sub: 'Un proyecto de 12 casas en perfecta armonía con la tranquilidad y la seguridad, rodeado de amplias áreas verdes y con acceso rápido a todos los servicios.',
     stats: [{n: 12, l: 'casas'}, {n: 87.2, l: 'm² de construcción'}, {n: 2, l: 'estacionamientos'}, {t: 'Áreas verdes', l: 'amplias'}],
     perks: [
