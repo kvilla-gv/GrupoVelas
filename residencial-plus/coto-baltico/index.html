@@ -710,6 +710,13 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
 .places li.np{grid-template-columns:28px 1fr}
 .loc .more-txt{color:var(--muted);font-size:14px;margin:-10px 0 22px;max-width:58ch}
 .hero-note{font-size:11px;opacity:.7;margin-top:14px}
+/* Más de 3 prototipos: si no caben en una fila, van en filas de 3 sin indicador deslizante (como .tabs.four de residencial-plus) */
+@media (max-width:1180px){
+  .tabs.many{grid-template-columns:repeat(3,1fr)!important;width:100%;gap:4px}
+  .tabs.many .ind{display:none}
+  .tabs.many button{border-radius:5px;white-space:normal;line-height:1.25;padding:10px 8px}
+  .tabs.many button.on{background:var(--navy)}
+}
 @media (max-width:480px){
   header.top .logo img{display:none}
   header.top .logo .dv{border-left:0;padding-left:0}

@@ -162,6 +162,13 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
 .places li.np{grid-template-columns:28px 1fr}
 .loc .more-txt{color:var(--muted);font-size:14px;margin:-10px 0 22px;max-width:58ch}
 .hero-note{font-size:11px;opacity:.7;margin-top:14px}
+/* Más de 3 prototipos: si no caben en una fila, van en filas de 3 sin indicador deslizante (como .tabs.four de residencial-plus) */
+@media (max-width:1180px){
+  .tabs.many{grid-template-columns:repeat(3,1fr)!important;width:100%;gap:4px}
+  .tabs.many .ind{display:none}
+  .tabs.many button{border-radius:5px;white-space:normal;line-height:1.25;padding:10px 8px}
+  .tabs.many button.on{background:var(--navy)}
+}
 @media (max-width:480px){
   header.top .logo img{display:none}
   header.top .logo .dv{border-left:0;padding-left:0}
@@ -318,7 +325,7 @@ function build(d){
   /* ===== PROTOTIPOS ===== */
   if (protos.length){
     const p0 = protos[0], many = protos.length > 1;
-    const tabs = many ? `\n      <div class="tabs" id="tabs" data-reveal="up" style="--d:.2s;grid-template-columns:repeat(${protos.length},1fr)"><span class="ind" style="width:calc(${(100 / protos.length).toFixed(3)}% - ${protos.length > 2 ? 2 : 4}px)"></span>${protos.map((p, i) => `<button${i ? '' : ' class="on"'} data-t="${i}">${esc(p.name)}</button>`).join('')}</div>` : '';
+    const tabs = many ? `\n      <div class="tabs${protos.length > 3 ? ' many' : ''}" id="tabs" data-reveal="up" style="--d:.2s;grid-template-columns:repeat(${protos.length},1fr)"><span class="ind" style="width:calc(${(100 / protos.length).toFixed(3)}% - ${protos.length > 2 ? 2 : 4}px)"></span>${protos.map((p, i) => `<button${i ? '' : ' class="on"'} data-t="${i}">${esc(p.name)}</button>`).join('')}</div>` : '';
     const head = d.protoHead || (d.protos ? [`Conoce ${many ? 'nuestros prototipos' : 'el prototipo'}`, many ? 'Encuentra tu espacio ideal' : `Conoce ${p0.name}`] : ['Ficha del desarrollo', `Así es ${d.name}`]);
     const lead = d.protoLead || (d.protos ? `${many ? `${protos.length} prototipos` : 'Un prototipo'} en ${d.name}. Pide a un asesor planos, precios y disponibilidad actualizada.` : `Estos son los datos confirmados de ${d.name}. Un asesor te comparte prototipos, planos, precios y disponibilidad.`);
     sec('prototipos', d.categoria === 'entrada' ? 'La casa' : 'Prototipos', `<!-- ============ PROTOTIPOS ============ -->
