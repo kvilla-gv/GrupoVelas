@@ -56,6 +56,16 @@ module.exports = [
       {ic: 'building', t: '274 departamentos', s: 'Distribuidos en 8 edificios.'},
       {ic: 'pin', t: 'Cabo San Lucas', s: 'Cerca de Puerto Paraíso Mall, Plaza San Lucas y Playa El Médano.'}
     ],
+    /* Prototipos: sitio de Grupo Velas Los Cabos (pruebas.velasresorts.com, sección Modelos) */
+    protos: [
+      {name: 'Condo 1', type: 'Departamento', cap: 'm² por residencia', m2: 140.66, rec: 2, ban: 3, img: 'img/premium/vistavela-iii/condo-1.webp',
+        feats: ['2 recámaras', '3 baños', 'Sala de estar', 'Cocina', 'Terraza', '1 estacionamiento', 'Centro de lavado']},
+      {name: 'Condo 2', type: 'Departamento', tag: 'Departamento · 1 recámara', cap: 'm² por residencia', m2: 63, rec: 1, ban: 1, img: 'img/premium/vistavela-iii/condo-2.webp',
+        feats: ['1 recámara', '1 baño', 'Sala de estar', 'Cocineta', 'Terraza', '1 estacionamiento', 'Cuarto de lavado']},
+      {name: 'Condo 3', type: 'Departamento', cap: 'm² por residencia', m2: 139, rec: 2, ban: 3, img: 'img/premium/vistavela-iii/condo-3.webp',
+        feats: ['2 recámaras', '3 baños', 'Sala de estar', 'Cocina', 'Terraza', '1 estacionamiento', 'Cuarto de lavado']}
+    ],
+    protoLead: 'Tres distribuciones de 63 a 140.66 m², pensadas para distintos estilos de vida, todas con terraza, estacionamiento y área de lavado.',
     nearby: ['Centros comerciales: Puerto Paraíso Mall y Plaza San Lucas', 'Supermercados: Fresko, Costco y Walmart', 'Hospitales: H+ Hospital Los Cabos y BlueNet Hospitals', 'Playa El Médano, a 15–20 minutos en coche']
   },
   {

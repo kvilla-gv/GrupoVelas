@@ -4,8 +4,8 @@ Generado por `tools/generar-desarrollos.js` a partir de `img/manifest.json` (ori
 No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manifest.json`
 (aparte de los datos crudos de `tools/data/grupovelas.json`, que no se tocan).
 
-- 312 imágenes locales, 230 con miniatura de 800 px (`-800.webp`, solo en galerías y recortes de Selvanova).
-- Peso: 189,354 KB antes → 37,119 KB después, más 10,071 KB de miniaturas.
+- 315 imágenes locales, 230 con miniatura de 800 px (`-800.webp`, solo en galerías y recortes de Selvanova).
+- Peso: 189,695 KB antes → 37,404 KB después, más 10,071 KB de miniaturas.
 - WebP de máx. 1920 px de ancho y ≤400 KB; los SVG se copian tal cual.
 
 ## Imágenes
@@ -97,6 +97,9 @@ No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manif
 | `img/premium/vela-towers-cancun/vela2.webp` | https://velatowerscancun.com/wp-content/uploads/2024/10/VELA2-scaled.jpg (+1 variante) | 419 KB | 107 KB | 32 KB |
 | `img/premium/vela-towers-cancun/vela6.webp` | https://velatowerscancun.com/wp-content/uploads/2024/10/VELA6-scaled.jpg (+1 variante) | 620 KB | 212 KB | 56 KB |
 | `img/premium/vela-towers-cancun/zona-asadores-1-1.webp` | https://velatowerscancun.com/wp-content/uploads/2024/10/Zona-Asadores-1-1-scaled.jpg (+1 variante) | 673 KB | 218 KB | 55 KB |
+| `img/premium/vistavela-iii/condo-1.webp` | https://pruebas.velasresorts.com/ (foto vistavela3-2) | 120 KB | 97 KB | — |
+| `img/premium/vistavela-iii/condo-2.webp` | https://pruebas.velasresorts.com/ (foto v3-k) | 96 KB | 74 KB | — |
+| `img/premium/vistavela-iii/condo-3.webp` | https://pruebas.velasresorts.com/ (foto am-int) | 125 KB | 114 KB | — |
 | `img/premium/vistavela-iii/review-d57c2aceb2.webp` | https://backend.grupovelas.com/uploads/Review_d57c2aceb2.webp | 105 KB | 105 KB | — |
 | `img/premium/vistavela-iii/slider-01-526797c096.webp` | https://backend.grupovelas.com/uploads/Slider_01_526797c096.webp | 105 KB | 75 KB | 21 KB |
 | `img/premium/vistavela-iii/slider-02-1-45da5907d6.webp` | https://backend.grupovelas.com/uploads/Slider_02_1_45da5907d6.webp | 162 KB | 118 KB | 35 KB |

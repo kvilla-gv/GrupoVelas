@@ -943,6 +943,30 @@
   }
  },
  {
+  "ruta": "img/premium/vistavela-iii/condo-1.webp",
+  "origen": "https://pruebas.velasresorts.com/ (foto vistavela3-2)",
+  "estado": "ok",
+  "antes": 123357,
+  "despues": 98844,
+  "ancho": 1400
+ },
+ {
+  "ruta": "img/premium/vistavela-iii/condo-2.webp",
+  "origen": "https://pruebas.velasresorts.com/ (foto v3-k)",
+  "estado": "ok",
+  "antes": 98777,
+  "despues": 76048,
+  "ancho": 1400
+ },
+ {
+  "ruta": "img/premium/vistavela-iii/condo-3.webp",
+  "origen": "https://pruebas.velasresorts.com/ (foto am-int)",
+  "estado": "ok",
+  "antes": 127721,
+  "despues": 116764,
+  "ancho": 1400
+ },
+ {
   "ruta": "img/premium/vistavela-iii/review-d57c2aceb2.webp",
   "origen": "https://backend.grupovelas.com/uploads/Review_d57c2aceb2.webp",
   "estado": "ok",
