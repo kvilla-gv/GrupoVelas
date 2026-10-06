@@ -9,7 +9,8 @@ ni build. Todo en español. SITE_URL = https://grupovelas.com.mx
   reorganizar código): PROPÓNLO primero y espera confirmación. No lo hagas "porque conviene".
 - No cambies el comportamiento visual ni la estructura de páginas salvo que se pida.
 - Si algo es ambiguo o falta un dato, pregunta. No inventes datos ni decisiones.
-- Trabaja en la rama `revamp-categorias`, un commit por paso (commits convencionales).
+- Trabaja en una rama nueva por tarea (desde `main`), un commit por paso (commits convencionales).
+  Se integra a `main` por PR; después del merge se borra la rama.
 - No dejes servidores ni procesos corriendo al terminar.
 
 ## Estructura
