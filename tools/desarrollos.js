@@ -277,7 +277,8 @@ module.exports = [
       'img/residencial-plus/paseos-de-floresta/nfprre7dw5q3b6sqjhln.webp']
   },
   {
-    slug: 'zafiro-residencial', name: 'Zafiro Residencial', categoria: 'media', plaza: 'Tampico'
+    slug: 'zafiro-residencial', name: 'Zafiro Residencial', categoria: 'media', plaza: 'Tampico',
+    images: ['img/residencial-plus/zafiro-residencial/zafiro.webp']
   },
   {
     slug: 'selvanova', name: 'Selvanova Residencial', nombreCorto: 'Selvanova', categoria: 'media', plaza: 'Playa del Carmen', plantilla: true,
@@ -343,7 +344,8 @@ module.exports = [
     address: 'Carretera a Monterrey, Reynosa, Tamps.', lat: 26.0477755, lon: -98.3959864
   },
   {
-    slug: 'loma-del-jazmin', name: 'Loma del Jazmín', categoria: 'media', plaza: 'Reynosa'
+    slug: 'loma-del-jazmin', name: 'Loma del Jazmín', categoria: 'media', plaza: 'Reynosa',
+    images: ['img/residencial-plus/loma-del-jazmin/loma-del-jazmin.webp']
   },
   {
     slug: 'fraccionamiento-loma-bonita', name: 'Fraccionamiento Loma Bonita', categoria: 'media', plaza: 'Tampico', gv: 'fraccionamiento-loma-bonita',
@@ -419,7 +421,8 @@ module.exports = [
     slug: 'conjunto-cardenas-807', logoText: 'Cárdenas 807', name: 'Conjunto Cárdenas 807', categoria: 'media', plaza: 'Tampico',
     feat: 'Conjunto de 12 departamentos.',
     type: 'Departamentos', rec: '3 rec.', m2: '79.68 m²', units: '12 departamentos',
-    sub: 'Conjunto de 12 departamentos de 3 recámaras en Tampico.'
+    sub: 'Conjunto de 12 departamentos de 3 recámaras en Tampico.',
+    images: ['img/residencial-plus/conjunto-cardenas-807/conjunto-cardenas.webp']
   },
 
   /* ========================== RESIDENCIAL ========================== */
