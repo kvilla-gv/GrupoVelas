@@ -628,6 +628,13 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
 .places li.np{grid-template-columns:28px 1fr}
 .loc .more-txt{color:var(--muted);font-size:14px;margin:-10px 0 22px;max-width:58ch}
 .hero-note{font-size:11px;opacity:.7;margin-top:14px}
+/* Más de 3 prototipos: si no caben en una fila, van en filas de 3 sin indicador deslizante (como .tabs.four de residencial-plus) */
+@media (max-width:1180px){
+  .tabs.many{grid-template-columns:repeat(3,1fr)!important;width:100%;gap:4px}
+  .tabs.many .ind{display:none}
+  .tabs.many button{border-radius:5px;white-space:normal;line-height:1.25;padding:10px 8px}
+  .tabs.many button.on{background:var(--navy)}
+}
 @media (max-width:480px){
   header.top .logo img{display:none}
   header.top .logo .dv{border-left:0;padding-left:0}
@@ -707,7 +714,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
         <h2 class="split-words" data-split>Encuentra tu espacio ideal</h2>
         <p class="lead" data-reveal="up" style="--d:.1s">Cuatro modelos de departamento y dos de casa, de 162.35 a 249.29 m² de construcción. Toca la planta para ampliarla.</p>
       </div>
-      <div class="tabs" id="tabs" data-reveal="up" style="--d:.2s;grid-template-columns:repeat(6,1fr)"><span class="ind" style="width:calc(16.667% - 2px)"></span><button class="on" data-t="0">Condo 3</button><button data-t="1">Penthouse</button><button data-t="2">End Units</button><button data-t="3">Penthouse Torre 1</button><button data-t="4">Casa 2</button><button data-t="5">Casa 3</button></div>
+      <div class="tabs many" id="tabs" data-reveal="up" style="--d:.2s;grid-template-columns:repeat(6,1fr)"><span class="ind" style="width:calc(16.667% - 2px)"></span><button class="on" data-t="0">Condo 3</button><button data-t="1">Penthouse</button><button data-t="2">End Units</button><button data-t="3">Penthouse Torre 1</button><button data-t="4">Casa 2</button><button data-t="5">Casa 3</button></div>
     </div>
 
     <div class="proto-card" id="protoCard" data-reveal="scale" style="--d:.1s">
