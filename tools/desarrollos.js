@@ -19,7 +19,7 @@
                  tools/data/grupovelas.json aporta texto de bienvenida, fotos,
                  amenidades, video y catálogo
      zona        localidad si difiere de la plaza (p. ej. Altamira en Tampico)
-     status      Preventa | En construcción | Entrega inmediata | Vendido
+     status      Preventa | En construcción | Entrega inmediata | Disponible | Vendido
      from/price  precio "desde" (texto) y el mismo en número (activa el simulador)
      type, rec, m2, units   datos de inventario (se muestran como ficha)
      h1          [línea 1, línea 2] del título; admite <em>
@@ -46,7 +46,7 @@ module.exports = [
   {
     slug: 'vistavela-iii', name: 'Vistavela III', categoria: 'alta', plaza: 'Los Cabos', zona: 'Cabo San Lucas', gv: 'vistavela-iii',
     img: 'img/premium/vistavela-iii/review-d57c2aceb2.webp', feat: '274 departamentos con estilo de vida de resort en el corazón de Cabo San Lucas.',
-    status: 'Vendido', type: 'Departamentos', units: '274 departamentos',
+    status: 'Disponible', type: 'Departamentos', units: '274 departamentos',
     from: '$195K USD', /* en dólares: sin `price` numérico para no mezclarlo con el "Desde" en pesos de la categoría */
     h1: ['Vistavela III', 'en <em>Cabo San Lucas</em>'],
     sub: 'Un estilo de vida de resort en el corazón de Cabo San Lucas: 274 departamentos con amenidades de primer nivel, rodeados de la belleza natural de Los Cabos.',
