@@ -1387,6 +1387,14 @@
   "ancho": 1920
  },
  {
+  "ruta": "img/residencial-plus/conjunto-cardenas-807/conjunto-cardenas.webp",
+  "origen": "conjunto_cardenas.png",
+  "estado": "ok",
+  "antes": 11079793,
+  "despues": 249614,
+  "ancho": 1920
+ },
+ {
   "ruta": "img/residencial-plus/coto-baltico/coto-baltico.webp",
   "origen": "img/categorias/residencial/coto_baltico.png",
   "estado": "ok",
@@ -1713,6 +1721,14 @@
    "ruta": "img/residencial-plus/loma-bonita-reynosa/sitio-gv-slider-principal-proyectos-5c1a5e9b19-800.webp",
    "peso": 27292
   }
+ },
+ {
+  "ruta": "img/residencial-plus/loma-del-jazmin/loma-del-jazmin.webp",
+  "origen": "loma_del_jazmin.png",
+  "estado": "ok",
+  "antes": 2411833,
+  "despues": 203186,
+  "ancho": 1254
  },
  {
   "ruta": "img/residencial-plus/los-encinos/galeria-01-69eb2b0618.webp",
@@ -3046,6 +3062,14 @@
   "antes": 40436,
   "despues": 40436,
   "ancho": 712
+ },
+ {
+  "ruta": "img/residencial-plus/zafiro-residencial/zafiro.webp",
+  "origen": "zafiro.jpeg",
+  "estado": "ok",
+  "antes": 186989,
+  "despues": 132614,
+  "ancho": 1088
  },
  {
   "ruta": "img/residencial/arecas-altamira/carrusel-01-5-54fb926eb6.webp",

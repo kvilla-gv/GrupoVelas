@@ -4,8 +4,8 @@ Generado por `tools/generar-desarrollos.js` a partir de `img/manifest.json` (ori
 No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manifest.json`
 (aparte de los datos crudos de `tools/data/grupovelas.json`, que no se tocan).
 
-- 321 imágenes locales, 230 con miniatura de 800 px (`-800.webp`, solo en galerías y recortes de Selvanova).
-- Peso: 320,931 KB antes → 37,862 KB después, más 10,071 KB de miniaturas.
+- 324 imágenes locales, 230 con miniatura de 800 px (`-800.webp`, solo en galerías y recortes de Selvanova).
+- Peso: 334,289 KB antes → 38,434 KB después, más 10,071 KB de miniaturas.
 - WebP de máx. 1920 px de ancho y ≤400 KB; los SVG se copian tal cual.
 
 ## Imágenes
@@ -139,6 +139,7 @@ No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manif
 | `img/residencial-plus/cima-penaflor/prototipo1.webp` | https://www.aryve.com.mx/storage/prototypes/June2026/prototipo1.jpg | 392 KB | 138 KB | — |
 | `img/residencial-plus/cima-penaflor/prototipo2.webp` | https://www.aryve.com.mx/storage/prototypes/June2026/prototipo2.jpg | 383 KB | 143 KB | — |
 | `img/residencial-plus/cima-penaflor/prototipo3.webp` | https://www.aryve.com.mx/storage/prototypes/June2026/prototipo3.jpg | 243 KB | 85 KB | — |
+| `img/residencial-plus/conjunto-cardenas-807/conjunto-cardenas.webp` | conjunto_cardenas.png | 10,820 KB | 244 KB | — |
 | `img/residencial-plus/coto-baltico/coto-baltico.webp` | img/categorias/residencial/coto_baltico.png | 3,466 KB | 324 KB | — |
 | `img/residencial-plus/fraccionamiento-loma-bonita/galeria-01-1-7c92c6fd51.webp` | https://backend.grupovelas.com/uploads/Galeria_01_1_7c92c6fd51.webp | 35 KB | 35 KB | 35 KB |
 | `img/residencial-plus/fraccionamiento-loma-bonita/galeria-02-2-d3dc079a8f.webp` | https://backend.grupovelas.com/uploads/Galeria_02_2_d3dc079a8f.webp | 28 KB | 28 KB | 28 KB |
@@ -170,6 +171,7 @@ No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manif
 | `img/residencial-plus/loma-bonita-reynosa/sitio-gv-slider-principal-proyectos-2-e27ce88a1f.webp` | https://backend.grupovelas.com/uploads/Sitio_GV_Slider_principal_proyectos_2_e27ce88a1f.jpg | 102 KB | 63 KB | 26 KB |
 | `img/residencial-plus/loma-bonita-reynosa/sitio-gv-slider-principal-proyectos-3-b26884b464.webp` | https://backend.grupovelas.com/uploads/Sitio_GV_Slider_principal_proyectos_3_b26884b464.jpg | 112 KB | 74 KB | 32 KB |
 | `img/residencial-plus/loma-bonita-reynosa/sitio-gv-slider-principal-proyectos-5c1a5e9b19.webp` | https://backend.grupovelas.com/uploads/Sitio_GV_Slider_principal_proyectos_5c1a5e9b19.jpg | 97 KB | 62 KB | 27 KB |
+| `img/residencial-plus/loma-del-jazmin/loma-del-jazmin.webp` | loma_del_jazmin.png | 2,355 KB | 198 KB | — |
 | `img/residencial-plus/los-encinos/galeria-01-69eb2b0618.webp` | https://backend.grupovelas.com/uploads/Galeria_01_69eb2b0618.webp | 31 KB | 31 KB | 31 KB |
 | `img/residencial-plus/los-encinos/galeria-02-1-c206614e2d.webp` | https://backend.grupovelas.com/uploads/Galeria_02_1_c206614e2d.webp | 37 KB | 37 KB | 37 KB |
 | `img/residencial-plus/los-encinos/galeria-03-d0d56f67f3.webp` | https://backend.grupovelas.com/uploads/Galeria_03_d0d56f67f3.webp | 30 KB | 30 KB | 30 KB |
@@ -288,6 +290,7 @@ No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manif
 | `img/residencial-plus/velasur/velasur-casas-queretaro-olivo-recamara-6bdc1dd8e4.webp` | https://backend.grupovelas.com/uploads/velasur_casas_queretaro_olivo_recamara_6bdc1dd8e4.jpg | 253 KB | 168 KB | — |
 | `img/residencial-plus/velasur/velasur-casas-queretaro-olivo-vestidor-d1a11369dd.webp` | https://backend.grupovelas.com/uploads/velasur_casas_queretaro_olivo_vestidor_d1a11369dd.jpg | 225 KB | 122 KB | — |
 | `img/residencial-plus/velasur/velasur-cfa30aa3c3.webp` | https://backend.grupovelas.com/uploads/Velasur_cfa30aa3c3.webp | 39 KB | 39 KB | — |
+| `img/residencial-plus/zafiro-residencial/zafiro.webp` | zafiro.jpeg | 183 KB | 130 KB | — |
 | `img/residencial/arecas-altamira/carrusel-01-5-54fb926eb6.webp` | https://backend.grupovelas.com/uploads/Carrusel_01_5_54fb926eb6.webp | 132 KB | 132 KB | — |
 | `img/residencial/arecas-altamira/carrusel-01-6-d2fbdd8513.webp` | https://backend.grupovelas.com/uploads/Carrusel_01_6_d2fbdd8513.webp | 132 KB | 132 KB | 48 KB |
 | `img/residencial/arecas-altamira/carrusel-03-6-7d0df19d4e.webp` | https://backend.grupovelas.com/uploads/Carrusel_03_6_7d0df19d4e.webp | 87 KB | 87 KB | 39 KB |
