@@ -47,6 +47,7 @@ module.exports = [
     slug: 'vistavela-iii', name: 'Vistavela III', categoria: 'alta', plaza: 'Los Cabos', zona: 'Cabo San Lucas', gv: 'vistavela-iii',
     img: 'img/premium/vistavela-iii/review-d57c2aceb2.webp', feat: '274 departamentos con estilo de vida de resort en el corazón de Cabo San Lucas.',
     status: 'Vendido', type: 'Departamentos', units: '274 departamentos',
+    from: '$195K USD', /* en dólares: sin `price` numérico para no mezclarlo con el "Desde" en pesos de la categoría */
     h1: ['Vistavela III', 'en <em>Cabo San Lucas</em>'],
     sub: 'Un estilo de vida de resort en el corazón de Cabo San Lucas: 274 departamentos con amenidades de primer nivel, rodeados de la belleza natural de Los Cabos.',
     stats: [{n: 274, l: 'departamentos'}, {n: 8, l: 'edificios'}, {n: 5, l: 'albercas'}, {n: 7, l: 'amenidades'}],
@@ -72,6 +73,7 @@ module.exports = [
     slug: 'vistavela-sunset', name: 'Vistavela Sunset', categoria: 'alta', plaza: 'Los Cabos', zona: 'Cabo San Lucas', gv: 'vistavela-sunset',
     img: 'img/premium/vistavela-sunset/review-74f3e83745.webp', feat: 'Elegancia, confort y exclusividad en un entorno privilegiado de Los Cabos.',
     status: 'Preventa', type: 'Departamentos y casas', units: '120 departamentos y 31 casas',
+    from: '$580K USD', /* en dólares: sin `price` numérico para no mezclarlo con el "Desde" en pesos de la categoría */
     h1: ['Donde el desierto', 'se une con el <em>mar</em>'],
     eyebrow: 'Vistavela Sunset · Cabo San Lucas',
     sub: 'Elegancia, confort y exclusividad en un desarrollo residencial de Grupo Velas en Los Cabos, con opciones de departamentos que se adaptan a diversos estilos de vida.',
