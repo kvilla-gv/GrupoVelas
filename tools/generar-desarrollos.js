@@ -657,7 +657,7 @@ function build(d){
   if (d.protos && d.protos.length) faqs.push([`¿Qué prototipos hay en ${d.name}?`, d.protoFaq || protos.map(p => `${p.name}: ${[p.m2 && `${p.m2} m² de construcción`, ...p.feats.map(f => f.replace('*', ''))].filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).join(', ')}`).join('. ') + '.']);
   else if (specs.length > 1) faqs.push([`¿Qué tipo de vivienda ofrece ${d.name}?`, specs.join(', ') + '.']);
   if (amen.length) faqs.push([`¿Qué amenidades tiene ${d.name}?`, amen.map(a => a.t).join(', ') + '.']);
-  if (d.status) faqs.push([`¿En qué etapa está ${d.name}?`, sold ? `${d.name} está vendido.` : `${d.name} se encuentra en ${d.status.toLowerCase()}.`]);
+  if (d.status) faqs.push([`¿En qué etapa está ${d.name}?`, sold ? `${d.name} está vendido.` : d.status === 'Disponible' ? `${d.name} está disponible.` : `${d.name} se encuentra en ${d.status.toLowerCase()}.`]);
   if (d.categoria === 'entrada' || d.credits) faqs.push(['¿Puedo comprar con crédito?', d.credits ? `Sí. ${d.name} acepta: ${d.credits}. Un asesor te acompaña en todo el trámite.` : `Un asesor te indica qué créditos (Infonavit, Fovissste o bancario) aplican para ${d.name} y te acompaña en todo el trámite.`]);
   faqs.push([`¿Dónde se ubica ${d.name}?`, `En ${address.replace(/<br>/g, ' ')}.` + (places.length ? ` Está a ${places.slice(0, 3).map(p => `${p.m} minutos de ${p.n.charAt(0).toLowerCase() + p.n.slice(1)}`).join(', ')}.` : '')]);
   faqs.push([`¿Quién desarrolla ${d.name}?`, 'Grupo Velas, empresa mexicana con más de 40 años en la construcción y marca hermana de Velas Resorts.']);
