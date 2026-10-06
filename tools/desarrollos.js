@@ -56,6 +56,16 @@ module.exports = [
       {ic: 'building', t: '274 departamentos', s: 'Distribuidos en 8 edificios.'},
       {ic: 'pin', t: 'Cabo San Lucas', s: 'Cerca de Puerto Paraíso Mall, Plaza San Lucas y Playa El Médano.'}
     ],
+    /* Prototipos: sitio de Grupo Velas Los Cabos (pruebas.velasresorts.com, sección Modelos) */
+    protos: [
+      {name: 'Condo 1', type: 'Departamento', cap: 'm² por residencia', m2: 140.66, rec: 2, ban: 3, img: 'img/premium/vistavela-iii/condo-1.webp',
+        feats: ['2 recámaras', '3 baños', 'Sala de estar', 'Cocina', 'Terraza', '1 estacionamiento', 'Centro de lavado']},
+      {name: 'Condo 2', type: 'Departamento', tag: 'Departamento · 1 recámara', cap: 'm² por residencia', m2: 63, rec: 1, ban: 1, img: 'img/premium/vistavela-iii/condo-2.webp',
+        feats: ['1 recámara', '1 baño', 'Sala de estar', 'Cocineta', 'Terraza', '1 estacionamiento', 'Cuarto de lavado']},
+      {name: 'Condo 3', type: 'Departamento', cap: 'm² por residencia', m2: 139, rec: 2, ban: 3, img: 'img/premium/vistavela-iii/condo-3.webp',
+        feats: ['2 recámaras', '3 baños', 'Sala de estar', 'Cocina', 'Terraza', '1 estacionamiento', 'Cuarto de lavado']}
+    ],
+    protoLead: 'Tres distribuciones de 63 a 140.66 m², pensadas para distintos estilos de vida, todas con terraza, estacionamiento y área de lavado.',
     nearby: ['Centros comerciales: Puerto Paraíso Mall y Plaza San Lucas', 'Supermercados: Fresko, Costco y Walmart', 'Hospitales: H+ Hospital Los Cabos y BlueNet Hospitals', 'Playa El Médano, a 15–20 minutos en coche']
   },
   {
@@ -72,6 +82,24 @@ module.exports = [
       {ic: 'star', t: 'Canchas deportivas', s: 'Pádel, pickleball, fútbol y básquetbol.'},
       {ic: 'pin', t: 'A 7 minutos de la playa', s: 'Playa El Médano y acceso fácil a la Transpeninsular.'}
     ],
+    /* Prototipos y plantas: brochure de julio 2026 (grupovelasloscabos.com/wp-content/uploads/2026/07/Brochure-VistaVela-Sunset_Julio-26.pdf).
+       Casa 1 no viene en el brochure. Penthouse Torre 1: su roof garden (229.95 m²) coincide con el total de End Units; por confirmar. */
+    protos: [
+      {name: 'Condo 3', type: 'Departamento', m2: 166.20, rec: 3, plan: 'img/premium/vistavela-sunset/planta-condo-3.webp',
+        feats: ['3 recámaras', '3½ baños', '2 estacionamientos', 'Cocina', 'Terraza de 60.51 m²', 'Total: 226.71 m²']},
+      {name: 'Penthouse', type: 'Departamento', m2: 162.35, rec: 3, plan: 'img/premium/vistavela-sunset/planta-penthouse.webp',
+        feats: ['3 recámaras', '3½ baños', '2 estacionamientos', 'Cocina', 'Terraza de 30.93 m²', 'Rooftop privado de 192.34 m²*', 'Total: 385.62 m²']},
+      {name: 'End Units', type: 'Departamento', m2: 194.15, rec: 4, plan: 'img/premium/vistavela-sunset/planta-end-units.webp',
+        feats: ['4 recámaras', '4½ baños', '2 estacionamientos', 'Cocina', 'Terraza de 35.80 m²', 'Total: 229.95 m²']},
+      {name: 'Penthouse Torre 1', type: 'Departamento', m2: 194.15, rec: 4, plan: 'img/premium/vistavela-sunset/planta-penthouse-torre-1.webp',
+        feats: ['4 recámaras', '4½ baños', '2 estacionamientos', 'Cocina', 'Terraza de 35.80 m²', 'Roof garden privado de 229.95 m²*', 'Total: 459.90 m²']},
+      {name: 'Casa 2', type: 'Casa', unit: 'Casa 2', m2: 245.14, rec: 4, plan: 'img/premium/vistavela-sunset/planta-casa-2.webp',
+        feats: ['4 recámaras', '4½ baños', 'Estacionamiento cubierto', 'Cocina', 'Jardín', 'Terraza de 104.73 m²', 'Rooftop privado*', 'Total: 349.87 m²']},
+      {name: 'Casa 3', type: 'Casa', unit: 'Casa 3', m2: 249.29, rec: 4, plan: 'img/premium/vistavela-sunset/planta-casa-3.webp',
+        feats: ['4 recámaras', '4½ baños', 'Estacionamiento cubierto', 'Cocina', 'Jardín', 'Terraza de 91.85 m²', 'Rooftop privado*', 'Total: 341.14 m²']}
+    ],
+    protoLead: 'Cuatro modelos de departamento y dos de casa, de 162.35 a 249.29 m² de construcción. Toca la planta para ampliarla.',
+    protoNote: 'Plantas del brochure de Vistavela Sunset (julio 2026). Medidas aproximadas; precios y disponibilidad sujetos a cambio.',
     nearby: ['Playa El Médano, a 7 minutos en coche', 'Centros comerciales: Puerto Paraíso Mall y Plaza San Lucas', 'Supermercados: Fresko, Costco y Walmart', 'Hospitales: H+ Hospital Los Cabos y BlueNet Hospitals', 'Acceso fácil a la carretera Transpeninsular']
   },
   {
