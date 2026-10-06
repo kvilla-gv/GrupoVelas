@@ -174,28 +174,12 @@
   "ancho": 1920
  },
  {
-  "ruta": "img/home/unsplash-1502672260266.webp",
-  "origen": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1000&q=70&auto=format&fit=crop",
-  "estado": "ok",
-  "antes": 78633,
-  "despues": 72184,
-  "ancho": 1000
- },
- {
   "ruta": "img/home/unsplash-1600585154340.webp",
   "origen": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=70&auto=format&fit=crop",
   "estado": "ok",
   "antes": 103106,
   "despues": 92824,
   "ancho": 900
- },
- {
-  "ruta": "img/home/unsplash-1600596542815.webp",
-  "origen": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1000&q=70&auto=format&fit=crop",
-  "estado": "ok",
-  "antes": 63923,
-  "despues": 58704,
-  "ancho": 1000
  },
  {
   "ruta": "img/premium/manila/manila.webp",

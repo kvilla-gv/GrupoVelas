@@ -4,8 +4,8 @@ Generado por `tools/generar-desarrollos.js` a partir de `img/manifest.json` (ori
 No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manifest.json`
 (aparte de los datos crudos de `tools/data/grupovelas.json`, que no se tocan).
 
-- 314 imágenes locales, 230 con miniatura de 800 px (`-800.webp`, solo en galerías y recortes de Selvanova).
-- Peso: 189,493 KB antes → 37,247 KB después, más 10,071 KB de miniaturas.
+- 312 imágenes locales, 230 con miniatura de 800 px (`-800.webp`, solo en galerías y recortes de Selvanova).
+- Peso: 189,354 KB antes → 37,119 KB después, más 10,071 KB de miniaturas.
 - WebP de máx. 1920 px de ancho y ≤400 KB; los SVG se copian tal cual.
 
 ## Imágenes
@@ -33,9 +33,7 @@ No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manif
 | `img/home/hero-premium.webp` | premium.jpg | 18,783 KB | 249 KB | — |
 | `img/home/hero-residencial-plus.webp` | residencial_plus.png | 2,935 KB | 324 KB | — |
 | `img/home/hero-residencial.webp` | residencial.jpg | 3,712 KB | 210 KB | — |
-| `img/home/unsplash-1502672260266.webp` | https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1000&q=70&auto=format&fit=crop | 77 KB | 70 KB | — |
 | `img/home/unsplash-1600585154340.webp` | https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=70&auto=format&fit=crop | 101 KB | 91 KB | — |
-| `img/home/unsplash-1600596542815.webp` | https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1000&q=70&auto=format&fit=crop | 62 KB | 57 KB | — |
 | `img/premium/manila/manila.webp` | img/categorias/residencial_plus/manila.png | 13,517 KB | 399 KB | — |
 | `img/premium/sorrento-velamar/sorrento.webp` | img/categorias/residencial_plus/sorrento.jpg | 589 KB | 82 KB | — |
 | `img/premium/torre-milos/01-sala-comedor.webp` | https://laescondida.grupovelas.com/wp-content/uploads/2025/04/01-SALA-COMEDOR-scaled.jpg | 668 KB | 193 KB | 38 KB |
