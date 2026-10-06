@@ -1155,6 +1155,54 @@
   }
  },
  {
+  "ruta": "img/premium/vistavela-sunset/planta-casa-2.webp",
+  "origen": "https://grupovelasloscabos.com/wp-content/uploads/2026/07/Brochure-VistaVela-Sunset_Julio-26.pdf (p. 10)",
+  "estado": "ok",
+  "antes": 22397557,
+  "despues": 61424,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/premium/vistavela-sunset/planta-casa-3.webp",
+  "origen": "https://grupovelasloscabos.com/wp-content/uploads/2026/07/Brochure-VistaVela-Sunset_Julio-26.pdf (p. 11)",
+  "estado": "ok",
+  "antes": 22397557,
+  "despues": 65198,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/premium/vistavela-sunset/planta-condo-3.webp",
+  "origen": "https://grupovelasloscabos.com/wp-content/uploads/2026/07/Brochure-VistaVela-Sunset_Julio-26.pdf (p. 5)",
+  "estado": "ok",
+  "antes": 22397557,
+  "despues": 78270,
+  "ancho": 1440
+ },
+ {
+  "ruta": "img/premium/vistavela-sunset/planta-end-units.webp",
+  "origen": "https://grupovelasloscabos.com/wp-content/uploads/2026/07/Brochure-VistaVela-Sunset_Julio-26.pdf (p. 7)",
+  "estado": "ok",
+  "antes": 22397557,
+  "despues": 109744,
+  "ancho": 1050
+ },
+ {
+  "ruta": "img/premium/vistavela-sunset/planta-penthouse-torre-1.webp",
+  "origen": "https://grupovelasloscabos.com/wp-content/uploads/2026/07/Brochure-VistaVela-Sunset_Julio-26.pdf (p. 8)",
+  "estado": "ok",
+  "antes": 22397557,
+  "despues": 107886,
+  "ancho": 1065
+ },
+ {
+  "ruta": "img/premium/vistavela-sunset/planta-penthouse.webp",
+  "origen": "https://grupovelasloscabos.com/wp-content/uploads/2026/07/Brochure-VistaVela-Sunset_Julio-26.pdf (p. 6)",
+  "estado": "ok",
+  "antes": 22397557,
+  "despues": 46830,
+  "ancho": 1590
+ },
+ {
   "ruta": "img/premium/vistavela-sunset/review-74f3e83745.webp",
   "origen": "https://backend.grupovelas.com/uploads/Review_74f3e83745.webp",
   "estado": "ok",

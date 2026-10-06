@@ -4,8 +4,8 @@ Generado por `tools/generar-desarrollos.js` a partir de `img/manifest.json` (ori
 No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manifest.json`
 (aparte de los datos crudos de `tools/data/grupovelas.json`, que no se tocan).
 
-- 315 imágenes locales, 230 con miniatura de 800 px (`-800.webp`, solo en galerías y recortes de Selvanova).
-- Peso: 189,695 KB antes → 37,404 KB después, más 10,071 KB de miniaturas.
+- 321 imágenes locales, 230 con miniatura de 800 px (`-800.webp`, solo en galerías y recortes de Selvanova).
+- Peso: 320,931 KB antes → 37,862 KB después, más 10,071 KB de miniaturas.
 - WebP de máx. 1920 px de ancho y ≤400 KB; los SVG se copian tal cual.
 
 ## Imágenes
@@ -116,6 +116,12 @@ No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manif
 | `img/premium/vistavela-sunset/galeria-04-13-1f1eb1acb2.webp` | https://backend.grupovelas.com/uploads/Galeria_04_13_1f1eb1acb2.webp | 27 KB | 27 KB | 26 KB |
 | `img/premium/vistavela-sunset/galeria-05-13-4ddea37d54.webp` | https://backend.grupovelas.com/uploads/Galeria_05_13_4ddea37d54.webp | 29 KB | 29 KB | 29 KB |
 | `img/premium/vistavela-sunset/galeria-06-14-bbd3d1bc82.webp` | https://backend.grupovelas.com/uploads/Galeria_06_14_bbd3d1bc82.webp | 36 KB | 36 KB | 36 KB |
+| `img/premium/vistavela-sunset/planta-casa-2.webp` | https://grupovelasloscabos.com/wp-content/uploads/2026/07/Brochure-VistaVela-Sunset_Julio-26.pdf (p. 10) | 21,873 KB | 60 KB | — |
+| `img/premium/vistavela-sunset/planta-casa-3.webp` | https://grupovelasloscabos.com/wp-content/uploads/2026/07/Brochure-VistaVela-Sunset_Julio-26.pdf (p. 11) | 21,873 KB | 64 KB | — |
+| `img/premium/vistavela-sunset/planta-condo-3.webp` | https://grupovelasloscabos.com/wp-content/uploads/2026/07/Brochure-VistaVela-Sunset_Julio-26.pdf (p. 5) | 21,873 KB | 76 KB | — |
+| `img/premium/vistavela-sunset/planta-end-units.webp` | https://grupovelasloscabos.com/wp-content/uploads/2026/07/Brochure-VistaVela-Sunset_Julio-26.pdf (p. 7) | 21,873 KB | 107 KB | — |
+| `img/premium/vistavela-sunset/planta-penthouse-torre-1.webp` | https://grupovelasloscabos.com/wp-content/uploads/2026/07/Brochure-VistaVela-Sunset_Julio-26.pdf (p. 8) | 21,873 KB | 105 KB | — |
+| `img/premium/vistavela-sunset/planta-penthouse.webp` | https://grupovelasloscabos.com/wp-content/uploads/2026/07/Brochure-VistaVela-Sunset_Julio-26.pdf (p. 6) | 21,873 KB | 46 KB | — |
 | `img/premium/vistavela-sunset/review-74f3e83745.webp` | https://backend.grupovelas.com/uploads/Review_74f3e83745.webp | 60 KB | 60 KB | — |
 | `img/premium/vistavela-sunset/slider-01-14-91a7d9d8dd.webp` | https://backend.grupovelas.com/uploads/Slider_01_14_91a7d9d8dd.webp | 105 KB | 75 KB | 21 KB |
 | `img/premium/vistavela-sunset/slider-02-16-102f3498a1.webp` | https://backend.grupovelas.com/uploads/Slider_02_16_102f3498a1.webp | 162 KB | 118 KB | 35 KB |
