@@ -182,6 +182,258 @@
   "ancho": 900
  },
  {
+  "ruta": "img/logos/arecas-altamira.webp",
+  "origen": "Whats_Arecas.png",
+  "estado": "ok",
+  "antes": 51576,
+  "despues": 15610,
+  "ancho": 674,
+  "alto": 456
+ },
+ {
+  "ruta": "img/logos/ballesta.webp",
+  "origen": "Ballesta_blanco.png",
+  "estado": "ok",
+  "antes": 37523,
+  "despues": 16014,
+  "ancho": 1409,
+  "alto": 1281
+ },
+ {
+  "ruta": "img/logos/cima-penaflor.webp",
+  "origen": "Whats_Cima.png",
+  "estado": "ok",
+  "antes": 39157,
+  "despues": 11158,
+  "ancho": 820,
+  "alto": 406
+ },
+ {
+  "ruta": "img/logos/conjunto-cardenas-807.webp",
+  "origen": "Logo Cardenas 807_Blanco.png",
+  "estado": "ok",
+  "antes": 63116,
+  "despues": 20860,
+  "ancho": 1784,
+  "alto": 1494
+ },
+ {
+  "ruta": "img/logos/conjunto-roma-401.webp",
+  "origen": "Whatsapp_ROMA 401.png",
+  "estado": "ok",
+  "antes": 26938,
+  "despues": 5990,
+  "ancho": 630,
+  "alto": 270
+ },
+ {
+  "ruta": "img/logos/coto-baltico.webp",
+  "origen": "LOGO COTO BÁLTICO-09 (1).png",
+  "estado": "ok",
+  "antes": 7325,
+  "despues": 3158,
+  "ancho": 787,
+  "alto": 105
+ },
+ {
+  "ruta": "img/logos/coto-jade.webp",
+  "origen": "Whats_CotoJade.png",
+  "estado": "ok",
+  "antes": 33747,
+  "despues": 10604,
+  "ancho": 794,
+  "alto": 302
+ },
+ {
+  "ruta": "img/logos/florencia.webp",
+  "origen": "Whats_Florencia.png",
+  "estado": "ok",
+  "antes": 27598,
+  "despues": 8294,
+  "ancho": 674,
+  "alto": 479
+ },
+ {
+  "ruta": "img/logos/fraccionamiento-arecas.webp",
+  "origen": "Whats_Arecas_Matamoros.png",
+  "estado": "ok",
+  "antes": 48111,
+  "despues": 19006,
+  "ancho": 730,
+  "alto": 460
+ },
+ {
+  "ruta": "img/logos/fraccionamiento-loma-bonita.webp",
+  "origen": "Lomabonita_tampico (1).png",
+  "estado": "ok",
+  "antes": 80951,
+  "despues": 119062,
+  "ancho": 1920,
+  "alto": 712
+ },
+ {
+  "ruta": "img/logos/lavanda-ii.webp",
+  "origen": "Whats_Lavanda.png",
+  "estado": "ok",
+  "antes": 19002,
+  "despues": 4756,
+  "ancho": 754,
+  "alto": 221
+ },
+ {
+  "ruta": "img/logos/loma-bonita-reynosa.webp",
+  "origen": "Whats_LomaBonita_Reynosa.png",
+  "estado": "ok",
+  "antes": 36713,
+  "despues": 10124,
+  "ancho": 852,
+  "alto": 336
+ },
+ {
+  "ruta": "img/logos/los-encinos.webp",
+  "origen": "Whats_LosEncinos.png",
+  "estado": "ok",
+  "antes": 35067,
+  "despues": 9208,
+  "ancho": 794,
+  "alto": 324
+ },
+ {
+  "ruta": "img/logos/manila.webp",
+  "origen": "Copia de __Logo Horizontal Manila Blanco.png",
+  "estado": "ok",
+  "antes": 21854,
+  "despues": 9286,
+  "ancho": 898,
+  "alto": 239
+ },
+ {
+  "ruta": "img/logos/paseos-de-floresta.webp",
+  "origen": "Whats_PaseosFloresta.png",
+  "estado": "ok",
+  "antes": 28575,
+  "despues": 7346,
+  "ancho": 806,
+  "alto": 242
+ },
+ {
+  "ruta": "img/logos/punta-vela.webp",
+  "origen": "Whats_PuntaVela.png",
+  "estado": "ok",
+  "antes": 23215,
+  "despues": 5384,
+  "ancho": 708,
+  "alto": 340
+ },
+ {
+  "ruta": "img/logos/selvanova.webp",
+  "origen": "Selvanova_Whats.png",
+  "estado": "ok",
+  "antes": 52696,
+  "despues": 13500,
+  "ancho": 788,
+  "alto": 665
+ },
+ {
+  "ruta": "img/logos/sorrento-velamar.webp",
+  "origen": "sorrento logo.png",
+  "estado": "ok",
+  "antes": 96036,
+  "despues": 33688,
+  "ancho": 1566,
+  "alto": 1002
+ },
+ {
+  "ruta": "img/logos/torre-829.webp",
+  "origen": "829_H.png",
+  "estado": "ok",
+  "antes": 7126,
+  "despues": 3004,
+  "ancho": 361,
+  "alto": 120
+ },
+ {
+  "ruta": "img/logos/torre-milos.webp",
+  "origen": "Whats_Milos.png",
+  "estado": "ok",
+  "antes": 22460,
+  "despues": 5536,
+  "ancho": 797,
+  "alto": 237
+ },
+ {
+  "ruta": "img/logos/townhouses-velamar-ii.webp",
+  "origen": "Whats_Townhouses.png",
+  "estado": "ok",
+  "antes": 22393,
+  "despues": 5576,
+  "ancho": 732,
+  "alto": 174
+ },
+ {
+  "ruta": "img/logos/valencia.webp",
+  "origen": "Valencia-Logo.png",
+  "estado": "ok",
+  "antes": 246562,
+  "despues": 50034,
+  "ancho": 1094,
+  "alto": 1293
+ },
+ {
+  "ruta": "img/logos/vela-towers-cancun.webp",
+  "origen": "VelaTowers_Whats.png",
+  "estado": "ok",
+  "antes": 31596,
+  "despues": 8014,
+  "ancho": 944,
+  "alto": 440
+ },
+ {
+  "ruta": "img/logos/velasur.webp",
+  "origen": "logo Velasur PNG.png",
+  "estado": "ok",
+  "antes": 74573,
+  "despues": 77992,
+  "ancho": 1920,
+  "alto": 1018
+ },
+ {
+  "ruta": "img/logos/vista-laguna.webp",
+  "origen": "Whatsapp_VistaLaguna.png",
+  "estado": "ok",
+  "antes": 28893,
+  "despues": 8234,
+  "ancho": 678,
+  "alto": 352
+ },
+ {
+  "ruta": "img/logos/vistavela-iii.webp",
+  "origen": "Whats_VistaVela.png",
+  "estado": "ok",
+  "antes": 16144,
+  "despues": 4416,
+  "ancho": 904,
+  "alto": 335
+ },
+ {
+  "ruta": "img/logos/vistavela-sunset.webp",
+  "origen": "Whats_VistaVelaSunset.png",
+  "estado": "ok",
+  "antes": 18960,
+  "despues": 5234,
+  "ancho": 854,
+  "alto": 452
+ },
+ {
+  "ruta": "img/logos/zafiro-residencial.webp",
+  "origen": "Copia de 01_logotipo_zafiro_horizontal_color_contorno.png",
+  "estado": "ok",
+  "antes": 38684,
+  "despues": 45096,
+  "ancho": 1920,
+  "alto": 600
+ },
+ {
   "ruta": "img/premium/manila/manila.webp",
   "origen": "img/categorias/residencial_plus/manila.png",
   "estado": "ok",
