@@ -497,10 +497,5 @@ module.exports = [
       {t: 'Áreas verdes', s: 'Extensas áreas naturales para caminar, hacer ejercicio o disfrutar del aire libre.'}
     ],
     nearby: ['Supermercados: Soriana y Arteli', 'Hospital: IMSS', 'Playa Tesoro', 'Cafés y restaurantes: Degas Café, El Asador y Plaza Arenas', 'Carretera Tampico–Mante']
-  },
-
-  /* ============ SIN CATEGORÍA CONFIRMADA (solo navbar; ver PENDIENTES.md) ============ */
-  {slug: 'coto-jade', name: 'Coto Jade', categoria: null, plaza: 'Tampico', gv: 'coto-jade'},
-  {slug: 'valle-esmeralda', name: 'Valle Esmeralda', categoria: null, plaza: 'Tampico', gv: 'valle-esmeralda'},
-  {slug: 'conjunto-roma-401', name: 'Conjunto Roma 401', categoria: null, plaza: 'Tampico', gv: 'conjunto-roma-401'}
+  }
 ];
