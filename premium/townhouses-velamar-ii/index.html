@@ -200,6 +200,9 @@ header.top:not(.scrolled) .burger span{background:#fff}
 .hero .wrap{position:relative;z-index:2;display:flex;justify-content:flex-end}
 .hero-inner{max-width:560px;padding:140px 0 110px}
 .hero .eyebrow{color:var(--gold-2)}
+.hero-brand{display:flex;flex-direction:column;align-items:flex-start;gap:22px}
+.hero-logo{display:block;width:var(--w,200px);max-width:80%;height:auto;filter:brightness(0) invert(1) drop-shadow(0 2px 14px rgba(8,20,48,.35))}
+@media (max-width:700px){.hero-brand{gap:16px}.hero-logo{width:calc(var(--w,200px)*.75)}}
 .hero h1{font-size:clamp(50px,7vw,92px);margin:18px 0 20px;color:#fff}
 .hero h1 .line{display:block;overflow:hidden;padding-bottom:.06em}
 .hero h1 .line>span{display:block;transform:translateY(110%);transition:transform 1.3s var(--ease-out)}
@@ -675,7 +678,10 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
   <div class="hero-media"><img src="../../img/premium/townhouses-velamar-ii/slider-04-8-f29f882edf.webp" alt="Townhouses Velamar II en Altamira" id="heroImg" fetchpriority="high"></div>
   <div class="wrap">
     <div class="hero-inner fade-seq">
-      <span class="eyebrow is-in">Townhouses Velamar II · Altamira</span>
+      <div class="hero-brand">
+        <img class="hero-logo" src="../../img/logos/townhouses-velamar-ii.webp" alt="Logo de Townhouses Velamar II" width="732" height="174" style="--w:304px">
+        <span class="eyebrow is-in">Townhouses Velamar II · Altamira</span>
+      </div>
       <h1><span class="line"><span>Vive en un</span></span><span class="line"><span>eterno <em>verano</em></span></span></h1>
       <p class="sub">20 exclusivos townhouses a orillas del mar en La Escondida Velamar: vistas panorámicas, acabados de lujo y un ambiente privado con acceso directo a la playa.</p>
       <div class="chips">

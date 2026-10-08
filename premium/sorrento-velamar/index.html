@@ -153,6 +153,9 @@ header.top:not(.scrolled) .burger span{background:#fff}
 .hero .wrap{position:relative;z-index:2;display:flex;justify-content:flex-end}
 .hero-inner{max-width:560px;padding:140px 0 110px}
 .hero .eyebrow{color:var(--gold-2)}
+.hero-brand{display:flex;flex-direction:column;align-items:flex-start;gap:22px}
+.hero-logo{display:block;width:var(--w,200px);max-width:80%;height:auto;filter:brightness(0) invert(1) drop-shadow(0 2px 14px rgba(8,20,48,.35))}
+@media (max-width:700px){.hero-brand{gap:16px}.hero-logo{width:calc(var(--w,200px)*.75)}}
 .hero h1{font-size:clamp(50px,7vw,92px);margin:18px 0 20px;color:#fff}
 .hero h1 .line{display:block;overflow:hidden;padding-bottom:.06em}
 .hero h1 .line>span{display:block;transform:translateY(110%);transition:transform 1.3s var(--ease-out)}
@@ -625,7 +628,10 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
   <div class="hero-media"><img src="../../img/premium/sorrento-velamar/sorrento.webp" alt="Sorrento Velamar en Altamira" id="heroImg" fetchpriority="high"></div>
   <div class="wrap">
     <div class="hero-inner fade-seq">
-      <span class="eyebrow is-in">Premium · Altamira</span>
+      <div class="hero-brand">
+        <img class="hero-logo" src="../../img/logos/sorrento-velamar.webp" alt="Logo de Sorrento Velamar" width="1566" height="1002" style="--w:185px">
+        <span class="eyebrow is-in">Premium · Altamira</span>
+      </div>
       <h1><span class="line"><span>Sorrento Velamar</span></span><span class="line"><span>en <em>Altamira</em></span></span></h1>
       <p class="sub">Torre Sorrento en Residencial Velamar: 46 departamentos residenciales con una espectacular vista al mar.</p>
       <div class="chips"></div>

@@ -200,6 +200,9 @@ header.top:not(.scrolled) .burger span{background:#fff}
 .hero .wrap{position:relative;z-index:2;display:flex;justify-content:flex-end}
 .hero-inner{max-width:560px;padding:140px 0 110px}
 .hero .eyebrow{color:var(--acc-2)}
+.hero-brand{display:flex;flex-direction:column;align-items:flex-start;gap:22px}
+.hero-logo{display:block;width:var(--w,200px);max-width:80%;height:auto;filter:brightness(0) invert(1) drop-shadow(0 2px 14px rgba(8,20,48,.35))}
+@media (max-width:700px){.hero-brand{gap:16px}.hero-logo{width:calc(var(--w,200px)*.75)}}
 .hero h1{font-size:clamp(50px,7vw,92px);margin:18px 0 20px;color:#fff}
 .hero h1 .line{display:block;overflow:hidden;padding-bottom:.06em}
 .hero h1 .line>span{display:block;transform:translateY(110%);transition:transform 1.3s var(--ease-out)}
@@ -807,7 +810,10 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
   </div>
   <div class="wrap">
     <div class="hero-inner fade-seq">
-      <span class="eyebrow is-in">Residencial Plus · Altamira</span>
+      <div class="hero-brand">
+        <img class="hero-logo" src="../../img/logos/paseos-de-floresta.webp" alt="Logo de Paseos de Floresta" width="806" height="242" style="--w:271px">
+        <span class="eyebrow is-in">Residencial Plus · Altamira</span>
+      </div>
       <h1><span class="line"><span>Paseos de Floresta</span></span><span class="line"><span>en <em>Altamira</em></span></span></h1>
       <p class="sub">Fraccionamiento con arco de acceso, alberca, áreas verdes, banquetas en todas las calles y servicios de agua y luz subterráneos, a unas cuadras del IEST.</p>
       <div class="chips"></div>
