@@ -270,7 +270,7 @@ module.exports = [
        "Nueva Lavanda") difiere: Sevilla a $1,380,000 con 1 cajón, y un modelo Palma en lugar de Bali. */
     slug: 'lavanda-ii', name: 'Lavanda II', categoria: 'media', plaza: 'Matamoros',
     feat: 'Casas de dos y tres recámaras dentro del Fraccionamiento Arecas.',
-    type: 'Casas', rec: '2 – 3 rec.', m2: '80.34 – 87.10 m²',
+    type: 'Casas', rec: '2 – 3 rec.', m2: '80.34 – 87.10 m²', from: '$1,302,000 MXN', price: 1302000,
     sub: 'Casas con dos y tres recámaras ubicadas dentro del Fraccionamiento Arecas, a 3 minutos de Sendero Nacional.',
     protos: [
       {name: 'Sevilla', type: 'Casa', m2: 80.34, rec: 2, ban: '1½', price: '$1,302,000',

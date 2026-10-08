@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lavanda II · Casas en Matamoros | Grupo Velas</title>
+<title>Lavanda II · Matamoros desde $1,302,000 | Grupo Velas</title>
 <meta name="description" content="Casas con dos y tres recámaras ubicadas dentro del Fraccionamiento Arecas, a 3 minutos de Sendero Nacional.">
-<meta property="og:title" content="Lavanda II · Casas en Matamoros | Grupo Velas">
+<meta property="og:title" content="Lavanda II · Matamoros desde $1,302,000 | Grupo Velas">
 <meta property="og:description" content="Casas con dos y tres recámaras ubicadas dentro del Fraccionamiento Arecas, a 3 minutos de Sendero Nacional.">
 <meta property="og:image" content="https://grupovelas.com.mx/img/residencial-plus/lavanda-ii/lavanda.webp">
 <!-- Generado con tools/generar-desarrollos.js a partir de residencial-plus/index.html. Edita tools/desarrollos.js y vuelve a generar. -->
@@ -781,6 +781,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
       <a href="#prototipos">Prototipos</a>
       <a href="#amenidades">Amenidades</a>
       <a href="#ubicacion">Ubicación</a>
+      <a href="#financiamiento">Planes de pago</a>
       <a href="#contacto">Contacto</a>
     </nav>
     <a href="#contacto" class="btn sm desk">Agendar visita <span class="arr">→</span></a>
@@ -801,7 +802,9 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
       </div>
       <h1><span class="line"><span>Lavanda II</span></span><span class="line"><span>en <em>Matamoros</em></span></span></h1>
       <p class="sub">Casas con dos y tres recámaras ubicadas dentro del Fraccionamiento Arecas, a 3 minutos de Sendero Nacional.</p>
-      <div class="chips"></div>
+      <div class="chips">
+        <span class="chip">Desde <b>$1,302,000 MXN</b></span>
+      </div>
       <div class="ctas">
         <a href="#prototipos" class="btn" style="--bg:#fff;--fg:var(--navy)">Ver prototipos <span class="arr">→</span></a>
         <a href="#contacto" class="btn glass" data-unit="Información general">Solicitar información</a>
@@ -810,7 +813,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
     <div class="pick" id="pick">
       <a href="#prototipos"><img src="../../img/residencial-plus/lavanda-ii/lavanda.webp" alt="" loading="lazy"><div><small>Casa</small><b>80.34 m²</b><span>Sevilla</span></div><span class="go">→</span></a>
       <a href="#prototipos"><img src="../../img/residencial-plus/lavanda-ii/lavanda.webp" alt="" loading="lazy"><div><small>Casa</small><b>87.1 m²</b><span>Bali</span></div><span class="go">→</span></a>
-      
+      <div class="price"><span>Desde</span><b>$1,302,000 MXN</b></div>
     </div>
   </div>
 </section>
@@ -907,6 +910,28 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
   </div>
 </section>
 
+<!-- ============ SIMULADOR ============ -->
+<section class="sec" id="financiamiento" style="background:var(--sand)">
+  <div class="wrap calc">
+    <div>
+      <span class="eyebrow" data-reveal="up">Planes de pago</span>
+      <h2 class="split-words" data-split>Haz tus números en segundos</h2>
+      <p class="lead" data-reveal="up" style="--d:.1s">Ajusta el precio de referencia, el enganche y el plazo para conocer una mensualidad estimada en Lavanda II. Un asesor te comparte los planes vigentes.</p>
+      <div style="margin-top:26px;--d:.2s" data-reveal="up"><a href="#contacto" class="link" data-unit="Planes de pago">Quiero mi corrida financiera <span class="arr">→</span></a></div>
+    </div>
+    <div class="calc-card" data-reveal="scale" style="--d:.1s">
+      <div class="pmodes" id="pmodes"><span class="pill"></span><button class="on" data-m="banco">Crédito bancario</button><button data-m="directo">Plan directo</button><button data-m="contado">Contado</button></div>
+      <div class="f"><div class="range-row"><span>Precio de referencia</span><b id="prV"></b></div><input type="range" id="pr" min="1.3" max="2.3" step="0.1" value="1.3" aria-label="Precio de referencia en millones"></div>
+      <div class="f" data-for="banco directo"><div class="range-row"><span>Enganche</span><b id="engV"></b></div><input type="range" id="eng" min="10" max="50" step="5" value="20" aria-label="Porcentaje de enganche"></div>
+      <div class="f" data-for="banco"><div class="range-row"><span>Plazo del crédito</span><b id="yrV"></b></div><input type="range" id="yrs" min="5" max="20" step="5" value="20" aria-label="Plazo en años"></div>
+      <div class="f" data-for="banco"><div class="rate"><span>Tasa anual de referencia</span><span><input type="number" id="rate" value="11" min="6" max="18" step="0.1"> %</span></div></div>
+      <div class="f" data-for="directo"><div class="range-row"><span>Plazo para el saldo</span><b id="plzV"></b></div><input type="range" id="plz" min="6" max="36" step="6" value="24" aria-label="Plazo en meses"></div>
+      <div class="out"><div><small id="o1L">Enganche</small><b id="o1">$0</b></div><div class="big"><small id="o2L">Mensualidad estimada</small><b id="o2">$0</b></div></div>
+      <p class="disc" id="cdisc">Estimación ilustrativa sin intereses; no constituye una oferta. Precios y planes sujetos a cambio y disponibilidad.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ============ GRUPO VELAS ============ -->
 <section class="gv" id="grupo-velas">
   <div class="ph" data-reveal="clip"><img src="../../img/residencial-plus/lavanda-ii/lavanda.webp" alt="Lavanda II" loading="lazy" data-parallax=".12"></div>
@@ -929,7 +954,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
     <h2 class="split-words" data-split>Lo que necesitas saber</h2>
   </div>
   <div class="wrap faq">
-    <details data-reveal="up"><summary>¿Cuál es el precio de Lavanda II?<i></i></summary><div class="ans"><div><p>Un asesor de Matamoros te comparte precios, disponibilidad y planes de pago vigentes de Lavanda II.</p></div></div></details>
+    <details data-reveal="up"><summary>¿Cuál es el precio de Lavanda II?<i></i></summary><div class="ans"><div><p>Lavanda II está disponible desde $1,302,000 MXN. Precios sujetos a cambio y disponibilidad; un asesor te comparte los planes de pago vigentes.</p></div></div></details>
     <details data-reveal="up" style="--d:0.05s"><summary>¿Qué prototipos hay en Lavanda II?<i></i></summary><div class="ans"><div><p>Sevilla: 80.34 m² de construcción, 2 recámaras con clóset, 1½ baños, 2 cajones de estacionamiento, Planta baja: sala, comedor, cocina, ½ baño y lavandería, Planta alta: 2 recámaras y baño completo, Terreno de 112 m², Desde $1,302,000 MXN. Bali: 87.1 m² de construcción, 2 recámaras con clóset, 1 alcoba en planta baja, 2 baños completos, 2 cajones de estacionamiento, Sala, comedor, cocina y lavandería, Terreno de 112 m², Desde $1,409,000 MXN.</p></div></div></details>
     <details data-reveal="up" style="--d:0.10s"><summary>¿Qué amenidades tiene Lavanda II?<i></i></summary><div class="ans"><div><p>Parques, Senderos, Áreas sociales, Áreas verdes, Alberca, Área de juegos, Asador.</p></div></div></details>
     <details data-reveal="up" style="--d:0.15s"><summary>¿Dónde se ubica Lavanda II?<i></i></summary><div class="ans"><div><p>En Lib. Emilio Portes Gil km 3, C.P. 87413, H. Matamoros, Tamps..</p></div></div></details>
@@ -1051,7 +1076,10 @@ window.DEV = {
    ],
    "unit": "Casa Bali"
   }
- ]
+ ],
+ "calc": {
+  "type": "media"
+ }
 };
 </script>
 <script src="../../assets/gv-desarrollo.js"></script>
