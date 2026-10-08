@@ -1201,6 +1201,30 @@
   "ancho": 1400
  },
  {
+  "ruta": "img/premium/vistavela-iii/planta-condo-1.webp",
+  "origen": "brochures/vistavela-iii.pdf (p. 6)",
+  "estado": "ok",
+  "antes": 7778299,
+  "despues": 46962,
+  "ancho": 1129
+ },
+ {
+  "ruta": "img/premium/vistavela-iii/planta-condo-2.webp",
+  "origen": "brochures/vistavela-iii.pdf (p. 8)",
+  "estado": "ok",
+  "antes": 7778299,
+  "despues": 30168,
+  "ancho": 577
+ },
+ {
+  "ruta": "img/premium/vistavela-iii/planta-condo-3.webp",
+  "origen": "brochures/vistavela-iii.pdf (p. 10)",
+  "estado": "ok",
+  "antes": 7778299,
+  "despues": 58418,
+  "ancho": 1073
+ },
+ {
   "ruta": "img/premium/vistavela-iii/review-d57c2aceb2.webp",
   "origen": "https://backend.grupovelas.com/uploads/Review_d57c2aceb2.webp",
   "estado": "ok",
@@ -1773,6 +1797,22 @@
   "ancho": 1193
  },
  {
+  "ruta": "img/residencial-plus/lavanda-ii/planta-bali.webp",
+  "origen": "brochures/lavanda-ii.pdf (p. 6)",
+  "estado": "ok",
+  "antes": 2572489,
+  "despues": 96324,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/residencial-plus/lavanda-ii/planta-sevilla.webp",
+  "origen": "brochures/lavanda-ii.pdf (p. 5)",
+  "estado": "ok",
+  "antes": 2572489,
+  "despues": 111826,
+  "ancho": 1920
+ },
+ {
   "ruta": "img/residencial-plus/loma-bonita-reynosa/20a69446-a4c4-4677-9d20-883b914d6086-8aa9b1c8cf.webp",
   "origen": "https://backend.grupovelas.com/uploads/20a69446_a4c4_4677_9d20_883b914d6086_8aa9b1c8cf.jpg",
   "estado": "ok",
@@ -1851,6 +1891,22 @@
    "ruta": "img/residencial-plus/loma-bonita-reynosa/b1217e48-d7d4-4ac5-a36f-4156d37383f4-31e70fddf6-800.webp",
    "peso": 25290
   }
+ },
+ {
+  "ruta": "img/residencial-plus/loma-bonita-reynosa/planta-colibri.webp",
+  "origen": "brochures/loma-bonita-reynosa.pdf (p. 6)",
+  "estado": "ok",
+  "antes": 3835756,
+  "despues": 192082,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/residencial-plus/loma-bonita-reynosa/planta-mallorca.webp",
+  "origen": "brochures/loma-bonita-reynosa.pdf (p. 5)",
+  "estado": "ok",
+  "antes": 3835756,
+  "despues": 157630,
+  "ancho": 1920
  },
  {
   "ruta": "img/residencial-plus/loma-bonita-reynosa/sitio-gv-amenidades-1080x1080-1-139e8e7ff4.webp",
@@ -3430,6 +3486,22 @@
   }
  },
  {
+  "ruta": "img/residencial/arecas-altamira/planta-bali-2.webp",
+  "origen": "brochures/arecas-altamira.pdf (p. 6)",
+  "estado": "ok",
+  "antes": 1722819,
+  "despues": 88424,
+  "ancho": 1211
+ },
+ {
+  "ruta": "img/residencial/arecas-altamira/planta-bali-3.webp",
+  "origen": "brochures/arecas-altamira.pdf (p. 5)",
+  "estado": "ok",
+  "antes": 1722819,
+  "despues": 90822,
+  "ancho": 1211
+ },
+ {
   "ruta": "img/residencial/arecas-altamira/slider-01-8-66cd38fcbd.webp",
   "origen": "https://backend.grupovelas.com/uploads/Slider_01_8_66cd38fcbd.webp",
   "estado": "ok",
@@ -3718,6 +3790,54 @@
   "ancho": 1280
  },
  {
+  "ruta": "img/residencial/vista-laguna/bali-2-1.webp",
+  "origen": "brochures/vista-laguna.pdf (p. 9)",
+  "estado": "ok",
+  "antes": 2990877,
+  "despues": 119444,
+  "ancho": 1211
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/bali-2-2.webp",
+  "origen": "brochures/vista-laguna.pdf (p. 9)",
+  "estado": "ok",
+  "antes": 2990877,
+  "despues": 126670,
+  "ancho": 1211
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/bali-2-3.webp",
+  "origen": "brochures/vista-laguna.pdf (p. 9)",
+  "estado": "ok",
+  "antes": 2990877,
+  "despues": 81406,
+  "ancho": 1211
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/bali-3-1.webp",
+  "origen": "brochures/vista-laguna.pdf (p. 10)",
+  "estado": "ok",
+  "antes": 2990877,
+  "despues": 96530,
+  "ancho": 1211
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/bali-3-2.webp",
+  "origen": "brochures/vista-laguna.pdf (p. 10)",
+  "estado": "ok",
+  "antes": 2990877,
+  "despues": 78416,
+  "ancho": 1211
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/bali-3-3.webp",
+  "origen": "brochures/vista-laguna.pdf (p. 10)",
+  "estado": "ok",
+  "antes": 2990877,
+  "despues": 65632,
+  "ancho": 1211
+ },
+ {
   "ruta": "img/residencial/vista-laguna/galeria-01-4-8a44ffd6eb.webp",
   "origen": "https://backend.grupovelas.com/uploads/Galeria_01_4_8a44ffd6eb.webp",
   "estado": "ok",
@@ -3824,6 +3944,54 @@
    "ruta": "img/residencial/vista-laguna/galeria-09-1-dd51039b80-800.webp",
    "peso": 48288
   }
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/planta-bali-2.webp",
+  "origen": "brochures/vista-laguna.pdf (p. 9)",
+  "estado": "ok",
+  "antes": 2990877,
+  "despues": 74828,
+  "ancho": 1211
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/planta-bali-3.webp",
+  "origen": "brochures/vista-laguna.pdf (p. 10)",
+  "estado": "ok",
+  "antes": 2990877,
+  "despues": 75864,
+  "ancho": 1211
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/planta-sevilla-2025.webp",
+  "origen": "brochures/vista-laguna.pdf (p. 8)",
+  "estado": "ok",
+  "antes": 2990877,
+  "despues": 80986,
+  "ancho": 1211
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/sevilla-2025-1.webp",
+  "origen": "brochures/vista-laguna.pdf (p. 8)",
+  "estado": "ok",
+  "antes": 2990877,
+  "despues": 92342,
+  "ancho": 1211
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/sevilla-2025-2.webp",
+  "origen": "brochures/vista-laguna.pdf (p. 8)",
+  "estado": "ok",
+  "antes": 2990877,
+  "despues": 78806,
+  "ancho": 1211
+ },
+ {
+  "ruta": "img/residencial/vista-laguna/sevilla-2025-3.webp",
+  "origen": "brochures/vista-laguna.pdf (p. 8)",
+  "estado": "ok",
+  "antes": 2990877,
+  "despues": 84666,
+  "ancho": 1211
  },
  {
   "ruta": "img/residencial/vista-laguna/slider-01-6-0df0103dfb.webp",

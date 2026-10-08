@@ -61,11 +61,11 @@ module.exports = [
     /* Prototipos: sitio de Grupo Velas Los Cabos (pruebas.velasresorts.com, sección Modelos);
        m², terraza, lavado y amenidades según el brochure de mayo 2026 (brochures/) */
     protos: [
-      {name: 'Condo 1', type: 'Departamento', cap: 'm² por residencia', m2: 140.66, rec: 2, ban: 3, img: 'img/premium/vistavela-iii/condo-1.webp',
+      {name: 'Condo 1', type: 'Departamento', cap: 'm² por residencia', m2: 140.66, rec: 2, ban: 3, plan: 'img/premium/vistavela-iii/planta-condo-1.webp', photos: ['img/premium/vistavela-iii/planta-condo-1.webp', 'img/premium/vistavela-iii/condo-1.webp'],
         feats: ['2 recámaras', '3 baños', 'Sala de estar', 'Cocina', 'Terraza de 25.36 m²', '1 estacionamiento', 'Clóset de lavado']},
-      {name: 'Condo 2', type: 'Departamento', tag: 'Departamento · 1 recámara', cap: 'm² por residencia', m2: 63.33, rec: 1, ban: 1, img: 'img/premium/vistavela-iii/condo-2.webp',
+      {name: 'Condo 2', type: 'Departamento', tag: 'Departamento · 1 recámara', cap: 'm² por residencia', m2: 63.33, rec: 1, ban: 1, plan: 'img/premium/vistavela-iii/planta-condo-2.webp', photos: ['img/premium/vistavela-iii/planta-condo-2.webp', 'img/premium/vistavela-iii/condo-2.webp'],
         feats: ['1 recámara', '1 baño', 'Sala de estar', 'Cocineta', 'Terraza de 9.83 m²', '1 estacionamiento', 'Clóset de lavado']},
-      {name: 'Condo 3', type: 'Departamento', cap: 'm² por residencia', m2: 139.34, rec: 2, ban: 3, img: 'img/premium/vistavela-iii/condo-3.webp',
+      {name: 'Condo 3', type: 'Departamento', cap: 'm² por residencia', m2: 139.34, rec: 2, ban: 3, plan: 'img/premium/vistavela-iii/planta-condo-3.webp', photos: ['img/premium/vistavela-iii/planta-condo-3.webp', 'img/premium/vistavela-iii/condo-3.webp'],
         feats: ['2 recámaras', '3 baños', 'Sala de estar', 'Cocina', 'Terraza de 24.90 m²', '1 estacionamiento', 'Clóset de lavado']}
     ],
     protoLead: 'Tres distribuciones de 63.33 a 140.66 m², pensadas para distintos estilos de vida, todas con terraza, estacionamiento y área de lavado.',
@@ -273,9 +273,9 @@ module.exports = [
     type: 'Casas', rec: '2 – 3 rec.', m2: '80.34 – 87.10 m²', from: '$1,302,000 MXN', price: 1302000,
     sub: 'Casas con dos y tres recámaras ubicadas dentro del Fraccionamiento Arecas, a 3 minutos de Sendero Nacional.',
     protos: [
-      {name: 'Sevilla', type: 'Casa', m2: 80.34, rec: 2, ban: '1½', price: '$1,302,000',
+      {name: 'Sevilla', type: 'Casa', m2: 80.34, rec: 2, ban: '1½', price: '$1,302,000', plan: 'img/residencial-plus/lavanda-ii/planta-sevilla.webp',
         feats: ['2 recámaras con clóset', '1½ baños', '2 cajones de estacionamiento', 'Planta baja: sala, comedor, cocina, ½ baño y lavandería', 'Planta alta: 2 recámaras y baño completo', 'Terreno de 112 m²', 'Desde $1,302,000 MXN']},
-      {name: 'Bali', type: 'Casa', m2: 87.10, rec: 2, ban: 2, price: '$1,409,000',
+      {name: 'Bali', type: 'Casa', m2: 87.10, rec: 2, ban: 2, price: '$1,409,000', plan: 'img/residencial-plus/lavanda-ii/planta-bali.webp',
         feats: ['2 recámaras con clóset', '1 alcoba en planta baja', '2 baños completos', '2 cajones de estacionamiento', 'Sala, comedor, cocina y lavandería', 'Terreno de 112 m²', 'Desde $1,409,000 MXN']}
     ],
     protoLead: 'Dos modelos de casa en dos plantas, en terrenos de 112 m².',
@@ -386,9 +386,9 @@ module.exports = [
       {ic: 'pin', t: 'Ubicación privilegiada', s: 'A 2 minutos de hospitales y 5 de Plaza Sendero.'}
     ],
     protos: [
-      {name: 'Mallorca', type: 'Casa', m2: 114.46, cap: 'm² de construcción (desde)', rec: 3, ban: '2.5', price: '$2,935,000',
+      {name: 'Mallorca', type: 'Casa', m2: 114.46, cap: 'm² de construcción (desde)', rec: 3, ban: '2.5', price: '$2,935,000', plan: 'img/residencial-plus/loma-bonita-reynosa/planta-mallorca.webp',
         feats: ['1 recámara principal con baño completo', '2 recámaras con baño compartido', '½ baño', 'Cochera para 2 autos', 'Sala, comedor, cocina y lavandería', 'Terreno de 126 m²', 'Desde $2,935,000 MXN']},
-      {name: 'Colibrí', type: 'Casa', m2: 154, cap: 'm² de construcción (desde)', rec: 3, ban: '3.5', price: '$2,385,000',
+      {name: 'Colibrí', type: 'Casa', m2: 154, cap: 'm² de construcción (desde)', rec: 3, ban: '3.5', price: '$2,385,000', plan: 'img/residencial-plus/loma-bonita-reynosa/planta-colibri.webp',
         feats: ['1 recámara principal con vestidor, baño privado y terraza', '2 recámaras con baño completo', '½ baño', 'Cochera techada para 2 autos', 'Sala, comedor, cocina y lavandería', 'Terreno de 147.60 m²', 'Desde $2,385,000 MXN']}
     ],
     protoNote: 'Precios y superficies del brochure de Loma Bonita (sector Loma Norteña), sujetos a cambio y disponibilidad. Imágenes ilustrativas.',
@@ -541,8 +541,8 @@ module.exports = [
       {ic: 'chart', t: 'Inversión inteligente', s: 'Avalada por Grupo Velas.'}
     ],
     protos: [
-      {name: 'Bali 3', type: 'Casa', rec: 3, ban: '2.5', feats: ['3 recámaras', '2 baños y ½ baño', '2 estacionamientos', 'Sala-comedor', 'Cocina', 'Cuarto de lavado', 'Jardín']},
-      {name: 'Bali 2', type: 'Casa', rec: 2, ban: '1.5', feats: ['2 recámaras', '1 baño y ½ baño', '2 estacionamientos', 'Sala-comedor', 'Cocina', 'Cuarto de lavado']}
+      {name: 'Bali 3', type: 'Casa', rec: 3, ban: '2.5', plan: 'img/residencial/arecas-altamira/planta-bali-3.webp', feats: ['3 recámaras', '2 baños y ½ baño', '2 estacionamientos', 'Sala-comedor', 'Cocina', 'Cuarto de lavado', 'Jardín']},
+      {name: 'Bali 2', type: 'Casa', rec: 2, ban: '1.5', plan: 'img/residencial/arecas-altamira/planta-bali-2.webp', feats: ['2 recámaras', '1 baño y ½ baño', '2 estacionamientos', 'Sala-comedor', 'Cocina', 'Cuarto de lavado']}
     ],
     protoLead: 'Dos modelos de casa, de 2 y 3 recámaras, con 2 estacionamientos.',
     amenities: ['Áreas verdes', 'Canchas deportivas', 'Ambiente seguro'],
@@ -570,11 +570,17 @@ module.exports = [
       {t: 'Áreas verdes', s: 'Extensas áreas naturales para caminar, hacer ejercicio o disfrutar del aire libre.'}
     ],
     protos: [
-      {name: 'Sevilla 2025', type: 'Casa', m2: 79.25, rec: 2, ban: '1.5', feats: ['2 recámaras', '1.5 baños', 'Sala-comedor', 'Cocina', 'Área de lavandería', 'Estacionamiento']},
-      {name: 'Bali 2', type: 'Casa', m2: 87.10, rec: 2, ban: 2, feats: ['2 recámaras', '2 baños completos', 'Sala-comedor', 'Cocina', 'Área de lavandería', 'Estacionamiento']},
-      {name: 'Bali 3', type: 'Casa', m2: 116.68, rec: 3, ban: '2.5', feats: ['3 recámaras', '2.5 baños', 'Sala-comedor', 'Cocina', 'Área de lavandería', 'Estacionamiento']}
+      {name: 'Sevilla 2025', type: 'Casa', m2: 79.25, rec: 2, ban: '1.5', plan: 'img/residencial/vista-laguna/planta-sevilla-2025.webp',
+        photos: ['img/residencial/vista-laguna/planta-sevilla-2025.webp', 'img/residencial/vista-laguna/sevilla-2025-1.webp', 'img/residencial/vista-laguna/sevilla-2025-2.webp', 'img/residencial/vista-laguna/sevilla-2025-3.webp'],
+        feats: ['2 recámaras', '1.5 baños', 'Sala-comedor', 'Cocina', 'Área de lavandería', 'Estacionamiento']},
+      {name: 'Bali 2', type: 'Casa', m2: 87.10, rec: 2, ban: 2, plan: 'img/residencial/vista-laguna/planta-bali-2.webp',
+        photos: ['img/residencial/vista-laguna/planta-bali-2.webp', 'img/residencial/vista-laguna/bali-2-1.webp', 'img/residencial/vista-laguna/bali-2-2.webp', 'img/residencial/vista-laguna/bali-2-3.webp'],
+        feats: ['2 recámaras', '2 baños completos', 'Sala-comedor', 'Cocina', 'Área de lavandería', 'Estacionamiento']},
+      {name: 'Bali 3', type: 'Casa', m2: 116.68, rec: 3, ban: '2.5', plan: 'img/residencial/vista-laguna/planta-bali-3.webp',
+        photos: ['img/residencial/vista-laguna/planta-bali-3.webp', 'img/residencial/vista-laguna/bali-3-1.webp', 'img/residencial/vista-laguna/bali-3-2.webp', 'img/residencial/vista-laguna/bali-3-3.webp'],
+        feats: ['3 recámaras', '2.5 baños', 'Sala-comedor', 'Cocina', 'Área de lavandería', 'Estacionamiento']}
     ],
-    protoLead: 'Casas construidas en tres modelos, de 2 y 3 recámaras.',
+    protoLead: 'Casas construidas en tres modelos, de 2 y 3 recámaras. Toca la planta para ver las fotos del modelo.',
     address: 'Fracc. Vista Laguna, Altamira, Tamps. (entrada por Su Bodega Monte Alto)',
     nearby: ['Supermercados: Soriana y Arteli', 'Hospital: IMSS', 'Playa Tesoro', 'Cafés y restaurantes: Degas Café, El Asador y Plaza Arenas', 'Carretera Tampico–Mante']
   }
