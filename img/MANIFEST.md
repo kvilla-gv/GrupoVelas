@@ -4,8 +4,8 @@ Generado por `tools/generar-desarrollos.js` a partir de `img/manifest.json` (ori
 No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manifest.json`
 (aparte de los datos crudos de `tools/data/grupovelas.json`, que no se tocan).
 
-- 350 imágenes locales, 230 con miniatura de 800 px (`-800.webp`, solo en galerías y recortes de Selvanova).
-- Peso: 335,437 KB antes → 38,941 KB después, más 10,071 KB de miniaturas.
+- 355 imágenes locales, 234 con miniatura de 800 px (`-800.webp`, solo en galerías y recortes de Selvanova).
+- Peso: 463,776 KB antes → 39,562 KB después, más 10,253 KB de miniaturas.
 - WebP de máx. 1920 px de ancho y ≤400 KB; los SVG se copian tal cual.
 
 ## Imágenes
@@ -279,6 +279,11 @@ No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manif
 | `img/residencial-plus/selvanova/recamara-1-vista-2-1.webp` | https://selvanova.mx/wp-content/uploads/2024/11/Recamara-1-vista-2-1-800x800.png | 705 KB | 42 KB | 42 KB |
 | `img/residencial-plus/selvanova/recamara-principal-vista-1-1-1.webp` | https://selvanova.mx/wp-content/uploads/2024/11/Recamara-Principal-vista-1-1-1-800x800.png | 684 KB | 40 KB | 40 KB |
 | `img/residencial-plus/selvanova/sala-vista-3-1.webp` | https://selvanova.mx/wp-content/uploads/2024/11/Sala-vista-3-1-800x800.png | 809 KB | 65 KB | 65 KB |
+| `img/residencial-plus/selvanova/sauce-3b-cocina.webp` | brochures/selvanova.pdf (p. 27) | 25,668 KB | 156 KB | 44 KB |
+| `img/residencial-plus/selvanova/sauce-3b-recamara.webp` | brochures/selvanova.pdf (p. 27) | 25,668 KB | 88 KB | 40 KB |
+| `img/residencial-plus/selvanova/sauce-3b-sala-cocina.webp` | brochures/selvanova.pdf (p. 27) | 25,668 KB | 74 KB | 38 KB |
+| `img/residencial-plus/selvanova/sauce-3b-sala-comedor.webp` | brochures/selvanova.pdf (p. 26) | 25,668 KB | 253 KB | 61 KB |
+| `img/residencial-plus/selvanova/sauce-3b.webp` | brochures/selvanova.pdf (p. 25) | 25,668 KB | 49 KB | — |
 | `img/residencial-plus/selvanova/sauce-plus.webp` | https://selvanova.mx/wp-content/uploads/2021/10/sauce-plus.png | 128 KB | 41 KB | — |
 | `img/residencial-plus/selvanova/selvanova-alberca-03-1.webp` | https://selvanova.mx/wp-content/uploads/2026/08/Selvanova_Alberca_03-scaled-1-592x444.jpg | 371 KB | 46 KB | — |
 | `img/residencial-plus/selvanova/selvanova-logo-horizontal-alta-3.webp` | https://selvanova.mx/wp-content/uploads/2021/08/selvanova-logo-horizontal-alta-3.png | 8 KB | 6 KB | — |

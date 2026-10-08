@@ -2906,6 +2906,62 @@
   }
  },
  {
+  "ruta": "img/residencial-plus/selvanova/sauce-3b-cocina.webp",
+  "origen": "brochures/selvanova.pdf (p. 27)",
+  "estado": "ok",
+  "antes": 26283738,
+  "despues": 160238,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/sauce-3b-cocina-800.webp",
+   "peso": 44704
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/sauce-3b-recamara.webp",
+  "origen": "brochures/selvanova.pdf (p. 27)",
+  "estado": "ok",
+  "antes": 26283738,
+  "despues": 90300,
+  "ancho": 1488,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/sauce-3b-recamara-800.webp",
+   "peso": 40518
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/sauce-3b-sala-cocina.webp",
+  "origen": "brochures/selvanova.pdf (p. 27)",
+  "estado": "ok",
+  "antes": 26283738,
+  "despues": 75452,
+  "ancho": 1338,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/sauce-3b-sala-cocina-800.webp",
+   "peso": 38718
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/sauce-3b-sala-comedor.webp",
+  "origen": "brochures/selvanova.pdf (p. 26)",
+  "estado": "ok",
+  "antes": 26283738,
+  "despues": 259420,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial-plus/selvanova/sauce-3b-sala-comedor-800.webp",
+   "peso": 62318
+  }
+ },
+ {
+  "ruta": "img/residencial-plus/selvanova/sauce-3b.webp",
+  "origen": "brochures/selvanova.pdf (p. 25)",
+  "estado": "ok",
+  "antes": 26283738,
+  "despues": 50642,
+  "ancho": 800
+ },
+ {
   "ruta": "img/residencial-plus/selvanova/sauce-plus.webp",
   "origen": "https://selvanova.mx/wp-content/uploads/2021/10/sauce-plus.png",
   "estado": "ok",
