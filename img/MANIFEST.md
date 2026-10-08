@@ -4,8 +4,8 @@ Generado por `tools/generar-desarrollos.js` a partir de `img/manifest.json` (ori
 No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manifest.json`
 (aparte de los datos crudos de `tools/data/grupovelas.json`, que no se tocan).
 
-- 352 imágenes locales, 230 con miniatura de 800 px (`-800.webp`, solo en galerías y recortes de Selvanova).
-- Peso: 335,497 KB antes → 38,957 KB después, más 10,071 KB de miniaturas.
+- 350 imágenes locales, 230 con miniatura de 800 px (`-800.webp`, solo en galerías y recortes de Selvanova).
+- Peso: 335,437 KB antes → 38,941 KB después, más 10,071 KB de miniaturas.
 - WebP de máx. 1920 px de ancho y ≤400 KB; los SVG se copian tal cual.
 
 ## Imágenes
@@ -38,9 +38,7 @@ No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manif
 | `img/logos/ballesta.webp` | Ballesta_blanco.png | 37 KB | 16 KB | — |
 | `img/logos/cima-penaflor.webp` | Whats_Cima.png | 38 KB | 11 KB | — |
 | `img/logos/conjunto-cardenas-807.webp` | Logo Cardenas 807_Blanco.png | 62 KB | 20 KB | — |
-| `img/logos/conjunto-roma-401.webp` | Whatsapp_ROMA 401.png | 26 KB | 6 KB | — |
 | `img/logos/coto-baltico.webp` | LOGO COTO BÁLTICO-09 (1).png | 7 KB | 3 KB | — |
-| `img/logos/coto-jade.webp` | Whats_CotoJade.png | 33 KB | 10 KB | — |
 | `img/logos/florencia.webp` | Whats_Florencia.png | 27 KB | 8 KB | — |
 | `img/logos/fraccionamiento-arecas.webp` | Whats_Arecas_Matamoros.png | 47 KB | 19 KB | — |
 | `img/logos/fraccionamiento-loma-bonita.webp` | Lomabonita_tampico (1).png | 79 KB | 116 KB | — |
