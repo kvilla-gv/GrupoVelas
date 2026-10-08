@@ -31,17 +31,17 @@
   "amenityFeature": [
     {
       "@type": "LocationFeatureSpecification",
-      "name": "5 Piscinas",
+      "name": "5 albercas",
       "value": true
     },
     {
       "@type": "LocationFeatureSpecification",
-      "name": "Casa Club Multiusos",
+      "name": "Casa club",
       "value": true
     },
     {
       "@type": "LocationFeatureSpecification",
-      "name": "Gimnasio (semi-equipado)",
+      "name": "Gimnasio",
       "value": true
     },
     {
@@ -51,17 +51,17 @@
     },
     {
       "@type": "LocationFeatureSpecification",
-      "name": "Parques Infantiles",
+      "name": "Juegos infantiles",
       "value": true
     },
     {
       "@type": "LocationFeatureSpecification",
-      "name": "Cancha de Pádel",
+      "name": "Cancha de pickleball",
       "value": true
     },
     {
       "@type": "LocationFeatureSpecification",
-      "name": "Sala de Spa de Bienestar",
+      "name": "Acceso controlado con seguridad",
       "value": true
     }
   ],
@@ -516,6 +516,7 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 .ok path{stroke-dasharray:50;stroke-dashoffset:50;transition:stroke-dashoffset .6s var(--ease-out) .9s}
 .form.sent .ok circle,.form.sent .ok path{stroke-dashoffset:0}
 .ok h3{margin-top:16px;font-size:22px}
+.form .ok .btn{width:auto;margin-top:20px;padding:14px 26px}
 .ok p{color:var(--muted);font-size:14px;margin-top:6px;opacity:1}
 
 
@@ -621,6 +622,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
 .places li.np{grid-template-columns:28px 1fr}
 .loc .more-txt{color:var(--muted);font-size:14px;margin:-10px 0 22px;max-width:58ch}
 .hero-note{font-size:11px;opacity:.7;margin-top:14px}
+.form .ok .btn{width:auto;margin-top:20px;padding:14px 26px}
 /* Más de 3 prototipos: si no caben en una fila, van en filas de 3 sin indicador deslizante (como .tabs.four de residencial-plus) */
 @media (max-width:1180px){
   .tabs.many{grid-template-columns:repeat(3,1fr)!important;width:100%;gap:4px}
@@ -696,7 +698,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
 <section class="perks" id="ventajas">
   <div class="wrap grid" style="--n:4">
     <div class="perk" data-reveal="up"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M16 3 5 7v8c0 7 4.8 11.4 11 14 6.2-2.6 11-7 11-14V7z"/><path d="m11 16 3.5 3.5L21 13"/></svg><div><b>Respaldo Grupo Velas</b><span>Más de 45 años construyendo patrimonio en México.</span></div></div>
-    <div class="perk" data-reveal="up" style="--d:0.08s"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="23" cy="9" r="3.5"/><path d="M3 20c3-2 5 2 8 0s5 2 8 0 5 2 8 0 2 0 2 0M3 26c3-2 5 2 8 0s5 2 8 0 5 2 8 0"/></svg><div><b>Estilo de vida de resort</b><span>5 albercas, casa club, gimnasio y cancha de pádel.</span></div></div>
+    <div class="perk" data-reveal="up" style="--d:0.08s"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="23" cy="9" r="3.5"/><path d="M3 20c3-2 5 2 8 0s5 2 8 0 5 2 8 0 2 0 2 0M3 26c3-2 5 2 8 0s5 2 8 0 5 2 8 0"/></svg><div><b>Estilo de vida de resort</b><span>5 albercas, casa club, gimnasio y cancha de pickleball.</span></div></div>
     <div class="perk" data-reveal="up" style="--d:0.16s"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M6 28V10l8-6v24M14 28V12l12 5v11M3 28h26"/><path d="M9 14h2M9 18h2M9 22h2M18 20h4M18 24h4"/></svg><div><b>274 departamentos</b><span>Distribuidos en 8 edificios.</span></div></div>
     <div class="perk" data-reveal="up" style="--d:0.24s"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M16 29s9-9.2 9-16a9 9 0 0 0-18 0c0 6.8 9 16 9 16Z"/><circle cx="16" cy="13" r="3.5"/></svg><div><b>Cabo San Lucas</b><span>Cerca de Puerto Paraíso Mall, Plaza San Lucas y Playa El Médano.</span></div></div>
   </div>
@@ -709,15 +711,15 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
       <div>
         <span class="eyebrow" data-reveal="up">Conoce nuestros prototipos</span>
         <h2 class="split-words" data-split>Encuentra tu espacio ideal</h2>
-        <p class="lead" data-reveal="up" style="--d:.1s">Tres distribuciones de 63 a 140.66 m², pensadas para distintos estilos de vida, todas con terraza, estacionamiento y área de lavado.</p>
+        <p class="lead" data-reveal="up" style="--d:.1s">Tres distribuciones de 63.33 a 140.66 m², pensadas para distintos estilos de vida, todas con terraza, estacionamiento y área de lavado.</p>
       </div>
       <div class="tabs" id="tabs" data-reveal="up" style="--d:.2s;grid-template-columns:repeat(3,1fr)"><span class="ind" style="width:calc(33.333% - 2px)"></span><button class="on" data-t="0">Condo 1</button><button data-t="1">Condo 2</button><button data-t="2">Condo 3</button></div>
     </div>
 
     <div class="proto-card" id="protoCard" data-reveal="scale" style="--d:.1s">
-      <div class="plan photo" id="plan" role="button" tabindex="0" aria-label="Ampliar imagen">
+      <div class="plan" id="plan" role="button" tabindex="0" aria-label="Ampliar imagen">
         <span class="scan"></span>
-        <img id="planImg" src="../../img/premium/vistavela-iii/condo-1.webp" alt="Condo 1" loading="lazy">
+        <img id="planImg" src="../../img/premium/vistavela-iii/planta-condo-1.webp" alt="Planta Condo 1" loading="lazy">
         <span class="zoom"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5M11 8v6M8 11h6"/></svg></span>
       </div>
       <div class="proto-info">
@@ -726,10 +728,11 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
           <h3 id="pName">Condo 1</h3>
           <div id="pM2wrap"><div class="m2"><span id="pM2">140.66</span><small>m²</small></div>
           <div class="m2cap" id="pCap">m² por residencia</div></div>
-          <ul class="flist" id="flist"><li style="--i:0" class="">2 recámaras</li><li style="--i:1" class="">3 baños</li><li style="--i:2" class="">Sala de estar</li><li style="--i:3" class="">Cocina</li><li style="--i:4" class="">Terraza</li><li style="--i:5" class="">1 estacionamiento</li><li style="--i:6" class="">Centro de lavado</li></ul>
+          <ul class="flist" id="flist"><li style="--i:0" class="">2 recámaras</li><li style="--i:1" class="">3 baños</li><li style="--i:2" class="">Sala de estar</li><li style="--i:3" class="">Cocina</li><li style="--i:4" class="">Terraza de 25.36 m²</li><li style="--i:5" class="">1 estacionamiento</li><li style="--i:6" class="">Clóset de lavado</li></ul>
         </div>
         <div class="acts">
           <a href="#contacto" class="btn" id="pCta" data-unit="Departamento Condo 1">Solicitar información <span class="arr">→</span></a>
+          <a href="#contacto" class="btn ghost" data-unit="Brochure">Descargar brochure</a>
         </div>
         <p class="proto-note">Imágenes ilustrativas. Medidas aproximadas; precios y disponibilidad sujetos a cambio.</p>
       </div>
@@ -773,13 +776,13 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
     </div>
     <div class="amen">
       <div class="am big" data-reveal="up"><img src="../../img/premium/vistavela-iii/slider-03-cc6bafb672.webp" alt="Vistavela III" loading="lazy"><div class="t"><div><b>Vistavela III</b><span>7 amenidades para disfrutar</span></div><span class="n">CABO SAN LUCAS</span></div></div>
-      <div class="am ic" data-reveal="up" style="--d:0.00s"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 27c3-2 5 2 8 0s5 2 8 0 5 2 8 0 5 2 8 0M4 33c3-2 5 2 8 0s5 2 8 0 5 2 8 0 5 2 8 0M13 23V10a3 3 0 0 1 6 0M25 23V10a3 3 0 0 1 6 0M13 15h12M13 20h12"/></svg><div class="t" style="position:static"><div><b>5 Piscinas</b><span>Disfruta de múltiples opciones para nadar y relajarte bajo el sol.</span></div><span class="n">01</span></div></div>
-      <div class="am ic" data-reveal="up" style="--d:0.06s"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 18 20 7l15 11M9 16v18h22V16M16 34v-8h8v8"/></svg><div class="t" style="position:static"><div><b>Casa Club Multiusos</b><span>Un espacio versátil para reuniones, eventos y actividades comunitarias.</span></div><span class="n">02</span></div></div>
-      <div class="am ic" data-reveal="up" style="--d:0.12s"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 13v14M4 16v8M32 13v14M36 16v8M8 20h24"/></svg><div class="t" style="position:static"><div><b>Gimnasio (semi-equipado)</b><span>Mantén tu rutina de ejercicio en un espacio conveniente y con lo básico…</span></div><span class="n">03</span></div></div>
-      <div class="am ic" data-reveal="up" style="--d:0.18s"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 36V20M20 20c-7 0-10-5-10-11 6 0 10 4 10 11ZM20 25c6 0 9-4 9-10-6 0-9 4-9 10Z"/><path d="M6 36h28"/></svg><div class="t" style="position:static"><div><b>Jardines</b><span>Amplias zonas verdes diseñadas para el esparcimiento y la conexión con la…</span></div><span class="n">04</span></div></div>
-      <div class="am ic" data-reveal="up" style="--d:0.00s"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 35 14 7h2l8 28M10 21h10M26 35V16l8-4v23M4 35h32"/><circle cx="30" cy="8" r="2"/></svg><div class="t" style="position:static"><div><b>Parques Infantiles</b><span>Espacios seguros y divertidos para que los más pequeños jueguen libremente.</span></div><span class="n">05</span></div></div>
-      <div class="am ic" data-reveal="up" style="--d:0.06s"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="6" y="8" width="28" height="24" rx="1"/><path d="M20 8v24M6 20h28"/><circle cx="20" cy="20" r="4"/></svg><div class="t" style="position:static"><div><b>Cancha de Pádel</b><span>Perfecta para los amantes del deporte y para disfrutar de partidos amistosos.</span></div><span class="n">06</span></div></div>
-      <div class="am ic wide" data-reveal="up" style="--d:0.12s"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 31c-6 0-11-4-12-10 5 0 9 2 12 6 3-4 7-6 12-6-1 6-6 10-12 10ZM20 27c-2-3-2-8 0-12 2 4 2 9 0 12Z"/></svg><div class="t" style="position:static"><div><b>Sala de Spa de Bienestar</b><span>Un rincón dedicado a tu relajación y cuidado personal dentro del desarrollo.</span></div><span class="n">07</span></div></div>
+      <div class="am ic" data-reveal="up" style="--d:0.00s"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 27c3-2 5 2 8 0s5 2 8 0 5 2 8 0 5 2 8 0M4 33c3-2 5 2 8 0s5 2 8 0 5 2 8 0 5 2 8 0M13 23V10a3 3 0 0 1 6 0M25 23V10a3 3 0 0 1 6 0M13 15h12M13 20h12"/></svg><div class="t" style="position:static"><div><b>5 albercas</b></div><span class="n">01</span></div></div>
+      <div class="am ic" data-reveal="up" style="--d:0.06s"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 18 20 7l15 11M9 16v18h22V16M16 34v-8h8v8"/></svg><div class="t" style="position:static"><div><b>Casa club</b><span>Con salón multiusos.</span></div><span class="n">02</span></div></div>
+      <div class="am ic" data-reveal="up" style="--d:0.12s"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 13v14M4 16v8M32 13v14M36 16v8M8 20h24"/></svg><div class="t" style="position:static"><div><b>Gimnasio</b></div><span class="n">03</span></div></div>
+      <div class="am ic" data-reveal="up" style="--d:0.18s"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 36V20M20 20c-7 0-10-5-10-11 6 0 10 4 10 11ZM20 25c6 0 9-4 9-10-6 0-9 4-9 10Z"/><path d="M6 36h28"/></svg><div class="t" style="position:static"><div><b>Jardines</b></div><span class="n">04</span></div></div>
+      <div class="am ic" data-reveal="up" style="--d:0.00s"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 35 14 7h2l8 28M10 21h10M26 35V16l8-4v23M4 35h32"/><circle cx="30" cy="8" r="2"/></svg><div class="t" style="position:static"><div><b>Juegos infantiles</b></div><span class="n">05</span></div></div>
+      <div class="am ic" data-reveal="up" style="--d:0.06s"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="6" y="8" width="28" height="24" rx="1"/><path d="M20 8v24M6 20h28"/><circle cx="20" cy="20" r="4"/></svg><div class="t" style="position:static"><div><b>Cancha de pickleball</b></div><span class="n">06</span></div></div>
+      <div class="am ic wide" data-reveal="up" style="--d:0.12s"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 4 7 9v9c0 8 5.5 13 13 16 7.5-3 13-8 13-16V9z"/><path d="m14 19 4 4 8-8"/></svg><div class="t" style="position:static"><div><b>Acceso controlado con seguridad</b></div><span class="n">07</span></div></div>
     </div>
   </div>
 </section>
@@ -795,7 +798,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
         <li class="np" data-reveal="right" style="--d:0.05s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 8h14l-1 12H6zM9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Centros comerciales: Puerto Paraíso Mall y Plaza San Lucas</span></li>
         <li class="np" data-reveal="right" style="--d:0.10s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 8h14l-1 12H6zM9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Supermercados: Fresko, Costco y Walmart</span></li>
         <li class="np" data-reveal="right" style="--d:0.15s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M12 8v8M8 12h8"/></svg><span>Hospitales: H+ Hospital Los Cabos y BlueNet Hospitals</span></li>
-        <li class="np" data-reveal="right" style="--d:0.20s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="17" cy="6" r="3"/><path d="M2 18c3-2 5 2 8 0s5 2 8 0 3 0 4-1M2 22c3-2 5 2 8 0s5 2 8 0"/></svg><span>Playa El Médano, a 15–20 minutos en coche</span></li>
+        <li class="np" data-reveal="right" style="--d:0.20s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="17" cy="6" r="3"/><path d="M2 18c3-2 5 2 8 0s5 2 8 0 3 0 4-1M2 22c3-2 5 2 8 0s5 2 8 0"/></svg><span>Playa El Médano, a 15 minutos en coche</span></li>
       </ul>
       <p class="more-txt" data-reveal="up">Los Cabos es el escenario perfecto para quienes buscan desarrollos inmobiliarios en México.</p>
       <div class="addr" data-reveal="up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 22s7-7.2 7-12.5a7 7 0 0 0-14 0C5 14.8 12 22 12 22Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Cabo San Lucas, Los Cabos, Baja California Sur</span></div>
@@ -833,8 +836,8 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
   </div>
   <div class="wrap faq">
     <details data-reveal="up"><summary>¿Cuál es el precio de Vistavela III?<i></i></summary><div class="ans"><div><p>Vistavela III está disponible desde $195K USD. Precios sujetos a cambio y disponibilidad; un asesor te comparte los planes de pago vigentes.</p></div></div></details>
-    <details data-reveal="up" style="--d:0.05s"><summary>¿Qué prototipos hay en Vistavela III?<i></i></summary><div class="ans"><div><p>Condo 1: 140.66 m² de construcción, 2 recámaras, 3 baños, Sala de estar, Cocina, Terraza, 1 estacionamiento, Centro de lavado. Condo 2: 63 m² de construcción, 1 recámara, 1 baño, Sala de estar, Cocineta, Terraza, 1 estacionamiento, Cuarto de lavado. Condo 3: 139 m² de construcción, 2 recámaras, 3 baños, Sala de estar, Cocina, Terraza, 1 estacionamiento, Cuarto de lavado.</p></div></div></details>
-    <details data-reveal="up" style="--d:0.10s"><summary>¿Qué amenidades tiene Vistavela III?<i></i></summary><div class="ans"><div><p>5 Piscinas, Casa Club Multiusos, Gimnasio (semi-equipado), Jardines, Parques Infantiles, Cancha de Pádel, Sala de Spa de Bienestar.</p></div></div></details>
+    <details data-reveal="up" style="--d:0.05s"><summary>¿Qué prototipos hay en Vistavela III?<i></i></summary><div class="ans"><div><p>Condo 1: 140.66 m² de construcción, 2 recámaras, 3 baños, Sala de estar, Cocina, Terraza de 25.36 m², 1 estacionamiento, Clóset de lavado. Condo 2: 63.33 m² de construcción, 1 recámara, 1 baño, Sala de estar, Cocineta, Terraza de 9.83 m², 1 estacionamiento, Clóset de lavado. Condo 3: 139.34 m² de construcción, 2 recámaras, 3 baños, Sala de estar, Cocina, Terraza de 24.90 m², 1 estacionamiento, Clóset de lavado.</p></div></div></details>
+    <details data-reveal="up" style="--d:0.10s"><summary>¿Qué amenidades tiene Vistavela III?<i></i></summary><div class="ans"><div><p>5 albercas, Casa club, Gimnasio, Jardines, Juegos infantiles, Cancha de pickleball, Acceso controlado con seguridad.</p></div></div></details>
     <details data-reveal="up" style="--d:0.15s"><summary>¿En qué etapa está Vistavela III?<i></i></summary><div class="ans"><div><p>Vistavela III está disponible.</p></div></div></details>
     <details data-reveal="up" style="--d:0.20s"><summary>¿Dónde se ubica Vistavela III?<i></i></summary><div class="ans"><div><p>En Cabo San Lucas, Los Cabos, Baja California Sur.</p></div></div></details>
     <details data-reveal="up" style="--d:0.25s"><summary>¿Quién desarrolla Vistavela III?<i></i></summary><div class="ans"><div><p>Grupo Velas, empresa mexicana con más de 45 años en la construcción y marca hermana de Velas Resorts.</p></div></div></details>
@@ -868,7 +871,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
         <div class="fld"><input id="fe" name="email" type="email" placeholder=" " autocomplete="email"><label for="fe">Correo electrónico</label></div>
       </div>
       <div class="two">
-        <div class="fld"><select id="fu" name="interes"><option>Cualquier prototipo</option><option>Departamento Condo 1</option><option>Departamento Condo 2</option><option>Departamento Condo 3</option><option>Precios y disponibilidad</option><option>Planes de pago</option><option>Visita al desarrollo</option></select><label for="fu">Me interesa</label></div>
+        <div class="fld"><select id="fu" name="interes"><option>Cualquier prototipo</option><option>Departamento Condo 1</option><option>Departamento Condo 2</option><option>Departamento Condo 3</option><option>Precios y disponibilidad</option><option>Planes de pago</option><option>Visita al desarrollo</option><option>Brochure</option></select><label for="fu">Me interesa</label></div>
         <div class="fld"><select id="fo" name="objetivo"><option>Para vivir</option><option>Para invertir</option><option>Ambos</option></select><label for="fo">Lo quiero</label></div>
       </div>
       <input type="hidden" name="desarrollo" value="Vistavela III"><input type="hidden" name="categoria" value="Premium"><input type="hidden" name="plaza" value="Los Cabos">
@@ -882,7 +885,8 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
       <div class="ok">
         <svg viewBox="0 0 70 70" fill="none" stroke="#0f2340" stroke-width="2.5"><circle cx="35" cy="35" r="30"/><path d="m22 36 9 9 17-19" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <h3>¡Gracias!</h3>
-        <p>Recibimos tus datos. Un asesor de Vistavela III te contactará muy pronto.</p>
+        <p>Recibimos tus datos. Ya puedes descargar el brochure; un asesor de Vistavela III te contactará muy pronto.</p>
+        <a class="btn" href="../../brochures/vistavela-iii.pdf" target="_blank" rel="noopener">Descargar brochure <span class="arr">↓</span></a>
       </div>
     </form>
   </div>
@@ -924,55 +928,64 @@ window.DEV = {
    "tag": "Departamento · 2 recámaras",
    "m2": 140.66,
    "cap": "m² por residencia",
-   "img": "../../img/premium/vistavela-iii/condo-1.webp",
-   "isPlan": false,
-   "photos": [],
+   "img": "../../img/premium/vistavela-iii/planta-condo-1.webp",
+   "isPlan": true,
+   "photos": [
+    "../../img/premium/vistavela-iii/planta-condo-1.webp",
+    "../../img/premium/vistavela-iii/condo-1.webp"
+   ],
    "feats": [
     "2 recámaras",
     "3 baños",
     "Sala de estar",
     "Cocina",
-    "Terraza",
+    "Terraza de 25.36 m²",
     "1 estacionamiento",
-    "Centro de lavado"
+    "Clóset de lavado"
    ],
    "unit": "Departamento Condo 1"
   },
   {
    "name": "Condo 2",
    "tag": "Departamento · 1 recámara",
-   "m2": 63,
+   "m2": 63.33,
    "cap": "m² por residencia",
-   "img": "../../img/premium/vistavela-iii/condo-2.webp",
-   "isPlan": false,
-   "photos": [],
+   "img": "../../img/premium/vistavela-iii/planta-condo-2.webp",
+   "isPlan": true,
+   "photos": [
+    "../../img/premium/vistavela-iii/planta-condo-2.webp",
+    "../../img/premium/vistavela-iii/condo-2.webp"
+   ],
    "feats": [
     "1 recámara",
     "1 baño",
     "Sala de estar",
     "Cocineta",
-    "Terraza",
+    "Terraza de 9.83 m²",
     "1 estacionamiento",
-    "Cuarto de lavado"
+    "Clóset de lavado"
    ],
    "unit": "Departamento Condo 2"
   },
   {
    "name": "Condo 3",
    "tag": "Departamento · 2 recámaras",
-   "m2": 139,
+   "m2": 139.34,
    "cap": "m² por residencia",
-   "img": "../../img/premium/vistavela-iii/condo-3.webp",
-   "isPlan": false,
-   "photos": [],
+   "img": "../../img/premium/vistavela-iii/planta-condo-3.webp",
+   "isPlan": true,
+   "photos": [
+    "../../img/premium/vistavela-iii/planta-condo-3.webp",
+    "../../img/premium/vistavela-iii/condo-3.webp"
+   ],
    "feats": [
     "2 recámaras",
     "3 baños",
     "Sala de estar",
     "Cocina",
-    "Terraza",
+    "Terraza de 24.90 m²",
     "1 estacionamiento",
-    "Cuarto de lavado"
+    "Clóset de lavado"
    ],
    "unit": "Departamento Condo 3"
   }

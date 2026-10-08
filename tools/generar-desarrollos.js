@@ -171,6 +171,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
 .places li.np{grid-template-columns:28px 1fr}
 .loc .more-txt{color:var(--muted);font-size:14px;margin:-10px 0 22px;max-width:58ch}
 .hero-note{font-size:11px;opacity:.7;margin-top:14px}
+.form .ok .btn{width:auto;margin-top:20px;padding:14px 26px}
 /* Más de 3 prototipos: si no caben en una fila, van en filas de 3 sin indicador deslizante (como .tabs.four de residencial-plus) */
 @media (max-width:1180px){
   .tabs.many{grid-template-columns:repeat(3,1fr)!important;width:100%;gap:4px}
@@ -196,6 +197,9 @@ function build(d){
   const where = d.zona || d.plaza;
   const whereFull = [d.zona, d.plaza !== d.zona ? d.plaza : '', estado].filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).join(', ');
   const sold = d.status === 'Vendido';
+  /* Brochure: brochures/<slug>.pdf si existe; si no, el catálogo del data o de grupovelas.com.mx */
+  const brochure = fs.existsSync(path.join(ROOT, 'brochures', d.slug + '.pdf')) ? `brochures/${d.slug}.pdf` : '';
+  const catalog = brochure ? url(brochure) : d.catalog || g.catalog || '';
 
   /* Fotos: primero las propias (research / locales), luego las de grupovelas.com.mx */
   const photos = [];
@@ -369,7 +373,7 @@ function build(d){
           <ul class="flist" id="flist">${p0.feats.map((f, i) => `<li style="--i:${i}" class="${f.endsWith('*') ? 'hl' : ''}">${esc(f.replace('*', ''))}</li>`).join('')}</ul>
         </div>
         <div class="acts">
-          <a href="#contacto" class="btn" id="pCta" data-unit="${esc(p0.unit)}">${sold ? 'Ver opciones disponibles' : d.categoria === 'entrada' ? 'Quiero esta casa' : 'Solicitar información'} <span class="arr">→</span></a>${g.catalog || d.catalog ? `\n          <a href="${esc(d.catalog || g.catalog)}" class="btn ghost" target="_blank" rel="noopener">Descargar catálogo</a>` : ''}
+          <a href="#contacto" class="btn" id="pCta" data-unit="${esc(p0.unit)}">${sold ? 'Ver opciones disponibles' : d.categoria === 'entrada' ? 'Quiero esta casa' : 'Solicitar información'} <span class="arr">→</span></a>${brochure ? `\n          <a href="#contacto" class="btn ghost" data-unit="Brochure">Descargar brochure</a>` : catalog ? `\n          <a href="${esc(catalog)}" class="btn ghost" target="_blank" rel="noopener">Descargar catálogo</a>` : ''}
         </div>
         <p class="proto-note">${esc(d.protoNote || 'Imágenes ilustrativas. Medidas aproximadas; precios y disponibilidad sujetos a cambio.')}</p>
       </div>
@@ -689,7 +693,7 @@ function build(d){
 </section>`);
 
   /* ===== CONTACTO ===== */
-  const unitOpts = ['Cualquier prototipo', ...protos.filter(() => d.protos).map(p => p.unit), 'Precios y disponibilidad', 'Planes de pago', 'Visita al desarrollo'];
+  const unitOpts = ['Cualquier prototipo', ...protos.filter(() => d.protos).map(p => p.unit), 'Precios y disponibilidad', 'Planes de pago', 'Visita al desarrollo', ...(brochure ? ['Brochure'] : [])];
   const contacts = [
     `<li><a href="#" data-wa>${WA_ICO}WhatsApp</a></li>`,
     tel && `<li><a href="${telHref(tel)}">${TEL_ICO}(+52) ${esc(tel)}</a></li>`,
@@ -742,7 +746,8 @@ function build(d){
       <div class="ok">
         <svg viewBox="0 0 70 70" fill="none" stroke="#0f2340" stroke-width="2.5"><circle cx="35" cy="35" r="30"/><path d="m22 36 9 9 17-19" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <h3>¡Gracias!</h3>
-        <p>Recibimos tus datos. Un asesor de ${esc(d.name)} te contactará muy pronto.</p>
+        <p>Recibimos tus datos. ${brochure ? 'Ya puedes descargar el brochure; un' : 'Un'} asesor de ${esc(d.name)} te contactará muy pronto.</p>${brochure ? `
+        <a class="btn" href="${esc(catalog)}" target="_blank" rel="noopener">Descargar brochure <span class="arr">↓</span></a>` : ''}
       </div>
     </form>
   </div>

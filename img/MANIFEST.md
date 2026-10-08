@@ -4,8 +4,8 @@ Generado por `tools/generar-desarrollos.js` a partir de `img/manifest.json` (ori
 No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manifest.json`
 (aparte de los datos crudos de `tools/data/grupovelas.json`, que no se tocan).
 
-- 350 imágenes locales, 230 con miniatura de 800 px (`-800.webp`, solo en galerías y recortes de Selvanova).
-- Peso: 335,437 KB antes → 38,941 KB después, más 10,071 KB de miniaturas.
+- 376 imágenes locales, 234 con miniatura de 800 px (`-800.webp`, solo en galerías y recortes de Selvanova).
+- Peso: 537,494 KB antes → 41,445 KB después, más 10,253 KB de miniaturas.
 - WebP de máx. 1920 px de ancho y ≤400 KB; los SVG se copian tal cual.
 
 ## Imágenes
@@ -126,6 +126,9 @@ No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manif
 | `img/premium/vistavela-iii/condo-1.webp` | https://pruebas.velasresorts.com/ (foto vistavela3-2) | 120 KB | 97 KB | — |
 | `img/premium/vistavela-iii/condo-2.webp` | https://pruebas.velasresorts.com/ (foto v3-k) | 96 KB | 74 KB | — |
 | `img/premium/vistavela-iii/condo-3.webp` | https://pruebas.velasresorts.com/ (foto am-int) | 125 KB | 114 KB | — |
+| `img/premium/vistavela-iii/planta-condo-1.webp` | brochures/vistavela-iii.pdf (p. 6) | 7,596 KB | 46 KB | — |
+| `img/premium/vistavela-iii/planta-condo-2.webp` | brochures/vistavela-iii.pdf (p. 8) | 7,596 KB | 29 KB | — |
+| `img/premium/vistavela-iii/planta-condo-3.webp` | brochures/vistavela-iii.pdf (p. 10) | 7,596 KB | 57 KB | — |
 | `img/premium/vistavela-iii/review-d57c2aceb2.webp` | https://backend.grupovelas.com/uploads/Review_d57c2aceb2.webp | 105 KB | 105 KB | — |
 | `img/premium/vistavela-iii/slider-01-526797c096.webp` | https://backend.grupovelas.com/uploads/Slider_01_526797c096.webp | 105 KB | 75 KB | 21 KB |
 | `img/premium/vistavela-iii/slider-02-1-45da5907d6.webp` | https://backend.grupovelas.com/uploads/Slider_02_1_45da5907d6.webp | 162 KB | 118 KB | 35 KB |
@@ -179,6 +182,8 @@ No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manif
 | `img/residencial-plus/fraccionamiento-loma-bonita/slider-03-2-b28f49fefb.webp` | https://backend.grupovelas.com/uploads/Slider_03_2_b28f49fefb.webp | 167 KB | 131 KB | 33 KB |
 | `img/residencial-plus/fraccionamiento-loma-bonita/slider-04-2-1-11zon-a61f44b223.webp` | https://backend.grupovelas.com/uploads/Slider_04_2_1_11zon_a61f44b223.webp | 384 KB | 275 KB | 37 KB |
 | `img/residencial-plus/lavanda-ii/lavanda.webp` | img/categorias/residencial/lavanda.jpg | 758 KB | 84 KB | — |
+| `img/residencial-plus/lavanda-ii/planta-bali.webp` | brochures/lavanda-ii.pdf (p. 6) | 2,512 KB | 94 KB | — |
+| `img/residencial-plus/lavanda-ii/planta-sevilla.webp` | brochures/lavanda-ii.pdf (p. 5) | 2,512 KB | 109 KB | — |
 | `img/residencial-plus/loma-bonita-reynosa/20a69446-a4c4-4677-9d20-883b914d6086-8aa9b1c8cf.webp` | https://backend.grupovelas.com/uploads/20a69446_a4c4_4677_9d20_883b914d6086_8aa9b1c8cf.jpg | 156 KB | 116 KB | — |
 | `img/residencial-plus/loma-bonita-reynosa/20a69446-a4c4-4677-9d20-883b914d6086-bcf0a5ed2a.webp` | https://backend.grupovelas.com/uploads/20a69446_a4c4_4677_9d20_883b914d6086_bcf0a5ed2a.jpg | 156 KB | 116 KB | 88 KB |
 | `img/residencial-plus/loma-bonita-reynosa/307126428-776700536775528-2071051306545178009-n-e47e3f7c54.webp` | https://backend.grupovelas.com/uploads/307126428_776700536775528_2071051306545178009_n_e47e3f7c54.jpg | 83 KB | 57 KB | 39 KB |
@@ -186,6 +191,8 @@ No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manif
 | `img/residencial-plus/loma-bonita-reynosa/4dfa9aac-cff3-4842-a7ce-ab8c77222d2a-233d396f58.webp` | https://backend.grupovelas.com/uploads/4dfa9aac_cff3_4842_a7ce_ab8c77222d2a_233d396f58.jpg | 111 KB | 89 KB | 89 KB |
 | `img/residencial-plus/loma-bonita-reynosa/7aa35458-ed43-4ff6-b173-e4c317240e70-11f7ac9679.webp` | https://backend.grupovelas.com/uploads/7aa35458_ed43_4ff6_b173_e4c317240e70_11f7ac9679.jpg | 101 KB | 68 KB | 68 KB |
 | `img/residencial-plus/loma-bonita-reynosa/b1217e48-d7d4-4ac5-a36f-4156d37383f4-31e70fddf6.webp` | https://backend.grupovelas.com/uploads/b1217e48_d7d4_4ac5_a36f_4156d37383f4_31e70fddf6.jpg | 86 KB | 47 KB | 25 KB |
+| `img/residencial-plus/loma-bonita-reynosa/planta-colibri.webp` | brochures/loma-bonita-reynosa.pdf (p. 6) | 3,746 KB | 188 KB | — |
+| `img/residencial-plus/loma-bonita-reynosa/planta-mallorca.webp` | brochures/loma-bonita-reynosa.pdf (p. 5) | 3,746 KB | 154 KB | — |
 | `img/residencial-plus/loma-bonita-reynosa/sitio-gv-amenidades-1080x1080-1-139e8e7ff4.webp` | https://backend.grupovelas.com/uploads/Sitio_GV_Amenidades_1080x1080_1_139e8e7ff4.jpg | 225 KB | 182 KB | — |
 | `img/residencial-plus/loma-bonita-reynosa/sitio-gv-amenidades-1080x1080-2-1be1a02eac.webp` | https://backend.grupovelas.com/uploads/Sitio_GV_Amenidades_1080x1080_2_1be1a02eac.jpg | 95 KB | 56 KB | — |
 | `img/residencial-plus/loma-bonita-reynosa/sitio-gv-amenidades-1080x1080-2-57bcfbf208.webp` | https://backend.grupovelas.com/uploads/Sitio_GV_Amenidades_1080x1080_2_57bcfbf208.jpg | 95 KB | 56 KB | — |
@@ -279,6 +286,11 @@ No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manif
 | `img/residencial-plus/selvanova/recamara-1-vista-2-1.webp` | https://selvanova.mx/wp-content/uploads/2024/11/Recamara-1-vista-2-1-800x800.png | 705 KB | 42 KB | 42 KB |
 | `img/residencial-plus/selvanova/recamara-principal-vista-1-1-1.webp` | https://selvanova.mx/wp-content/uploads/2024/11/Recamara-Principal-vista-1-1-1-800x800.png | 684 KB | 40 KB | 40 KB |
 | `img/residencial-plus/selvanova/sala-vista-3-1.webp` | https://selvanova.mx/wp-content/uploads/2024/11/Sala-vista-3-1-800x800.png | 809 KB | 65 KB | 65 KB |
+| `img/residencial-plus/selvanova/sauce-3b-cocina.webp` | brochures/selvanova.pdf (p. 27) | 25,668 KB | 156 KB | 44 KB |
+| `img/residencial-plus/selvanova/sauce-3b-recamara.webp` | brochures/selvanova.pdf (p. 27) | 25,668 KB | 88 KB | 40 KB |
+| `img/residencial-plus/selvanova/sauce-3b-sala-cocina.webp` | brochures/selvanova.pdf (p. 27) | 25,668 KB | 74 KB | 38 KB |
+| `img/residencial-plus/selvanova/sauce-3b-sala-comedor.webp` | brochures/selvanova.pdf (p. 26) | 25,668 KB | 253 KB | 61 KB |
+| `img/residencial-plus/selvanova/sauce-3b.webp` | brochures/selvanova.pdf (p. 25) | 25,668 KB | 49 KB | — |
 | `img/residencial-plus/selvanova/sauce-plus.webp` | https://selvanova.mx/wp-content/uploads/2021/10/sauce-plus.png | 128 KB | 41 KB | — |
 | `img/residencial-plus/selvanova/selvanova-alberca-03-1.webp` | https://selvanova.mx/wp-content/uploads/2026/08/Selvanova_Alberca_03-scaled-1-592x444.jpg | 371 KB | 46 KB | — |
 | `img/residencial-plus/selvanova/selvanova-logo-horizontal-alta-3.webp` | https://selvanova.mx/wp-content/uploads/2021/08/selvanova-logo-horizontal-alta-3.png | 8 KB | 6 KB | — |
@@ -323,6 +335,8 @@ No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manif
 | `img/residencial/arecas-altamira/galeria-04-6-4150c9c783.webp` | https://backend.grupovelas.com/uploads/Galeria_04_6_4150c9c783.webp | 27 KB | 27 KB | 26 KB |
 | `img/residencial/arecas-altamira/galeria-05-6-616625420b.webp` | https://backend.grupovelas.com/uploads/Galeria_05_6_616625420b.webp | 32 KB | 32 KB | 32 KB |
 | `img/residencial/arecas-altamira/galeria-06-6-f3de6074af.webp` | https://backend.grupovelas.com/uploads/Galeria_06_6_f3de6074af.webp | 31 KB | 31 KB | 31 KB |
+| `img/residencial/arecas-altamira/planta-bali-2.webp` | brochures/arecas-altamira.pdf (p. 6) | 1,682 KB | 86 KB | — |
+| `img/residencial/arecas-altamira/planta-bali-3.webp` | brochures/arecas-altamira.pdf (p. 5) | 1,682 KB | 89 KB | — |
 | `img/residencial/arecas-altamira/slider-01-8-66cd38fcbd.webp` | https://backend.grupovelas.com/uploads/Slider_01_8_66cd38fcbd.webp | 75 KB | 55 KB | 15 KB |
 | `img/residencial/arecas-altamira/slider-03-7-e5f63011d1.webp` | https://backend.grupovelas.com/uploads/Slider_03_7_e5f63011d1.webp | 128 KB | 96 KB | 27 KB |
 | `img/residencial/arecas-altamira/slider-04-7-e5d82e7c51.webp` | https://backend.grupovelas.com/uploads/Slider_04_7_e5d82e7c51.webp | 61 KB | 47 KB | 15 KB |
@@ -348,6 +362,12 @@ No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manif
 | `img/residencial/fraccionamiento-arecas/slider-03-15-84c19a6e8e.webp` | https://backend.grupovelas.com/uploads/Slider_03_15_84c19a6e8e.webp | 128 KB | 96 KB | 27 KB |
 | `img/residencial/fraccionamiento-arecas/slider-04-16-d07e05c2a6.webp` | https://backend.grupovelas.com/uploads/Slider_04_16_d07e05c2a6.webp | 61 KB | 47 KB | 15 KB |
 | `img/residencial/valencia/valencia.webp` | img/categorias/primera_vivienda/valencia.jpeg | 265 KB | 130 KB | — |
+| `img/residencial/vista-laguna/bali-2-1.webp` | brochures/vista-laguna.pdf (p. 9) | 2,921 KB | 117 KB | — |
+| `img/residencial/vista-laguna/bali-2-2.webp` | brochures/vista-laguna.pdf (p. 9) | 2,921 KB | 124 KB | — |
+| `img/residencial/vista-laguna/bali-2-3.webp` | brochures/vista-laguna.pdf (p. 9) | 2,921 KB | 79 KB | — |
+| `img/residencial/vista-laguna/bali-3-1.webp` | brochures/vista-laguna.pdf (p. 10) | 2,921 KB | 94 KB | — |
+| `img/residencial/vista-laguna/bali-3-2.webp` | brochures/vista-laguna.pdf (p. 10) | 2,921 KB | 77 KB | — |
+| `img/residencial/vista-laguna/bali-3-3.webp` | brochures/vista-laguna.pdf (p. 10) | 2,921 KB | 64 KB | — |
 | `img/residencial/vista-laguna/galeria-01-4-8a44ffd6eb.webp` | https://backend.grupovelas.com/uploads/Galeria_01_4_8a44ffd6eb.webp | 55 KB | 55 KB | 55 KB |
 | `img/residencial/vista-laguna/galeria-02-5-984f69b924.webp` | https://backend.grupovelas.com/uploads/Galeria_02_5_984f69b924.webp | 23 KB | 23 KB | 23 KB |
 | `img/residencial/vista-laguna/galeria-03-4-905050fc1c.webp` | https://backend.grupovelas.com/uploads/Galeria_03_4_905050fc1c.webp | 50 KB | 50 KB | 49 KB |
@@ -357,6 +377,12 @@ No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manif
 | `img/residencial/vista-laguna/galeria-07-1-f03200d05f.webp` | https://backend.grupovelas.com/uploads/Galeria_07_1_f03200d05f.webp | 39 KB | 39 KB | 38 KB |
 | `img/residencial/vista-laguna/galeria-08-1-628a01f98a.webp` | https://backend.grupovelas.com/uploads/Galeria_08_1_628a01f98a.webp | 48 KB | 48 KB | 48 KB |
 | `img/residencial/vista-laguna/galeria-09-1-dd51039b80.webp` | https://backend.grupovelas.com/uploads/Galeria_09_1_dd51039b80.webp | 47 KB | 47 KB | 47 KB |
+| `img/residencial/vista-laguna/planta-bali-2.webp` | brochures/vista-laguna.pdf (p. 9) | 2,921 KB | 73 KB | — |
+| `img/residencial/vista-laguna/planta-bali-3.webp` | brochures/vista-laguna.pdf (p. 10) | 2,921 KB | 74 KB | — |
+| `img/residencial/vista-laguna/planta-sevilla-2025.webp` | brochures/vista-laguna.pdf (p. 8) | 2,921 KB | 79 KB | — |
+| `img/residencial/vista-laguna/sevilla-2025-1.webp` | brochures/vista-laguna.pdf (p. 8) | 2,921 KB | 90 KB | — |
+| `img/residencial/vista-laguna/sevilla-2025-2.webp` | brochures/vista-laguna.pdf (p. 8) | 2,921 KB | 77 KB | — |
+| `img/residencial/vista-laguna/sevilla-2025-3.webp` | brochures/vista-laguna.pdf (p. 8) | 2,921 KB | 83 KB | — |
 | `img/residencial/vista-laguna/slider-01-6-0df0103dfb.webp` | https://backend.grupovelas.com/uploads/Slider_01_6_0df0103dfb.webp | 147 KB | 115 KB | 31 KB |
 | `img/residencial/vista-laguna/slider-02-6-b7d8ddcef9.webp` | https://backend.grupovelas.com/uploads/Slider_02_6_b7d8ddcef9.webp | 232 KB | 167 KB | — |
 | `img/residencial/vista-laguna/slider-02-7-e0d4becc9b.webp` | https://backend.grupovelas.com/uploads/Slider_02_7_e0d4becc9b.webp | 161 KB | 118 KB | 30 KB |

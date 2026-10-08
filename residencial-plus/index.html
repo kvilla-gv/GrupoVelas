@@ -454,6 +454,7 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 .ok path{stroke-dasharray:50;stroke-dashoffset:50;transition:stroke-dashoffset .6s var(--ease-out) .9s}
 .form.sent .ok circle,.form.sent .ok path{stroke-dashoffset:0}
 .ok h3{margin-top:16px;font-size:22px}
+.form .ok .btn{width:auto;margin-top:20px;padding:14px 26px}
 .ok p{color:var(--muted);font-size:14px;margin-top:6px;opacity:1}
 
 
@@ -588,6 +589,9 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85);height:34px}
 .ptype{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
 .tabs.four{grid-template-columns:repeat(4,1fr)}
 .tabs.four .ind{width:calc(25% - 2px)}
+.tabs.five{grid-template-columns:repeat(5,1fr)}
+.tabs.five .ind{width:calc(20% - 1.6px)}
+.btn[hidden]{display:none}
 .tabs button small{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.7;font-weight:600}
 .plan img{max-height:560px}
 .pthumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:4px 0 22px}
@@ -712,7 +716,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85);height:34px}
       </div>
     </div>
     <div class="pick" id="pick">
-      <a href="#prototipos" data-type="casa"><img src="../img/residencial-plus/selvanova/a85i2324-1.webp" alt=""><div><small>Casas</small><b>155 m²</b><span>3 rec. · 3½ baños · cochera doble</span></div><span class="go">→</span></a>
+      <a href="#prototipos" data-type="casa"><img src="../img/residencial-plus/selvanova/a85i2324-1.webp" alt=""><div><small>Casas</small><b>153.71 m²</b><span>3 rec. · 3½ baños · cochera doble</span></div><span class="go">→</span></a>
       <a href="#prototipos" data-type="depa"><img src="../img/residencial-plus/selvanova/coto-11-2.webp" alt=""><div><small>Departamentos</small><b>100 – 109 m²</b><span>3 rec. · 2 baños · elevador</span></div><span class="go">→</span></a>
       <div class="price"><span>Desde</span><b>$3.5 MDP</b></div>
     </div>
@@ -720,7 +724,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85);height:34px}
   <div class="sdots" id="sdots"><button class="on" aria-label="Foto 1"><i></i></button><button aria-label="Foto 2"><i></i></button><button aria-label="Foto 3"><i></i></button></div>
   <div class="hero-stats">
     <div class="wrap">
-      <div class="hs"><b data-count="4">4</b><span>prototipos</span></div>
+      <div class="hs"><b data-count="5">5</b><span>prototipos</span></div>
       <div class="hs"><b data-count="3">3</b><span>recámaras en todos</span></div>
       <div class="hs"><b data-count="10">10</b><span>min de la playa</span></div>
       <div class="hs"><b data-count="9">9</b><span>min de la 5ª Avenida</span></div>
@@ -745,9 +749,9 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85);height:34px}
       <div>
         <span class="eyebrow" data-reveal="up">Conoce nuestros prototipos</span>
         <h2 class="split-words" data-split>Casas y departamentos para crecer</h2>
-        <p class="lead" data-reveal="up" style="--d:.1s">Cuatro prototipos de 3 recámaras. Elige uno para ver su planta, sus espacios y su tour virtual, o compáralos lado a lado.</p>
+        <p class="lead" data-reveal="up" style="--d:.1s">Cinco prototipos de 3 recámaras. Elige uno para ver su planta, sus espacios y su tour virtual, o compáralos lado a lado.</p>
       </div>
-      <div class="tabs four" id="tabs" data-reveal="up" style="--d:.2s"><span class="ind"></span></div>
+      <div class="tabs four five" id="tabs" data-reveal="up" style="--d:.2s"><span class="ind"></span></div>
     </div>
 
     <div class="proto-card" id="protoCard" data-reveal="scale" style="--d:.1s">
@@ -1007,7 +1011,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85);height:34px}
   </div>
   <div class="wrap faq">
     <details data-reveal="up"><summary>¿Cuál es el precio de las casas y departamentos en Selvanova?<i></i></summary><div class="ans"><div><p>Las casas y departamentos en Selvanova Residencial están disponibles desde $3.5 MDP. Un asesor te comparte precios y disponibilidad por prototipo.</p></div></div></details>
-    <details data-reveal="up" style="--d:.05s"><summary>¿Qué prototipos hay?<i></i></summary><div class="ans"><div><p>Casas Encino Plus y Sauce Plus (155 m², 3 recámaras, 3½ baños, cochera para 2 vehículos) y departamentos Borneo (desde 100 m²) y Borneo Ampliado (109.23 m²), con 3 recámaras, 2 baños, 1 estacionamiento y elevador.</p></div></div></details>
+    <details data-reveal="up" style="--d:.05s"><summary>¿Qué prototipos hay?<i></i></summary><div class="ans"><div><p>Casas Encino Plus (153.71 m²), Sauce 3B (161.06 m²) y Sauce Plus (165.24 m²), con 3 recámaras, 3½ baños y cochera techada para 2 vehículos, y departamentos Borneo (desde 100 m²) y Borneo Ampliado (109.23 m²), con 3 recámaras, 2 baños, 1 estacionamiento y elevador.</p></div></div></details>
     <details data-reveal="up" style="--d:.1s"><summary>¿Qué amenidades tiene Selvanova?<i></i></summary><div class="ans"><div><p>Alberca, gimnasio, Kids Club, áreas verdes, zonas comunes con asador, espacios de estacionamiento, seguridad con acceso controlado y es pet friendly.</p></div></div></details>
     <details data-reveal="up" style="--d:.15s"><summary>¿Qué formas de pago aceptan?<i></i></summary><div class="ans"><div><p>Crédito bancario, plan directo con el desarrollador y contado. Un asesor te comparte los planes vigentes.</p></div></div></details>
     <details data-reveal="up" style="--d:.2s"><summary>¿Dónde está Selvanova Residencial?<i></i></summary><div class="ans"><div><p>En Av. Paseo del Mayab Lote 003, Manzana 175, Playa del Carmen, Quintana Roo: a 10 minutos de la playa, 9 minutos de la Quinta Avenida y 5 minutos de centros comerciales.</p></div></div></details>
@@ -1039,7 +1043,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85);height:34px}
         <div class="fld"><input id="fe" name="email" type="email" placeholder=" " autocomplete="email"><label for="fe">Correo electrónico</label></div>
       </div>
       <div class="two">
-        <div class="fld"><select id="fu" name="interes"><option>Cualquier prototipo</option><option>Casa Encino Plus</option><option>Casa Sauce Plus</option><option>Departamento Borneo</option><option>Departamento Borneo Ampliado</option><option>Brochure</option><option>Inversión</option><option>Plan de pagos</option></select><label for="fu">Me interesa</label></div>
+        <div class="fld"><select id="fu" name="interes"><option>Cualquier prototipo</option><option>Casa Encino Plus</option><option>Casa Sauce 3B</option><option>Casa Sauce Plus</option><option>Departamento Borneo</option><option>Departamento Borneo Ampliado</option><option>Brochure</option><option>Inversión</option><option>Plan de pagos</option></select><label for="fu">Me interesa</label></div>
         <div class="fld"><select id="fo" name="objetivo"><option>Para vivir</option><option>Para invertir</option><option>Ambos</option></select><label for="fo">Lo quiero</label></div>
       </div>
       <input type="hidden" name="desarrollo" value="Selvanova Residencial"><input type="hidden" name="categoria" value="Residencial Plus"><input type="hidden" name="plaza" value="Playa del Carmen">
@@ -1050,7 +1054,8 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85);height:34px}
       <div class="ok">
         <svg viewBox="0 0 70 70" fill="none" stroke="#0f2340" stroke-width="2.5"><circle cx="35" cy="35" r="30"/><path d="m22 36 9 9 17-19" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <h3>¡Gracias!</h3>
-        <p>Un asesor de Selvanova te contactará muy pronto.</p>
+        <p>Ya puedes descargar el brochure; un asesor de Selvanova te contactará muy pronto.</p>
+        <a class="btn" href="../brochures/selvanova.pdf" target="_blank" rel="noopener">Descargar brochure <span class="arr">↓</span></a>
       </div>
     </form>
   </div>
@@ -1080,14 +1085,18 @@ const MAPS_EMBED = 'https://maps.google.com/maps?q=Av.%20Paseo%20del%20Mayab%2C%
 const TOURS = 'https://selvanova.mx/toursvirtuales/';
 
 const PROTOS = {
-  encino:{name:'Encino Plus', type:'Casa', typeKey:'casa', m2:155, from:'', rec:'3', ban:'3½', park:'Cochera para 2 vehículos', elev:false,
+  encino:{name:'Encino Plus', type:'Casa', typeKey:'casa', m2:153.71, from:'', rec:'3', ban:'3½', park:'Cochera techada para 2 vehículos', elev:false,
     plan:S+'casa-encino-plus-selvanova-residencial-coto-9.webp', tour:TOURS+'casa_encino-plus/index.htm',
     imgs:['recamara-1-vista-2-1.webp','sala-vista-3-1.webp','planta-baja-vista-general-1.webp'],
-    feats:['3 recámaras','3½ baños','Recámara principal con vestidor y terraza*','Cochera para 2 vehículos','Closet de lavado']},
-  sauce:{name:'Sauce Plus', type:'Casa', typeKey:'casa', m2:155, from:'', rec:'3', ban:'3½', park:'Cochera para 2 vehículos', elev:false,
+    feats:['3 recámaras','3½ baños','Recámara principal con vestidor y terraza*','Cochera techada para 2 vehículos','Closet de lavado','Lote tipo de 98.17 m²']},
+  sauce3b:{name:'Sauce 3B', type:'Casa', typeKey:'casa', m2:161.06, from:'', rec:'3', ban:'3½', park:'Cochera techada para 2 vehículos', elev:false,
+    plan:S+'sauce-3b.webp', tour:'',
+    imgs:['sauce-3b-sala-comedor.webp','sauce-3b-sala-cocina.webp','sauce-3b-cocina.webp','sauce-3b-recamara.webp'],
+    feats:['3 recámaras','3½ baños','Recámara principal con walk-in clóset y baño*','Cochera techada para 2 vehículos','Clóset de lavado y clóset de blancos','Lote tipo de 103.95 m²']},
+  sauce:{name:'Sauce Plus', type:'Casa', typeKey:'casa', m2:165.24, from:'', rec:'3', ban:'3½', park:'Cochera techada para 2 vehículos', elev:false,
     plan:S+'sauce-plus.webp', tour:TOURS+'casa_sauce-plus/index.htm',
     imgs:['recamara-principal-vista-1-1-1.webp','pasillo-planta-alta-2-1.webp','cocina-vista-desde-desayunador-1-1.webp'],
-    feats:['3 recámaras','3½ baños','Recámara principal y 2ª recámara con vestidor y terraza*','Cochera para 2 vehículos','Closet de lavado']},
+    feats:['3 recámaras','3½ baños','Recámara principal y 2ª recámara con vestidor y terraza*','Cochera techada para 2 vehículos','Closet de lavado','Lote tipo de 103.95 m²']},
   borneo:{name:'Borneo', type:'Departamento', typeKey:'depa', m2:100, from:'Desde', rec:'3', ban:'2', park:'1 espacio de estacionamiento', elev:true,
     plan:S+'planos-vectores-coto-9.webp', tour:TOURS+'depa_borneo/index.htm',
     imgs:['mg-9675-hdr-1.webp','mg-9659-hdr.webp','mg-9648.webp','mg-9642-hdr-1.webp','mg-9620-hdr.webp'],
@@ -1200,7 +1209,8 @@ const PLACES = [
     const dec = p.m2 % 1 ? 2 : 0, t0 = performance.now();
     const s = t => { const q = Math.min((t-t0)/900,1); $('#pM2').textContent = (from + (p.m2-from)*(1-Math.pow(1-q,3))).toFixed(dec); if (q<1) requestAnimationFrame(s); }; requestAnimationFrame(s);
     $$('#cmpt [data-k]').forEach(c => c.classList.toggle('hl', c.dataset.k === k));
-    setTour(k);
+    $('#pTour').hidden = !p.tour;
+    if (p.tour) setTour(k);
   }
   new IntersectionObserver((es, o) => { if (es[0].isIntersecting){ render(cur, true); o.disconnect(); } }, {threshold:.25}).observe(card);
   $$('#pick a').forEach(a => a.addEventListener('click', e => { e.preventDefault(); selectProto(a.dataset.type === 'casa' ? 'encino' : 'borneo', true); }));
@@ -1214,7 +1224,8 @@ const PLACES = [
 
   /* ===== Tour por prototipo ===== */
   const viewer = $('#viewer');
-  $('#tchips').innerHTML = keys.map(k => `<button data-t="${k}">${PROTOS[k].type} ${PROTOS[k].name}</button>`).join('');
+  const tkeys = keys.filter(k => PROTOS[k].tour);
+  $('#tchips').innerHTML = tkeys.map(k => `<button data-t="${k}">${PROTOS[k].type} ${PROTOS[k].name}</button>`).join('');
   let tourKey = keys[0];
   function setTour(k){
     tourKey = k; const p = PROTOS[k];

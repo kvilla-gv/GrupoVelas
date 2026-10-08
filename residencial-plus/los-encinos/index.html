@@ -501,6 +501,7 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 .ok path{stroke-dasharray:50;stroke-dashoffset:50;transition:stroke-dashoffset .6s var(--ease-out) .9s}
 .form.sent .ok circle,.form.sent .ok path{stroke-dashoffset:0}
 .ok h3{margin-top:16px;font-size:22px}
+.form .ok .btn{width:auto;margin-top:20px;padding:14px 26px}
 .ok p{color:var(--muted);font-size:14px;margin-top:6px;opacity:1}
 
 
@@ -635,6 +636,9 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85);height:34px}
 .ptype{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
 .tabs.four{grid-template-columns:repeat(4,1fr)}
 .tabs.four .ind{width:calc(25% - 2px)}
+.tabs.five{grid-template-columns:repeat(5,1fr)}
+.tabs.five .ind{width:calc(20% - 1.6px)}
+.btn[hidden]{display:none}
 .tabs button small{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.7;font-weight:600}
 .plan img{max-height:560px}
 .pthumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:4px 0 22px}
@@ -734,6 +738,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
 .places li.np{grid-template-columns:28px 1fr}
 .loc .more-txt{color:var(--muted);font-size:14px;margin:-10px 0 22px;max-width:58ch}
 .hero-note{font-size:11px;opacity:.7;margin-top:14px}
+.form .ok .btn{width:auto;margin-top:20px;padding:14px 26px}
 /* Más de 3 prototipos: si no caben en una fila, van en filas de 3 sin indicador deslizante (como .tabs.four de residencial-plus) */
 @media (max-width:1180px){
   .tabs.many{grid-template-columns:repeat(3,1fr)!important;width:100%;gap:4px}
@@ -797,7 +802,8 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
       </div>
     </div>
     <div class="pick" id="pick">
-      <a href="#prototipos"><img src="../../img/residencial-plus/los-encinos/slider-02-3-097f2a5d2f.webp" alt="" loading="lazy"><div><small>Los Encinos Residencial</small><b>163.52 m²</b><span>Casas</span></div><span class="go">→</span></a>
+      <a href="#prototipos"><img src="../../img/residencial-plus/los-encinos/slider-02-3-097f2a5d2f.webp" alt="" loading="lazy"><div><small>Casa</small><b>Encino Tipo A</b><span>3 recámaras · 2.5 baños</span></div><span class="go">→</span></a>
+      <a href="#prototipos"><img src="../../img/residencial-plus/los-encinos/slider-04-1-a81f5a15ec.webp" alt="" loading="lazy"><div><small>Casa</small><b>Encino Tipo B</b><span>3 recámaras · 2.5 baños</span></div><span class="go">→</span></a>
       
     </div>
   </div>
@@ -805,7 +811,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
   <div class="hero-stats">
     <div class="wrap" style="--n:4">
       <div class="hs"><b><span data-count="3">3</span></b><span>recámaras</span></div>
-      <div class="hs"><b><span data-count="2">2</span></b><span>baños</span></div>
+      <div class="hs"><b><span data-count="2.5" data-dec="1">2.5</span></b><span>baños</span></div>
       <div class="hs"><b><span data-count="2500">2500</span></b><span>litros de cisterna</span></div>
       <div class="hs"><b><span data-count="24">24</span> h</b><span>caseta de seguridad</span></div>
     </div>
@@ -817,7 +823,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
   <div class="wrap grid" style="--n:4">
     <div class="perk" data-reveal="up"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M16 3 5 7v8c0 7 4.8 11.4 11 14 6.2-2.6 11-7 11-14V7z"/><path d="m11 16 3.5 3.5L21 13"/></svg><div><b>Seguridad 24 horas</b><span>Caseta de seguridad y acceso controlado.</span></div></div>
     <div class="perk" data-reveal="up" style="--d:0.08s"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M16 29V16M16 16c-6 0-9-4-9-9 5 0 9 3 9 9ZM16 20c5 0 8-3 8-8-5 0-8 3-8 8Z"/><path d="M5 29h22"/></svg><div><b>Áreas verdes y senderos</b><span>Además de alberca y club deportivo.</span></div></div>
-    <div class="perk" data-reveal="up" style="--d:0.16s"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 14 16 4l12 10v14H4z"/><path d="M12 28v-8h8v8"/></svg><div><b>Casas de 3 recámaras</b><span>2 baños y cisterna de 2,500 litros.</span></div></div>
+    <div class="perk" data-reveal="up" style="--d:0.16s"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 14 16 4l12 10v14H4z"/><path d="M12 28v-8h8v8"/></svg><div><b>Casas de 3 recámaras</b><span>2.5 baños y cisterna de 2,500 litros.</span></div></div>
     <div class="perk" data-reveal="up" style="--d:0.24s"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M16 29s9-9.2 9-16a9 9 0 0 0-18 0c0 6.8 9 16 9 16Z"/><circle cx="16" cy="13" r="3.5"/></svg><div><b>Bien conectado</b><span>A minutos de la carretera Tampico–Mante y 8 de Plaza Arenas.</span></div></div>
   </div>
 </section>
@@ -827,28 +833,30 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <span class="eyebrow" data-reveal="up">Ficha del desarrollo</span>
-        <h2 class="split-words" data-split>Así es Los Encinos Residencial</h2>
-        <p class="lead" data-reveal="up" style="--d:.1s">Estos son los datos confirmados de Los Encinos Residencial. Un asesor te comparte prototipos, planos, precios y disponibilidad.</p>
+        <span class="eyebrow" data-reveal="up">Conoce nuestros prototipos</span>
+        <h2 class="split-words" data-split>Encuentra tu espacio ideal</h2>
+        <p class="lead" data-reveal="up" style="--d:.1s">Cinco modelos de casa de 3 recámaras y 2.5 baños, con jardín y estacionamiento.</p>
       </div>
+      <div class="tabs many" id="tabs" data-reveal="up" style="--d:.2s;grid-template-columns:repeat(5,1fr)"><span class="ind" style="width:calc(20.000% - 2px)"></span><button class="on" data-t="0">Encino Tipo A</button><button data-t="1">Encino Tipo B</button><button data-t="2">Encino Tipo C</button><button data-t="3">Encino Tipo D</button><button data-t="4">Turquesa E</button></div>
     </div>
 
     <div class="proto-card" id="protoCard" data-reveal="scale" style="--d:.1s">
       <div class="plan photo" id="plan" role="button" tabindex="0" aria-label="Ampliar imagen">
         <span class="scan"></span>
-        <img id="planImg" src="../../img/residencial-plus/los-encinos/slider-02-3-097f2a5d2f.webp" alt="Casas" loading="lazy">
+        <img id="planImg" src="../../img/residencial-plus/los-encinos/slider-02-3-097f2a5d2f.webp" alt="Encino Tipo A" loading="lazy">
         <span class="zoom"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5M11 8v6M8 11h6"/></svg></span>
       </div>
       <div class="proto-info">
         <div class="tx">
-          <span class="tower" id="pType">Los Encinos Residencial · Altamira</span>
-          <h3 id="pName">Casas</h3>
-          <div id="pM2wrap"><div class="m2"><span id="pM2">163.52</span><small>m²</small></div>
-          <div class="m2cap" id="pCap">m² de construcción</div></div>
-          <ul class="flist" id="flist"><li style="--i:0" class="">Casas</li><li style="--i:1" class="">3 recámaras</li></ul>
+          <span class="tower" id="pType">Casa · 3 recámaras</span>
+          <h3 id="pName">Encino Tipo A</h3>
+          <div id="pM2wrap" hidden><div class="m2"><span id="pM2">0</span><small>m²</small></div>
+          <div class="m2cap" id="pCap"></div></div>
+          <ul class="flist" id="flist"><li style="--i:0" class="">3 recámaras</li><li style="--i:1" class="">2.5 baños</li><li style="--i:2" class="">Sala-comedor</li><li style="--i:3" class="">Cocina</li><li style="--i:4" class="">Cuarto de lavado</li><li style="--i:5" class="">Jardín</li><li style="--i:6" class="">Estacionamiento</li><li style="--i:7" class="">Casa del lote 8</li></ul>
         </div>
         <div class="acts">
-          <a href="#contacto" class="btn" id="pCta" data-unit="Casas">Solicitar información <span class="arr">→</span></a>
+          <a href="#contacto" class="btn" id="pCta" data-unit="Casa Encino Tipo A">Solicitar información <span class="arr">→</span></a>
+          <a href="#contacto" class="btn ghost" data-unit="Brochure">Descargar brochure</a>
         </div>
         <p class="proto-note">Imágenes ilustrativas. Medidas aproximadas; precios y disponibilidad sujetos a cambio.</p>
       </div>
@@ -985,7 +993,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
   </div>
   <div class="wrap faq">
     <details data-reveal="up"><summary>¿Cuál es el precio de Los Encinos Residencial?<i></i></summary><div class="ans"><div><p>Un asesor de Tampico te comparte precios, disponibilidad y planes de pago vigentes de Los Encinos Residencial.</p></div></div></details>
-    <details data-reveal="up" style="--d:0.05s"><summary>¿Qué tipo de vivienda ofrece Los Encinos Residencial?<i></i></summary><div class="ans"><div><p>Casas, 3 recámaras, 163.52 m² de construcción.</p></div></div></details>
+    <details data-reveal="up" style="--d:0.05s"><summary>¿Qué prototipos hay en Los Encinos Residencial?<i></i></summary><div class="ans"><div><p>Encino Tipo A: 3 recámaras, 2.5 baños, Sala-comedor, Cocina, Cuarto de lavado, Jardín, Estacionamiento, Casa del lote 8. Encino Tipo B: 3 recámaras, 2.5 baños, Sala-comedor, Cocina, Cuarto de lavado, Jardín, Estacionamiento, Casa del lote 27. Encino Tipo C: 3 recámaras, 2.5 baños, Sala-comedor, Cocina, Cuarto de lavado, Jardín, Estacionamiento, Casa del lote 23. Encino Tipo D: 3 recámaras, 2.5 baños, Sala-comedor, Cocina, Cuarto de lavado, Jardín, Estacionamiento, Casa del lote 17. Turquesa E: 3 recámaras, 2.5 baños, Sala-comedor, Cocina, Cuarto de lavado, Jardín, Estacionamiento, Casa del lote 1.</p></div></div></details>
     <details data-reveal="up" style="--d:0.10s"><summary>¿Qué amenidades tiene Los Encinos Residencial?<i></i></summary><div class="ans"><div><p>Áreas verdes, Club deportivo, Alberca, Salón de usos múltiples.</p></div></div></details>
     <details data-reveal="up" style="--d:0.15s"><summary>¿Dónde se ubica Los Encinos Residencial?<i></i></summary><div class="ans"><div><p>En Altamira, Tampico, Tamaulipas. Está a 8 minutos de plaza Arenas, 20 minutos de hEB, 20 minutos de playa Miramar.</p></div></div></details>
     <details data-reveal="up" style="--d:0.20s"><summary>¿Quién desarrolla Los Encinos Residencial?<i></i></summary><div class="ans"><div><p>Grupo Velas, empresa mexicana con más de 45 años en la construcción y marca hermana de Velas Resorts.</p></div></div></details>
@@ -1019,7 +1027,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
         <div class="fld"><input id="fe" name="email" type="email" placeholder=" " autocomplete="email"><label for="fe">Correo electrónico</label></div>
       </div>
       <div class="two">
-        <div class="fld"><select id="fu" name="interes"><option>Cualquier prototipo</option><option>Precios y disponibilidad</option><option>Planes de pago</option><option>Visita al desarrollo</option></select><label for="fu">Me interesa</label></div>
+        <div class="fld"><select id="fu" name="interes"><option>Cualquier prototipo</option><option>Casa Encino Tipo A</option><option>Casa Encino Tipo B</option><option>Casa Encino Tipo C</option><option>Casa Encino Tipo D</option><option>Casa Turquesa E</option><option>Precios y disponibilidad</option><option>Planes de pago</option><option>Visita al desarrollo</option><option>Brochure</option></select><label for="fu">Me interesa</label></div>
         <div class="fld"><select id="fo" name="objetivo"><option>Para vivir</option><option>Para invertir</option><option>Ambos</option></select><label for="fo">Lo quiero</label></div>
       </div>
       <input type="hidden" name="desarrollo" value="Los Encinos Residencial"><input type="hidden" name="categoria" value="Residencial Plus"><input type="hidden" name="plaza" value="Tampico">
@@ -1033,7 +1041,8 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
       <div class="ok">
         <svg viewBox="0 0 70 70" fill="none" stroke="#0f2340" stroke-width="2.5"><circle cx="35" cy="35" r="30"/><path d="m22 36 9 9 17-19" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <h3>¡Gracias!</h3>
-        <p>Recibimos tus datos. Un asesor de Los Encinos Residencial te contactará muy pronto.</p>
+        <p>Recibimos tus datos. Ya puedes descargar el brochure; un asesor de Los Encinos Residencial te contactará muy pronto.</p>
+        <a class="btn" href="../../brochures/los-encinos.pdf" target="_blank" rel="noopener">Descargar brochure <span class="arr">↓</span></a>
       </div>
     </form>
   </div>
@@ -1071,18 +1080,104 @@ window.DEV = {
  "mapsEmbed": "https://maps.google.com/maps?q=Altamira%2C%20Tamaulipas&t=m&z=12&output=embed",
  "protos": [
   {
-   "name": "Casas",
-   "tag": "Los Encinos Residencial · Altamira",
-   "m2": 163.52,
-   "cap": "m² de construcción",
+   "name": "Encino Tipo A",
+   "tag": "Casa · 3 recámaras",
+   "m2": 0,
+   "cap": "",
    "img": "../../img/residencial-plus/los-encinos/slider-02-3-097f2a5d2f.webp",
    "isPlan": false,
    "photos": [],
    "feats": [
-    "Casas",
-    "3 recámaras"
+    "3 recámaras",
+    "2.5 baños",
+    "Sala-comedor",
+    "Cocina",
+    "Cuarto de lavado",
+    "Jardín",
+    "Estacionamiento",
+    "Casa del lote 8"
    ],
-   "unit": "Casas"
+   "unit": "Casa Encino Tipo A"
+  },
+  {
+   "name": "Encino Tipo B",
+   "tag": "Casa · 3 recámaras",
+   "m2": 0,
+   "cap": "",
+   "img": "../../img/residencial-plus/los-encinos/slider-04-1-a81f5a15ec.webp",
+   "isPlan": false,
+   "photos": [],
+   "feats": [
+    "3 recámaras",
+    "2.5 baños",
+    "Sala-comedor",
+    "Cocina",
+    "Cuarto de lavado",
+    "Jardín",
+    "Estacionamiento",
+    "Casa del lote 27"
+   ],
+   "unit": "Casa Encino Tipo B"
+  },
+  {
+   "name": "Encino Tipo C",
+   "tag": "Casa · 3 recámaras",
+   "m2": 0,
+   "cap": "",
+   "img": "../../img/residencial-plus/los-encinos/galeria-06-1c67e17151.webp",
+   "isPlan": false,
+   "photos": [],
+   "feats": [
+    "3 recámaras",
+    "2.5 baños",
+    "Sala-comedor",
+    "Cocina",
+    "Cuarto de lavado",
+    "Jardín",
+    "Estacionamiento",
+    "Casa del lote 23"
+   ],
+   "unit": "Casa Encino Tipo C"
+  },
+  {
+   "name": "Encino Tipo D",
+   "tag": "Casa · 3 recámaras",
+   "m2": 0,
+   "cap": "",
+   "img": "../../img/residencial-plus/los-encinos/galeria-05-2bc6046442.webp",
+   "isPlan": false,
+   "photos": [],
+   "feats": [
+    "3 recámaras",
+    "2.5 baños",
+    "Sala-comedor",
+    "Cocina",
+    "Cuarto de lavado",
+    "Jardín",
+    "Estacionamiento",
+    "Casa del lote 17"
+   ],
+   "unit": "Casa Encino Tipo D"
+  },
+  {
+   "name": "Turquesa E",
+   "tag": "Casa · 3 recámaras",
+   "m2": 0,
+   "cap": "",
+   "img": "../../img/residencial-plus/los-encinos/galeria-04-e5ec048e09.webp",
+   "isPlan": false,
+   "photos": [],
+   "feats": [
+    "3 recámaras",
+    "2.5 baños",
+    "Sala-comedor",
+    "Cocina",
+    "Cuarto de lavado",
+    "Jardín",
+    "Estacionamiento",
+    "Casa del lote 1"
+   ],
+   "unit": "Casa Turquesa E"
   }
  ],
  "video": {

@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lavanda II · Matamoros | Grupo Velas</title>
-<meta name="description" content="Desarrollo Residencial Plus de Grupo Velas en Matamoros, Tamaulipas. Un asesor te comparte toda la información.">
-<meta property="og:title" content="Lavanda II · Matamoros | Grupo Velas">
-<meta property="og:description" content="Desarrollo Residencial Plus de Grupo Velas en Matamoros, Tamaulipas. Un asesor te comparte toda la información.">
+<title>Lavanda II · Matamoros desde $1,302,000 | Grupo Velas</title>
+<meta name="description" content="Casas con dos y tres recámaras ubicadas dentro del Fraccionamiento Arecas, a 3 minutos de Sendero Nacional.">
+<meta property="og:title" content="Lavanda II · Matamoros desde $1,302,000 | Grupo Velas">
+<meta property="og:description" content="Casas con dos y tres recámaras ubicadas dentro del Fraccionamiento Arecas, a 3 minutos de Sendero Nacional.">
 <meta property="og:image" content="https://grupovelas.com.mx/img/residencial-plus/lavanda-ii/lavanda.webp">
 <!-- Generado con tools/generar-desarrollos.js a partir de residencial-plus/index.html. Edita tools/desarrollos.js y vuelve a generar. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,14 +19,52 @@
   "@context": "https://schema.org",
   "@type": "Residence",
   "name": "Lavanda II",
-  "description": "Desarrollo Residencial Plus de Grupo Velas en Matamoros, Tamaulipas. Un asesor te comparte toda la información.",
+  "description": "Casas con dos y tres recámaras ubicadas dentro del Fraccionamiento Arecas, a 3 minutos de Sendero Nacional.",
   "image": "https://grupovelas.com.mx/img/residencial-plus/lavanda-ii/lavanda.webp",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "Lib. Emilio Portes Gil km 3",
     "addressLocality": "Matamoros",
     "addressRegion": "Tamaulipas",
     "addressCountry": "MX"
   },
+  "amenityFeature": [
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Parques",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Senderos",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Áreas sociales",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Áreas verdes",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Alberca",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Área de juegos",
+      "value": true
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      "name": "Asador",
+      "value": true
+    }
+  ],
   "brand": {
     "@type": "Organization",
     "name": "Grupo Velas"
@@ -478,6 +516,7 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 .ok path{stroke-dasharray:50;stroke-dashoffset:50;transition:stroke-dashoffset .6s var(--ease-out) .9s}
 .form.sent .ok circle,.form.sent .ok path{stroke-dashoffset:0}
 .ok h3{margin-top:16px;font-size:22px}
+.form .ok .btn{width:auto;margin-top:20px;padding:14px 26px}
 .ok p{color:var(--muted);font-size:14px;margin-top:6px;opacity:1}
 
 
@@ -612,6 +651,9 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85);height:34px}
 .ptype{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
 .tabs.four{grid-template-columns:repeat(4,1fr)}
 .tabs.four .ind{width:calc(25% - 2px)}
+.tabs.five{grid-template-columns:repeat(5,1fr)}
+.tabs.five .ind{width:calc(20% - 1.6px)}
+.btn[hidden]{display:none}
 .tabs button small{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.7;font-weight:600}
 .plan img{max-height:560px}
 .pthumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:4px 0 22px}
@@ -711,6 +753,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
 .places li.np{grid-template-columns:28px 1fr}
 .loc .more-txt{color:var(--muted);font-size:14px;margin:-10px 0 22px;max-width:58ch}
 .hero-note{font-size:11px;opacity:.7;margin-top:14px}
+.form .ok .btn{width:auto;margin-top:20px;padding:14px 26px}
 /* Más de 3 prototipos: si no caben en una fila, van en filas de 3 sin indicador deslizante (como .tabs.four de residencial-plus) */
 @media (max-width:1180px){
   .tabs.many{grid-template-columns:repeat(3,1fr)!important;width:100%;gap:4px}
@@ -740,8 +783,10 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
   <div class="wrap nav">
     <a href="#inicio" class="logo" aria-label="Lavanda II · Grupo Velas"><img src="../../img/comun/logo-grupo-velas.svg" alt="Grupo Velas"><span class="dv">Lavanda II<small>MATAMOROS</small></span></a>
     <nav class="menu" id="menu">
-      <a href="#prototipos">Información</a>
+      <a href="#prototipos">Prototipos</a>
+      <a href="#amenidades">Amenidades</a>
       <a href="#ubicacion">Ubicación</a>
+      <a href="#financiamiento">Planes de pago</a>
       <a href="#contacto">Contacto</a>
     </nav>
     <a href="#contacto" class="btn sm desk">Agendar visita <span class="arr">→</span></a>
@@ -761,36 +806,88 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
         <span class="eyebrow is-in">Residencial Plus · Matamoros</span>
       </div>
       <h1><span class="line"><span>Lavanda II</span></span><span class="line"><span>en <em>Matamoros</em></span></span></h1>
-      <p class="sub">Desarrollo Residencial Plus de Grupo Velas en Matamoros, Tamaulipas. Un asesor te comparte toda la información.</p>
-      <div class="chips"></div>
-      <div class="ctas">
-        
-        <a href="#contacto" class="btn" style="--bg:#fff;--fg:var(--navy)" data-unit="Información general">Solicitar información <span class="arr">→</span></a>
+      <p class="sub">Casas con dos y tres recámaras ubicadas dentro del Fraccionamiento Arecas, a 3 minutos de Sendero Nacional.</p>
+      <div class="chips">
+        <span class="chip">Desde <b>$1,302,000 MXN</b></span>
       </div>
+      <div class="ctas">
+        <a href="#prototipos" class="btn" style="--bg:#fff;--fg:var(--navy)">Ver prototipos <span class="arr">→</span></a>
+        <a href="#contacto" class="btn glass" data-unit="Información general">Solicitar información</a>
+      </div>
+    </div>
+    <div class="pick" id="pick">
+      <a href="#prototipos"><img src="../../img/residencial-plus/lavanda-ii/planta-sevilla.webp" alt="" loading="lazy"><div><small>Casa</small><b>80.34 m²</b><span>Sevilla</span></div><span class="go">→</span></a>
+      <a href="#prototipos"><img src="../../img/residencial-plus/lavanda-ii/planta-bali.webp" alt="" loading="lazy"><div><small>Casa</small><b>87.1 m²</b><span>Bali</span></div><span class="go">→</span></a>
+      <div class="price"><span>Desde</span><b>$1,302,000 MXN</b></div>
     </div>
   </div>
 </section>
 
 <!-- ============ VENTAJAS ============ -->
 <section class="perks" id="ventajas">
-  <div class="wrap grid" style="--n:3">
+  <div class="wrap grid" style="--n:4">
     <div class="perk" data-reveal="up"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M16 3 5 7v8c0 7 4.8 11.4 11 14 6.2-2.6 11-7 11-14V7z"/><path d="m11 16 3.5 3.5L21 13"/></svg><div><b>Respaldo Grupo Velas</b><span>Más de 45 años construyendo patrimonio en México.</span></div></div>
-    <div class="perk" data-reveal="up" style="--d:0.08s"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M16 29s9-9.2 9-16a9 9 0 0 0-18 0c0 6.8 9 16 9 16Z"/><circle cx="16" cy="13" r="3.5"/></svg><div><b>Ubicación</b><span>Matamoros, Tamaulipas.</span></div></div>
-    <div class="perk" data-reveal="up" style="--d:0.16s"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="11" cy="11" r="4"/><circle cx="22" cy="12" r="3"/><path d="M3 27c1-5 4-8 8-8s7 3 8 8M19 20c4 0 7 2 8 7"/></svg><div><b>Asesoría personalizada</b><span>Un asesor de Matamoros te acompaña en todo el proceso.</span></div></div>
+    <div class="perk" data-reveal="up" style="--d:0.08s"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 14 16 4l12 10v14H4z"/><path d="M12 28v-8h8v8"/></svg><div><b>Casas</b><span>2 – 3 recámaras · 80.34 – 87.10 m² de construcción</span></div></div>
+    <div class="perk" data-reveal="up" style="--d:0.16s"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M16 29V16M16 16c-6 0-9-4-9-9 5 0 9 3 9 9ZM16 20c5 0 8-3 8-8-5 0-8 3-8 8Z"/><path d="M5 29h22"/></svg><div><b>Amenidades</b><span>Parques, Senderos, Áreas sociales y más.</span></div></div>
+    <div class="perk" data-reveal="up" style="--d:0.24s"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M16 29s9-9.2 9-16a9 9 0 0 0-18 0c0 6.8 9 16 9 16Z"/><circle cx="16" cy="13" r="3.5"/></svg><div><b>Ubicación</b><span>Matamoros, Tamaulipas.</span></div></div>
   </div>
 </section>
 
-<!-- ============ INFORMACIÓN ============ -->
+<!-- ============ PROTOTIPOS ============ -->
 <section class="sec proto" id="prototipos">
   <div class="wrap">
-    <div class="pending" data-reveal="up">
+    <div class="sec-head">
       <div>
-        <span class="eyebrow">Residencial Plus · Matamoros</span>
-        <h3>Conoce Lavanda II con un asesor</h3>
-        <p>Estamos preparando la ficha completa de Lavanda II. Pide a un asesor de Matamoros prototipos, precios, planes de pago y disponibilidad actualizada.</p>
-        
+        <span class="eyebrow" data-reveal="up">Conoce nuestros prototipos</span>
+        <h2 class="split-words" data-split>Encuentra tu espacio ideal</h2>
+        <p class="lead" data-reveal="up" style="--d:.1s">Dos modelos de casa en dos plantas, en terrenos de 112 m².</p>
       </div>
-      <div class="acts"><a href="#contacto" class="btn" data-unit="Información general">Solicitar información <span class="arr">→</span></a><a href="#" class="btn ghost" data-wa>WhatsApp</a></div>
+      <div class="tabs" id="tabs" data-reveal="up" style="--d:.2s;grid-template-columns:repeat(2,1fr)"><span class="ind" style="width:calc(50.000% - 4px)"></span><button class="on" data-t="0">Sevilla</button><button data-t="1">Bali</button></div>
+    </div>
+
+    <div class="proto-card" id="protoCard" data-reveal="scale" style="--d:.1s">
+      <div class="plan" id="plan" role="button" tabindex="0" aria-label="Ampliar imagen">
+        <span class="scan"></span>
+        <img id="planImg" src="../../img/residencial-plus/lavanda-ii/planta-sevilla.webp" alt="Planta Sevilla" loading="lazy">
+        <span class="zoom"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5M11 8v6M8 11h6"/></svg></span>
+      </div>
+      <div class="proto-info">
+        <div class="tx">
+          <span class="tower" id="pType">Casa · 2 recámaras</span>
+          <h3 id="pName">Sevilla</h3>
+          <div id="pM2wrap"><div class="m2"><span id="pM2">80.34</span><small>m²</small></div>
+          <div class="m2cap" id="pCap">m² de construcción</div></div>
+          <ul class="flist" id="flist"><li style="--i:0" class="">2 recámaras con clóset</li><li style="--i:1" class="">1½ baños</li><li style="--i:2" class="">2 cajones de estacionamiento</li><li style="--i:3" class="">Planta baja: sala, comedor, cocina, ½ baño y lavandería</li><li style="--i:4" class="">Planta alta: 2 recámaras y baño completo</li><li style="--i:5" class="">Terreno de 112 m²</li><li style="--i:6" class="">Desde $1,302,000 MXN</li></ul>
+        </div>
+        <div class="acts">
+          <a href="#contacto" class="btn" id="pCta" data-unit="Casa Sevilla">Solicitar información <span class="arr">→</span></a>
+          <a href="#contacto" class="btn ghost" data-unit="Brochure">Descargar brochure</a>
+        </div>
+        <p class="proto-note">Precios del brochure de Privada Lavanda, sujetos a cambio y disponibilidad. Imágenes ilustrativas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AMENIDADES ============ -->
+<section class="sec" id="amenidades">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:0">
+      <div>
+        <span class="eyebrow" data-reveal="up">Amenidades</span>
+        <h2 class="split-words" data-split>Espacios para disfrutar</h2>
+      </div>
+      <p class="lead" data-reveal="up" style="--d:.15s">Lavanda II cuenta con 7 amenidades pensadas para vivir en comunidad.</p>
+    </div>
+    <div class="amen">
+      <div class="am big" data-reveal="up"><img src="../../img/residencial-plus/lavanda-ii/lavanda.webp" alt="Lavanda II" loading="lazy"><div class="t"><div><b>Lavanda II</b><span>7 amenidades para disfrutar</span></div><span class="n">MATAMOROS</span></div></div>
+      <div class="am ic" data-reveal="up" style="--d:0.00s"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 36V20M20 20c-7 0-10-5-10-11 6 0 10 4 10 11ZM20 25c6 0 9-4 9-10-6 0-9 4-9 10Z"/><path d="M6 36h28"/></svg><div class="t" style="position:static"><div><b>Parques</b></div><span class="n">01</span></div></div>
+      <div class="am ic" data-reveal="up" style="--d:0.06s"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 36V20M20 20c-7 0-10-5-10-11 6 0 10 4 10 11ZM20 25c6 0 9-4 9-10-6 0-9 4-9 10Z"/><path d="M6 36h28"/></svg><div class="t" style="position:static"><div><b>Senderos</b></div><span class="n">02</span></div></div>
+      <div class="am ic" data-reveal="up" style="--d:0.12s"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 5l4.3 8.8 9.7 1.4-7 6.8 1.7 9.6L20 27.1l-8.7 4.5 1.7-9.6-7-6.8 9.7-1.4z"/></svg><div class="t" style="position:static"><div><b>Áreas sociales</b></div><span class="n">03</span></div></div>
+      <div class="am ic" data-reveal="up" style="--d:0.18s"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 36V20M20 20c-7 0-10-5-10-11 6 0 10 4 10 11ZM20 25c6 0 9-4 9-10-6 0-9 4-9 10Z"/><path d="M6 36h28"/></svg><div class="t" style="position:static"><div><b>Áreas verdes</b></div><span class="n">04</span></div></div>
+      <div class="am ic" data-reveal="up" style="--d:0.00s"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 27c3-2 5 2 8 0s5 2 8 0 5 2 8 0 5 2 8 0M4 33c3-2 5 2 8 0s5 2 8 0 5 2 8 0 5 2 8 0M13 23V10a3 3 0 0 1 6 0M25 23V10a3 3 0 0 1 6 0M13 15h12M13 20h12"/></svg><div class="t" style="position:static"><div><b>Alberca</b></div><span class="n">05</span></div></div>
+      <div class="am ic" data-reveal="up" style="--d:0.06s"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 35 14 7h2l8 28M10 21h10M26 35V16l8-4v23M4 35h32"/><circle cx="30" cy="8" r="2"/></svg><div class="t" style="position:static"><div><b>Área de juegos</b></div><span class="n">06</span></div></div>
+      <div class="am ic wide" data-reveal="up" style="--d:0.12s"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 16h24a12 12 0 0 1-24 0ZM14 26l-4 9M26 26l4 9M20 28v7M15 10c0-2 2-2 2-4M20 10c0-2 2-2 2-4M25 10c0-2 2-2 2-4"/></svg><div class="t" style="position:static"><div><b>Asador</b></div><span class="n">07</span></div></div>
     </div>
   </div>
 </section>
@@ -801,17 +898,42 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
     <div>
       <span class="eyebrow" data-reveal="up">Ubicación</span>
       <h2 class="split-words" data-split>Cerca de todo</h2>
-      <p class="lead" data-reveal="up" style="--d:.1s">Lavanda II está en Matamoros, Tamaulipas.</p>
+      <p class="lead" data-reveal="up" style="--d:.1s">Lavanda II está en Matamoros, Tamaulipas, cerca de:</p>
+      <ul class="places" id="places">
+        <li class="np" data-reveal="right" style="--d:0.05s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s7-6.5 7-11.5a7 7 0 0 0-14 0C5 14.5 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Dentro del Fraccionamiento Arecas</span></li>
+        <li class="np" data-reveal="right" style="--d:0.10s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s7-6.5 7-11.5a7 7 0 0 0-14 0C5 14.5 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>A 3 minutos de Sendero Nacional</span></li>
+      </ul>
       
-      
-      <div class="addr" data-reveal="up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 22s7-7.2 7-12.5a7 7 0 0 0-14 0C5 14.8 12 22 12 22Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Matamoros, Tamaulipas</span></div>
+      <div class="addr" data-reveal="up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 22s7-7.2 7-12.5a7 7 0 0 0-14 0C5 14.8 12 22 12 22Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Lib. Emilio Portes Gil km 3, C.P. 87413, H. Matamoros, Tamps.</span></div>
       <div style="display:flex;gap:10px;flex-wrap:wrap" data-reveal="up">
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=Lavanda%20II%20Matamoros" target="_blank" rel="noopener" class="btn">Cómo llegar <span class="arr">→</span></a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Lib.%20Emilio%20Portes%20Gil%20km%203%2C%20C.P.%2087413%2C%20H.%20Matamoros%2C%20Tamps.%2C%20Matamoros%2C%20Tamaulipas" target="_blank" rel="noopener" class="btn">Cómo llegar <span class="arr">→</span></a>
       </div>
     </div>
     <div class="mapbox gm" id="mapbox" data-reveal="scale">
       
       <div class="gmap" id="gmap"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SIMULADOR ============ -->
+<section class="sec" id="financiamiento" style="background:var(--sand)">
+  <div class="wrap calc">
+    <div>
+      <span class="eyebrow" data-reveal="up">Planes de pago</span>
+      <h2 class="split-words" data-split>Haz tus números en segundos</h2>
+      <p class="lead" data-reveal="up" style="--d:.1s">Ajusta el precio de referencia, el enganche y el plazo para conocer una mensualidad estimada en Lavanda II. Un asesor te comparte los planes vigentes.</p>
+      <div style="margin-top:26px;--d:.2s" data-reveal="up"><a href="#contacto" class="link" data-unit="Planes de pago">Quiero mi corrida financiera <span class="arr">→</span></a></div>
+    </div>
+    <div class="calc-card" data-reveal="scale" style="--d:.1s">
+      <div class="pmodes" id="pmodes"><span class="pill"></span><button class="on" data-m="banco">Crédito bancario</button><button data-m="directo">Plan directo</button><button data-m="contado">Contado</button></div>
+      <div class="f"><div class="range-row"><span>Precio de referencia</span><b id="prV"></b></div><input type="range" id="pr" min="1.3" max="2.3" step="0.1" value="1.3" aria-label="Precio de referencia en millones"></div>
+      <div class="f" data-for="banco directo"><div class="range-row"><span>Enganche</span><b id="engV"></b></div><input type="range" id="eng" min="10" max="50" step="5" value="20" aria-label="Porcentaje de enganche"></div>
+      <div class="f" data-for="banco"><div class="range-row"><span>Plazo del crédito</span><b id="yrV"></b></div><input type="range" id="yrs" min="5" max="20" step="5" value="20" aria-label="Plazo en años"></div>
+      <div class="f" data-for="banco"><div class="rate"><span>Tasa anual de referencia</span><span><input type="number" id="rate" value="11" min="6" max="18" step="0.1"> %</span></div></div>
+      <div class="f" data-for="directo"><div class="range-row"><span>Plazo para el saldo</span><b id="plzV"></b></div><input type="range" id="plz" min="6" max="36" step="6" value="24" aria-label="Plazo en meses"></div>
+      <div class="out"><div><small id="o1L">Enganche</small><b id="o1">$0</b></div><div class="big"><small id="o2L">Mensualidad estimada</small><b id="o2">$0</b></div></div>
+      <p class="disc" id="cdisc">Estimación ilustrativa sin intereses; no constituye una oferta. Precios y planes sujetos a cambio y disponibilidad.</p>
     </div>
   </div>
 </section>
@@ -838,9 +960,11 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
     <h2 class="split-words" data-split>Lo que necesitas saber</h2>
   </div>
   <div class="wrap faq">
-    <details data-reveal="up"><summary>¿Cuál es el precio de Lavanda II?<i></i></summary><div class="ans"><div><p>Un asesor de Matamoros te comparte precios, disponibilidad y planes de pago vigentes de Lavanda II.</p></div></div></details>
-    <details data-reveal="up" style="--d:0.05s"><summary>¿Dónde se ubica Lavanda II?<i></i></summary><div class="ans"><div><p>En Matamoros, Tamaulipas.</p></div></div></details>
-    <details data-reveal="up" style="--d:0.10s"><summary>¿Quién desarrolla Lavanda II?<i></i></summary><div class="ans"><div><p>Grupo Velas, empresa mexicana con más de 45 años en la construcción y marca hermana de Velas Resorts.</p></div></div></details>
+    <details data-reveal="up"><summary>¿Cuál es el precio de Lavanda II?<i></i></summary><div class="ans"><div><p>Lavanda II está disponible desde $1,302,000 MXN. Precios sujetos a cambio y disponibilidad; un asesor te comparte los planes de pago vigentes.</p></div></div></details>
+    <details data-reveal="up" style="--d:0.05s"><summary>¿Qué prototipos hay en Lavanda II?<i></i></summary><div class="ans"><div><p>Sevilla: 80.34 m² de construcción, 2 recámaras con clóset, 1½ baños, 2 cajones de estacionamiento, Planta baja: sala, comedor, cocina, ½ baño y lavandería, Planta alta: 2 recámaras y baño completo, Terreno de 112 m², Desde $1,302,000 MXN. Bali: 87.1 m² de construcción, 2 recámaras con clóset, 1 alcoba en planta baja, 2 baños completos, 2 cajones de estacionamiento, Sala, comedor, cocina y lavandería, Terreno de 112 m², Desde $1,409,000 MXN.</p></div></div></details>
+    <details data-reveal="up" style="--d:0.10s"><summary>¿Qué amenidades tiene Lavanda II?<i></i></summary><div class="ans"><div><p>Parques, Senderos, Áreas sociales, Áreas verdes, Alberca, Área de juegos, Asador.</p></div></div></details>
+    <details data-reveal="up" style="--d:0.15s"><summary>¿Dónde se ubica Lavanda II?<i></i></summary><div class="ans"><div><p>En Lib. Emilio Portes Gil km 3, C.P. 87413, H. Matamoros, Tamps..</p></div></div></details>
+    <details data-reveal="up" style="--d:0.20s"><summary>¿Quién desarrolla Lavanda II?<i></i></summary><div class="ans"><div><p>Grupo Velas, empresa mexicana con más de 45 años en la construcción y marca hermana de Velas Resorts.</p></div></div></details>
   </div>
 </section>
 
@@ -869,7 +993,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
         <div class="fld"><input id="fe" name="email" type="email" placeholder=" " autocomplete="email"><label for="fe">Correo electrónico</label></div>
       </div>
       <div class="two">
-        <div class="fld"><select id="fu" name="interes"><option>Cualquier prototipo</option><option>Precios y disponibilidad</option><option>Planes de pago</option><option>Visita al desarrollo</option></select><label for="fu">Me interesa</label></div>
+        <div class="fld"><select id="fu" name="interes"><option>Cualquier prototipo</option><option>Casa Sevilla</option><option>Casa Bali</option><option>Precios y disponibilidad</option><option>Planes de pago</option><option>Visita al desarrollo</option><option>Brochure</option></select><label for="fu">Me interesa</label></div>
         <div class="fld"><select id="fo" name="objetivo"><option>Para vivir</option><option>Para invertir</option><option>Ambos</option></select><label for="fo">Lo quiero</label></div>
       </div>
       <input type="hidden" name="desarrollo" value="Lavanda II"><input type="hidden" name="categoria" value="Residencial Plus"><input type="hidden" name="plaza" value="Matamoros">
@@ -883,7 +1007,8 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
       <div class="ok">
         <svg viewBox="0 0 70 70" fill="none" stroke="#0f2340" stroke-width="2.5"><circle cx="35" cy="35" r="30"/><path d="m22 36 9 9 17-19" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <h3>¡Gracias!</h3>
-        <p>Recibimos tus datos. Un asesor de Lavanda II te contactará muy pronto.</p>
+        <p>Recibimos tus datos. Ya puedes descargar el brochure; un asesor de Lavanda II te contactará muy pronto.</p>
+        <a class="btn" href="../../brochures/lavanda-ii.pdf" target="_blank" rel="noopener">Descargar brochure <span class="arr">↓</span></a>
       </div>
     </form>
   </div>
@@ -918,8 +1043,50 @@ window.DEV = {
  "name": "Lavanda II",
  "whatsapp": "520000000000",
  "waMsg": "Hola, me gustaría recibir información de Lavanda II (Matamoros).",
- "mapsEmbed": "https://maps.google.com/maps?q=Matamoros%2C%20Tamaulipas&t=m&z=12&output=embed",
- "protos": []
+ "mapsEmbed": "https://maps.google.com/maps?q=Lib.%20Emilio%20Portes%20Gil%20km%203%2C%20C.P.%2087413%2C%20H.%20Matamoros%2C%20Tamps.%2C%20Matamoros%2C%20Tamaulipas&t=m&z=15&output=embed",
+ "protos": [
+  {
+   "name": "Sevilla",
+   "tag": "Casa · 2 recámaras",
+   "m2": 80.34,
+   "cap": "m² de construcción",
+   "img": "../../img/residencial-plus/lavanda-ii/planta-sevilla.webp",
+   "isPlan": true,
+   "photos": [],
+   "feats": [
+    "2 recámaras con clóset",
+    "1½ baños",
+    "2 cajones de estacionamiento",
+    "Planta baja: sala, comedor, cocina, ½ baño y lavandería",
+    "Planta alta: 2 recámaras y baño completo",
+    "Terreno de 112 m²",
+    "Desde $1,302,000 MXN"
+   ],
+   "unit": "Casa Sevilla"
+  },
+  {
+   "name": "Bali",
+   "tag": "Casa · 2 recámaras",
+   "m2": 87.1,
+   "cap": "m² de construcción",
+   "img": "../../img/residencial-plus/lavanda-ii/planta-bali.webp",
+   "isPlan": true,
+   "photos": [],
+   "feats": [
+    "2 recámaras con clóset",
+    "1 alcoba en planta baja",
+    "2 baños completos",
+    "2 cajones de estacionamiento",
+    "Sala, comedor, cocina y lavandería",
+    "Terreno de 112 m²",
+    "Desde $1,409,000 MXN"
+   ],
+   "unit": "Casa Bali"
+  }
+ ],
+ "calc": {
+  "type": "media"
+ }
 };
 </script>
 <script src="../../assets/gv-desarrollo.js"></script>

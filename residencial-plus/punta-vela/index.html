@@ -516,6 +516,7 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 .ok path{stroke-dasharray:50;stroke-dashoffset:50;transition:stroke-dashoffset .6s var(--ease-out) .9s}
 .form.sent .ok circle,.form.sent .ok path{stroke-dashoffset:0}
 .ok h3{margin-top:16px;font-size:22px}
+.form .ok .btn{width:auto;margin-top:20px;padding:14px 26px}
 .ok p{color:var(--muted);font-size:14px;margin-top:6px;opacity:1}
 
 
@@ -650,6 +651,9 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85);height:34px}
 .ptype{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
 .tabs.four{grid-template-columns:repeat(4,1fr)}
 .tabs.four .ind{width:calc(25% - 2px)}
+.tabs.five{grid-template-columns:repeat(5,1fr)}
+.tabs.five .ind{width:calc(20% - 1.6px)}
+.btn[hidden]{display:none}
 .tabs button small{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.7;font-weight:600}
 .plan img{max-height:560px}
 .pthumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:4px 0 22px}
@@ -749,6 +753,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
 .places li.np{grid-template-columns:28px 1fr}
 .loc .more-txt{color:var(--muted);font-size:14px;margin:-10px 0 22px;max-width:58ch}
 .hero-note{font-size:11px;opacity:.7;margin-top:14px}
+.form .ok .btn{width:auto;margin-top:20px;padding:14px 26px}
 /* Más de 3 prototipos: si no caben en una fila, van en filas de 3 sin indicador deslizante (como .tabs.four de residencial-plus) */
 @media (max-width:1180px){
   .tabs.many{grid-template-columns:repeat(3,1fr)!important;width:100%;gap:4px}
@@ -813,7 +818,8 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
       </div>
     </div>
     <div class="pick" id="pick">
-      <a href="#prototipos"><img src="../../img/residencial-plus/punta-vela/slider-03-10-be85c6a973.webp" alt="" loading="lazy"><div><small>Punta Vela Residencial</small><b>Casas</b><span>Casas · 63 casas</span></div><span class="go">→</span></a>
+      <a href="#prototipos"><img src="../../img/residencial-plus/punta-vela/slider-03-10-be85c6a973.webp" alt="" loading="lazy"><div><small>Casa</small><b>146.5 m²</b><span>Casa Alpe</span></div><span class="go">→</span></a>
+      <a href="#prototipos"><img src="../../img/residencial-plus/punta-vela/slider-02-12-e21b356b93.webp" alt="" loading="lazy"><div><small>Casa</small><b>147.6 m²</b><span>Casa Celta</span></div><span class="go">→</span></a>
       
     </div>
   </div>
@@ -843,28 +849,30 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <span class="eyebrow" data-reveal="up">Ficha del desarrollo</span>
-        <h2 class="split-words" data-split>Así es Punta Vela Residencial</h2>
-        <p class="lead" data-reveal="up" style="--d:.1s">Estos son los datos confirmados de Punta Vela Residencial. Un asesor te comparte prototipos, planos, precios y disponibilidad.</p>
+        <span class="eyebrow" data-reveal="up">Conoce nuestros prototipos</span>
+        <h2 class="split-words" data-split>Encuentra tu espacio ideal</h2>
+        <p class="lead" data-reveal="up" style="--d:.1s">Tres modelos de casa de 3 recámaras y 3.5 baños, en terrenos de 140 m².</p>
       </div>
+      <div class="tabs" id="tabs" data-reveal="up" style="--d:.2s;grid-template-columns:repeat(3,1fr)"><span class="ind" style="width:calc(33.333% - 2px)"></span><button class="on" data-t="0">Casa Alpe</button><button data-t="1">Casa Celta</button><button data-t="2">Casa Mirabel</button></div>
     </div>
 
     <div class="proto-card" id="protoCard" data-reveal="scale" style="--d:.1s">
       <div class="plan photo" id="plan" role="button" tabindex="0" aria-label="Ampliar imagen">
         <span class="scan"></span>
-        <img id="planImg" src="../../img/residencial-plus/punta-vela/slider-03-10-be85c6a973.webp" alt="Casas" loading="lazy">
+        <img id="planImg" src="../../img/residencial-plus/punta-vela/slider-03-10-be85c6a973.webp" alt="Casa Alpe" loading="lazy">
         <span class="zoom"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5M11 8v6M8 11h6"/></svg></span>
       </div>
       <div class="proto-info">
         <div class="tx">
-          <span class="tower" id="pType">Punta Vela Residencial · Ciudad Juárez</span>
-          <h3 id="pName">Casas</h3>
-          <div id="pM2wrap" hidden><div class="m2"><span id="pM2">0</span><small>m²</small></div>
-          <div class="m2cap" id="pCap"></div></div>
-          <ul class="flist" id="flist"><li style="--i:0" class="">Casas</li><li style="--i:1" class="">63 casas</li><li style="--i:2" class="">Etapa: Preventa</li></ul>
+          <span class="tower" id="pType">Casa · 3 recámaras</span>
+          <h3 id="pName">Casa Alpe</h3>
+          <div id="pM2wrap"><div class="m2"><span id="pM2">146.5</span><small>m²</small></div>
+          <div class="m2cap" id="pCap">m² de construcción</div></div>
+          <ul class="flist" id="flist"><li style="--i:0" class="">3 recámaras</li><li style="--i:1" class="">3.5 baños</li><li style="--i:2" class="">Terreno de 140 m²</li></ul>
         </div>
         <div class="acts">
-          <a href="#contacto" class="btn" id="pCta" data-unit="Casas">Solicitar información <span class="arr">→</span></a>
+          <a href="#contacto" class="btn" id="pCta" data-unit="Casa Casa Alpe">Solicitar información <span class="arr">→</span></a>
+          <a href="#contacto" class="btn ghost" data-unit="Brochure">Descargar brochure</a>
         </div>
         <p class="proto-note">Imágenes ilustrativas. Medidas aproximadas; precios y disponibilidad sujetos a cambio.</p>
       </div>
@@ -1002,7 +1010,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
   </div>
   <div class="wrap faq">
     <details data-reveal="up"><summary>¿Cuál es el precio de Punta Vela Residencial?<i></i></summary><div class="ans"><div><p>Un asesor de Ciudad Juárez te comparte precios, disponibilidad y planes de pago vigentes de Punta Vela Residencial.</p></div></div></details>
-    <details data-reveal="up" style="--d:0.05s"><summary>¿Qué tipo de vivienda ofrece Punta Vela Residencial?<i></i></summary><div class="ans"><div><p>Casas, 63 casas.</p></div></div></details>
+    <details data-reveal="up" style="--d:0.05s"><summary>¿Qué prototipos hay en Punta Vela Residencial?<i></i></summary><div class="ans"><div><p>Casa Alpe: 146.5 m² de construcción, 3 recámaras, 3.5 baños, Terreno de 140 m². Casa Celta: 147.6 m² de construcción, 3 recámaras, 3.5 baños, Terreno de 140 m². Casa Mirabel: 154.5 m² de construcción, 3 recámaras: 2 en planta alta y 1 en planta baja, 3.5 baños, Terreno de 140 m².</p></div></div></details>
     <details data-reveal="up" style="--d:0.10s"><summary>¿Qué amenidades tiene Punta Vela Residencial?<i></i></summary><div class="ans"><div><p>Casa Club, Gimnasio, Área de Asadores, Salón de Eventos, Cuarto de Juegos, Piñatero, Terraza de Estar.</p></div></div></details>
     <details data-reveal="up" style="--d:0.15s"><summary>¿En qué etapa está Punta Vela Residencial?<i></i></summary><div class="ans"><div><p>Punta Vela Residencial se encuentra en preventa.</p></div></div></details>
     <details data-reveal="up" style="--d:0.20s"><summary>¿Dónde se ubica Punta Vela Residencial?<i></i></summary><div class="ans"><div><p>En Ciudad Juárez, Chihuahua. Está a 1 minutos de mundo Acuático Anita, 10 minutos de plaza Sendero, 14 minutos de puente Zaragoza.</p></div></div></details>
@@ -1037,7 +1045,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
         <div class="fld"><input id="fe" name="email" type="email" placeholder=" " autocomplete="email"><label for="fe">Correo electrónico</label></div>
       </div>
       <div class="two">
-        <div class="fld"><select id="fu" name="interes"><option>Cualquier prototipo</option><option>Precios y disponibilidad</option><option>Planes de pago</option><option>Visita al desarrollo</option></select><label for="fu">Me interesa</label></div>
+        <div class="fld"><select id="fu" name="interes"><option>Cualquier prototipo</option><option>Casa Casa Alpe</option><option>Casa Casa Celta</option><option>Casa Casa Mirabel</option><option>Precios y disponibilidad</option><option>Planes de pago</option><option>Visita al desarrollo</option><option>Brochure</option></select><label for="fu">Me interesa</label></div>
         <div class="fld"><select id="fo" name="objetivo"><option>Para vivir</option><option>Para invertir</option><option>Ambos</option></select><label for="fo">Lo quiero</label></div>
       </div>
       <input type="hidden" name="desarrollo" value="Punta Vela Residencial"><input type="hidden" name="categoria" value="Residencial Plus"><input type="hidden" name="plaza" value="Ciudad Juárez">
@@ -1051,7 +1059,8 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
       <div class="ok">
         <svg viewBox="0 0 70 70" fill="none" stroke="#0f2340" stroke-width="2.5"><circle cx="35" cy="35" r="30"/><path d="m22 36 9 9 17-19" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <h3>¡Gracias!</h3>
-        <p>Recibimos tus datos. Un asesor de Punta Vela Residencial te contactará muy pronto.</p>
+        <p>Recibimos tus datos. Ya puedes descargar el brochure; un asesor de Punta Vela Residencial te contactará muy pronto.</p>
+        <a class="btn" href="../../brochures/punta-vela.pdf" target="_blank" rel="noopener">Descargar brochure <span class="arr">↓</span></a>
       </div>
     </form>
   </div>
@@ -1089,19 +1098,49 @@ window.DEV = {
  "mapsEmbed": "https://maps.google.com/maps?q=Ciudad%20Ju%C3%A1rez%2C%20Chihuahua&t=m&z=12&output=embed",
  "protos": [
   {
-   "name": "Casas",
-   "tag": "Punta Vela Residencial · Ciudad Juárez",
-   "m2": 0,
-   "cap": "",
+   "name": "Casa Alpe",
+   "tag": "Casa · 3 recámaras",
+   "m2": 146.5,
+   "cap": "m² de construcción",
    "img": "../../img/residencial-plus/punta-vela/slider-03-10-be85c6a973.webp",
    "isPlan": false,
    "photos": [],
    "feats": [
-    "Casas",
-    "63 casas",
-    "Etapa: Preventa"
+    "3 recámaras",
+    "3.5 baños",
+    "Terreno de 140 m²"
    ],
-   "unit": "Casas"
+   "unit": "Casa Casa Alpe"
+  },
+  {
+   "name": "Casa Celta",
+   "tag": "Casa · 3 recámaras",
+   "m2": 147.6,
+   "cap": "m² de construcción",
+   "img": "../../img/residencial-plus/punta-vela/slider-02-12-e21b356b93.webp",
+   "isPlan": false,
+   "photos": [],
+   "feats": [
+    "3 recámaras",
+    "3.5 baños",
+    "Terreno de 140 m²"
+   ],
+   "unit": "Casa Casa Celta"
+  },
+  {
+   "name": "Casa Mirabel",
+   "tag": "Casa · 3 recámaras",
+   "m2": 154.5,
+   "cap": "m² de construcción",
+   "img": "../../img/residencial-plus/punta-vela/slider-01-11-303b82bae2.webp",
+   "isPlan": false,
+   "photos": [],
+   "feats": [
+    "3 recámaras: 2 en planta alta y 1 en planta baja",
+    "3.5 baños",
+    "Terreno de 140 m²"
+   ],
+   "unit": "Casa Casa Mirabel"
   }
  ]
 };

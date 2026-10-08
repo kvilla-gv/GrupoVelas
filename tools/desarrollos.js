@@ -34,6 +34,7 @@
      youtube | video | tour   video de YouTube (ID), video de Drive (URL) o tour 360°
      address, lat, lon, mapsQuery, tel, mail, whatsapp, credits, faq[[p, r]]
    Logo: img/logos/<slug>.webp si existe (va en el hero, pintado en blanco); sin archivo no se muestra.
+   Brochure: brochures/<slug>.pdf si existe (botón "Descargar brochure" junto a los prototipos).
    Datos sin confirmar se dejan vacíos: la sección correspondiente se omite.
    ===================================================================== */
 
@@ -54,21 +55,23 @@ module.exports = [
     stats: [{n: 274, l: 'departamentos'}, {n: 8, l: 'edificios'}, {n: 5, l: 'albercas'}, {n: 7, l: 'amenidades'}],
     perks: [
       {ic: 'shield', t: 'Respaldo Grupo Velas', s: 'Más de 45 años construyendo patrimonio en México.'},
-      {ic: 'waves', t: 'Estilo de vida de resort', s: '5 albercas, casa club, gimnasio y cancha de pádel.'},
+      {ic: 'waves', t: 'Estilo de vida de resort', s: '5 albercas, casa club, gimnasio y cancha de pickleball.'},
       {ic: 'building', t: '274 departamentos', s: 'Distribuidos en 8 edificios.'},
       {ic: 'pin', t: 'Cabo San Lucas', s: 'Cerca de Puerto Paraíso Mall, Plaza San Lucas y Playa El Médano.'}
     ],
-    /* Prototipos: sitio de Grupo Velas Los Cabos (pruebas.velasresorts.com, sección Modelos) */
+    /* Prototipos: sitio de Grupo Velas Los Cabos (pruebas.velasresorts.com, sección Modelos);
+       m², terraza, lavado y amenidades según el brochure de mayo 2026 (brochures/) */
     protos: [
-      {name: 'Condo 1', type: 'Departamento', cap: 'm² por residencia', m2: 140.66, rec: 2, ban: 3, img: 'img/premium/vistavela-iii/condo-1.webp',
-        feats: ['2 recámaras', '3 baños', 'Sala de estar', 'Cocina', 'Terraza', '1 estacionamiento', 'Centro de lavado']},
-      {name: 'Condo 2', type: 'Departamento', tag: 'Departamento · 1 recámara', cap: 'm² por residencia', m2: 63, rec: 1, ban: 1, img: 'img/premium/vistavela-iii/condo-2.webp',
-        feats: ['1 recámara', '1 baño', 'Sala de estar', 'Cocineta', 'Terraza', '1 estacionamiento', 'Cuarto de lavado']},
-      {name: 'Condo 3', type: 'Departamento', cap: 'm² por residencia', m2: 139, rec: 2, ban: 3, img: 'img/premium/vistavela-iii/condo-3.webp',
-        feats: ['2 recámaras', '3 baños', 'Sala de estar', 'Cocina', 'Terraza', '1 estacionamiento', 'Cuarto de lavado']}
+      {name: 'Condo 1', type: 'Departamento', cap: 'm² por residencia', m2: 140.66, rec: 2, ban: 3, plan: 'img/premium/vistavela-iii/planta-condo-1.webp', photos: ['img/premium/vistavela-iii/planta-condo-1.webp', 'img/premium/vistavela-iii/condo-1.webp'],
+        feats: ['2 recámaras', '3 baños', 'Sala de estar', 'Cocina', 'Terraza de 25.36 m²', '1 estacionamiento', 'Clóset de lavado']},
+      {name: 'Condo 2', type: 'Departamento', tag: 'Departamento · 1 recámara', cap: 'm² por residencia', m2: 63.33, rec: 1, ban: 1, plan: 'img/premium/vistavela-iii/planta-condo-2.webp', photos: ['img/premium/vistavela-iii/planta-condo-2.webp', 'img/premium/vistavela-iii/condo-2.webp'],
+        feats: ['1 recámara', '1 baño', 'Sala de estar', 'Cocineta', 'Terraza de 9.83 m²', '1 estacionamiento', 'Clóset de lavado']},
+      {name: 'Condo 3', type: 'Departamento', cap: 'm² por residencia', m2: 139.34, rec: 2, ban: 3, plan: 'img/premium/vistavela-iii/planta-condo-3.webp', photos: ['img/premium/vistavela-iii/planta-condo-3.webp', 'img/premium/vistavela-iii/condo-3.webp'],
+        feats: ['2 recámaras', '3 baños', 'Sala de estar', 'Cocina', 'Terraza de 24.90 m²', '1 estacionamiento', 'Clóset de lavado']}
     ],
-    protoLead: 'Tres distribuciones de 63 a 140.66 m², pensadas para distintos estilos de vida, todas con terraza, estacionamiento y área de lavado.',
-    nearby: ['Centros comerciales: Puerto Paraíso Mall y Plaza San Lucas', 'Supermercados: Fresko, Costco y Walmart', 'Hospitales: H+ Hospital Los Cabos y BlueNet Hospitals', 'Playa El Médano, a 15–20 minutos en coche']
+    protoLead: 'Tres distribuciones de 63.33 a 140.66 m², pensadas para distintos estilos de vida, todas con terraza, estacionamiento y área de lavado.',
+    amenities: ['5 albercas', {t: 'Casa club', s: 'Con salón multiusos.'}, 'Gimnasio', 'Jardines', 'Juegos infantiles', 'Cancha de pickleball', 'Acceso controlado con seguridad'],
+    nearby: ['Centros comerciales: Puerto Paraíso Mall y Plaza San Lucas', 'Supermercados: Fresko, Costco y Walmart', 'Hospitales: H+ Hospital Los Cabos y BlueNet Hospitals', 'Playa El Médano, a 15 minutos en coche']
   },
   {
     slug: 'vistavela-sunset', name: 'Vistavela Sunset', categoria: 'alta', plaza: 'Los Cabos', zona: 'Cabo San Lucas', gv: 'vistavela-sunset',
@@ -78,13 +81,15 @@ module.exports = [
     h1: ['Donde el desierto', 'se une con el <em>mar</em>'],
     eyebrow: 'Vistavela Sunset · Cabo San Lucas',
     sub: 'Elegancia, confort y exclusividad en un desarrollo residencial de Grupo Velas en Los Cabos, con opciones de departamentos que se adaptan a diversos estilos de vida.',
-    stats: [{n: 120, l: 'departamentos'}, {n: 31, l: 'casas'}, {n: 6, l: 'edificios'}, {n: 9, l: 'amenidades'}],
+    stats: [{n: 120, l: 'departamentos'}, {n: 31, l: 'casas'}, {n: 6, l: 'edificios'}, {n: 10, l: 'amenidades'}],
     perks: [
       {ic: 'shield', t: 'Respaldo Grupo Velas', s: 'Más de 45 años construyendo patrimonio en México.'},
       {ic: 'waves', t: '6 albercas', s: 'Además de casa club, gimnasio y jardines.'},
-      {ic: 'star', t: 'Canchas deportivas', s: 'Pádel, pickleball, fútbol y básquetbol.'},
-      {ic: 'pin', t: 'A 7 minutos de la playa', s: 'Playa El Médano y acceso fácil a la Transpeninsular.'}
+      {ic: 'star', t: 'Canchas deportivas', s: 'Pádel, pickleball, fútbol, básquetbol y putting green.'},
+      {ic: 'pin', t: 'A 13 minutos de la playa', s: 'Playa El Médano y acceso fácil a la Transpeninsular.'}
     ],
+    /* Amenidades y distancias: brochure de abril 2026 (brochures/) */
+    amenities: ['6 albercas', 'Casa club', 'Gimnasio', 'Jardines', 'Juegos infantiles', 'Cancha de pickleball', 'Cancha de pádel', 'Cancha de fútbol', 'Cancha de básquetbol', 'Putting green'],
     /* Prototipos y plantas: brochure de julio 2026 (grupovelasloscabos.com/wp-content/uploads/2026/07/Brochure-VistaVela-Sunset_Julio-26.pdf).
        Casa 1 no viene en el brochure. Penthouse Torre 1: su roof garden (229.95 m²) coincide con el total de End Units; por confirmar. */
     protos: [
@@ -103,7 +108,7 @@ module.exports = [
     ],
     protoLead: 'Cuatro modelos de departamento y dos de casa, de 162.35 a 249.29 m² de construcción. Toca la planta para ampliarla.',
     protoNote: 'Plantas del brochure de Vistavela Sunset (julio 2026). Medidas aproximadas; precios y disponibilidad sujetos a cambio.',
-    nearby: ['Playa El Médano, a 7 minutos en coche', 'Centros comerciales: Puerto Paraíso Mall y Plaza San Lucas', 'Supermercados: Fresko, Costco y Walmart', 'Hospitales: H+ Hospital Los Cabos y BlueNet Hospitals', 'Acceso fácil a la carretera Transpeninsular']
+    nearby: ['Playa El Médano, a 13 minutos en coche', 'Centros comerciales: Puerto Paraíso Mall y Plaza San Lucas', 'Supermercados: Fresko, Costco y Walmart', 'Hospitales: H+ Hospital Los Cabos y BlueNet Hospitals', 'Acceso fácil a la carretera Transpeninsular']
   },
   {
     slug: 'manila', name: 'Manila', categoria: 'alta', plaza: 'Tampico',
@@ -214,13 +219,31 @@ module.exports = [
     images: ['img/residencial-plus/cima-penaflor/cima-penaflor.webp'].concat(['img/residencial-plus/cima-penaflor/1.webp', 'img/residencial-plus/cima-penaflor/2.webp', 'img/residencial-plus/cima-penaflor/3.webp', 'img/residencial-plus/cima-penaflor/gal1.webp', 'img/residencial-plus/cima-penaflor/gal2.webp', 'img/residencial-plus/cima-penaflor/gal3.webp', 'img/residencial-plus/cima-penaflor/gal4.webp', 'img/residencial-plus/cima-penaflor/gal5.webp'])
   },
   {
+    /* Fuente: brochure "Ballesta Condominio" de Construcciones Aryve (brochures/, sep. 2025) */
     slug: 'ballesta', name: 'Ballesta', categoria: 'media', plaza: 'Querétaro',
+    feat: 'Condominio de solo 111 casas de 3 recámaras en Ciudad del Sol.',
+    type: 'Casas', rec: '3 rec.', m2: '105.64 – 114.89 m²', units: '111 casas',
+    sub: 'Ballesta tiene únicamente 111 casas en Ciudad del Sol, Querétaro, garantizando mayor privacidad y armonía en el condominio.',
+    stats: [{n: 111, l: 'casas'}, {n: 2, l: 'prototipos'}, {n: 3, l: 'recámaras'}, {n: 2, l: 'autos en cochera'}],
+    protos: [
+      {name: 'Arezzo', type: 'Casa', m2: 105.64, rec: 3, ban: '2½',
+        feats: ['3 recámaras con clóset', '2½ baños', 'Cochera para 2 autos', 'Planta baja: sala, comedor, cocina, ½ baño y patio de servicio', 'Planta alta: 3 recámaras, baño completo y recámara 3 con baño completo', 'Terreno de 83.95 m² (5.75 × 14.60 m)']},
+      {name: 'Sorrento', type: 'Casa', m2: 114.89, rec: 3, ban: 3,
+        feats: ['3 recámaras con clóset', '3 baños completos', 'Cochera para 2 autos', 'Planta baja: sala, comedor, cocina, recámara 1 con clóset, baño completo y patio de servicio', 'Planta alta: recámaras 2 y 3 con clóset y baño completo cada una', 'Terreno de 92 m² (5.75 × 16 m)']}
+    ],
+    protoLead: 'Dos prototipos de casa de 3 recámaras en dos plantas, con cochera para 2 autos.',
+    credits: 'Infonavit, Fovissste, crédito bancario y contado',
+    address: 'Calle Circuito Puerta del Sol 401 int. 202, Unidad Condominal Urvilla del Real, Ciudad del Sol, Querétaro, Qro.',
+    places: [
+      {n: 'Libramiento Norponiente', m: 1, short: 'Libramiento'}, {n: 'Tiendas de autoservicio y cines', m: 3, short: 'Autoservicio y cines'},
+      {n: 'Centros de estudio', m: 3}, {n: 'Prol. Bernardo Quintana', m: 3, short: 'Bernardo Quintana'}, {n: 'Antea', m: 15}
+    ],
     images: ['img/residencial-plus/ballesta/ballesta.webp']
   },
   {
     slug: 'punta-vela', name: 'Punta Vela Residencial', categoria: 'media', plaza: 'Ciudad Juárez', gv: 'punta-vela-residencial',
     nombreCorto: 'Punta Vela', img: 'img/residencial-plus/punta-vela/guest-reviews-045abb6e8a.webp', feat: 'Solo 63 casas en 3 modelos, todas con 3.5 baños y más de 5 amenidades.',
-    status: 'Preventa', type: 'Casas', units: '63 casas',
+    status: 'Preventa', type: 'Casas', rec: '3 rec.', m2: '146.5 – 154.5 m²', units: '63 casas',
     h1: ['Punta Vela', 'en <em>Ciudad Juárez</em>'],
     sub: 'Solo 63 casas, todas con 3.5 baños y más de 5 amenidades, en una ubicación estratégica cerca de centros comerciales, del Puente Zaragoza y del aeropuerto.',
     stats: [{n: 63, l: 'casas'}, {n: 3.5, l: 'baños por casa'}, {n: 7, l: 'amenidades'}, {n: 14, l: 'min del Puente Zaragoza'}],
@@ -230,13 +253,37 @@ module.exports = [
       {ic: 'pin', t: 'Cerca de todo', s: 'A 10 minutos de Plaza Sendero y 25 del aeropuerto.'},
       {ic: 'shield', t: 'Respaldo Grupo Velas', s: 'Más de 45 años construyendo patrimonio en México.'}
     ],
+    /* Modelos: brochure de Punta Vela (brochures/, feb. 2024). Ahí las cifras van junto a íconos sin
+       etiqueta; 140 = terreno y el resto = construcción, como en los anuncios del modelo Alpe. */
+    protos: [
+      {name: 'Casa Alpe', type: 'Casa', m2: 146.5, rec: 3, ban: '3.5', feats: ['3 recámaras', '3.5 baños', 'Terreno de 140 m²']},
+      {name: 'Casa Celta', type: 'Casa', m2: 147.6, rec: 3, ban: '3.5', feats: ['3 recámaras', '3.5 baños', 'Terreno de 140 m²']},
+      {name: 'Casa Mirabel', type: 'Casa', m2: 154.5, rec: 3, ban: '3.5', feats: ['3 recámaras: 2 en planta alta y 1 en planta baja', '3.5 baños', 'Terreno de 140 m²']}
+    ],
+    protoLead: 'Tres modelos de casa de 3 recámaras y 3.5 baños, en terrenos de 140 m².',
     places: [
       {n: 'Mundo Acuático Anita', m: 1}, {n: 'Plaza Sendero', m: 10}, {n: 'Puente Zaragoza', m: 14},
       {n: 'Walmart', m: 15}, {n: 'Aeropuerto Internacional', m: 25, short: 'Aeropuerto'}
     ]
   },
   {
+    /* Fuente: brochure "Privada Lavanda" (brochures/). El brochure web (grupovelas.com.mx/images/brochure.pdf,
+       "Nueva Lavanda") difiere: Sevilla a $1,380,000 con 1 cajón, y un modelo Palma en lugar de Bali. */
     slug: 'lavanda-ii', name: 'Lavanda II', categoria: 'media', plaza: 'Matamoros',
+    feat: 'Casas de dos y tres recámaras dentro del Fraccionamiento Arecas.',
+    type: 'Casas', rec: '2 – 3 rec.', m2: '80.34 – 87.10 m²', from: '$1,302,000 MXN', price: 1302000,
+    sub: 'Casas con dos y tres recámaras ubicadas dentro del Fraccionamiento Arecas, a 3 minutos de Sendero Nacional.',
+    protos: [
+      {name: 'Sevilla', type: 'Casa', m2: 80.34, rec: 2, ban: '1½', price: '$1,302,000', plan: 'img/residencial-plus/lavanda-ii/planta-sevilla.webp',
+        feats: ['2 recámaras con clóset', '1½ baños', '2 cajones de estacionamiento', 'Planta baja: sala, comedor, cocina, ½ baño y lavandería', 'Planta alta: 2 recámaras y baño completo', 'Terreno de 112 m²', 'Desde $1,302,000 MXN']},
+      {name: 'Bali', type: 'Casa', m2: 87.10, rec: 2, ban: 2, price: '$1,409,000', plan: 'img/residencial-plus/lavanda-ii/planta-bali.webp',
+        feats: ['2 recámaras con clóset', '1 alcoba en planta baja', '2 baños completos', '2 cajones de estacionamiento', 'Sala, comedor, cocina y lavandería', 'Terreno de 112 m²', 'Desde $1,409,000 MXN']}
+    ],
+    protoLead: 'Dos modelos de casa en dos plantas, en terrenos de 112 m².',
+    protoNote: 'Precios del brochure de Privada Lavanda, sujetos a cambio y disponibilidad. Imágenes ilustrativas.',
+    amenities: ['Parques', 'Senderos', 'Áreas sociales', 'Áreas verdes', 'Alberca', 'Área de juegos', 'Asador'],
+    address: 'Lib. Emilio Portes Gil km 3, C.P. 87413, H. Matamoros, Tamps.',
+    nearby: ['Dentro del Fraccionamiento Arecas', 'A 3 minutos de Sendero Nacional'],
     images: ['img/residencial-plus/lavanda-ii/lavanda.webp']
   },
   {
@@ -285,7 +332,7 @@ module.exports = [
   },
   {
     slug: 'selvanova', name: 'Selvanova Residencial', nombreCorto: 'Selvanova', categoria: 'media', plaza: 'Playa del Carmen', plantilla: true,
-    type: 'Casas y departamentos', rec: '3 rec.', m2: '100 – 155 m²', from: '$3.5 MDP', price: 3500000,
+    type: 'Casas y departamentos', rec: '3 rec.', m2: '100 – 165.24 m²', from: '$3.5 MDP', price: 3500000,
     img: 'img/residencial-plus/selvanova/guest-review-46330f56a6.webp', feat: 'Equilibrio entre naturaleza y vida urbana, con extensas áreas verdes, alberca y seguridad.'
   },
   {
@@ -294,13 +341,21 @@ module.exports = [
     status: 'Entrega inmediata', type: 'Casas y terrenos', rec: '3 rec.', m2: '264 m²',
     h1: ['Tu vida en Querétaro', 'comienza en <em>Velasur</em>'],
     sub: 'Comunidad residencial rodeada de áreas naturales, con espacios para la recreación, el acondicionamiento físico y la convivencia familiar en contacto con la naturaleza.',
-    stats: [{n: 40, l: 'hectáreas de desarrollo'}, {n: 3, l: 'privadas'}, {n: 9, l: 'amenidades'}, {n: 2, l: 'puntos de acceso'}],
+    /* Cifras, amenidades y dirección: brochure de Velasur (brochures/, oct. 2025). No trae modelos de casa. */
+    stats: [{n: 40, l: 'hectáreas de desarrollo'}, {n: 5, l: 'privadas'}, {n: 11, l: 'amenidades'}, {n: 2, l: 'puntos de acceso'}],
     perks: [
-      {ic: 'leaf', t: 'Rodeado de naturaleza', s: 'Más de 1,600 m² de áreas verdes por privada y un parque lineal.'},
-      {ic: 'shield', t: 'Doble control de acceso', s: 'Seguridad 24/7 para ti y tu familia.'},
-      {ic: 'waves', t: 'Alberca en cada privada', s: 'Además de casa club, cancha de pádel y pet park.'},
+      {ic: 'leaf', t: 'Rodeado de naturaleza', s: '2,500 m² de área verde por privada y 7 mil m² de parque lineal.'},
+      {ic: 'shield', t: 'Doble punto de acceso', s: 'Acceso principal con caseta de control las 24 horas.'},
+      {ic: 'waves', t: 'Casa club y alberca', s: 'En Privada Artemisa, además de canchas de pádel y dog park.'},
       {ic: 'pin', t: 'Conectado', s: 'A 5 minutos del Libramiento Surponiente y 12 del centro histórico.'}
     ],
+    amenities: [
+      {t: 'Acceso principal con caseta de control', s: 'Vigilancia las 24 horas.'}, {t: 'Parque lineal', s: '7 mil m² de parque lineal.'},
+      {t: 'Ciclovía y pista para correr', s: 'Periférica, de más de 2,500 m.'}, {t: 'Áreas verdes', s: '2,500 m² de área verde por privada.'},
+      {t: 'Área lounge con fogata'}, {t: 'Área de picnics'}, {t: 'Juegos infantiles', s: 'Con instalaciones inclusivas.'},
+      {t: 'Dog park'}, {t: 'Coworking al aire libre'}, {t: 'Canchas de pádel'}, {t: 'Doble punto de acceso'}
+    ],
+    address: 'Blvd. Metropolitano Corregidora–Huimilpan S/N km 3.5, Corregidora, Qro.',
     protos: [
       {name: 'Casa Magnolia', type: 'Casa', img: 'img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-fachada-3f317b5f8d.webp',
         photos: ['img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-fachada-3f317b5f8d.webp', 'img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-sala-fe1e6498eb.webp', 'img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-comedor-f24ca8cb89.webp', 'img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-living-bf3bab40cf.webp', 'img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-recamara-bc0a0e1dcc.webp', 'img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-vestidor-fb737bccbe.webp', 'img/residencial-plus/velasur/velasur-casas-queretaro-magnolia-bano-d3d1b186eb.webp'],
@@ -314,7 +369,8 @@ module.exports = [
     places: [
       {n: 'Centros de estudio', m: 1}, {n: 'Libramiento Surponiente', m: 5, short: 'Libramiento'}, {n: 'Centros comerciales y cines', m: 5, short: 'Comercios y cines'},
       {n: 'Av. Constituyentes', m: 10}, {n: 'Centro histórico', m: 12}
-    ]
+    ],
+    nearby: ['Reserva natural protegida Presa El Batán, a 4 minutos']
   },
   {
     slug: 'loma-bonita-reynosa', name: 'Loma Bonita', categoria: 'media', plaza: 'Reynosa', gv: 'loma-bonita-reynosa',
@@ -322,20 +378,22 @@ module.exports = [
     type: 'Casas', rec: '3 rec.', from: '$2,385,000 MXN', price: 2385000,
     h1: ['Tu hogar a tu manera', 'en <em>Loma Bonita</em>'],
     sub: 'Casas diseñadas a tu gusto en un entorno seguro y completamente bardeado, con estacionamiento, jardín y acabados de calidad en Reynosa.',
-    stats: [{n: 2, l: 'modelos de casa'}, {n: 3, l: 'recámaras'}, {n: 2, l: 'estacionamientos'}, {n: 7, l: 'amenidades'}],
+    /* Modelos, precios, amenidades y dirección: brochure de Loma Bonita, sector Loma Norteña (brochures/) */
+    stats: [{n: 2, l: 'modelos de casa'}, {n: 3, l: 'recámaras'}, {n: 2, l: 'estacionamientos'}, {n: 6, l: 'amenidades'}],
     perks: [
       {ic: 'shield', t: 'Doble filtro de seguridad', s: 'Accesos controlados y seguridad 24/7.'},
       {ic: 'star', t: 'Interiores de calidad', s: 'Cubierta de cuarzo, porcelanato de 60×60 y cancelería.'},
-      {ic: 'leaf', t: 'Casa club y áreas verdes', s: 'Fitness center y juegos para niños.'},
+      {ic: 'leaf', t: 'Casa club y alberca privada', s: 'Además de gimnasio, área de juegos y áreas verdes.'},
       {ic: 'pin', t: 'Ubicación privilegiada', s: 'A 2 minutos de hospitales y 5 de Plaza Sendero.'}
     ],
     protos: [
-      {name: 'Mallorca', type: 'Casa', m2: 156, rec: 3, ban: 3, price: '$2,385,000',
-        feats: ['3 recámaras', '3 baños', 'Cocina con cubierta de cuarzo*', 'Vitropiso de 60×60', 'Cancelería en baños y escaleras', 'Patio y área de lavado', 'Desde $2,385,000 MXN']},
-      {name: 'Colibrí', type: 'Casa', m2: 114, rec: 3, ban: '3.5', price: '$2,935,000',
-        feats: ['3 recámaras', '3.5 baños', 'Cocina', 'Vitropiso', 'Cancelería en baños y escalera', 'Patio y área de lavado', 'Desde $2,935,000 MXN']}
+      {name: 'Mallorca', type: 'Casa', m2: 114.46, cap: 'm² de construcción (desde)', rec: 3, ban: '2.5', price: '$2,935,000', plan: 'img/residencial-plus/loma-bonita-reynosa/planta-mallorca.webp',
+        feats: ['1 recámara principal con baño completo', '2 recámaras con baño compartido', '½ baño', 'Cochera para 2 autos', 'Sala, comedor, cocina y lavandería', 'Terreno de 126 m²', 'Desde $2,935,000 MXN']},
+      {name: 'Colibrí', type: 'Casa', m2: 154, cap: 'm² de construcción (desde)', rec: 3, ban: '3.5', price: '$2,385,000', plan: 'img/residencial-plus/loma-bonita-reynosa/planta-colibri.webp',
+        feats: ['1 recámara principal con vestidor, baño privado y terraza', '2 recámaras con baño completo', '½ baño', 'Cochera techada para 2 autos', 'Sala, comedor, cocina y lavandería', 'Terreno de 147.60 m²', 'Desde $2,385,000 MXN']}
     ],
-    protoNote: 'Precios publicados en grupovelas.com.mx, sujetos a cambio y disponibilidad. Imágenes ilustrativas.',
+    protoNote: 'Precios y superficies del brochure de Loma Bonita (sector Loma Norteña), sujetos a cambio y disponibilidad. Imágenes ilustrativas.',
+    amenities: ['Alberca privada', 'Gimnasio', 'Área de juegos', 'Áreas verdes', 'Doble filtro de seguridad', 'Casa club'],
     credits: 'crédito hipotecario, Infonavit y Fovissste, además de pago de contado (30% y hasta 2 meses para liquidar)',
     places: [
       {n: 'Hospitales Materno-infantil y Christus Muguerza', m: 2, short: 'Hospitales'}, {n: 'Escuela Primaria Nueva Creación', m: 2, short: 'Escuela'},
@@ -344,7 +402,7 @@ module.exports = [
     placeAngles: [-150, -75, 0, 70, 140],
     nearby: ['Supermercados: Smart, Soriana y Mi Tiendita del Ahorro', 'Cerca de los puentes internacionales', 'Carretera Reynosa–Monterrey'],
     /* Coordenadas del enlace de Google Maps publicado en grupovelas.com.mx */
-    address: 'Carretera a Monterrey, Reynosa, Tamps.', lat: 26.0477755, lon: -98.3959864
+    address: 'Carretera Reynosa–Monterrey km 203, Fracc. Loma Bonita, Reynosa, Tamps.', lat: 26.0477755, lon: -98.3959864
   },
   {
     slug: 'loma-del-jazmin', name: 'Loma del Jazmín', categoria: 'media', plaza: 'Reynosa',
@@ -386,11 +444,11 @@ module.exports = [
     h1: ['Tu hogar en armonía', 'con la <em>naturaleza</em>'],
     eyebrow: 'Los Encinos Residencial · Altamira',
     sub: 'Un hogar seguro, sostenible y en conexión con la naturaleza, con modelos variados, acabados modernos y espacios diseñados para tu comodidad.',
-    stats: [{n: 3, l: 'recámaras'}, {n: 2, l: 'baños'}, {n: 2500, l: 'litros de cisterna'}, {n: 24, suf: ' h', l: 'caseta de seguridad'}],
+    stats: [{n: 3, l: 'recámaras'}, {n: 2.5, l: 'baños'}, {n: 2500, l: 'litros de cisterna'}, {n: 24, suf: ' h', l: 'caseta de seguridad'}],
     perks: [
       {ic: 'shield', t: 'Seguridad 24 horas', s: 'Caseta de seguridad y acceso controlado.'},
       {ic: 'leaf', t: 'Áreas verdes y senderos', s: 'Además de alberca y club deportivo.'},
-      {ic: 'home', t: 'Casas de 3 recámaras', s: '2 baños y cisterna de 2,500 litros.'},
+      {ic: 'home', t: 'Casas de 3 recámaras', s: '2.5 baños y cisterna de 2,500 litros.'},
       {ic: 'pin', t: 'Bien conectado', s: 'A minutos de la carretera Tampico–Mante y 8 de Plaza Arenas.'}
     ],
     amenities: [
@@ -399,6 +457,12 @@ module.exports = [
       {t: 'Alberca', s: 'Piscina familiar ideal para el descanso y la diversión al aire libre.'},
       {t: 'Salón de usos múltiples', s: 'Área flexible para eventos, reuniones y celebraciones.'}
     ],
+    /* Modelos y baños: brochure de Los Encinos Residencial (brochures/); no trae m² por modelo */
+    protos: [
+      ['Encino Tipo A', 8], ['Encino Tipo B', 27], ['Encino Tipo C', 23], ['Encino Tipo D', 17], ['Turquesa E', 1]
+    ].map(([name, lote]) => ({name, type: 'Casa', rec: 3, ban: '2.5',
+      feats: ['3 recámaras', '2.5 baños', 'Sala-comedor', 'Cocina', 'Cuarto de lavado', 'Jardín', 'Estacionamiento', `Casa del lote ${lote}`]})),
+    protoLead: 'Cinco modelos de casa de 3 recámaras y 2.5 baños, con jardín y estacionamiento.',
     places: [{n: 'Plaza Arenas', m: 8}, {n: 'HEB', m: 20}, {n: 'Playa Miramar', m: 20}],
     placeAngles: [-120, 20, 140],
     nearby: ['A minutos de la carretera Tampico–Mante']
@@ -464,8 +528,9 @@ module.exports = [
     nearby: ['Supermercados: Bodega Aurrera Express, Smart y Soriana', 'Av. Tamaulipas y Viaducto Reynosa']
   },
   {
+    /* Modelos, amenidades y dirección: brochure "Coto Arecas Residencial" (brochures/); no trae m² */
     slug: 'arecas-altamira', name: 'Arecas', categoria: 'entrada', plaza: 'Tampico', zona: 'Altamira', gv: 'arecas',
-    rec: '3 rec.', img: 'img/residencial/arecas-altamira/carrusel-01-5-54fb926eb6.webp', feat: 'Desarrollo de 12 casas en Altamira, con tranquilidad y seguridad.',
+    rec: '2 – 3 rec.', img: 'img/residencial/arecas-altamira/carrusel-01-5-54fb926eb6.webp', feat: 'Desarrollo de 12 casas en Altamira, con tranquilidad y seguridad.',
     type: 'Casas', m2: '87.20 m²', units: '12 casas',
     h1: ['Tranquilidad', 'en <em>Altamira</em>'],
     sub: 'Un proyecto de 12 casas en perfecta armonía con la tranquilidad y la seguridad, rodeado de amplias áreas verdes y con acceso rápido a todos los servicios.',
@@ -476,16 +541,25 @@ module.exports = [
       {ic: 'pin', t: 'Conveniencia', s: 'Cerca del Tec de Monterrey, Soriana, Arteli y HEB.'},
       {ic: 'chart', t: 'Inversión inteligente', s: 'Avalada por Grupo Velas.'}
     ],
+    protos: [
+      {name: 'Bali 3', type: 'Casa', rec: 3, ban: '2.5', plan: 'img/residencial/arecas-altamira/planta-bali-3.webp', feats: ['3 recámaras', '2 baños y ½ baño', '2 estacionamientos', 'Sala-comedor', 'Cocina', 'Cuarto de lavado', 'Jardín']},
+      {name: 'Bali 2', type: 'Casa', rec: 2, ban: '1.5', plan: 'img/residencial/arecas-altamira/planta-bali-2.webp', feats: ['2 recámaras', '1 baño y ½ baño', '2 estacionamientos', 'Sala-comedor', 'Cocina', 'Cuarto de lavado']}
+    ],
+    protoLead: 'Dos modelos de casa, de 2 y 3 recámaras, con 2 estacionamientos.',
+    amenities: ['Áreas verdes', 'Canchas deportivas', 'Ambiente seguro'],
+    address: 'Blvd. Petrocel km 1.3, Puerto Industrial, Altamira, Tamps. (a un lado del Tec de Monterrey)',
     nearby: ['Tecnológico de Monterrey', 'Supermercados: Soriana, Arteli y HEB', 'Hospitales Bene y Ángeles, a minutos', 'Playa Miramar y Plaza Arenas', 'Fácil acceso a la carretera Tampico–Mante'],
     logoText: 'Arecas'
   },
   {
+    /* Estado, modelos de casa y dirección: brochure "Vista Laguna Residencial / Casas" (brochures/):
+       "Casas construidas: 3 casas tipo Bali 3, 3 casas tipo Sevilla, 4 casas tipo Bali 2" */
     slug: 'vista-laguna', name: 'Vista Laguna', categoria: 'entrada', plaza: 'Tampico', zona: 'Altamira', gv: 'vista-laguna',
-    rec: '3 rec.', img: 'img/residencial/vista-laguna/slider-02-6-b7d8ddcef9.webp', feat: 'Casas y departamentos con vistas a la laguna, áreas verdes y cercanía a servicios.',
-    status: 'Vendido', type: 'Casas y departamentos', m2: '80.39 m²', units: '15 casas y 96 departamentos',
+    rec: '2 – 3 rec.', img: 'img/residencial/vista-laguna/slider-02-6-b7d8ddcef9.webp', feat: 'Casas y departamentos con vistas a la laguna, áreas verdes y cercanía a servicios.',
+    status: 'Disponible', type: 'Casas y departamentos', m2: '79.25 – 116.68 m²', units: '15 casas y 96 departamentos',
     h1: ['Vista Laguna', 'en <em>Altamira</em>'],
     sub: 'Casas y departamentos con vistas a la laguna, privacidad, áreas verdes y cercanía a servicios: un proyecto que combina confort, naturaleza y plusvalía.',
-    stats: [{n: 15, l: 'casas'}, {n: 96, l: 'departamentos'}, {n: 80.39, l: 'm² de construcción'}, {t: 'Laguna', l: 'vistas'}],
+    stats: [{n: 15, l: 'casas'}, {n: 96, l: 'departamentos'}, {pre: 'hasta', n: 116.68, l: 'm² de construcción'}, {t: 'Laguna', l: 'vistas'}],
     perks: [
       {ic: 'waves', t: 'Vista a la laguna', s: 'Confort y naturaleza en Altamira.'},
       {ic: 'leaf', t: 'Áreas verdes', s: 'Amplios espacios de esparcimiento.'},
@@ -496,6 +570,19 @@ module.exports = [
       {t: 'Amplios espacios de esparcimiento', s: 'Lugares para relajarte, disfrutar tu tiempo libre o pasarla bien con familia y amigos.'},
       {t: 'Áreas verdes', s: 'Extensas áreas naturales para caminar, hacer ejercicio o disfrutar del aire libre.'}
     ],
+    protos: [
+      {name: 'Sevilla 2025', type: 'Casa', m2: 79.25, rec: 2, ban: '1.5', plan: 'img/residencial/vista-laguna/planta-sevilla-2025.webp',
+        photos: ['img/residencial/vista-laguna/planta-sevilla-2025.webp', 'img/residencial/vista-laguna/sevilla-2025-1.webp', 'img/residencial/vista-laguna/sevilla-2025-2.webp', 'img/residencial/vista-laguna/sevilla-2025-3.webp'],
+        feats: ['2 recámaras', '1.5 baños', 'Sala-comedor', 'Cocina', 'Área de lavandería', 'Estacionamiento']},
+      {name: 'Bali 2', type: 'Casa', m2: 87.10, rec: 2, ban: 2, plan: 'img/residencial/vista-laguna/planta-bali-2.webp',
+        photos: ['img/residencial/vista-laguna/planta-bali-2.webp', 'img/residencial/vista-laguna/bali-2-1.webp', 'img/residencial/vista-laguna/bali-2-2.webp', 'img/residencial/vista-laguna/bali-2-3.webp'],
+        feats: ['2 recámaras', '2 baños completos', 'Sala-comedor', 'Cocina', 'Área de lavandería', 'Estacionamiento']},
+      {name: 'Bali 3', type: 'Casa', m2: 116.68, rec: 3, ban: '2.5', plan: 'img/residencial/vista-laguna/planta-bali-3.webp',
+        photos: ['img/residencial/vista-laguna/planta-bali-3.webp', 'img/residencial/vista-laguna/bali-3-1.webp', 'img/residencial/vista-laguna/bali-3-2.webp', 'img/residencial/vista-laguna/bali-3-3.webp'],
+        feats: ['3 recámaras', '2.5 baños', 'Sala-comedor', 'Cocina', 'Área de lavandería', 'Estacionamiento']}
+    ],
+    protoLead: 'Casas construidas en tres modelos, de 2 y 3 recámaras. Toca la planta para ver las fotos del modelo.',
+    address: 'Fracc. Vista Laguna, Altamira, Tamps. (entrada por Su Bodega Monte Alto)',
     nearby: ['Supermercados: Soriana y Arteli', 'Hospital: IMSS', 'Playa Tesoro', 'Cafés y restaurantes: Degas Café, El Asador y Plaza Arenas', 'Carretera Tampico–Mante']
   }
 ];
