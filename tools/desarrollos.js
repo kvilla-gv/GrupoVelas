@@ -34,6 +34,7 @@
      youtube | video | tour   video de YouTube (ID), video de Drive (URL) o tour 360°
      address, lat, lon, mapsQuery, tel, mail, whatsapp, credits, faq[[p, r]]
    Logo: img/logos/<slug>.webp si existe (va en el hero, pintado en blanco); sin archivo no se muestra.
+   Brochure: brochures/<slug>.pdf si existe (botón "Descargar brochure" junto a los prototipos).
    Datos sin confirmar se dejan vacíos: la sección correspondiente se omite.
    ===================================================================== */
 

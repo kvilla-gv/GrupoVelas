@@ -196,6 +196,9 @@ function build(d){
   const where = d.zona || d.plaza;
   const whereFull = [d.zona, d.plaza !== d.zona ? d.plaza : '', estado].filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).join(', ');
   const sold = d.status === 'Vendido';
+  /* Brochure: brochures/<slug>.pdf si existe; si no, el catálogo del data o de grupovelas.com.mx */
+  const brochure = fs.existsSync(path.join(ROOT, 'brochures', d.slug + '.pdf')) ? `brochures/${d.slug}.pdf` : '';
+  const catalog = brochure ? url(brochure) : d.catalog || g.catalog || '';
 
   /* Fotos: primero las propias (research / locales), luego las de grupovelas.com.mx */
   const photos = [];
@@ -369,7 +372,7 @@ function build(d){
           <ul class="flist" id="flist">${p0.feats.map((f, i) => `<li style="--i:${i}" class="${f.endsWith('*') ? 'hl' : ''}">${esc(f.replace('*', ''))}</li>`).join('')}</ul>
         </div>
         <div class="acts">
-          <a href="#contacto" class="btn" id="pCta" data-unit="${esc(p0.unit)}">${sold ? 'Ver opciones disponibles' : d.categoria === 'entrada' ? 'Quiero esta casa' : 'Solicitar información'} <span class="arr">→</span></a>${g.catalog || d.catalog ? `\n          <a href="${esc(d.catalog || g.catalog)}" class="btn ghost" target="_blank" rel="noopener">Descargar catálogo</a>` : ''}
+          <a href="#contacto" class="btn" id="pCta" data-unit="${esc(p0.unit)}">${sold ? 'Ver opciones disponibles' : d.categoria === 'entrada' ? 'Quiero esta casa' : 'Solicitar información'} <span class="arr">→</span></a>${catalog ? `\n          <a href="${esc(catalog)}" class="btn ghost" target="_blank" rel="noopener">${brochure ? 'Descargar brochure' : 'Descargar catálogo'}</a>` : ''}
         </div>
         <p class="proto-note">${esc(d.protoNote || 'Imágenes ilustrativas. Medidas aproximadas; precios y disponibilidad sujetos a cambio.')}</p>
       </div>
