@@ -157,7 +157,7 @@
       <div class="gvf-grid">
         <div class="gvf-about">
           <a href="${H('#inicio')}" class="gvf-logo" aria-label="Grupo Velas · Inicio">${LOGO}</a>
-          <p>Más de 40 años construyendo hogares en México. Marca hermana de Velas Resorts.</p>
+          <p>Más de 45 años construyendo hogares en México. Marca hermana de Velas Resorts.</p>
           ${social()}
         </div>
         ${col('Grupo Velas', NAV.filter(n => !n.dd).map(n => `<a href="${n.h}"${n.ext ? ' ' + EXT : ''}>${n.t}</a>`).join('') + `<a href="${REVISTA}" ${EXT}>Revista Horizonte <span class="arr">↗</span></a>`)}

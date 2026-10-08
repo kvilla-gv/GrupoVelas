@@ -324,7 +324,7 @@ function build(d){
 
   /* ===== VENTAJAS ===== */
   const perks = d.perks || [
-    {ic: 'shield', t: 'Respaldo Grupo Velas', s: 'Más de 40 años construyendo patrimonio en México.'},
+    {ic: 'shield', t: 'Respaldo Grupo Velas', s: 'Más de 45 años construyendo patrimonio en México.'},
     specs.length && {ic: 'home', t: typeLabel || 'Tu nuevo hogar', s: specs.slice(1).join(' · ') || `Vivienda ${C.name.toLowerCase()} en ${where}.`},
     amen.length && {ic: 'leaf', t: 'Amenidades', s: amen.slice(0, 3).map(a => a.t).join(', ') + (amen.length > 3 ? ' y más.' : '.')},
     {ic: 'pin', t: 'Ubicación', s: `${whereFull}.`},
@@ -656,10 +656,10 @@ function build(d){
   <div class="ph" data-reveal="clip"><img src="${esc(url(gvImg))}" alt="${esc(d.name)}" loading="lazy" data-parallax=".12"></div>
   <div class="txt">
     <span class="eyebrow" data-reveal="up">Un desarrollo de Grupo Velas</span>
-    <h2 class="split-words" data-split>Más de 40 años construyendo patrimonio</h2>
+    <h2 class="split-words" data-split>Más de 45 años construyendo patrimonio</h2>
     <p class="lead" data-reveal="up" style="--d:.1s">${esc(d.name)} es un desarrollo de Grupo Velas, empresa mexicana con una trayectoria impecable en la industria de la construcción y marca hermana de la reconocida cadena hotelera Velas Resorts.</p>
     <div class="stats">
-      <div class="stat" data-reveal="up" style="--d:.1s"><b>+<span data-count="40">0</span></b><span>años en la construcción</span></div>
+      <div class="stat" data-reveal="up" style="--d:.1s"><b>+<span data-count="45">0</span></b><span>años en la construcción</span></div>
       <div class="stat" data-reveal="up" style="--d:.2s"><b>+<span data-count="100">0</span><small style="font-size:.5em"> mil</small></b><span>familias confían en nosotros</span></div>
       <div class="stat" data-reveal="up" style="--d:.3s"><b>${/^\d+$/.test(third.b) ? `<span data-count="${third.b}">0</span>` : esc(third.b)}</b><span>${esc(third.s)}</span></div>
     </div>
@@ -675,7 +675,7 @@ function build(d){
   if (d.status) faqs.push([`¿En qué etapa está ${d.name}?`, sold ? `${d.name} está vendido.` : d.status === 'Disponible' ? `${d.name} está disponible.` : `${d.name} se encuentra en ${d.status.toLowerCase()}.`]);
   if (d.categoria === 'entrada' || d.credits) faqs.push(['¿Puedo comprar con crédito?', d.credits ? `Sí. ${d.name} acepta: ${d.credits}. Un asesor te acompaña en todo el trámite.` : `Un asesor te indica qué créditos (Infonavit, Fovissste o bancario) aplican para ${d.name} y te acompaña en todo el trámite.`]);
   faqs.push([`¿Dónde se ubica ${d.name}?`, `En ${address.replace(/<br>/g, ' ')}.` + (places.length ? ` Está a ${places.slice(0, 3).map(p => `${p.m} minutos de ${p.n.charAt(0).toLowerCase() + p.n.slice(1)}`).join(', ')}.` : '')]);
-  faqs.push([`¿Quién desarrolla ${d.name}?`, 'Grupo Velas, empresa mexicana con más de 40 años en la construcción y marca hermana de Velas Resorts.']);
+  faqs.push([`¿Quién desarrolla ${d.name}?`, 'Grupo Velas, empresa mexicana con más de 45 años en la construcción y marca hermana de Velas Resorts.']);
   (d.faq || []).forEach(f => faqs.splice(faqs.length - 1, 0, f));
   sec('faq', '', `<!-- ============ FAQ ============ -->
 <section class="sec" style="background:var(--sand)" id="faq">

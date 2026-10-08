@@ -53,7 +53,7 @@ module.exports = [
     sub: 'Un estilo de vida de resort en el corazón de Cabo San Lucas: 274 departamentos con amenidades de primer nivel, rodeados de la belleza natural de Los Cabos.',
     stats: [{n: 274, l: 'departamentos'}, {n: 8, l: 'edificios'}, {n: 5, l: 'albercas'}, {n: 7, l: 'amenidades'}],
     perks: [
-      {ic: 'shield', t: 'Respaldo Grupo Velas', s: 'Más de 40 años construyendo patrimonio en México.'},
+      {ic: 'shield', t: 'Respaldo Grupo Velas', s: 'Más de 45 años construyendo patrimonio en México.'},
       {ic: 'waves', t: 'Estilo de vida de resort', s: '5 albercas, casa club, gimnasio y cancha de pádel.'},
       {ic: 'building', t: '274 departamentos', s: 'Distribuidos en 8 edificios.'},
       {ic: 'pin', t: 'Cabo San Lucas', s: 'Cerca de Puerto Paraíso Mall, Plaza San Lucas y Playa El Médano.'}
@@ -80,7 +80,7 @@ module.exports = [
     sub: 'Elegancia, confort y exclusividad en un desarrollo residencial de Grupo Velas en Los Cabos, con opciones de departamentos que se adaptan a diversos estilos de vida.',
     stats: [{n: 120, l: 'departamentos'}, {n: 31, l: 'casas'}, {n: 6, l: 'edificios'}, {n: 9, l: 'amenidades'}],
     perks: [
-      {ic: 'shield', t: 'Respaldo Grupo Velas', s: 'Más de 40 años construyendo patrimonio en México.'},
+      {ic: 'shield', t: 'Respaldo Grupo Velas', s: 'Más de 45 años construyendo patrimonio en México.'},
       {ic: 'waves', t: '6 albercas', s: 'Además de casa club, gimnasio y jardines.'},
       {ic: 'star', t: 'Canchas deportivas', s: 'Pádel, pickleball, fútbol y básquetbol.'},
       {ic: 'pin', t: 'A 7 minutos de la playa', s: 'Playa El Médano y acceso fácil a la Transpeninsular.'}
@@ -160,7 +160,7 @@ module.exports = [
       {ic: 'waves', t: 'Acceso directo al mar', s: 'Paddle board, yoga en la orilla y los amaneceres más bellos.'},
       {ic: 'home', t: 'Alberca o jacuzzi privados', s: 'Alberca en jardín frente al mar o terraza con jacuzzi.'},
       {ic: 'star', t: 'Para disfrutar', s: 'Cancha de pádel, pistas para razor o cuatrimoto y tienda de conveniencia.'},
-      {ic: 'shield', t: 'Respaldo Grupo Velas', s: 'Más de 40 años construyendo patrimonio en México.'}
+      {ic: 'shield', t: 'Respaldo Grupo Velas', s: 'Más de 45 años construyendo patrimonio en México.'}
     ],
     protos: [
       {name: 'Prototipo A', type: 'Townhouse', rec: 3, feats: ['3 recámaras', '4½ baños', 'Alberca privada en jardín frente al mar*', 'Cocina y sala-comedor', 'Cuarto de lavado', 'Cuarto de servicio con baño', 'Estacionamiento']},
@@ -228,7 +228,7 @@ module.exports = [
       {ic: 'home', t: 'Solo 63 casas', s: 'Todas con 3.5 baños.'},
       {ic: 'star', t: 'Casa club y gimnasio', s: 'Más asadores, salón de eventos y cuarto de juegos.'},
       {ic: 'pin', t: 'Cerca de todo', s: 'A 10 minutos de Plaza Sendero y 25 del aeropuerto.'},
-      {ic: 'shield', t: 'Respaldo Grupo Velas', s: 'Más de 40 años construyendo patrimonio en México.'}
+      {ic: 'shield', t: 'Respaldo Grupo Velas', s: 'Más de 45 años construyendo patrimonio en México.'}
     ],
     places: [
       {n: 'Mundo Acuático Anita', m: 1}, {n: 'Plaza Sendero', m: 10}, {n: 'Puente Zaragoza', m: 14},
@@ -361,7 +361,7 @@ module.exports = [
       {ic: 'home', t: 'Diseño a tu medida', s: 'Casas con estacionamiento, jardín y acabados de calidad.'},
       {ic: 'shield', t: 'Entorno seguro', s: 'Fraccionamiento completamente bardeado.'},
       {ic: 'pin', t: 'Tampico', s: 'Ubicación privilegiada con espacios de esparcimiento.'},
-      {ic: 'people', t: 'Respaldo Grupo Velas', s: 'Más de 40 años construyendo patrimonio en México.'}
+      {ic: 'people', t: 'Respaldo Grupo Velas', s: 'Más de 45 años construyendo patrimonio en México.'}
     ]
   },
   {
@@ -415,7 +415,7 @@ module.exports = [
       {ic: 'building', t: 'Diseño vanguardista', s: 'Departamentos con amplia terraza y acabados de lujo.'},
       {ic: 'star', t: 'Roof garden con alberca', s: 'Además de Sky Bar, gimnasio y simulador de golf.'},
       {ic: 'pin', t: 'Ubicación privilegiada', s: 'En Faja de Oro, Tampico.'},
-      {ic: 'shield', t: 'Respaldo de calidad', s: 'Más de 40 años de Grupo Velas construyendo.'}
+      {ic: 'shield', t: 'Respaldo de calidad', s: 'Más de 45 años de Grupo Velas construyendo.'}
     ],
     protos: [{name: 'Departamento tipo', type: 'Departamento', m2: 220.86, rec: 3,
       feats: ['3 recámaras', 'Walk-in closet*', 'Cuarto de servicio con baño', 'Amplia terraza', 'Acabados de lujo', '2 elevadores en la torre']}]
@@ -453,7 +453,7 @@ module.exports = [
       {ic: 'pin', t: 'Ubicación estratégica', s: 'A 2 minutos de hospitales y 5 de Plaza Sendero Periférico.'},
       {ic: 'home', t: 'Departamentos de 72 m²', s: 'Con 2 habitaciones.'},
       {ic: 'leaf', t: 'Ambiente familiar', s: 'Canchas deportivas, áreas verdes y juegos para niños.'},
-      {ic: 'shield', t: 'Respaldo Grupo Velas', s: 'Más de 40 años construyendo patrimonio en México.'}
+      {ic: 'shield', t: 'Respaldo Grupo Velas', s: 'Más de 45 años construyendo patrimonio en México.'}
     ],
     protos: [{name: 'Departamento Florencia', type: 'Departamento', m2: 72, rec: 2, feats: ['2 habitaciones', '72 m² de construcción', '36 departamentos en 8 edificios','Canchas deportivas y áreas verdes*']}],
     places: [
@@ -490,7 +490,7 @@ module.exports = [
       {ic: 'waves', t: 'Vista a la laguna', s: 'Confort y naturaleza en Altamira.'},
       {ic: 'leaf', t: 'Áreas verdes', s: 'Amplios espacios de esparcimiento.'},
       {ic: 'pin', t: 'Cerca de servicios', s: 'Soriana, Arteli, IMSS y Plaza Arenas.'},
-      {ic: 'shield', t: 'Respaldo Grupo Velas', s: 'Más de 40 años construyendo patrimonio en México.'}
+      {ic: 'shield', t: 'Respaldo Grupo Velas', s: 'Más de 45 años construyendo patrimonio en México.'}
     ],
     amenities: [
       {t: 'Amplios espacios de esparcimiento', s: 'Lugares para relajarte, disfrutar tu tiempo libre o pasarla bien con familia y amigos.'},
