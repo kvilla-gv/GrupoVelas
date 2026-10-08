@@ -4,8 +4,8 @@ Generado por `tools/generar-desarrollos.js` a partir de `img/manifest.json` (ori
 No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manifest.json`
 (aparte de los datos crudos de `tools/data/grupovelas.json`, que no se tocan).
 
-- 324 imágenes locales, 230 con miniatura de 800 px (`-800.webp`, solo en galerías y recortes de Selvanova).
-- Peso: 334,289 KB antes → 38,434 KB después, más 10,071 KB de miniaturas.
+- 352 imágenes locales, 230 con miniatura de 800 px (`-800.webp`, solo en galerías y recortes de Selvanova).
+- Peso: 335,497 KB antes → 38,957 KB después, más 10,071 KB de miniaturas.
 - WebP de máx. 1920 px de ancho y ≤400 KB; los SVG se copian tal cual.
 
 ## Imágenes
@@ -34,6 +34,34 @@ No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manif
 | `img/home/hero-residencial-plus.webp` | residencial_plus.png | 2,935 KB | 324 KB | — |
 | `img/home/hero-residencial.webp` | residencial.jpg | 3,712 KB | 210 KB | — |
 | `img/home/unsplash-1600585154340.webp` | https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=70&auto=format&fit=crop | 101 KB | 91 KB | — |
+| `img/logos/arecas-altamira.webp` | Whats_Arecas.png | 50 KB | 15 KB | — |
+| `img/logos/ballesta.webp` | Ballesta_blanco.png | 37 KB | 16 KB | — |
+| `img/logos/cima-penaflor.webp` | Whats_Cima.png | 38 KB | 11 KB | — |
+| `img/logos/conjunto-cardenas-807.webp` | Logo Cardenas 807_Blanco.png | 62 KB | 20 KB | — |
+| `img/logos/conjunto-roma-401.webp` | Whatsapp_ROMA 401.png | 26 KB | 6 KB | — |
+| `img/logos/coto-baltico.webp` | LOGO COTO BÁLTICO-09 (1).png | 7 KB | 3 KB | — |
+| `img/logos/coto-jade.webp` | Whats_CotoJade.png | 33 KB | 10 KB | — |
+| `img/logos/florencia.webp` | Whats_Florencia.png | 27 KB | 8 KB | — |
+| `img/logos/fraccionamiento-arecas.webp` | Whats_Arecas_Matamoros.png | 47 KB | 19 KB | — |
+| `img/logos/fraccionamiento-loma-bonita.webp` | Lomabonita_tampico (1).png | 79 KB | 116 KB | — |
+| `img/logos/lavanda-ii.webp` | Whats_Lavanda.png | 19 KB | 5 KB | — |
+| `img/logos/loma-bonita-reynosa.webp` | Whats_LomaBonita_Reynosa.png | 36 KB | 10 KB | — |
+| `img/logos/los-encinos.webp` | Whats_LosEncinos.png | 34 KB | 9 KB | — |
+| `img/logos/manila.webp` | Copia de __Logo Horizontal Manila Blanco.png | 21 KB | 9 KB | — |
+| `img/logos/paseos-de-floresta.webp` | Whats_PaseosFloresta.png | 28 KB | 7 KB | — |
+| `img/logos/punta-vela.webp` | Whats_PuntaVela.png | 23 KB | 5 KB | — |
+| `img/logos/selvanova.webp` | Selvanova_Whats.png | 51 KB | 13 KB | — |
+| `img/logos/sorrento-velamar.webp` | sorrento logo.png | 94 KB | 33 KB | — |
+| `img/logos/torre-829.webp` | 829_H.png | 7 KB | 3 KB | — |
+| `img/logos/torre-milos.webp` | Whats_Milos.png | 22 KB | 5 KB | — |
+| `img/logos/townhouses-velamar-ii.webp` | Whats_Townhouses.png | 22 KB | 5 KB | — |
+| `img/logos/valencia.webp` | Valencia-Logo.png | 241 KB | 49 KB | — |
+| `img/logos/vela-towers-cancun.webp` | VelaTowers_Whats.png | 31 KB | 8 KB | — |
+| `img/logos/velasur.webp` | logo Velasur PNG.png | 73 KB | 76 KB | — |
+| `img/logos/vista-laguna.webp` | Whatsapp_VistaLaguna.png | 28 KB | 8 KB | — |
+| `img/logos/vistavela-iii.webp` | Whats_VistaVela.png | 16 KB | 4 KB | — |
+| `img/logos/vistavela-sunset.webp` | Whats_VistaVelaSunset.png | 19 KB | 5 KB | — |
+| `img/logos/zafiro-residencial.webp` | Copia de 01_logotipo_zafiro_horizontal_color_contorno.png | 38 KB | 44 KB | — |
 | `img/premium/manila/manila.webp` | img/categorias/residencial_plus/manila.png | 13,517 KB | 399 KB | — |
 | `img/premium/sorrento-velamar/sorrento.webp` | img/categorias/residencial_plus/sorrento.jpg | 589 KB | 82 KB | — |
 | `img/premium/torre-milos/01-sala-comedor.webp` | https://laescondida.grupovelas.com/wp-content/uploads/2025/04/01-SALA-COMEDOR-scaled.jpg | 668 KB | 193 KB | 38 KB |

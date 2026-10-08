@@ -60,6 +60,15 @@ const absoluta = s => { const u = url(s); return /^https?:/.test(u) ? u : `${SIT
 const telHref = t => 'tel:+52' + String(t).replace(/\D/g, '');
 const num = s => { const m = String(s ?? '').replace(/,/g, '').match(/[\d.]+/); return m ? +m[0] : 0; };
 const js = o => JSON.stringify(o, null, 1).replace(/<\//g, '<\\/');
+/* Logo del desarrollo: img/logos/<slug>.webp si está en img/manifest.json (con ancho y alto). Ancho en px
+   para que todos ocupen un área parecida (un logo cuadrado no se ve enorme ni uno alargado diminuto);
+   máx. 130 px de alto y 360 de ancho */
+const logoDe = slug => {
+  const e = MANIFEST.find(x => x.ruta === `img/logos/${slug}.webp` && x.estado === 'ok');
+  if (!e) return null;
+  const ratio = e.ancho / e.alto;
+  return {src: e.ruta, w: e.ancho, h: e.alto, css: Math.round(Math.min(Math.sqrt(22000 * ratio), 130 * ratio, 360))};
+};
 const firstSentences = (s, max = 260) => {
   s = String(s || '').replace(/\s+/g, ' ').trim(); if (s.length <= max) return s;
   const cut = s.slice(0, max), i = Math.max(cut.lastIndexOf('. '), cut.lastIndexOf('.'));
@@ -267,8 +276,14 @@ function build(d){
         ${protos.length ? `<a href="#prototipos" class="btn${d.categoria === 'alta' ? ' glass' : '" style="--bg:#fff;--fg:var(--navy)'}">${d.categoria === 'entrada' ? 'Conoce tu casa' : 'Ver prototipos'} <span class="arr">→</span></a>` : ''}
         <a href="#contacto" class="btn${d.categoria === 'alta' ? '" style="--bg:#fff;--fg:var(--navy)' : protos.length ? ' glass' : '" style="--bg:#fff;--fg:var(--navy)'}" data-unit="Información general">${sold ? 'Ver opciones disponibles' : 'Solicitar información'}${protos.length ? '' : ' <span class="arr">→</span>'}</a>
       </div>`;
+  /* El logo va junto al eyebrow en un mismo bloque para no alterar el orden de .fade-seq */
+  const logo = logoDe(d.slug);
+  const eyebrow = `<span class="eyebrow is-in">${txt(d.eyebrow || `${C.name} · ${where}`)}</span>`;
   const heroInner = `<div class="hero-inner fade-seq">
-      <span class="eyebrow is-in">${txt(d.eyebrow || `${C.name} · ${where}`)}</span>
+      ${logo ? `<div class="hero-brand">
+        <img class="hero-logo" src="${esc(url(logo.src))}" alt="Logo de ${esc(d.name)}" width="${logo.w}" height="${logo.h}" style="--w:${logo.css}px">
+        ${eyebrow}
+      </div>` : eyebrow}
       <h1><span class="line"><span>${txt(h1[0])}</span></span><span class="line"><span>${txt(h1[1])}</span></span></h1>
       <p class="sub">${txt(welcome)}</p>
       ${chips.length ? `<div class="chips">\n        ${chips.join('\n        ')}\n      </div>` : '<div class="chips"></div>'}

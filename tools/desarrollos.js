@@ -33,6 +33,7 @@
      images      fotos propias (van antes que las de grupovelas.com.mx): 'url' o {src, cat, cap}
      youtube | video | tour   video de YouTube (ID), video de Drive (URL) o tour 360°
      address, lat, lon, mapsQuery, tel, mail, whatsapp, credits, faq[[p, r]]
+   Logo: img/logos/<slug>.webp si existe (va en el hero, pintado en blanco); sin archivo no se muestra.
    Datos sin confirmar se dejan vacíos: la sección correspondiente se omite.
    ===================================================================== */
 
