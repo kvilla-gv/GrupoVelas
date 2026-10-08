@@ -480,6 +480,7 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 .ok path{stroke-dasharray:50;stroke-dashoffset:50;transition:stroke-dashoffset .6s var(--ease-out) .9s}
 .form.sent .ok circle,.form.sent .ok path{stroke-dashoffset:0}
 .ok h3{margin-top:16px;font-size:22px}
+.form .ok .btn{width:auto;margin-top:20px;padding:14px 26px}
 .ok p{color:var(--muted);font-size:14px;margin-top:6px;opacity:1}
 
 
@@ -716,6 +717,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
 .places li.np{grid-template-columns:28px 1fr}
 .loc .more-txt{color:var(--muted);font-size:14px;margin:-10px 0 22px;max-width:58ch}
 .hero-note{font-size:11px;opacity:.7;margin-top:14px}
+.form .ok .btn{width:auto;margin-top:20px;padding:14px 26px}
 /* Más de 3 prototipos: si no caben en una fila, van en filas de 3 sin indicador deslizante (como .tabs.four de residencial-plus) */
 @media (max-width:1180px){
   .tabs.many{grid-template-columns:repeat(3,1fr)!important;width:100%;gap:4px}
@@ -827,7 +829,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
         </div>
         <div class="acts">
           <a href="#contacto" class="btn" id="pCta" data-unit="Casa Arezzo">Solicitar información <span class="arr">→</span></a>
-          <a href="../../brochures/ballesta.pdf" class="btn ghost" target="_blank" rel="noopener">Descargar brochure</a>
+          <a href="#contacto" class="btn ghost" data-unit="Brochure">Descargar brochure</a>
         </div>
         <p class="proto-note">Imágenes ilustrativas. Medidas aproximadas; precios y disponibilidad sujetos a cambio.</p>
       </div>
@@ -939,7 +941,7 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
         <div class="fld"><input id="fe" name="email" type="email" placeholder=" " autocomplete="email"><label for="fe">Correo electrónico</label></div>
       </div>
       <div class="two">
-        <div class="fld"><select id="fu" name="interes"><option>Cualquier prototipo</option><option>Casa Arezzo</option><option>Casa Sorrento</option><option>Precios y disponibilidad</option><option>Planes de pago</option><option>Visita al desarrollo</option></select><label for="fu">Me interesa</label></div>
+        <div class="fld"><select id="fu" name="interes"><option>Cualquier prototipo</option><option>Casa Arezzo</option><option>Casa Sorrento</option><option>Precios y disponibilidad</option><option>Planes de pago</option><option>Visita al desarrollo</option><option>Brochure</option></select><label for="fu">Me interesa</label></div>
         <div class="fld"><select id="fo" name="objetivo"><option>Para vivir</option><option>Para invertir</option><option>Ambos</option></select><label for="fo">Lo quiero</label></div>
       </div>
       <input type="hidden" name="desarrollo" value="Ballesta"><input type="hidden" name="categoria" value="Residencial Plus"><input type="hidden" name="plaza" value="Querétaro">
@@ -953,7 +955,8 @@ header.top.scrolled .logo img{filter:brightness(0) opacity(.85)}
       <div class="ok">
         <svg viewBox="0 0 70 70" fill="none" stroke="#0f2340" stroke-width="2.5"><circle cx="35" cy="35" r="30"/><path d="m22 36 9 9 17-19" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <h3>¡Gracias!</h3>
-        <p>Recibimos tus datos. Un asesor de Ballesta te contactará muy pronto.</p>
+        <p>Recibimos tus datos. Ya puedes descargar el brochure; un asesor de Ballesta te contactará muy pronto.</p>
+        <a class="btn" href="../../brochures/ballesta.pdf" target="_blank" rel="noopener">Descargar brochure <span class="arr">↓</span></a>
       </div>
     </form>
   </div>
