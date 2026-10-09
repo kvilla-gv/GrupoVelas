@@ -267,26 +267,6 @@ module.exports = [
     ]
   },
   {
-    /* Fuente: brochure "Privada Lavanda" (brochures/). El brochure web (grupovelas.com.mx/images/brochure.pdf,
-       "Nueva Lavanda") difiere: Sevilla a $1,380,000 con 1 cajón, y un modelo Palma en lugar de Bali. */
-    slug: 'lavanda-ii', name: 'Lavanda II', categoria: 'media', plaza: 'Matamoros',
-    feat: 'Casas de dos y tres recámaras dentro del Fraccionamiento Arecas.',
-    type: 'Casas', rec: '2 – 3 rec.', m2: '80.34 – 87.10 m²', from: '$1,302,000 MXN', price: 1302000,
-    sub: 'Casas con dos y tres recámaras ubicadas dentro del Fraccionamiento Arecas, a 3 minutos de Sendero Nacional.',
-    protos: [
-      {name: 'Sevilla', type: 'Casa', m2: 80.34, rec: 2, ban: '1½', price: '$1,302,000', plan: 'img/residencial-plus/lavanda-ii/planta-sevilla.webp',
-        feats: ['2 recámaras con clóset', '1½ baños', '2 cajones de estacionamiento', 'Planta baja: sala, comedor, cocina, ½ baño y lavandería', 'Planta alta: 2 recámaras y baño completo', 'Terreno de 112 m²', 'Desde $1,302,000 MXN']},
-      {name: 'Bali', type: 'Casa', m2: 87.10, rec: 2, ban: 2, price: '$1,409,000', plan: 'img/residencial-plus/lavanda-ii/planta-bali.webp',
-        feats: ['2 recámaras con clóset', '1 alcoba en planta baja', '2 baños completos', '2 cajones de estacionamiento', 'Sala, comedor, cocina y lavandería', 'Terreno de 112 m²', 'Desde $1,409,000 MXN']}
-    ],
-    protoLead: 'Dos modelos de casa en dos plantas, en terrenos de 112 m².',
-    protoNote: 'Precios del brochure de Privada Lavanda, sujetos a cambio y disponibilidad. Imágenes ilustrativas.',
-    amenities: ['Parques', 'Senderos', 'Áreas sociales', 'Áreas verdes', 'Alberca', 'Área de juegos', 'Asador'],
-    address: 'Lib. Emilio Portes Gil km 3, C.P. 87413, H. Matamoros, Tamps.',
-    nearby: ['Dentro del Fraccionamiento Arecas', 'A 3 minutos de Sendero Nacional'],
-    images: ['img/residencial-plus/lavanda-ii/lavanda.webp']
-  },
-  {
     /* Fuente: aryve.com.mx/fraccionamientos/detalle/paseos-floresta (y prototipos Mallorca y Colibrí).
        Ahí no aparece la cifra de 114.49 m² del inventario del home: se muestran las superficies por prototipo. */
     slug: 'paseos-de-floresta', name: 'Paseos de Floresta', categoria: 'media', plaza: 'Tampico', zona: 'Altamira',
@@ -504,6 +484,26 @@ module.exports = [
     slug: 'fraccionamiento-arecas', name: 'Fraccionamiento Arecas', categoria: 'entrada', plaza: 'Matamoros', plantilla: true,
     type: 'Casas', rec: '2 rec.', m2: '46.92 m²', from: '$770,000', price: 770000,
     img: 'img/residencial/fraccionamiento-arecas/fraccionamiento-arecas-matamoros-1b434b6261.webp', feat: 'Estrena casa con tu crédito Infonavit, entregada equipada y con escuela dentro del fraccionamiento.'
+  },
+  {
+    /* Fuente: brochure "Privada Lavanda" (brochures/). El brochure web (grupovelas.com.mx/images/brochure.pdf,
+       "Nueva Lavanda") difiere: Sevilla a $1,380,000 con 1 cajón, y un modelo Palma en lugar de Bali. */
+    slug: 'lavanda-ii', name: 'Lavanda II', categoria: 'entrada', plaza: 'Matamoros',
+    feat: 'Casas de dos y tres recámaras dentro del Fraccionamiento Arecas.',
+    type: 'Casas', rec: '2 – 3 rec.', m2: '80.34 – 87.10 m²', from: '$1,302,000 MXN', price: 1302000,
+    sub: 'Casas con dos y tres recámaras ubicadas dentro del Fraccionamiento Arecas, a 3 minutos de Sendero Nacional.',
+    protos: [
+      {name: 'Sevilla', type: 'Casa', m2: 80.34, rec: 2, ban: '1½', price: '$1,302,000', plan: 'img/residencial/lavanda-ii/planta-sevilla.webp',
+        feats: ['2 recámaras con clóset', '1½ baños', '2 cajones de estacionamiento', 'Planta baja: sala, comedor, cocina, ½ baño y lavandería', 'Planta alta: 2 recámaras y baño completo', 'Terreno de 112 m²', 'Desde $1,302,000 MXN']},
+      {name: 'Bali', type: 'Casa', m2: 87.10, rec: 2, ban: 2, price: '$1,409,000', plan: 'img/residencial/lavanda-ii/planta-bali.webp',
+        feats: ['2 recámaras con clóset', '1 alcoba en planta baja', '2 baños completos', '2 cajones de estacionamiento', 'Sala, comedor, cocina y lavandería', 'Terreno de 112 m²', 'Desde $1,409,000 MXN']}
+    ],
+    protoLead: 'Dos modelos de casa en dos plantas, en terrenos de 112 m².',
+    protoNote: 'Precios del brochure de Privada Lavanda, sujetos a cambio y disponibilidad. Imágenes ilustrativas.',
+    amenities: ['Parques', 'Senderos', 'Áreas sociales', 'Áreas verdes', 'Alberca', 'Área de juegos', 'Asador'],
+    address: 'Lib. Emilio Portes Gil km 3, C.P. 87413, H. Matamoros, Tamps.',
+    nearby: ['Dentro del Fraccionamiento Arecas', 'A 3 minutos de Sendero Nacional'],
+    images: ['img/residencial/lavanda-ii/lavanda.webp']
   },
   {
     slug: 'florencia', name: 'Florencia Residencial', categoria: 'entrada', plaza: 'Reynosa', gv: 'florencia-residencial',

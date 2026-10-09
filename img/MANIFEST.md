@@ -181,9 +181,6 @@ No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manif
 | `img/residencial-plus/fraccionamiento-loma-bonita/slider-02-4-3a8e16858d.webp` | https://backend.grupovelas.com/uploads/Slider_02_4_3a8e16858d.webp | 146 KB | 105 KB | 26 KB |
 | `img/residencial-plus/fraccionamiento-loma-bonita/slider-03-2-b28f49fefb.webp` | https://backend.grupovelas.com/uploads/Slider_03_2_b28f49fefb.webp | 167 KB | 131 KB | 33 KB |
 | `img/residencial-plus/fraccionamiento-loma-bonita/slider-04-2-1-11zon-a61f44b223.webp` | https://backend.grupovelas.com/uploads/Slider_04_2_1_11zon_a61f44b223.webp | 384 KB | 275 KB | 37 KB |
-| `img/residencial-plus/lavanda-ii/lavanda.webp` | img/categorias/residencial/lavanda.jpg | 758 KB | 84 KB | — |
-| `img/residencial-plus/lavanda-ii/planta-bali.webp` | brochures/lavanda-ii.pdf (p. 6) | 2,512 KB | 94 KB | — |
-| `img/residencial-plus/lavanda-ii/planta-sevilla.webp` | brochures/lavanda-ii.pdf (p. 5) | 2,512 KB | 109 KB | — |
 | `img/residencial-plus/loma-bonita-reynosa/20a69446-a4c4-4677-9d20-883b914d6086-8aa9b1c8cf.webp` | https://backend.grupovelas.com/uploads/20a69446_a4c4_4677_9d20_883b914d6086_8aa9b1c8cf.jpg | 156 KB | 116 KB | — |
 | `img/residencial-plus/loma-bonita-reynosa/20a69446-a4c4-4677-9d20-883b914d6086-bcf0a5ed2a.webp` | https://backend.grupovelas.com/uploads/20a69446_a4c4_4677_9d20_883b914d6086_bcf0a5ed2a.jpg | 156 KB | 116 KB | 88 KB |
 | `img/residencial-plus/loma-bonita-reynosa/307126428-776700536775528-2071051306545178009-n-e47e3f7c54.webp` | https://backend.grupovelas.com/uploads/307126428_776700536775528_2071051306545178009_n_e47e3f7c54.jpg | 83 KB | 57 KB | 39 KB |
@@ -361,6 +358,9 @@ No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manif
 | `img/residencial/fraccionamiento-arecas/slider-01-15-641244cf39.webp` | https://backend.grupovelas.com/uploads/Slider_01_15_641244cf39.webp | 75 KB | 55 KB | 15 KB |
 | `img/residencial/fraccionamiento-arecas/slider-03-15-84c19a6e8e.webp` | https://backend.grupovelas.com/uploads/Slider_03_15_84c19a6e8e.webp | 128 KB | 96 KB | 27 KB |
 | `img/residencial/fraccionamiento-arecas/slider-04-16-d07e05c2a6.webp` | https://backend.grupovelas.com/uploads/Slider_04_16_d07e05c2a6.webp | 61 KB | 47 KB | 15 KB |
+| `img/residencial/lavanda-ii/lavanda.webp` | img/categorias/residencial/lavanda.jpg | 758 KB | 84 KB | — |
+| `img/residencial/lavanda-ii/planta-bali.webp` | brochures/lavanda-ii.pdf (p. 6) | 2,512 KB | 94 KB | — |
+| `img/residencial/lavanda-ii/planta-sevilla.webp` | brochures/lavanda-ii.pdf (p. 5) | 2,512 KB | 109 KB | — |
 | `img/residencial/valencia/valencia.webp` | img/categorias/primera_vivienda/valencia.jpeg | 265 KB | 130 KB | — |
 | `img/residencial/vista-laguna/bali-2-1.webp` | brochures/vista-laguna.pdf (p. 9) | 2,921 KB | 117 KB | — |
 | `img/residencial/vista-laguna/bali-2-2.webp` | brochures/vista-laguna.pdf (p. 9) | 2,921 KB | 124 KB | — |

@@ -1789,30 +1789,6 @@
   }
  },
  {
-  "ruta": "img/residencial-plus/lavanda-ii/lavanda.webp",
-  "origen": "img/categorias/residencial/lavanda.jpg",
-  "estado": "ok",
-  "antes": 776191,
-  "despues": 86226,
-  "ancho": 1193
- },
- {
-  "ruta": "img/residencial-plus/lavanda-ii/planta-bali.webp",
-  "origen": "brochures/lavanda-ii.pdf (p. 6)",
-  "estado": "ok",
-  "antes": 2572489,
-  "despues": 96324,
-  "ancho": 1920
- },
- {
-  "ruta": "img/residencial-plus/lavanda-ii/planta-sevilla.webp",
-  "origen": "brochures/lavanda-ii.pdf (p. 5)",
-  "estado": "ok",
-  "antes": 2572489,
-  "despues": 111826,
-  "ancho": 1920
- },
- {
   "ruta": "img/residencial-plus/loma-bonita-reynosa/20a69446-a4c4-4677-9d20-883b914d6086-8aa9b1c8cf.webp",
   "origen": "https://backend.grupovelas.com/uploads/20a69446_a4c4_4677_9d20_883b914d6086_8aa9b1c8cf.jpg",
   "estado": "ok",
@@ -3780,6 +3756,30 @@
    "ruta": "img/residencial/fraccionamiento-arecas/slider-04-16-d07e05c2a6-800.webp",
    "peso": 15202
   }
+ },
+ {
+  "ruta": "img/residencial/lavanda-ii/lavanda.webp",
+  "origen": "img/categorias/residencial/lavanda.jpg",
+  "estado": "ok",
+  "antes": 776191,
+  "despues": 86226,
+  "ancho": 1193
+ },
+ {
+  "ruta": "img/residencial/lavanda-ii/planta-bali.webp",
+  "origen": "brochures/lavanda-ii.pdf (p. 6)",
+  "estado": "ok",
+  "antes": 2572489,
+  "despues": 96324,
+  "ancho": 1920
+ },
+ {
+  "ruta": "img/residencial/lavanda-ii/planta-sevilla.webp",
+  "origen": "brochures/lavanda-ii.pdf (p. 5)",
+  "estado": "ok",
+  "antes": 2572489,
+  "despues": 111826,
+  "ancho": 1920
  },
  {
   "ruta": "img/residencial/valencia/valencia.webp",

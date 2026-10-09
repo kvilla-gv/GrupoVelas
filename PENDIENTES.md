@@ -10,7 +10,7 @@
   anterior decía otro valor. Fraccionamiento Loma Bonita: 4 (home: 3). Arecas (Altamira): 3
   (home: 2). Vista Laguna: 3 (home: 2).
 - **Precios "Desde" por categoría.** Los calculados difieren de los que tenía el home:
-  Residencial Plus $1.5 → $1.3 MDP (Lavanda II, brochure) y Premium $4.5 → $7.2 MDP. Confirmar con marketing.
+  Residencial Plus $1.5 → $2.38 MDP y Premium $4.5 → $7.2 MDP. Confirmar con marketing.
   (Residencial bajó de $790,000 MXN a $770,000.)
 
 ## Para otro paso
