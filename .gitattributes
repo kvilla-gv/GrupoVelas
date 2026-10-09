@@ -1,0 +1,15 @@
+# Saltos de línea LF en todo el proyecto: el generador escribe LF y tools/verificar.js
+# compara las páginas byte a byte, así que la copia local debe quedar igual en Windows.
+* text=auto eol=lf
+
+# Binarios (se guardan byte por byte: img/manifest.json registra su peso exacto)
+*.pdf binary
+*.webp binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.svg binary
