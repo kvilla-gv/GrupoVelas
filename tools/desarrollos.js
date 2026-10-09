@@ -26,7 +26,11 @@
      sub         párrafo del hero (si falta, se toma de grupovelas.com.mx)
      stats       hasta 4 cifras del hero: {n, l} o {t, l}
      perks       4 ventajas: {ic, t, s}; ic = shield|pin|home|leaf|star|chart|waves|building|people|key
-     protos      prototipos: {name, type, m2, rec, ban, park, lot, feats[], plan, img, photos[]}
+     protos      prototipos: {name, type, m2, rec, ban, park, lot, feats[], plan, img, photos[], precio, consultar, promo}
+                 precio: texto que se muestra como "Desde …"; consultar: true si el precio no se publica
+                 (el botón dice "Consulta precio con un asesor"); promo: promoción del prototipo
+     promo       promoción del desarrollo: {t, nota}; va en el hero con "*Aplican restricciones."
+     tel2        segundo teléfono (línea del desarrollo); tel sustituye al de la plaza
      amenities   sustituye las de grupovelas.com.mx: ['Alberca', {t, s, img}]
      places      cercanías: {n, m (minutos), d, short}; con 3 o más minutos se dibuja el radar
      nearby      cercanías sin minutos (texto)
@@ -111,15 +115,30 @@ module.exports = [
     nearby: ['Playa El Médano, a 13 minutos en coche', 'Centros comerciales: Puerto Paraíso Mall y Plaza San Lucas', 'Supermercados: Fresko, Costco y Walmart', 'Hospitales: H+ Hospital Los Cabos y BlueNet Hospitals', 'Acceso fácil a la carretera Transpeninsular']
   },
   {
+    /* Datos de prototipos, precios, promociones, amenidades y contacto: lista de Grupo Velas Tampico (oct. 2026) */
     slug: 'manila', name: 'Manila', categoria: 'alta', plaza: 'Tampico',
+    feat: '10 lotes habitacionales, 33 departamentos y 2 áreas comerciales en la Col. Arenal.',
+    status: 'Preventa', type: 'Casas y departamentos', rec: '3 rec.', units: '10 lotes habitacionales y 33 departamentos',
+    sub: 'Manila Residencial en la Col. Arenal, Tampico: 10 lotes habitacionales, 33 departamentos en 3 niveles y 2 áreas comerciales.',
+    stats: [{n: 10, l: 'lotes habitacionales'}, {n: 33, l: 'departamentos'}, {n: 3, l: 'niveles'}, {n: 2, l: 'áreas comerciales'}],
+    protos: [
+      {name: 'Casa Colibrí', type: 'Casa', rec: 3, ban: '3.5', consultar: true,
+        feats: ['3 recámaras', '3.5 baños', 'Terraza', 'Cocina integral', 'Sala', 'Comedor', 'Cochera techada', 'Equipada con clósets y vanitys', '10 lotes']},
+      {name: 'Departamentos Privada C', type: 'Departamento', rec: 3, ban: 2, consultar: true,
+        feats: ['3 recámaras', '2 baños completos', 'Cocina', 'Terraza', 'Sala', 'Comedor', 'Cuarto de lavado', '2 cajones de estacionamiento', 'Elevador', 'Estacionamiento de visitas', '33 departamentos']}
+    ],
+    amenities: ['Áreas comunes', 'Juegos infantiles'],
+    address: 'Av. Rivera de Champayán, Col. Arenal, Tampico, Tamps.',
+    tel2: '833 160 7493',
     images: ['img/premium/manila/manila.webp']
   },
   {
-    /* Fuentes: laescondida.grupovelas.com/milos y grupovelas.com.mx/desarrollo/torre-milos */
+    /* Fuentes: laescondida.grupovelas.com/milos y grupovelas.com.mx/desarrollo/torre-milos.
+       Prototipos, precio, amenidades y contacto: lista de Grupo Velas Tampico (oct. 2026) */
     slug: 'torre-milos', name: 'Torre Milos', categoria: 'alta', plaza: 'Tampico', zona: 'Altamira', gv: 'torre-milos',
     img: 'img/premium/torre-milos/guest-reviews-54544c819e.webp', feat: 'Departamentos con vista al Golfo de México y acceso directo a la playa.',
     status: 'Preventa', type: 'Departamentos', rec: '2 – 3 rec.', m2: 'hasta 231 m²', units: '71 departamentos',
-    from: '$7.2 MDP', price: 7200000,
+    from: '$7,300,000 MXN', price: 7300000,
     h1: ['Torre Milos,', 'frente al <em>Golfo</em>'],
     eyebrow: 'Departamentos frente al mar · Altamira',
     sub: '16 niveles y un rooftop en La Escondida Velamar, el nuevo complejo exclusivo y de lujo con increíbles vistas al Golfo de México y acceso directo a la playa.',
@@ -130,17 +149,14 @@ module.exports = [
       {ic: 'star', t: 'Amenidades de resort', s: 'Alberca infinita, cancha de pádel, gimnasio y fire pits.'},
       {ic: 'pin', t: 'La Escondida Velamar', s: 'A 5 minutos de Residencial Velamar y 10 del Malecón Miramar.'}
     ],
-    protos: [{name: 'Departamento Milos', type: 'Departamento', m2: 231, cap: 'm² de construcción, como máximo', rec: '2 o 3',
-      feats: ['2 o 3 recámaras', 'Hasta 3½ baños', 'Cocina integral', 'Sala-comedor', 'Cuarto de lavado', 'Bodega', 'Terraza', 'Vista al mar*']}],
-    protoLead: 'Departamentos de 2 y 3 recámaras con terraza y vista al mar. Pide a un asesor la disponibilidad por nivel y vista.',
-    protoNote: 'Superficie máxima publicada por el desarrollo. Imágenes ilustrativas; precios y disponibilidad sujetos a cambio.',
-    amenities: [
-      {t: 'Traslado directo a la playa', s: 'Carrito de golf exclusivo con capacidad para hasta 10 pasajeros.'},
-      {t: 'Alberca infinita'}, {t: 'Rooftop'}, {t: 'Gimnasio', s: 'Mantente activo sin salir de casa.'}, {t: 'Cancha de pádel'},
-      {t: 'Área de asadores', s: 'Para parrilladas y eventos sociales al aire libre.'}, {t: 'Área de fire pits', s: 'Para noches acogedoras.'},
-      {t: 'Salón de eventos', s: 'Un espacio para tus celebraciones y reuniones.'}, {t: 'Salón multiusos'}, {t: 'Terraza'}, {t: 'Pérgola'},
-      {t: 'Área para niños'}, {t: 'Bodega por departamento'}
+    protos: [
+      {name: 'Departamento 2 recámaras', type: 'Departamento', rec: 2, ban: 2,
+        feats: ['2 recámaras', '2 baños', 'Cocina integral', 'Sala-comedor', 'Cuarto de lavado', 'Climatizado', 'Terraza', '2 cajones de estacionamiento']},
+      {name: 'Departamento 3 recámaras', type: 'Departamento', rec: 3, ban: '3.5',
+        feats: ['3 recámaras', '3.5 baños', 'Cocina integral', 'Sala-comedor', 'Cuarto de lavado', 'Climatizado', 'Terraza', '2 cajones de estacionamiento']}
     ],
+    protoLead: 'Departamentos de 2 y 3 recámaras, desde $7,300,000 MXN. Pide a un asesor la disponibilidad por nivel y vista.',
+    amenities: ['Acceso a playa', 'Alberca', 'Gimnasio', 'Pérgola', 'Área de asadores', 'Área de firepits', 'Estacionamiento', 'Bodega en cada departamento'],
     address: 'La Escondida Velamar, Corredor Urbano Luis Donaldo Colosio km 7.5, Residencial Velamar, 89604 Altamira, Tamps.',
     mapsQuery: 'La Escondida Velamar, Corredor Urbano Luis Donaldo Colosio km 7.5, 89604 Altamira, Tamaulipas',
     places: [
@@ -148,7 +164,7 @@ module.exports = [
       {n: 'Arteli Miramar', m: 9, d: '2.7 km'}, {n: 'Malecón Miramar', m: 10, d: '3.5 km'}
     ],
     nearby: ['Cafés y restaurantes: Velas 10'],
-    whatsapp: '528333430381', tel: '833 343 0381',
+    whatsapp: '528333430381', tel2: '833 208 9869',
     hero: ['img/premium/torre-milos/fachada.webp', 'img/premium/torre-milos/cam-3.webp', 'img/premium/torre-milos/cam-4.webp'],
     images: ['img/premium/torre-milos/fachada.webp', 'img/premium/torre-milos/cam-3.webp', 'img/premium/torre-milos/cam-4.webp', 'img/premium/torre-milos/cam-5.webp', 'img/premium/torre-milos/cam-6.webp', 'img/premium/torre-milos/01-sala-comedor.webp', 'img/premium/torre-milos/02-cocina.webp', 'img/premium/torre-milos/03-rec.webp', 'img/premium/torre-milos/sala-dt1.webp', 'img/premium/torre-milos/cocina-dt1.webp', 'img/premium/torre-milos/recamara-dt1.webp']
   },
@@ -156,7 +172,7 @@ module.exports = [
     /* Fuentes: laescondida.grupovelas.com/townhouses y grupovelas.com.mx/desarrollo/townhouses-velamar-ii */
     slug: 'townhouses-velamar-ii', logoText: 'Townhouses', name: 'Townhouses Velamar II', categoria: 'alta', plaza: 'Tampico', zona: 'Altamira', gv: 'townhouses-velamar-ii',
     img: 'img/premium/townhouses-velamar-ii/amenidades-5-bca9c12f0c.webp', feat: 'Casas frente al mar en La Escondida Velamar.',
-    type: 'Casas', rec: '3 rec.', m2: 'hasta 449.20 m²', units: '20 casas', from: '$18.3 MDP', price: 18300000,
+    status: 'Entrega inmediata', type: 'Casas', rec: '3 rec.', m2: 'hasta 449.20 m²', units: '20 casas', from: '$18,400,000 MXN', price: 18400000,
     h1: ['Vive en un', 'eterno <em>verano</em>'],
     eyebrow: 'Townhouses Velamar II · Altamira',
     sub: '20 exclusivos townhouses a orillas del mar en La Escondida Velamar: vistas panorámicas, acabados de lujo y un ambiente privado con acceso directo a la playa.',
@@ -169,10 +185,11 @@ module.exports = [
     ],
     protos: [
       {name: 'Prototipo A', type: 'Townhouse', rec: 3, feats: ['3 recámaras', '4½ baños', 'Alberca privada en jardín frente al mar*', 'Cocina y sala-comedor', 'Cuarto de lavado', 'Cuarto de servicio con baño', 'Estacionamiento']},
-      {name: 'Prototipo B', type: 'Townhouse', rec: 3, feats: ['3 recámaras', '4½ baños', 'Terraza con jacuzzi y vista al mar*', 'Cocina y sala-comedor', 'Cuarto de lavado', 'Cuarto de servicio con baño', 'Estacionamiento']}
+      {name: 'Prototipo B', type: 'Townhouse', rec: 3, precio: '$18,400,000 MXN',
+        feats: ['3 recámaras', '4 baños completos y 1 medio baño', 'Roof garden con jacuzzi, barra y medio baño*', 'Sala-comedor', 'Terraza', 'Cocina', 'Estacionamiento', 'Lavandería', 'Cuarto de servicio']}
     ],
     protoLead: 'Dos prototipos de 3 recámaras y 4½ baños, de hasta 449.20 m² de construcción. Pide a un asesor planos y disponibilidad.',
-    amenities: ['Acceso directo a la playa', 'Alberca', 'Cancha de pádel', 'Terrazas con vista al mar', 'Áreas verdes', 'Seguridad', {t: 'Pistas para razor o cuatrimoto'}, {t: 'Paddle board y yoga en la playa'}, 'Tienda de conveniencia'],
+    amenities: ['Frente a la playa', 'Acceso a la playa', 'Seguridad', 'Estacionamiento', 'Terraza', 'Áreas verdes', 'Descanso y comodidad'],
     amenLead: 'Vive e invierte en uno de los destinos turísticos más importantes de Tamaulipas.',
     address: 'La Escondida Velamar, Corredor Urbano Luis Donaldo Colosio km 7.5, Residencial Velamar, 89604 Altamira, Tamps.',
     mapsQuery: 'La Escondida Velamar, Corredor Urbano Luis Donaldo Colosio km 7.5, 89604 Altamira, Tamaulipas',
@@ -180,17 +197,26 @@ module.exports = [
       {n: 'Residencial Velamar', m: 5, d: '500 m'}, {n: 'Bancos', m: 7, d: '2.3 km'}, {n: 'Walmart Miramar', m: 7, d: '2.3 km'},
       {n: 'Arteli Miramar', m: 9, d: '2.7 km'}, {n: 'Malecón Miramar', m: 10, d: '3.5 km'}
     ],
-    whatsapp: '528333430381', tel: '833 343 0381',
+    whatsapp: '528333430381', tel2: '833 208 9869',
     hero: ['img/premium/townhouses-velamar-ii/slider-04-8-f29f882edf.webp', 'img/premium/townhouses-velamar-ii/slider-03-8-f8f8c909f8.webp', 'img/premium/townhouses-velamar-ii/slider-02-10-2b86ea17c7.webp'],
     images: ['img/premium/townhouses-velamar-ii/townhouses-01-1.webp', 'img/premium/townhouses-velamar-ii/townhouses-02-1.webp', 'img/premium/townhouses-velamar-ii/townhouses-03-1.webp', 'img/premium/townhouses-velamar-ii/townhouses-04-1.webp', 'img/premium/townhouses-velamar-ii/townhouses-05-1.webp', 'img/premium/townhouses-velamar-ii/townhouses-06-1.webp', 'img/premium/townhouses-velamar-ii/townhouses-07-1.webp'].concat('img/premium/townhouses-velamar-ii/image00054.webp')
   },
   {
-    /* La página oficial ya no existe; descripción y unidades del texto del desarrollador publicado por un broker (geahomes-bienesraices.com) */
+    /* Descripción y unidades: texto del desarrollador publicado por un broker (geahomes-bienesraices.com).
+       Prototipo, precio, promoción, generales y contacto: lista de Grupo Velas Tampico (oct. 2026) */
     slug: 'sorrento-velamar', name: 'Sorrento Velamar', categoria: 'alta', plaza: 'Tampico', zona: 'Altamira',
     feat: 'Torre frente al mar en Residencial Velamar.',
-    type: 'Departamentos', rec: '3 rec.', m2: '149.37 m²', units: '46 departamentos',
+    type: 'Departamentos', rec: '3 rec.', m2: '149.37 m²', units: '46 departamentos', from: '$9,000,000 MXN', price: 9000000,
+    promo: {t: 'Kit de electrodomésticos', nota: 'Vigencia: 31 de octubre de 2026.'},
     sub: 'Torre Sorrento en Residencial Velamar: 46 departamentos residenciales con una espectacular vista al mar.',
-    address: 'Fraccionamiento Residencial Velamar, Altamira, Tamaulipas',
+    stats: [{n: 7, l: 'niveles'}, {n: 46, l: 'departamentos'}, {n: 3, l: 'recámaras'}, {n: 3.5, l: 'baños'}],
+    protos: [
+      {name: 'Departamento 3 recámaras', type: 'Departamento', rec: 3, ban: '3.5', precio: '$9,000,000 MXN',
+        feats: ['3 recámaras', '3.5 baños', 'Cocina integral', 'Sala-comedor', 'Clóset y walk-in clóset', 'Terraza', 'Estacionamiento']}
+    ],
+    amenities: ['Acceso exclusivo a la playa', 'Áreas verdes', 'Seguridad', 'Descanso', 'Comodidad', 'Tranquilidad'],
+    address: 'Velamar, Corredor Urbano Luis Donaldo Colosio km 7.5, Altamira, Tamps.',
+    tel2: '833 208 9869',
     images: ['img/premium/sorrento-velamar/sorrento.webp']
   },
 
@@ -287,30 +313,32 @@ module.exports = [
     images: ['img/residencial-plus/lavanda-ii/lavanda.webp']
   },
   {
-    /* Fuente: aryve.com.mx/fraccionamientos/detalle/paseos-floresta (y prototipos Mallorca y Colibrí).
-       Ahí no aparece la cifra de 114.49 m² del inventario del home: se muestran las superficies por prototipo. */
+    /* Fuente: aryve.com.mx/fraccionamientos/detalle/paseos-floresta (prototipo Mallorca).
+       Disponibilidad, promoción, amenidades y contacto: lista de Construcciones Aryve Tampico (oct. 2026);
+       ahí Mallorca es la única disponible y se pide NO mencionar áreas verdes ni áreas de esparcimiento. */
     slug: 'paseos-de-floresta', name: 'Paseos de Floresta', categoria: 'media', plaza: 'Tampico', zona: 'Altamira',
     type: 'Casas', rec: '3 rec.',
     h1: ['Paseos de Floresta', 'en <em>Altamira</em>'],
-    sub: 'Fraccionamiento con arco de acceso, alberca, áreas verdes, banquetas en todas las calles y servicios de agua y luz subterráneos, a unas cuadras del IEST.',
-    stats: [{n: 2, l: 'prototipos'}, {n: 3, l: 'recámaras'}, {pre: 'hasta', n: 3.5, l: 'baños'}, {pre: 'hasta', n: 156.84, l: 'm² de construcción'}],
+    sub: 'Excelente ubicación en Calle Divisoria, Col. Tampico, Altamira, cerca del IEST.',
+    stats: [{n: 3, l: 'recámaras'}, {n: 2.5, l: 'baños'}, {n: 102.84, l: 'm² de construcción'}, {t: 'Lote 15', l: 'última casa Mallorca'}],
     perks: [
       {ic: 'shield', t: 'Acceso controlado', s: 'Arco de acceso y vigilancia.'},
-      {ic: 'leaf', t: 'Alberca y áreas verdes', s: 'Con banquetas en todas las calles y vialidades de concreto.'},
+      {ic: 'star', t: 'Banquetas y alumbrado', s: 'Cerca de plazas comerciales y bancos.'},
       {ic: 'home', t: 'Casas de 3 recámaras', s: 'En dos niveles, con cochera.'},
       {ic: 'pin', t: 'A unas cuadras del IEST', s: 'Entre Tampico y Altamira, a espaldas del Libramiento Poniente.'}
     ],
     protos: [
-      {name: 'Mallorca', type: 'Casa', m2: 102.84, rec: 3, ban: '2.5', img: 'img/residencial-plus/paseos-de-floresta/kslpfbm82wzaxmedc1ev.webp',
-        feats: ['3 recámaras', '2.5 baños', 'Dos niveles', 'Cochera para 1 vehículo', 'Piso cerámico y pintura']},
-      {name: 'Colibrí', type: 'Casa', m2: 156.84, rec: 3, ban: '3.5', img: 'img/residencial-plus/paseos-de-floresta/dbpzop8nj2ee4gyvtthc.webp',
-        feats: ['3 recámaras', '3.5 baños', 'Dos niveles', 'Cochera techada para 2 vehículos*', 'Piso cerámico y pintura']}
+      {name: 'Mallorca', type: 'Casa', m2: 102.84, rec: 3, ban: '2.5', consultar: true, img: 'img/residencial-plus/paseos-de-floresta/kslpfbm82wzaxmedc1ev.webp',
+        promo: 'Certificado de $100,000 – Última casa Mallorca, lote 15. Vigencia: 31 de octubre de 2026.',
+        feats: ['3 recámaras con clóset', '2.5 baños', 'Cocina', 'Sala-comedor', 'Estacionamiento', 'Jardín', 'Dos niveles', 'Piso cerámico y pintura']}
     ],
+    protoLead: 'Mallorca, casa de 3 recámaras: la única disponible.',
     protoNote: 'Fachadas publicadas por el desarrollo. Pide a un asesor planos, precios y disponibilidad.',
-    amenities: ['Arco de acceso', 'Alberca', 'Áreas verdes', 'Vigilancia y control de acceso', 'Banquetas en todas las calles', 'Vialidades de concreto', 'Alumbrado público', {t: 'Servicios subterráneos', s: 'Agua y luz subterráneas para comodidad de los residentes.'}],
+    amenities: ['Banquetas y alumbrado', 'Cercanía a plazas comerciales y bancos', 'Accesibilidad'],
     credits: 'Infonavit, Fovissste y créditos bancarios',
     tourLink: 'https://www.primeraraiz.com/intro/293',
-    address: 'Calle Divisoria Tampico–Altamira, a espaldas del Libramiento Poniente, Altamira, Tamps.',
+    address: 'Calle Divisoria, Col. Tampico, Altamira, Tamps. (cerca del IEST)',
+    tel2: '833 226 7694',
     lat: 22.323046725826, lon: -97.887652198384,
     nearby: ['IEST, a unas cuadras', 'Libramiento Poniente'],
     images: ['img/residencial-plus/paseos-de-floresta/paseos-de-floresta.webp',
@@ -327,7 +355,20 @@ module.exports = [
       'img/residencial-plus/paseos-de-floresta/nfprre7dw5q3b6sqjhln.webp']
   },
   {
-    slug: 'zafiro-residencial', name: 'Zafiro Residencial', categoria: 'media', plaza: 'Tampico',
+    /* Datos de prototipos, amenidades y contacto: lista de Construcciones Aryve Tampico (oct. 2026) */
+    slug: 'zafiro-residencial', name: 'Zafiro Residencial', categoria: 'media', plaza: 'Tampico', zona: 'Altamira',
+    feat: 'Seguridad y tranquilidad para los que más amas.',
+    status: 'Preventa', type: 'Casas', rec: '2 – 3 rec.',
+    sub: 'Seguridad y tranquilidad para los que más amas. Cerca de colegios privados y supermercados.',
+    protos: [
+      {name: 'Bali 3', type: 'Casa', rec: 3, ban: '2.5', consultar: true,
+        feats: ['3 recámaras', '2.5 baños', 'Sala-comedor', 'Cocina', 'Área de lavado', 'Estacionamiento']},
+      {name: 'Sevilla', type: 'Casa', rec: 2, ban: '1.5', consultar: true,
+        feats: ['2 recámaras', '1.5 baños', 'Sala-comedor', 'Cocina', 'Área de lavado', 'Estacionamiento']}
+    ],
+    amenities: ['Comodidad', 'Tranquilidad', 'Ubicación privilegiada'],
+    address: 'Fracc. Valle Esmeralda, Carretera a Puerto Industrial, Altamira, Tamps. (a espaldas del estadio Altamira)',
+    tel2: '833 688 6997',
     images: ['img/residencial-plus/zafiro-residencial/zafiro.webp']
   },
   {
@@ -409,9 +450,11 @@ module.exports = [
     images: ['img/residencial-plus/loma-del-jazmin/loma-del-jazmin.webp']
   },
   {
+    /* Datos de prototipos, precios, promociones, amenidades y contacto: lista de Grupo Velas Tampico (oct. 2026) */
     slug: 'fraccionamiento-loma-bonita', name: 'Fraccionamiento Loma Bonita', categoria: 'media', plaza: 'Tampico', gv: 'fraccionamiento-loma-bonita',
-    rec: '4 rec.', img: 'img/residencial-plus/fraccionamiento-loma-bonita/guest-reviews-1-38aa114f3e.webp', feat: 'Casas con estacionamiento y jardín en un entorno completamente bardeado.',
-    status: 'Vendido', type: 'Casas', m2: '248.89 m²',
+    rec: '3 rec.', img: 'img/residencial-plus/fraccionamiento-loma-bonita/guest-reviews-1-38aa114f3e.webp', feat: 'Casas con estacionamiento y jardín en un entorno completamente bardeado.',
+    type: 'Casas', m2: '248.89 m²',
+    promo: {t: 'Certificado de $100,000', nota: 'Vigencia: 31 de octubre de 2026. Quedan 3 casas.'},
     h1: ['Tu hogar a tu manera', 'en <em>Loma Bonita</em>'],
     sub: 'Casas diseñadas a tu gusto en un entorno seguro y completamente bardeado, con estacionamiento, jardín y acabados de calidad en Tampico.',
     stats: [{n: 248.89, l: 'm² de construcción'}, {n: 2, l: 'estacionamientos'}, {t: 'Jardín', l: 'en cada casa'}, {t: 'Bardeado', l: 'entorno seguro'}],
@@ -420,49 +463,56 @@ module.exports = [
       {ic: 'shield', t: 'Entorno seguro', s: 'Fraccionamiento completamente bardeado.'},
       {ic: 'pin', t: 'Tampico', s: 'Ubicación privilegiada con espacios de esparcimiento.'},
       {ic: 'people', t: 'Respaldo Grupo Velas', s: 'Más de 45 años construyendo patrimonio en México.'}
-    ]
+    ],
+    protos: [
+      {name: 'Casa – Proyecto a la medida', type: 'Casa', rec: 3, ban: '3.5', consultar: true,
+        feats: ['3 recámaras', '3.5 baños', 'Sala-comedor', 'Cocina', 'Recibidor', 'Jardín', 'Equipada con clósets, cocina integral y vanitys']}
+    ],
+    amenities: ['Caseta de vigilancia con control de acceso', 'Totalmente bardeado', 'Cableado subterráneo', 'Terrenos amplios', 'Ambiente relajado', 'Confort', 'Plusvalía', 'Proyectos hechos a tu medida'],
+    address: 'Av. Ignacio Morones Prieto, Col. Lomas de Rosales, Tampico, Tamps.',
+    tel2: '833 217 3952'
   },
   {
     /* Fuente: copia archivada (jun. 2025) de grupovelas.com.mx/desarrollo/velamar, titulada "Coto Báltico".
        Ahí el prototipo mide 153.96 – 170.38 m²; el inventario del home dice 178.62 m². */
     slug: 'coto-baltico', name: 'Coto Báltico', categoria: 'media', plaza: 'Tampico', zona: 'Altamira',
-    type: 'Casas', rec: '3 rec.',
+    type: 'Casas', rec: '3 rec.', from: '$5,476,000 MXN', price: 5476000,
+    promo: {t: 'Certificado de $50,000', nota: 'Vigencia: 31 de octubre de 2026.'},
     h1: ['Vive la playa', 'a tu <em>manera</em>'],
     eyebrow: 'Coto Báltico · Residencial Velamar',
     sub: 'Casas de 3 recámaras en Residencial Velamar, Altamira: el momento de vivir la playa a tu manera.',
     stats: [{n: 3, l: 'recámaras'}, {n: 2.5, l: 'baños'}, {n: 2, l: 'estacionamientos'}, {pre: 'hasta', n: 170.38, l: 'm² de construcción'}],
-    protos: [{name: 'Casas Velamar', type: 'Casa', m2: 153.96, cap: 'm² de construcción (hasta 170.38 m²)', rec: 3, ban: '2.5',
-      feats: ['3 recámaras', '2.5 baños', '2 estacionamientos', 'De 153.96 a 170.38 m² de construcción']}],
+    protos: [{name: 'Casa 3 recámaras', type: 'Casa', m2: 153.96, cap: 'm² de construcción (hasta 170.38 m²)', rec: 3, ban: '2.5', precio: '$5,476,000 MXN',
+      feats: ['3 recámaras', '2.5 baños', 'Sala-comedor', 'Cocina integral', 'Clósets incluidos', 'Cuarto de lavado', 'Terraza', 'Estacionamiento para 2 vehículos', 'De 153.96 a 170.38 m² de construcción']}],
+    amenities: ['Todas con acceso a la playa', 'Seguridad', 'Plusvalía', 'Tienda de conveniencia', 'Restaurante', 'Hangar', 'Áreas verdes', 'Área de RZRs'],
+    tel2: '833 208 9869',
     tourLink: 'https://primeraraiz.com/intro/138',
-    address: 'Residencial Velamar, Corredor Urbano Luis Donaldo Colosio, Altamira, Tamps.',
+    address: 'Residencial Velamar, Corredor Urbano Luis Donaldo Colosio km 7.5, Altamira, Tamps.',
     images: ['img/residencial-plus/coto-baltico/coto-baltico.webp']
   },
   {
     slug: 'los-encinos', name: 'Los Encinos Residencial', categoria: 'media', plaza: 'Tampico', zona: 'Altamira', gv: 'encinos-residencial',
     img: 'img/residencial-plus/los-encinos/guest-reviews-1080aac18c.webp', feat: 'Un hogar seguro y sostenible, con modelos variados y acabados modernos.',
-    type: 'Casas', rec: '3 rec.', m2: '163.52 m²',
+    status: 'Preventa', type: 'Casas', rec: '3 rec.', m2: '163.52 m²', from: '$4,204,000 MXN', price: 4204000,
     h1: ['Tu hogar en armonía', 'con la <em>naturaleza</em>'],
     eyebrow: 'Los Encinos Residencial · Altamira',
     sub: 'Un hogar seguro, sostenible y en conexión con la naturaleza, con modelos variados, acabados modernos y espacios diseñados para tu comodidad.',
     stats: [{n: 3, l: 'recámaras'}, {n: 2.5, l: 'baños'}, {n: 2500, l: 'litros de cisterna'}, {n: 24, suf: ' h', l: 'caseta de seguridad'}],
     perks: [
       {ic: 'shield', t: 'Seguridad 24 horas', s: 'Caseta de seguridad y acceso controlado.'},
-      {ic: 'leaf', t: 'Áreas verdes y senderos', s: 'Además de alberca y club deportivo.'},
+      {ic: 'leaf', t: 'Áreas verdes y senderos', s: 'Además de alberca y casa club.'},
       {ic: 'home', t: 'Casas de 3 recámaras', s: '2.5 baños y cisterna de 2,500 litros.'},
       {ic: 'pin', t: 'Bien conectado', s: 'A minutos de la carretera Tampico–Mante y 8 de Plaza Arenas.'}
     ],
-    amenities: [
-      {t: 'Áreas verdes', s: 'Jardines y senderos diseñados para relajarte y conectarte con la naturaleza.'},
-      {t: 'Club deportivo', s: 'Espacios equipados para entrenamiento y actividades en comunidad.'},
-      {t: 'Alberca', s: 'Piscina familiar ideal para el descanso y la diversión al aire libre.'},
-      {t: 'Salón de usos múltiples', s: 'Área flexible para eventos, reuniones y celebraciones.'}
-    ],
+    amenities: ['Control de acceso', 'Áreas verdes', 'Casa club', 'Alberca', '2 salones de usos múltiples', 'Seguridad', 'Tranquilidad', 'Plusvalía'],
     /* Modelos y baños: brochure de Los Encinos Residencial (brochures/); no trae m² por modelo */
     protos: [
       ['Encino Tipo A', 8], ['Encino Tipo B', 27], ['Encino Tipo C', 23], ['Encino Tipo D', 17], ['Turquesa E', 1]
     ].map(([name, lote]) => ({name, type: 'Casa', rec: 3, ban: '2.5',
       feats: ['3 recámaras', '2.5 baños', 'Sala-comedor', 'Cocina', 'Cuarto de lavado', 'Jardín', 'Estacionamiento', `Casa del lote ${lote}`]})),
-    protoLead: 'Cinco modelos de casa de 3 recámaras y 2.5 baños, con jardín y estacionamiento.',
+    protoLead: 'Cinco modelos de casa de 3 recámaras y 2.5 baños, con jardín y estacionamiento. Desde $4,204,000 hasta $6,424,000 MXN.',
+    address: 'Carretera Tampico–Mante km 17.5, a 500 m del Holiday Inn Altamira',
+    tel2: '833 100 0728',
     places: [{n: 'Plaza Arenas', m: 8}, {n: 'HEB', m: 20}, {n: 'Playa Miramar', m: 20}],
     placeAngles: [-120, 20, 140],
     nearby: ['A minutos de la carretera Tampico–Mante']
@@ -470,7 +520,7 @@ module.exports = [
   {
     slug: 'torre-829', logoText: 'Torre 829', name: 'Torre 829 Faja de Oro', categoria: 'media', plaza: 'Tampico', gv: 'torre-829',
     nombreCorto: 'Torre 829', img: 'img/residencial-plus/torre-829/guest-reviews-86078fd359.webp', feat: 'Departamentos con walk-in closet, cuarto de servicio con baño y amplia terraza.',
-    status: 'Preventa', type: 'Departamentos', rec: '3 rec.', m2: '220.86 m²',
+    status: 'Preventa', type: 'Departamentos', rec: '3 rec.', m2: '220.86 m²', from: '$6,650,000 MXN', price: 6650000,
     h1: ['Torre 829', 'en <em>Tampico</em>'],
     eyebrow: 'Departamentos en preventa · Tampico',
     sub: 'Tu oportunidad en preventa para vivir en Tampico con estilo y confort: departamentos de 3 recámaras con walk-in closet, cuarto de servicio con baño, amplia terraza y acabados de lujo.',
@@ -481,14 +531,25 @@ module.exports = [
       {ic: 'pin', t: 'Ubicación privilegiada', s: 'En Faja de Oro, Tampico.'},
       {ic: 'shield', t: 'Respaldo de calidad', s: 'Más de 45 años de Grupo Velas construyendo.'}
     ],
-    protos: [{name: 'Departamento tipo', type: 'Departamento', m2: 220.86, rec: 3,
-      feats: ['3 recámaras', 'Walk-in closet*', 'Cuarto de servicio con baño', 'Amplia terraza', 'Acabados de lujo', '2 elevadores en la torre']}]
+    protos: [{name: 'Departamento 3 recámaras', type: 'Departamento', m2: 220.86, rec: 3, ban: 3, precio: '$6,650,000 MXN',
+      feats: ['3 recámaras (walk-in clóset en la principal)', '3 baños completos', 'Cuarto de servicio con baño completo', 'Sala-comedor', 'Cocina', 'Área de lavado', 'Clósets', 'Terraza', 'Clima central']}],
+    amenities: ['Caseta de vigilancia', "Kids' Club", 'Roof top', 'Alberca en roof garden', 'Sky Bar', 'Gimnasio', 'Salón de usos múltiples', 'Área de asador', 'Simulador de golf', '2 elevadores'],
+    address: 'Av. Faja de Oro 829, Col. Lomas de Rosales, Tampico, Tamps.',
+    tel2: '833 140 6818'
   },
   {
+    /* Datos de prototipo, amenidades y contacto: lista de Construcciones Aryve Tampico (oct. 2026) */
     slug: 'conjunto-cardenas-807', logoText: 'Cárdenas 807', name: 'Conjunto Cárdenas 807', categoria: 'media', plaza: 'Tampico',
-    feat: 'Conjunto de 12 departamentos.',
-    type: 'Departamentos', rec: '3 rec.', m2: '79.68 m²', units: '12 departamentos',
-    sub: 'Conjunto de 12 departamentos de 3 recámaras en Tampico.',
+    feat: 'Torre de 4 niveles con elevador y 12 departamentos de 3 recámaras.',
+    status: 'Preventa', type: 'Departamentos', rec: '3 rec.', m2: '79.68 m²', units: '12 departamentos',
+    sub: 'A solo unas cuadras de la Av. Monterrey. ¡Conectividad, comodidad y plusvalía!',
+    stats: [{n: 4, l: 'niveles'}, {n: 12, l: 'departamentos'}, {n: 3, l: 'recámaras'}, {t: 'Elevador', l: 'en la torre'}],
+    protos: [
+      {name: 'Departamento 3 recámaras', type: 'Departamento', rec: 3, ban: 2, consultar: true,
+        feats: ['3 recámaras', '2 baños', 'Sala', 'Comedor', 'Cocina integral', 'Cuarto de lavado', '1 estacionamiento']}
+    ],
+    amenities: ['Ubicación estratégica', 'Alta plusvalía', 'Espacios funcionales', 'Diseños modernos', 'Construcción de calidad'],
+    address: 'Col. Enrique Cárdenas 807, Calle 7 y Calle G, Tampico, Tamps.',
     images: ['img/residencial-plus/conjunto-cardenas-807/conjunto-cardenas.webp']
   },
 
@@ -528,12 +589,13 @@ module.exports = [
     nearby: ['Supermercados: Bodega Aurrera Express, Smart y Soriana', 'Av. Tamaulipas y Viaducto Reynosa']
   },
   {
-    /* Modelos, amenidades y dirección: brochure "Coto Arecas Residencial" (brochures/); no trae m² */
+    /* Modelos: brochure "Coto Arecas Residencial" (brochures/); no trae m².
+       Prototipos, promociones, amenidades, dirección y contacto: lista de Construcciones Aryve Tampico (oct. 2026) */
     slug: 'arecas-altamira', name: 'Arecas', categoria: 'entrada', plaza: 'Tampico', zona: 'Altamira', gv: 'arecas',
     rec: '2 – 3 rec.', img: 'img/residencial/arecas-altamira/carrusel-01-5-54fb926eb6.webp', feat: 'Desarrollo de 12 casas en Altamira, con tranquilidad y seguridad.',
     type: 'Casas', m2: '87.20 m²', units: '12 casas',
     h1: ['Tranquilidad', 'en <em>Altamira</em>'],
-    sub: 'Un proyecto de 12 casas en perfecta armonía con la tranquilidad y la seguridad, rodeado de amplias áreas verdes y con acceso rápido a todos los servicios.',
+    sub: 'Excelente ubicación, tranquilidad y seguridad. Atrás del Tec de Monterrey y supermercados.',
     stats: [{n: 12, l: 'casas'}, {n: 87.2, l: 'm² de construcción'}, {n: 2, l: 'estacionamientos'}, {t: 'Áreas verdes', l: 'amplias'}],
     perks: [
       {ic: 'leaf', t: 'Tranquilidad', s: 'Rodeado de amplias áreas verdes.'},
@@ -542,23 +604,30 @@ module.exports = [
       {ic: 'chart', t: 'Inversión inteligente', s: 'Avalada por Grupo Velas.'}
     ],
     protos: [
-      {name: 'Bali 3', type: 'Casa', rec: 3, ban: '2.5', plan: 'img/residencial/arecas-altamira/planta-bali-3.webp', feats: ['3 recámaras', '2 baños y ½ baño', '2 estacionamientos', 'Sala-comedor', 'Cocina', 'Cuarto de lavado', 'Jardín']},
-      {name: 'Bali 2', type: 'Casa', rec: 2, ban: '1.5', plan: 'img/residencial/arecas-altamira/planta-bali-2.webp', feats: ['2 recámaras', '1 baño y ½ baño', '2 estacionamientos', 'Sala-comedor', 'Cocina', 'Cuarto de lavado']}
+      {name: 'Bali 3', type: 'Casa', rec: 3, ban: '2.5', consultar: true, plan: 'img/residencial/arecas-altamira/planta-bali-3.webp',
+        promo: 'Monedero de $10,000 o 2 A/C de 1 ton sin instalar (valor de $11,000). Vigencia: 31 de octubre de 2026.',
+        feats: ['Planta alta: 3 recámaras y 2 baños completos', 'Planta baja: medio baño, cocina y sala-comedor', '2 espacios de estacionamiento', 'Cuarto de lavado', 'Jardín']},
+      {name: 'Bali 2', type: 'Casa', rec: 2, ban: 2, consultar: true, plan: 'img/residencial/arecas-altamira/planta-bali-2.webp',
+        promo: 'Monedero de $5,000 o 1 A/C de 1 ton sin instalar (valor de $5,500). Vigencia: 31 de octubre de 2026.',
+        feats: ['Planta alta: 2 recámaras y 1 baño completo', 'Planta baja: alcoba con baño completo, cocina y sala-comedor', '2 espacios de estacionamiento', 'Cuarto de lavado']}
     ],
     protoLead: 'Dos modelos de casa, de 2 y 3 recámaras, con 2 estacionamientos.',
-    amenities: ['Áreas verdes', 'Canchas deportivas', 'Ambiente seguro'],
-    address: 'Blvd. Petrocel km 1.3, Puerto Industrial, Altamira, Tamps. (a un lado del Tec de Monterrey)',
+    amenities: ['Excelente ubicación', 'Cercanía a plazas comerciales', 'Banquetas y alumbrado'],
+    address: 'Blvd. Petrocel km 1.3, Puerto Industrial, Altamira, Tamps. (entrada por San Jacinto)',
+    tel2: '833 343 0529',
     nearby: ['Tecnológico de Monterrey', 'Supermercados: Soriana, Arteli y HEB', 'Hospitales Bene y Ángeles, a minutos', 'Playa Miramar y Plaza Arenas', 'Fácil acceso a la carretera Tampico–Mante'],
     logoText: 'Arecas'
   },
   {
     /* Estado, modelos de casa y dirección: brochure "Vista Laguna Residencial / Casas" (brochures/):
-       "Casas construidas: 3 casas tipo Bali 3, 3 casas tipo Sevilla, 4 casas tipo Bali 2" */
+       "Casas construidas: 3 casas tipo Bali 3, 3 casas tipo Sevilla, 4 casas tipo Bali 2".
+       Departamentos, precio, promoción, amenidades y contacto: lista de Construcciones Aryve Tampico (oct. 2026) */
     slug: 'vista-laguna', name: 'Vista Laguna', categoria: 'entrada', plaza: 'Tampico', zona: 'Altamira', gv: 'vista-laguna',
     rec: '2 – 3 rec.', img: 'img/residencial/vista-laguna/slider-02-6-b7d8ddcef9.webp', feat: 'Casas y departamentos con vistas a la laguna, áreas verdes y cercanía a servicios.',
-    status: 'Disponible', type: 'Casas y departamentos', m2: '79.25 – 116.68 m²', units: '15 casas y 96 departamentos',
+    status: 'Disponible', type: 'Casas y departamentos', m2: '79.25 – 116.68 m²', units: '15 casas y 96 departamentos', from: '$727,000 MXN', price: 727000,
+    promo: {t: 'Monedero de $5,000 o 1 A/C de 1 ton sin instalar (valor de $5,500)', nota: 'Vigencia: 31 de octubre de 2026.'},
     h1: ['Vista Laguna', 'en <em>Altamira</em>'],
-    sub: 'Casas y departamentos con vistas a la laguna, privacidad, áreas verdes y cercanía a servicios: un proyecto que combina confort, naturaleza y plusvalía.',
+    sub: 'El espacio ideal para tu familia. La oportunidad de tener tu propio hogar.',
     stats: [{n: 15, l: 'casas'}, {n: 96, l: 'departamentos'}, {pre: 'hasta', n: 116.68, l: 'm² de construcción'}, {t: 'Laguna', l: 'vistas'}],
     perks: [
       {ic: 'waves', t: 'Vista a la laguna', s: 'Confort y naturaleza en Altamira.'},
@@ -566,23 +635,23 @@ module.exports = [
       {ic: 'pin', t: 'Cerca de servicios', s: 'Soriana, Arteli, IMSS y Plaza Arenas.'},
       {ic: 'shield', t: 'Respaldo Grupo Velas', s: 'Más de 45 años construyendo patrimonio en México.'}
     ],
-    amenities: [
-      {t: 'Amplios espacios de esparcimiento', s: 'Lugares para relajarte, disfrutar tu tiempo libre o pasarla bien con familia y amigos.'},
-      {t: 'Áreas verdes', s: 'Extensas áreas naturales para caminar, hacer ejercicio o disfrutar del aire libre.'}
-    ],
+    amenities: ['Banquetas y alumbrado', 'Amplios espacios de esparcimiento', 'Áreas verdes'],
     protos: [
-      {name: 'Sevilla 2025', type: 'Casa', m2: 79.25, rec: 2, ban: '1.5', plan: 'img/residencial/vista-laguna/planta-sevilla-2025.webp',
+      {name: 'Departamento 3 recámaras', type: 'Departamento', rec: 3, ban: 2, precio: '$727,000 MXN (precio de promoción)',
+        feats: ['Preventa', '3 recámaras', '2 baños completos', 'Sala-comedor', 'Cocina', 'Área de lavado']},
+      {name: 'Sevilla 2025', type: 'Casa', m2: 79.25, rec: 2, ban: '1.5', consultar: true, plan: 'img/residencial/vista-laguna/planta-sevilla-2025.webp',
         photos: ['img/residencial/vista-laguna/planta-sevilla-2025.webp', 'img/residencial/vista-laguna/sevilla-2025-1.webp', 'img/residencial/vista-laguna/sevilla-2025-2.webp', 'img/residencial/vista-laguna/sevilla-2025-3.webp'],
-        feats: ['2 recámaras', '1.5 baños', 'Sala-comedor', 'Cocina', 'Área de lavandería', 'Estacionamiento']},
-      {name: 'Bali 2', type: 'Casa', m2: 87.10, rec: 2, ban: 2, plan: 'img/residencial/vista-laguna/planta-bali-2.webp',
+        feats: ['2 recámaras', '1.5 baños', 'Sala-comedor', 'Cocina', 'Área de lavado', 'Estacionamiento']},
+      {name: 'Bali 2', type: 'Casa', m2: 87.10, rec: 2, ban: 2, consultar: true, plan: 'img/residencial/vista-laguna/planta-bali-2.webp',
         photos: ['img/residencial/vista-laguna/planta-bali-2.webp', 'img/residencial/vista-laguna/bali-2-1.webp', 'img/residencial/vista-laguna/bali-2-2.webp', 'img/residencial/vista-laguna/bali-2-3.webp'],
-        feats: ['2 recámaras', '2 baños completos', 'Sala-comedor', 'Cocina', 'Área de lavandería', 'Estacionamiento']},
-      {name: 'Bali 3', type: 'Casa', m2: 116.68, rec: 3, ban: '2.5', plan: 'img/residencial/vista-laguna/planta-bali-3.webp',
+        feats: ['Planta alta: 2 recámaras y 1 baño completo', 'Planta baja: alcoba con baño completo, cocina y sala-comedor', 'Área de lavandería', 'Estacionamiento']},
+      {name: 'Bali 3', type: 'Casa', m2: 116.68, rec: 3, ban: '2.5', consultar: true, plan: 'img/residencial/vista-laguna/planta-bali-3.webp',
         photos: ['img/residencial/vista-laguna/planta-bali-3.webp', 'img/residencial/vista-laguna/bali-3-1.webp', 'img/residencial/vista-laguna/bali-3-2.webp', 'img/residencial/vista-laguna/bali-3-3.webp'],
-        feats: ['3 recámaras', '2.5 baños', 'Sala-comedor', 'Cocina', 'Área de lavandería', 'Estacionamiento']}
+        feats: ['Planta alta: 3 recámaras y 2 baños completos', 'Planta baja: medio baño, cocina y sala-comedor', 'Área de lavandería', 'Estacionamiento']}
     ],
-    protoLead: 'Casas construidas en tres modelos, de 2 y 3 recámaras. Toca la planta para ver las fotos del modelo.',
+    protoLead: 'Departamentos de 3 recámaras en preventa y casas construidas en tres modelos. Toca la planta para ver las fotos del modelo.',
     address: 'Fracc. Vista Laguna, Altamira, Tamps. (entrada por Su Bodega Monte Alto)',
+    tel2: '833 311 9568',
     nearby: ['Supermercados: Soriana y Arteli', 'Hospital: IMSS', 'Playa Tesoro', 'Cafés y restaurantes: Degas Café, El Asador y Plaza Arenas', 'Carretera Tampico–Mante']
   }
 ];

@@ -41,7 +41,7 @@ const PLAZAS = {
   'Playa del Carmen': {estado: 'Quintana Roo', tel: '984 106 6243', mail: 'playadelcarmen@grupovelas.com.mx', img: 'img/ciudades/playa-del-carmen.webp'},
   'Querétaro': {estado: 'Querétaro', tel: '442 194 0719', mail: 'queretaro@grupovelas.com.mx', img: 'img/ciudades/queretaro.webp'},
   'Reynosa': {estado: 'Tamaulipas', img: 'img/ciudades/reynosa.webp'},
-  'Tampico': {estado: 'Tamaulipas', tel: '833 184 5936', mail: 'tampico@grupovelas.com.mx', img: 'img/ciudades/tampico.webp'}
+  'Tampico': {estado: 'Tamaulipas', tel: '833 213 2727', mail: 'tampico@grupovelas.com.mx', img: 'img/ciudades/tampico.webp'}
 };
 const WA_GENERAL = '520000000000'; // mismo número general que el home (index.html) — TODO: WhatsApp real por plaza
 
@@ -136,6 +136,7 @@ const CLOCK_ICO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" st
 const ZOOM_ICO = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5M11 8v6M8 11h6"/></svg>';
 const HAND_ICO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V12M11 11V4.5a1.5 1.5 0 0 1 3 0V12M14 11.5V6a1.5 1.5 0 0 1 3 0v8c0 4-2.5 7-6 7-2.5 0-4-1.2-5.5-3.2L3.8 15a1.5 1.5 0 0 1 2.4-1.8L8 15"/></svg>';
 const GV_LOGO = 'img/comun/logo-grupo-velas.svg';
+const CONSULTAR = 'Consulta precio con un asesor'; // botón de prototipos con precio no publicado (mismo texto en assets/gv-desarrollo.js)
 
 /* CSS de la plantilla (mismo diseño que la página de la categoría) */
 const tplCSS = {};
@@ -200,6 +201,7 @@ function build(d){
   /* Brochure: brochures/<slug>.pdf si existe; si no, el catálogo del data o de grupovelas.com.mx */
   const brochure = fs.existsSync(path.join(ROOT, 'brochures', d.slug + '.pdf')) ? `brochures/${d.slug}.pdf` : '';
   const catalog = brochure ? url(brochure) : d.catalog || g.catalog || '';
+  const ctaLabel = sold ? 'Ver opciones disponibles' : d.categoria === 'entrada' ? 'Quiero esta casa' : 'Solicitar información';
 
   /* Fotos: primero las propias (research / locales), luego las de grupovelas.com.mx */
   const photos = [];
@@ -224,10 +226,13 @@ function build(d){
   let protos = (d.protos || []).map(p => ({...p}));
   const photoFor = i => (photos[i + 1] || photos[0] || heroPhotos[0] || {}).src;
   protos = protos.map((p, i) => {
-    const feats = p.feats || [p.rec && `${p.rec} recámaras`, p.ban && `${p.ban} baños`, p.park, p.lot && `${p.lot} m² de terreno`].filter(Boolean);
+    const feats = (p.feats || [p.rec && `${p.rec} recámaras`, p.ban && `${p.ban} baños`, p.park, p.lot && `${p.lot} m² de terreno`]).filter(Boolean);
+    /* precio: "Desde …" destacado; consultar: sin cifra, el botón dice "Consulta precio con un asesor"; promo: con "*Aplican restricciones" */
+    if (p.precio) feats.unshift(`Desde ${p.precio}*`);
+    if (p.promo) feats.push(`Promoción: ${p.promo} *Aplican restricciones.*`);
     const img = p.plan || p.img || photoFor(i);
     return {name: p.name, tag: p.tag || [p.type, p.rec && `${p.rec} recámaras`].filter(Boolean).join(' · '), m2: num(p.m2), cap: p.cap || (p.m2 ? 'm² de construcción' : ''),
-      img: url(img), isPlan: !!p.plan, photos: (p.photos || []).map(url), feats, unit: p.unit || `${p.type ? p.type + ' ' : ''}${p.name}`.trim(), price: p.price || ''};
+      img: url(img), isPlan: !!p.plan, photos: (p.photos || []).map(url), feats, unit: p.unit || `${p.type ? p.type + ' ' : ''}${p.name}`.trim(), price: p.price || '', consultar: !!p.consultar};
   });
   if (!protos.length && specs.length > 1){
     protos = [{name: d.fichaName || typeLabel || d.name, tag: `${d.name} · ${where}`, m2: num(d.m2), cap: d.m2 ? (/–|-/.test(d.m2) ? 'm² de construcción (desde)' : 'm² de construcción') : '', img: url(photoFor(0)), isPlan: false, photos: [],
@@ -268,6 +273,7 @@ function build(d){
   const chips = [];
   if (d.status) chips.push(d.status === 'Vendido' ? `<span class="chip"><b>Vendido</b></span>` : `<span class="chip live"><i></i><b>${esc(d.status)}</b></span>`);
   if (d.from) chips.push(`<span class="chip">Desde <b>${esc(d.from)}</b></span>`);
+  if (d.promo) chips.push(`<span class="chip">Promoción: <b>${esc(d.promo.t)}</b>*</span>`);
   (d.chips || []).forEach(c => chips.push(`<span class="chip">${txt(c)}</span>`));
   const stats = (d.stats || []).slice(0, 4);
   const statsHTML = stats.length ? `
@@ -291,7 +297,7 @@ function build(d){
       <h1><span class="line"><span>${txt(h1[0])}</span></span><span class="line"><span>${txt(h1[1])}</span></span></h1>
       <p class="sub">${txt(welcome)}</p>
       ${chips.length ? `<div class="chips">\n        ${chips.join('\n        ')}\n      </div>` : '<div class="chips"></div>'}
-      ${ctas}${heroPhotos[0] && heroPhotos[0].city ? `\n      <p class="hero-note">Imagen de ${esc(d.plaza)}. Fotos del desarrollo próximamente.</p>` : ''}
+      ${ctas}${d.promo ? `\n      <p class="hero-note">*Aplican restricciones.${d.promo.nota ? ' ' + esc(d.promo.nota) : ''}</p>` : ''}${heroPhotos[0] && heroPhotos[0].city ? `\n      <p class="hero-note">Imagen de ${esc(d.plaza)}. Fotos del desarrollo próximamente.</p>` : ''}
     </div>`;
   let heroSide = '';
   if (d.categoria === 'media' && (protos.length || d.from)){
@@ -370,10 +376,10 @@ function build(d){
           <h3 id="pName">${esc(p0.name)}</h3>
           <div id="pM2wrap"${p0.m2 ? '' : ' hidden'}><div class="m2"><span id="pM2">${p0.m2 || 0}</span><small>m²</small></div>
           <div class="m2cap" id="pCap">${esc(p0.cap)}</div></div>
-          <ul class="flist" id="flist">${p0.feats.map((f, i) => `<li style="--i:${i}" class="${f.endsWith('*') ? 'hl' : ''}">${esc(f.replace('*', ''))}</li>`).join('')}</ul>
+          <ul class="flist" id="flist">${p0.feats.map((f, i) => `<li style="--i:${i}" class="${f.endsWith('*') ? 'hl' : ''}">${esc(f.replace(/\*$/, ''))}</li>`).join('')}</ul>
         </div>
         <div class="acts">
-          <a href="#contacto" class="btn" id="pCta" data-unit="${esc(p0.unit)}">${sold ? 'Ver opciones disponibles' : d.categoria === 'entrada' ? 'Quiero esta casa' : 'Solicitar información'} <span class="arr">→</span></a>${brochure ? `\n          <a href="#contacto" class="btn ghost" data-unit="Brochure">Descargar brochure</a>` : catalog ? `\n          <a href="${esc(catalog)}" class="btn ghost" target="_blank" rel="noopener">Descargar catálogo</a>` : ''}
+          <a href="#contacto" class="btn" id="pCta" data-unit="${esc(p0.unit)}" data-label="${esc(ctaLabel)}">${p0.consultar && !sold ? CONSULTAR : ctaLabel} <span class="arr">→</span></a>${brochure ? `\n          <a href="#contacto" class="btn ghost" data-unit="Brochure">Descargar brochure</a>` : catalog ? `\n          <a href="${esc(catalog)}" class="btn ghost" target="_blank" rel="noopener">Descargar catálogo</a>` : ''}
         </div>
         <p class="proto-note">${esc(d.protoNote || 'Imágenes ilustrativas. Medidas aproximadas; precios y disponibilidad sujetos a cambio.')}</p>
       </div>
@@ -697,6 +703,7 @@ function build(d){
   const contacts = [
     `<li><a href="#" data-wa>${WA_ICO}WhatsApp</a></li>`,
     tel && `<li><a href="${telHref(tel)}">${TEL_ICO}(+52) ${esc(tel)}</a></li>`,
+    d.tel2 && `<li><a href="${telHref(d.tel2)}">${TEL_ICO}(+52) ${esc(d.tel2)}</a></li>`,
     mail && `<li><a href="mailto:${esc(mail)}">${MAIL_ICO}${esc(mail)}</a></li>`,
     `<li>${CLOCK_ICO}Lunes a viernes 9:00 am – 6:00 pm · Sábado 9:00 am – 2:00 pm</li>`
   ].filter(Boolean);
@@ -791,7 +798,7 @@ function build(d){
   };
   const DEV = {
     name: d.name, whatsapp, waMsg, mapsEmbed,
-    protos: protos.map(({name, tag, m2, cap, img, isPlan, photos, feats, unit}) => ({name, tag, m2, cap, img, isPlan, photos, feats, unit})),
+    protos: protos.map(({name, tag, m2, cap, img, isPlan, photos, feats, unit, consultar}) => ({name, tag, m2, cap, img, isPlan, photos, feats, unit, ...(consultar && !sold ? {consultar} : {})})),
     ...(video ? {video} : {}), ...(tour ? {tour} : {}), ...(calc ? {calc} : {}),
     ...(d.categoria === 'entrada' ? {
       msgs: {si: `Hola, tengo crédito y me interesa una casa en ${d.name}, ${where}.`, nose: `Hola, quiero saber si mi crédito me alcanza para una casa en ${d.name}, ${where}.`, no: `Hola, no tengo crédito y quiero saber cómo comprar una casa en ${d.name}, ${where}.`},
