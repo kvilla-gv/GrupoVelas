@@ -21,6 +21,8 @@
      zona        localidad si difiere de la plaza (p. ej. Altamira en Tampico)
      status      Preventa | En construcción | Entrega inmediata | Disponible | Vendido
      from/price  precio "desde" (texto) y el mismo en número (activa el simulador)
+     pricePromo  true si `price` es de promoción: se sigue mostrando en la ficha y la tarjeta,
+                 pero no cuenta para el "Desde" de la categoría (solo precios regulares)
      type, rec, m2, units   datos de inventario (se muestran como ficha)
      h1          [línea 1, línea 2] del título; admite <em>
      sub         párrafo del hero (si falta, se toma de grupovelas.com.mx)
@@ -630,7 +632,7 @@ module.exports = [
        Departamentos, precio, promoción, amenidades y contacto: lista de Construcciones Aryve Tampico (oct. 2026) */
     slug: 'vista-laguna', name: 'Vista Laguna', categoria: 'entrada', plaza: 'Tampico', zona: 'Altamira', gv: 'vista-laguna',
     rec: '2 – 3 rec.', img: 'img/residencial/vista-laguna/slider-02-6-b7d8ddcef9.webp', feat: 'Casas y departamentos con vistas a la laguna, áreas verdes y cercanía a servicios.',
-    status: 'Disponible', type: 'Casas y departamentos', m2: '79.25 – 116.68 m²', units: '15 casas y 96 departamentos', from: '$727,000 MXN', price: 727000,
+    status: 'Disponible', type: 'Casas y departamentos', m2: '79.25 – 116.68 m²', units: '15 casas y 96 departamentos', from: '$727,000 MXN', price: 727000, pricePromo: true,
     promo: {t: 'Monedero de $5,000 o 1 A/C de 1 ton sin instalar (valor de $5,500)', nota: 'Vigencia: 31 de octubre de 2026.'},
     h1: ['Vista Laguna', 'en <em>Altamira</em>'],
     sub: 'El espacio ideal para tu familia. La oportunidad de tener tu propio hogar.',

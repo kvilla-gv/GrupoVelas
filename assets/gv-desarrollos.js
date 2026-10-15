@@ -33,4 +33,4 @@ window.GV_DESARROLLOS = [
   {"name":"Arecas","cat":"entrada","plaza":"Tampico","zona":"Altamira","status":"","type":"Casas","rec":"2 – 3 rec.","m2":"87.20 m²","from":"","img":"img/residencial/arecas-altamira/fachada.webp","feat":"Desarrollo de 12 casas en Altamira, con tranquilidad y seguridad.","url":"residencial/arecas-altamira/index.html","gv":"arecas"},
   {"name":"Vista Laguna","cat":"entrada","plaza":"Tampico","zona":"Altamira","status":"Disponible","type":"Casas y departamentos","rec":"2 – 3 rec.","m2":"79.25 – 116.68 m²","from":"$727,000","img":"img/residencial/vista-laguna/slider-02-6-b7d8ddcef9.webp","feat":"Casas y departamentos con vistas a la laguna, áreas verdes y cercanía a servicios.","url":"residencial/vista-laguna/index.html","gv":"vista-laguna"}
 ];
-window.GV_RESUMEN = {"total":27,"plazas":8,"estados":5,"desde":{"entrada":"$727,000","media":"$1.3 MDP","alta":"$7.3 MDP"}};
+window.GV_RESUMEN = {"total":27,"plazas":8,"estados":5,"desde":{"entrada":"$770,000","media":"$1.3 MDP","alta":"$7.3 MDP"}};
