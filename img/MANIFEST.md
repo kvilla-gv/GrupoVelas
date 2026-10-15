@@ -4,8 +4,8 @@ Generado por `tools/generar-desarrollos.js` a partir de `img/manifest.json` (ori
 No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manifest.json`
 (aparte de los datos crudos de `tools/data/grupovelas.json`, que no se tocan).
 
-- 375 imágenes locales, 234 con miniatura de 800 px (`-800.webp`, solo en galerías y recortes de Selvanova).
-- Peso: 573,427 KB antes → 41,970 KB después, más 10,216 KB de miniaturas.
+- 377 imágenes locales, 234 con miniatura de 800 px (`-800.webp`, solo en galerías y recortes de Selvanova).
+- Peso: 592,391 KB antes → 42,732 KB después, más 10,216 KB de miniaturas.
 - WebP de máx. 1920 px de ancho y ≤400 KB; los SVG se copian tal cual.
 
 ## Imágenes
@@ -159,7 +159,9 @@ No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manif
 | `img/residencial-plus/cima-penaflor/1.webp` | https://www.aryve.com.mx/storage/developments/June2026/1.jpg | 280 KB | 200 KB | 64 KB |
 | `img/residencial-plus/cima-penaflor/2.webp` | https://www.aryve.com.mx/storage/developments/June2026/2.jpg | 137 KB | 61 KB | 23 KB |
 | `img/residencial-plus/cima-penaflor/3.webp` | https://www.aryve.com.mx/storage/developments/June2026/3.jpg | 173 KB | 99 KB | 36 KB |
+| `img/residencial-plus/cima-penaflor/casa-club.webp` | cima/casa_club.jpg | 7,782 KB | 387 KB | — |
 | `img/residencial-plus/cima-penaflor/cima-penaflor.webp` | img/categorias/residencial/cima_penaflor.jpg | 6,847 KB | 382 KB | 72 KB |
+| `img/residencial-plus/cima-penaflor/fachada.webp` | cima/fachada.jpg | 11,183 KB | 375 KB | — |
 | `img/residencial-plus/cima-penaflor/gal1.webp` | https://www.aryve.com.mx/storage/developments/June2026/gal1.jpg | 173 KB | 141 KB | 101 KB |
 | `img/residencial-plus/cima-penaflor/gal2.webp` | https://www.aryve.com.mx/storage/developments/June2026/gal2.jpg | 114 KB | 76 KB | 56 KB |
 | `img/residencial-plus/cima-penaflor/gal3.webp` | https://www.aryve.com.mx/storage/developments/June2026/gal3.jpg | 133 KB | 91 KB | 67 KB |

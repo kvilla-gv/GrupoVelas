@@ -244,6 +244,7 @@ module.exports = [
     amenities: ['Casa club', 'Alberca', 'Roof top', 'Juegos infantiles', 'Teens club', 'Áreas verdes'],
     credits: 'Infonavit, Fovissste, crédito bancario y contado',
     address: 'Blvd. Peñaflor S/N, Col. Ciudad del Sol, 76116 Santiago de Querétaro, Qro.',
+    hero: ['img/residencial-plus/cima-penaflor/fachada.webp', 'img/residencial-plus/cima-penaflor/casa-club.webp', 'img/residencial-plus/cima-penaflor/1.webp'],
     images: ['img/residencial-plus/cima-penaflor/cima-penaflor.webp'].concat(['img/residencial-plus/cima-penaflor/1.webp', 'img/residencial-plus/cima-penaflor/2.webp', 'img/residencial-plus/cima-penaflor/3.webp', 'img/residencial-plus/cima-penaflor/gal1.webp', 'img/residencial-plus/cima-penaflor/gal2.webp', 'img/residencial-plus/cima-penaflor/gal3.webp', 'img/residencial-plus/cima-penaflor/gal4.webp', 'img/residencial-plus/cima-penaflor/gal5.webp'])
   },
   {
