@@ -1549,6 +1549,14 @@
   }
  },
  {
+  "ruta": "img/residencial-plus/cima-penaflor/casa-club.webp",
+  "origen": "cima/casa_club.jpg",
+  "estado": "ok",
+  "antes": 7968651,
+  "despues": 395912,
+  "ancho": 1920
+ },
+ {
   "ruta": "img/residencial-plus/cima-penaflor/cima-penaflor.webp",
   "origen": "img/categorias/residencial/cima_penaflor.jpg",
   "estado": "ok",
@@ -1559,6 +1567,14 @@
    "ruta": "img/residencial-plus/cima-penaflor/cima-penaflor-800.webp",
    "peso": 74118
   }
+ },
+ {
+  "ruta": "img/residencial-plus/cima-penaflor/fachada.webp",
+  "origen": "cima/fachada.jpg",
+  "estado": "ok",
+  "antes": 11451120,
+  "despues": 384378,
+  "ancho": 1920
  },
  {
   "ruta": "img/residencial-plus/cima-penaflor/gal1.webp",
