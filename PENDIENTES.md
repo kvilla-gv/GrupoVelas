@@ -12,8 +12,3 @@
   Confirmar con marketing.
 - **WhatsApp de Torre Milos y Townhouses:** sigue el 833 343 0381 (de laescondida.grupovelas.com);
   la lista de oct. 2026 da como línea del desarrollo el 833 208 9869. Confirmar cuál usar.
-
-## Para otro paso
-- **PLAZAS / CIUDADES copiadas en tres lugares:** `index.html` (`PLAZAS`, coordenadas del mapa),
-  `assets/gv-nav.js` (`CIUDADES`, plaza y estado) y `tools/generar-desarrollos.js` (`PLAZAS`:
-  estado, oficina y foto).
