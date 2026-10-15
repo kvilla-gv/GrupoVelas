@@ -905,7 +905,8 @@ const RESUMEN = {
   plazas: plazas.length,
   estados: new Set(plazas.map(p => PLAZAS[p].estado)).size,
   desde: Object.fromEntries(Object.keys(CATS).map(k => {
-    const precios = conCat.filter(d => d.categoria === k && d.price > 0).map(d => d.price);
+    /* Solo precios regulares: los de promoción (pricePromo) no fijan el "Desde" de la categoría */
+    const precios = conCat.filter(d => d.categoria === k && d.price > 0 && !d.pricePromo).map(d => d.price);
     return [k, precios.length ? desde(Math.min(...precios)) : ''];
   }))
 };
