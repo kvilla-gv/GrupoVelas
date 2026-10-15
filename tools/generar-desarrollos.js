@@ -31,18 +31,9 @@ const SITE_URL = 'https://grupovelas.com.mx';
 const CATEGORIAS = require('../assets/gv-categorias.js');
 const ACENTO = {entrada: '#c8643f', media: '#2f6f9f', alta: '#b8976a'};
 const CATS = Object.fromEntries(Object.entries(CATEGORIAS).map(([k, c]) => [k, {dir: c.carpeta, name: c.nombre, acc: ACENTO[k]}]));
-/* Oficinas de venta por plaza y foto de la ciudad (grupovelas.com.mx/ciudades).
-   La foto de la ciudad solo se usa si el desarrollo aún no tiene fotos propias. */
-const PLAZAS = {
-  'Cancún': {estado: 'Quintana Roo', tel: '998 477 5050', mail: 'cancun@grupovelas.com.mx', img: 'img/ciudades/cancun.webp'},
-  'Ciudad Juárez': {estado: 'Chihuahua', tel: '656 623 6654', mail: 'ciudadjuarez@grupovelas.com.mx', img: 'img/ciudades/ciudad-juarez.webp'},
-  'Los Cabos': {estado: 'Baja California Sur', tel: '624 191 9320', mail: 'loscabos@grupovelas.com.mx', img: 'img/ciudades/los-cabos.webp'},
-  'Matamoros': {estado: 'Tamaulipas', img: 'img/ciudades/matamoros.webp'},
-  'Playa del Carmen': {estado: 'Quintana Roo', tel: '984 106 6243', mail: 'playadelcarmen@grupovelas.com.mx', img: 'img/ciudades/playa-del-carmen.webp'},
-  'Querétaro': {estado: 'Querétaro', tel: '442 194 0719', mail: 'queretaro@grupovelas.com.mx', img: 'img/ciudades/queretaro.webp'},
-  'Reynosa': {estado: 'Tamaulipas', img: 'img/ciudades/reynosa.webp'},
-  'Tampico': {estado: 'Tamaulipas', tel: '833 213 2727', mail: 'tampico@grupovelas.com.mx', img: 'img/ciudades/tampico.webp'}
-};
+/* Plazas de assets/gv-plazas.js: estado, oficina de ventas y foto de la ciudad
+   (la foto solo se usa si el desarrollo aún no tiene fotos propias) */
+const PLAZAS = require('../assets/gv-plazas.js');
 const WA_GENERAL = '520000000000'; // mismo número general que el home (index.html) — TODO: WhatsApp real por plaza
 
 /* ---------- utilidades ---------- */
@@ -873,6 +864,7 @@ ${footer}
 </dialog>
 
 <script src="${BASE}assets/gv-desarrollos.js"></script>
+<script src="${BASE}assets/gv-plazas.js"></script>
 <script src="${BASE}assets/gv-categorias.js"></script>
 <script src="${BASE}assets/gv-nav.js" data-base="${BASE}" data-cat="${d.categoria}" data-city="${esc(d.plaza)}"></script>
 <script>
@@ -907,7 +899,7 @@ console.log(`${n} páginas generadas.`);
 const desde = p => p < 1e6 ? '$' + p.toLocaleString('en-US') : `$${Math.floor(p / 1e4) / 100} MDP`;
 const conCat = DEVS.filter(d => d.categoria !== null);
 const plazas = [...new Set(conCat.map(d => d.plaza))];
-for (const p of plazas) if (!PLAZAS[p]) throw new Error(`Plaza sin estado en PLAZAS: ${p}`);
+for (const p of plazas) if (!PLAZAS[p]) throw new Error(`Plaza que no está en assets/gv-plazas.js: ${p}`);
 const RESUMEN = {
   total: conCat.length,
   plazas: plazas.length,

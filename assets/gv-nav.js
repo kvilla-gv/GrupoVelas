@@ -7,6 +7,7 @@
      <header data-gv-header></header>
      <footer data-gv-footer></footer>        (o <div data-gv-footer>)
      <script src="[base]assets/gv-desarrollos.js"></script>   (generado; lista de desarrollos)
+     <script src="[base]assets/gv-plazas.js"></script>
      <script src="[base]assets/gv-categorias.js"></script>
      <script src="[base]assets/gv-nav.js" data-base="[base]" data-cat="entrada|media|alta"></script>
 
@@ -33,11 +34,8 @@
   ];
   const G = window.GV_CATEGORIAS; // nombres visibles (assets/gv-categorias.js)
   const CATS = [['entrada',G.entrada.nombre,'residencial/index.html'],['media',G.media.nombre,'residencial-plus/index.html'],['alta',G.alta.nombre,'premium/index.html']];
-  /* Mismas plazas y orden que grupovelas.com.mx/ciudades */
-  const CIUDADES = [
-    ['Cancún','Quintana Roo'], ['Ciudad Juárez','Chihuahua'], ['Los Cabos','Baja California Sur'], ['Matamoros','Tamaulipas'],
-    ['Playa del Carmen','Quintana Roo'], ['Querétaro','Querétaro'], ['Reynosa','Tamaulipas'], ['Tampico','Tamaulipas']
-  ];
+  /* [plaza, estado] de assets/gv-plazas.js, en su orden */
+  const CIUDADES = Object.entries(window.GV_PLAZAS).map(([c, p]) => [c, p.estado]);
   const REVISTA = 'https://horizonte.grupovelas.com/';
   /* Proyectos por ciudad, de assets/gv-desarrollos.js (generado de tools/desarrollos.js):
      [nombre visible, slug en el sitio corporativo, ciudad, página en este sitio, categoría],
