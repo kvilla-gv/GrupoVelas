@@ -23,6 +23,11 @@
         PROYECTOS = [, IMG_LOCAL o 4+ nombres de desarrollos en un script),
         gv-desarrollos.js cargado antes de gv-nav.js y cifras fijas del home
         iguales a los datos
+     12. Lista única de plazas (assets/gv-plazas.js): sin copias (PLAZAS = {,
+        CIUDADES = [, LBL = { o 4+ nombres de plaza en un script), gv-plazas.js
+        cargado antes de gv-nav.js, cada plaza de tools/desarrollos.js con
+        estado, punto y foto, y areaServed y la pregunta frecuente del home
+        con las mismas plazas en el mismo orden
 
    Uso:  node tools/verificar.js          (máx. 20 hallazgos por revisión)
          node tools/verificar.js --todo   (todos los hallazgos)
@@ -385,6 +390,47 @@ revisar('CTA del header', () => {
     if (!/\bhref="#contacto"/.test(attrs)) out.push(`${r}:${linea}  el CTA no lleva a #contacto`);
     if (/\bdata-wa\b/.test(attrs)) out.push(`${r}:${linea}  el CTA abre WhatsApp; WhatsApp va en el botón flotante y la barra móvil`);
   }
+  return out;
+});
+
+/* 12. Lista única de plazas */
+revisar('Lista única de plazas', () => {
+  const out = [];
+  const PLAZAS = require('../assets/gv-plazas.js'), nombres = Object.keys(PLAZAS);
+  /* gv-plazas.js es la lista; desarrollos.js y gv-desarrollos.js nombran la plaza de cada desarrollo */
+  const FUENTES = new Set(['assets/gv-plazas.js', 'tools/desarrollos.js', 'assets/gv-desarrollos.js']);
+  /* a. Listas de plazas declaradas fuera de gv-plazas.js (como las que se eliminaron) */
+  for (const f of ARCHIVOS) if (!FUENTES.has(f.r) && !f.r.endsWith('.md'))
+    f.lineas.forEach((l, i) => { const m = l.match(/\b(PLAZAS|CIUDADES|LBL)\s*=\s*[[{]/); if (m) out.push(`${f.r}:${i + 1}  "${m[0]}": la lista vive en assets/gv-plazas.js`); });
+  /* b. Scripts con 4 o más nombres de plaza entre comillas (posible copia de la lista) */
+  const scripts = f => f.r.endsWith('.js') ? [f.lineas.join('\n')]
+    : [...f.lineas.join('\n').matchAll(/<script(?![^>]*ld\+json)[^>]*>([\s\S]*?)<\/script>/g)].map(m => m[1]);
+  for (const f of ARCHIVOS) if (!FUENTES.has(f.r) && /\.(js|html)$/.test(f.r))
+    for (const js of scripts(f)){
+      const vistos = nombres.filter(n => ['\'', '"', '`'].some(q => js.includes(q + n + q)));
+      if (vistos.length >= 4) out.push(`${f.r}  ${vistos.length} nombres de plaza en un script (${vistos.slice(0, 4).join(', ')}…): ¿copia de la lista?`);
+    }
+  /* c. gv-plazas.js se carga antes de gv-nav.js */
+  for (const f of PUBLICADOS.filter(f => f.r.endsWith('.html'))){
+    const src = f.lineas.join('\n'), nav = src.search(/<script src="[^"]*gv-nav\.js"/), pla = src.search(/<script src="[^"]*gv-plazas\.js"/);
+    if (nav >= 0 && (pla < 0 || pla > nav)) out.push(`${f.r}  falta cargar assets/gv-plazas.js antes de gv-nav.js`);
+  }
+  /* d. Cada plaza de tools/desarrollos.js está en la lista, con estado, punto del mapa y foto */
+  for (const p of [...new Set(require('./desarrollos.js').map(d => d.plaza))]){
+    const pl = PLAZAS[p];
+    if (!pl){ out.push(`tools/desarrollos.js  la plaza "${p}" no está en assets/gv-plazas.js`); continue; }
+    const faltan = ['estado', 'lat', 'lon', 'etiqueta', 'img'].filter(k => pl[k] === undefined || pl[k] === '');
+    if (faltan.length) out.push(`assets/gv-plazas.js  "${p}" sin ${faltan.join(', ')}`);
+    if (pl.img && !fs.existsSync(path.join(ROOT, pl.img))) out.push(`assets/gv-plazas.js  "${p}": no existe ${pl.img}`);
+  }
+  /* e. Textos fijos del home: mismas plazas y mismo orden que la lista */
+  const hs = ARCHIVOS.find(f => f.r === 'index.html').lineas.join('\n');
+  const area = hs.match(/"areaServed":(\[[^\]]*\])/), faq = hs.match(/¿En qué ciudades[\s\S]*?<p>([^<]*)<\/p>/);
+  const enLista = nombres.slice(0, -1).join(', ') + ' y ' + nombres[nombres.length - 1] + '.';
+  if (!area) out.push('index.html  no se encontró "areaServed"');
+  else if (JSON.stringify(JSON.parse(area[1])) !== JSON.stringify(nombres)) out.push(`index.html  areaServed: ${area[1]}; la lista da ${JSON.stringify(nombres)}`);
+  if (!faq) out.push('index.html  no se encontró la pregunta "¿En qué ciudades…?"');
+  else if (faq[1].trim() !== enLista) out.push(`index.html  pregunta "¿En qué ciudades…?": "${faq[1].trim()}"; la lista da "${enLista}"`);
   return out;
 });
 

@@ -16,7 +16,7 @@
   "name":"Grupo Velas Desarrollos",
   "description":"Desarrolladora inmobiliaria mexicana con más de 45 años de experiencia y marca hermana de Velas Resorts. Vivienda en tres categorías: Residencial, Residencial Plus y Premium.",
   "logo":"https://grupovelas.com.mx/img/comun/logo-gv-1.webp",
-  "areaServed":["Cancún","Playa del Carmen","Tampico","Reynosa","Matamoros","Los Cabos","Querétaro","Ciudad Juárez"],
+  "areaServed":["Cancún","Ciudad Juárez","Los Cabos","Matamoros","Playa del Carmen","Querétaro","Reynosa","Tampico"],
   "sameAs":["https://www.facebook.com/people/Grupo-Velas-Inmobiliaria/61584865130339/","https://www.instagram.com/grupovelasinmobiliaria/","https://www.tiktok.com/@grupovelasinmobiliaria","https://www.youtube.com/channel/UC9dB8d8vtl6cUay-5QSYxdg"]
 }
 </script>
@@ -646,7 +646,7 @@ section{position:relative}
   </div>
   <div class="wrap faq">
     <details data-reveal="up"><summary>¿Qué diferencia hay entre Residencial, Residencial Plus y Premium?<i></i></summary><div class="ans"><div><p>Residencial está pensada para quien compra su primera casa, con opciones compatibles con créditos como Infonavit y Fovissste. Residencial Plus ofrece más espacio y amenidades para familias que buscan crecer. Premium reúne nuestros desarrollos con mayor nivel de diseño, ubicación y amenidades, como Vela Towers Cancún.</p></div></div></details>
-    <details data-reveal="up" style="--d:.06s"><summary>¿En qué ciudades tiene desarrollos Grupo Velas?<i></i></summary><div class="ans"><div><p>Cancún, Playa del Carmen, Tampico, Reynosa, Matamoros, Los Cabos, Querétaro y Ciudad Juárez.</p></div></div></details>
+    <details data-reveal="up" style="--d:.06s"><summary>¿En qué ciudades tiene desarrollos Grupo Velas?<i></i></summary><div class="ans"><div><p>Cancún, Ciudad Juárez, Los Cabos, Matamoros, Playa del Carmen, Querétaro, Reynosa y Tampico.</p></div></div></details>
     <details data-reveal="up" style="--d:.12s"><summary>¿Puedo comprar con crédito Infonavit o Fovissste?<i></i></summary><div class="ans"><div><p>Sí, en los desarrollos que lo permiten. Un asesor te indicará qué desarrollos y prototipos aplican para tu tipo de crédito.</p></div></div></details>
     <details data-reveal="up" style="--d:.18s"><summary>¿Tienen viviendas con entrega inmediata?<i></i></summary><div class="ans"><div><p>Sí. Usa el filtro "Entrega inmediata" en el buscador para ver los desarrollos disponibles para mudarte ya.</p></div></div></details>
     <details data-reveal="up" style="--d:.24s"><summary>¿Quién es Grupo Velas?<i></i></summary><div class="ans"><div><p>Una empresa mexicana con más de 45 años en la construcción y marca hermana de Velas Resorts.</p></div></div></details>
@@ -696,12 +696,13 @@ section{position:relative}
 <a href="#" class="wa" id="wa" data-wa aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3Z"/></svg></a>
 
 <script src="assets/gv-desarrollos.js"></script>
+<script src="assets/gv-plazas.js"></script>
 <script src="assets/gv-categorias.js"></script>
 <script src="assets/gv-nav.js"></script>
 <script>
 /* =====================================================================
-   DATOS — categorías y plazas. Los desarrollos y sus cifras (total, plazas,
-   estados, precio "desde") vienen de assets/gv-desarrollos.js.
+   DATOS — categorías. Las plazas vienen de assets/gv-plazas.js; los desarrollos
+   y sus cifras (total, plazas, estados, precio "desde"), de assets/gv-desarrollos.js.
    ===================================================================== */
 const WHATSAPP = '520000000000'; // número general / call center
 
@@ -720,11 +721,7 @@ const CATS = {
       rows:[['Ideal para','Quien busca exclusividad o una inversión patrimonial'],['Formas de pago','Recursos propios, planes directos y crédito bancario'],['Producto','Departamentos y residencias de lujo con amenidades de resort'],['Lo que más valoras','Ubicación, diseño y exclusividad']]}
 };
 
-const PLAZAS = {
-  'Cancún':{lat:21.16,lon:-86.85}, 'Playa del Carmen':{lat:20.63,lon:-87.08},
-  'Tampico':{lat:22.25,lon:-97.86}, 'Reynosa':{lat:26.09,lon:-98.28}, 'Matamoros':{lat:25.87,lon:-97.5},
-  'Los Cabos':{lat:22.89,lon:-109.92}, 'Querétaro':{lat:20.59,lon:-100.39}, 'Ciudad Juárez':{lat:31.69,lon:-106.42}
-};
+/* Plazas: assets/gv-plazas.js (GV_PLAZAS) — coordenadas y etiqueta del mapa, en el orden del sitio */
 
 /* Desarrollos: assets/gv-desarrollos.js (generado de tools/desarrollos.js). Tarjetas, buscador
    y conteos solo con categoría confirmada; en tarjetas se usa el nombre corto si lo hay. */
@@ -797,7 +794,7 @@ const STEPS = {
 
   /* ---------- Buscador ---------- */
   const fPlaza = $('#fPlaza'), fStatus = $('#fStatus'), grid = $('#grid');
-  Object.keys(PLAZAS).forEach(p => fPlaza.add(new Option(p, p)));
+  Object.keys(GV_PLAZAS).forEach(p => fPlaza.add(new Option(p, p)));
   const EXTERNAL = d => /^https?:/.test(d.url || '') ? 'target="_blank" rel="noopener"' : '';
   const NOIMG = '<span class="noimg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 21V9l8-6 8 6v12M9 21v-6h6v6"/></svg>Imagen próximamente</span>';
   const SPEC = {type:'<path d="M4 21V9l8-6 8 6v12M9 21v-6h6v6"/>', rec:'<path d="M3 19V8M3 14h18v5M7 14v-3h5v3"/>', m2:'<rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 10h7v11"/>'};
@@ -855,7 +852,7 @@ const STEPS = {
   });
   applyFilters(false);
   const qPlaza = new URLSearchParams(location.search).get('plaza'); // enlaces de ciudades desde las subpáginas
-  if (qPlaza && PLAZAS[qPlaza]){ fPlaza.value = qPlaza; applyFilters(false); }
+  if (qPlaza && GV_PLAZAS[qPlaza]){ fPlaza.value = qPlaza; applyFilters(false); }
 
   /* ---------- Comparativa ---------- */
   const ICO = ['<path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM4 21c1-4 4-6 8-6s7 2 8 6"/>','<rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/>','<path d="M4 21V9l8-6 8 6v12M9 21v-6h6v6"/>','<path d="M12 4l2.5 5 5.5.8-4 3.9.9 5.5L12 16.6 7.1 19.2 8 13.7 4 9.8l5.5-.8z"/>'];
@@ -892,13 +889,12 @@ const STEPS = {
   const mx = $('#mx');
   mx.setAttribute('d', 'M' + OUT.map(([a,b]) => P(a,b).map(v => v.toFixed(1)).join(',')).join('L') + 'Z');
   mx.style.setProperty('--len', mx.getTotalLength());
-  const LBL = {'Cancún':[-4,-14,'end'],'Playa del Carmen':[-12,16,'end'],'Tampico':[12,4,'start'],'Reynosa':[-12,-6,'end'],'Matamoros':[12,4,'start'],'Los Cabos':[12,4,'start'],'Querétaro':[-12,4,'end'],'Ciudad Juárez':[12,4,'start']};
-  $('#cities').innerHTML = Object.entries(PLAZAS).map(([n,p],i) => {
-    const [x,y] = P(p.lat,p.lon), [dx,dy,an] = LBL[n];
+  $('#cities').innerHTML = Object.entries(GV_PLAZAS).map(([n,p],i) => {
+    const [x,y] = P(p.lat,p.lon), [dx,dy,an] = p.etiqueta;
     return `<g class="city" data-plaza="${n}" style="--d:${(i*.12).toFixed(2)}s"><circle class="halo" cx="${x}" cy="${y}" r="10"/><circle class="dot" cx="${x}" cy="${y}" r="7"/><text x="${x+dx}" y="${y+dy}" text-anchor="${an}">${n}</text></g>`;
   }).join('');
-  const maxN = Math.max(...Object.keys(PLAZAS).map(p => DEVS.filter(d => d.plaza===p).length));
-  $('#plist').innerHTML = Object.keys(PLAZAS).map((p,i) => {
+  const maxN = Math.max(...Object.keys(GV_PLAZAS).map(p => DEVS.filter(d => d.plaza===p).length));
+  $('#plist').innerHTML = Object.keys(GV_PLAZAS).map((p,i) => {
     const ds = DEVS.filter(d => d.plaza===p), c = k => ds.filter(d => d.cat===k).length;
     return `<li data-plaza="${p}" data-reveal="right" style="--d:${i*.05}s"><span class="n">${p}</span><span class="c">${ds.length} ${ds.length===1?'desarrollo':'desarrollos'}*</span>
       <span class="bars">${['entrada','media','alta'].map(k => c(k)?`<i class="${k}" data-w="${c(k)/maxN*100}%"></i>`:'').join('')}</span></li>`;
@@ -958,7 +954,7 @@ const STEPS = {
   const track = $('#track'); track.innerHTML += track.innerHTML;
 
   /* ---------- Formulario ---------- */
-  const fpl = $('#fpl'); fpl.add(new Option('Aún no lo sé', '')); Object.keys(PLAZAS).forEach(p => fpl.add(new Option(p, p)));
+  const fpl = $('#fpl'); fpl.add(new Option('Aún no lo sé', '')); Object.keys(GV_PLAZAS).forEach(p => fpl.add(new Option(p, p)));
   $$('#formCats .chip').forEach(b => b.addEventListener('click', () => { $$('#formCats .chip').forEach(x => x.classList.toggle('on', x===b)); $('#fcat').value = CATS[b.dataset.c].name; }));
   const qp = new URLSearchParams(location.search);
   ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','fbclid'].forEach(k => { const f = $(`#form [name="${k}"]`); if (f && qp.get(k)) f.value = qp.get(k); });
