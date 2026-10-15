@@ -28,6 +28,9 @@
         cargado antes de gv-nav.js, cada plaza de tools/desarrollos.js con
         estado, punto y foto, y areaServed y la pregunta frecuente del home
         con las mismas plazas en el mismo orden
+     13. "Desde" de cada categoría sin precios de promoción: un price que el
+        data marca como "promoción" (en from o en el precio de un prototipo)
+        lleva pricePromo, y el "Desde" publicado es el precio regular más bajo
 
    Uso:  node tools/verificar.js          (máx. 20 hallazgos por revisión)
          node tools/verificar.js --todo   (todos los hallazgos)
@@ -431,6 +434,31 @@ revisar('Lista única de plazas', () => {
   else if (JSON.stringify(JSON.parse(area[1])) !== JSON.stringify(nombres)) out.push(`index.html  areaServed: ${area[1]}; la lista da ${JSON.stringify(nombres)}`);
   if (!faq) out.push('index.html  no se encontró la pregunta "¿En qué ciudades…?"');
   else if (faq[1].trim() !== enLista) out.push(`index.html  pregunta "¿En qué ciudades…?": "${faq[1].trim()}"; la lista da "${enLista}"`);
+  return out;
+});
+
+/* 13. "Desde" de cada categoría sin precios de promoción */
+revisar('"Desde" sin precios de promoción', () => {
+  const out = [], devs = require('./desarrollos.js').filter(d => d.categoria !== null);
+  /* a. Un price que aparece como "promoción" en el data lleva pricePromo */
+  const numero = t => { const m = String(t).match(/\$\s?([\d,]+)/); return m ? +m[1].replace(/,/g, '') : 0; };
+  for (const d of devs) if (d.price > 0 && !d.pricePromo){
+    const promo = [d.from, ...(d.protos || []).map(p => p.precio)].filter(t => t && /promoci[oó]n/i.test(t) && numero(t) === d.price);
+    if (promo.length) out.push(`tools/desarrollos.js  ${d.slug}: price ${d.price} es de promoción ("${promo[0]}"); falta pricePromo: true`);
+  }
+  /* b. El "Desde" publicado (GV_RESUMEN) es el precio regular más bajo de la categoría.
+     Mismo formato que desde() en tools/generar-desarrollos.js */
+  const desde = p => p < 1e6 ? '$' + p.toLocaleString('en-US') : `$${Math.floor(p / 1e4) / 100} MDP`;
+  const gvd = (ARCHIVOS.find(f => f.r === 'assets/gv-desarrollos.js') || {lineas: []}).lineas.join('\n');
+  const pub = JSON.parse((gvd.match(/"desde":(\{[^}]*\})/) || [, '{}'])[1]);
+  for (const k of Object.keys(CATEGORIAS)){
+    const regulares = devs.filter(d => d.categoria === k && d.price > 0 && !d.pricePromo);
+    const esperado = regulares.length ? desde(Math.min(...regulares.map(d => d.price))) : '';
+    if ((pub[k] || '') !== esperado){
+      const promo = devs.find(d => d.categoria === k && d.pricePromo && desde(d.price) === pub[k]);
+      out.push(`assets/gv-desarrollos.js  "Desde" de ${NOMBRES[k]}: ${pub[k] || '(vacío)'}${promo ? ` sale del precio de promoción de ${promo.slug}` : ''}; el precio regular más bajo da ${esperado || '(vacío)'}`);
+    }
+  }
   return out;
 });
 
