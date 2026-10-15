@@ -166,7 +166,7 @@ module.exports = [
       {n: 'Arteli Miramar', m: 9, d: '2.7 km'}, {n: 'Malecón Miramar', m: 10, d: '3.5 km'}
     ],
     nearby: ['Cafés y restaurantes: Velas 10'],
-    whatsapp: '528333430381', tel2: '833 208 9869',
+    whatsapp: '528332089869', tel2: '833 208 9869', // WhatsApp: línea del desarrollo, lista de oct. 2026
     hero: ['img/premium/torre-milos/fachada.webp', 'img/premium/torre-milos/cam-3.webp', 'img/premium/torre-milos/cam-4.webp'],
     images: ['img/premium/torre-milos/fachada.webp', 'img/premium/torre-milos/cam-3.webp', 'img/premium/torre-milos/cam-4.webp', 'img/premium/torre-milos/cam-5.webp', 'img/premium/torre-milos/cam-6.webp', 'img/premium/torre-milos/01-sala-comedor.webp', 'img/premium/torre-milos/02-cocina.webp', 'img/premium/torre-milos/03-rec.webp', 'img/premium/torre-milos/sala-dt1.webp', 'img/premium/torre-milos/cocina-dt1.webp', 'img/premium/torre-milos/recamara-dt1.webp']
   },
@@ -199,7 +199,7 @@ module.exports = [
       {n: 'Residencial Velamar', m: 5, d: '500 m'}, {n: 'Bancos', m: 7, d: '2.3 km'}, {n: 'Walmart Miramar', m: 7, d: '2.3 km'},
       {n: 'Arteli Miramar', m: 9, d: '2.7 km'}, {n: 'Malecón Miramar', m: 10, d: '3.5 km'}
     ],
-    whatsapp: '528333430381', tel2: '833 208 9869',
+    whatsapp: '528332089869', tel2: '833 208 9869', // WhatsApp: línea del desarrollo, lista de oct. 2026
     hero: ['img/premium/townhouses-velamar-ii/slider-04-8-f29f882edf.webp', 'img/premium/townhouses-velamar-ii/slider-03-8-f8f8c909f8.webp', 'img/premium/townhouses-velamar-ii/slider-02-10-2b86ea17c7.webp'],
     images: ['img/premium/townhouses-velamar-ii/townhouses-01-1.webp', 'img/premium/townhouses-velamar-ii/townhouses-02-1.webp', 'img/premium/townhouses-velamar-ii/townhouses-03-1.webp', 'img/premium/townhouses-velamar-ii/townhouses-04-1.webp', 'img/premium/townhouses-velamar-ii/townhouses-05-1.webp', 'img/premium/townhouses-velamar-ii/townhouses-06-1.webp', 'img/premium/townhouses-velamar-ii/townhouses-07-1.webp'].concat('img/premium/townhouses-velamar-ii/image00054.webp')
   },
