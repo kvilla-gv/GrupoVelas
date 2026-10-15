@@ -3418,71 +3418,75 @@
   "ancho": 1088
  },
  {
-  "ruta": "img/residencial/arecas-altamira/carrusel-01-5-54fb926eb6.webp",
-  "origen": "https://backend.grupovelas.com/uploads/Carrusel_01_5_54fb926eb6.webp",
+  "ruta": "img/residencial/arecas-altamira/bano.webp",
+  "origen": "DJI_20260429152815_0335_D.JPG",
   "estado": "ok",
-  "antes": 135554,
-  "despues": 135554,
-  "ancho": 1280
- },
- {
-  "ruta": "img/residencial/arecas-altamira/carrusel-01-6-d2fbdd8513.webp",
-  "origen": "https://backend.grupovelas.com/uploads/Carrusel_01_6_d2fbdd8513.webp",
-  "estado": "ok",
-  "antes": 135554,
-  "despues": 135554,
-  "ancho": 1280,
+  "antes": 4648960,
+  "despues": 75352,
+  "ancho": 1920,
   "mini": {
-   "ruta": "img/residencial/arecas-altamira/carrusel-01-6-d2fbdd8513-800.webp",
-   "peso": 49472
+   "ruta": "img/residencial/arecas-altamira/bano-800.webp",
+   "peso": 13956
   }
  },
  {
-  "ruta": "img/residencial/arecas-altamira/carrusel-03-6-7d0df19d4e.webp",
-  "origen": "https://backend.grupovelas.com/uploads/Carrusel_03_6_7d0df19d4e.webp",
+  "ruta": "img/residencial/arecas-altamira/comedor.webp",
+  "origen": "DJI_20260429153939_0375_D.JPG",
   "estado": "ok",
-  "antes": 89404,
-  "despues": 89404,
-  "ancho": 1280,
+  "antes": 5087232,
+  "despues": 141190,
+  "ancho": 1920,
   "mini": {
-   "ruta": "img/residencial/arecas-altamira/carrusel-03-6-7d0df19d4e-800.webp",
-   "peso": 39778
+   "ruta": "img/residencial/arecas-altamira/comedor-800.webp",
+   "peso": 24572
   }
  },
  {
-  "ruta": "img/residencial/arecas-altamira/galeria-04-6-4150c9c783.webp",
-  "origen": "https://backend.grupovelas.com/uploads/Galeria_04_6_4150c9c783.webp",
+  "ruta": "img/residencial/arecas-altamira/escalera.webp",
+  "origen": "DJI_20260429152920_0337_D.JPG",
   "estado": "ok",
-  "antes": 27154,
-  "despues": 27154,
-  "ancho": 710,
+  "antes": 4730880,
+  "despues": 55076,
+  "ancho": 1920,
   "mini": {
-   "ruta": "img/residencial/arecas-altamira/galeria-04-6-4150c9c783-800.webp",
-   "peso": 26934
+   "ruta": "img/residencial/arecas-altamira/escalera-800.webp",
+   "peso": 8954
   }
  },
  {
-  "ruta": "img/residencial/arecas-altamira/galeria-05-6-616625420b.webp",
-  "origen": "https://backend.grupovelas.com/uploads/Galeria_05_6_616625420b.webp",
+  "ruta": "img/residencial/arecas-altamira/estancia.webp",
+  "origen": "DJI_20260429153804_0365_D.JPG",
   "estado": "ok",
-  "antes": 32812,
-  "despues": 32812,
-  "ancho": 710,
+  "antes": 5566464,
+  "despues": 187726,
+  "ancho": 1920,
   "mini": {
-   "ruta": "img/residencial/arecas-altamira/galeria-05-6-616625420b-800.webp",
-   "peso": 32644
+   "ruta": "img/residencial/arecas-altamira/estancia-800.webp",
+   "peso": 24800
   }
  },
  {
-  "ruta": "img/residencial/arecas-altamira/galeria-06-6-f3de6074af.webp",
-  "origen": "https://backend.grupovelas.com/uploads/Galeria_06_6_f3de6074af.webp",
+  "ruta": "img/residencial/arecas-altamira/fachada.webp",
+  "origen": "Gemini_Generated_Image_9bsnfx9bsnfx9bsn.jpg",
   "estado": "ok",
-  "antes": 32140,
-  "despues": 32140,
-  "ancho": 710,
+  "antes": 706427,
+  "despues": 98328,
+  "ancho": 1376,
   "mini": {
-   "ruta": "img/residencial/arecas-altamira/galeria-06-6-f3de6074af-800.webp",
-   "peso": 31714
+   "ruta": "img/residencial/arecas-altamira/fachada-800.webp",
+   "peso": 29264
+  }
+ },
+ {
+  "ruta": "img/residencial/arecas-altamira/lavabo.webp",
+  "origen": "DJI_20260429152637_0328_D.JPG",
+  "estado": "ok",
+  "antes": 5988352,
+  "despues": 268660,
+  "ancho": 1920,
+  "mini": {
+   "ruta": "img/residencial/arecas-altamira/lavabo-800.webp",
+   "peso": 35776
   }
  },
  {
@@ -3502,39 +3506,27 @@
   "ancho": 1211
  },
  {
-  "ruta": "img/residencial/arecas-altamira/slider-01-8-66cd38fcbd.webp",
-  "origen": "https://backend.grupovelas.com/uploads/Slider_01_8_66cd38fcbd.webp",
+  "ruta": "img/residencial/arecas-altamira/sala-comedor.webp",
+  "origen": "DJI_20260429153912_0373_D.JPG",
   "estado": "ok",
-  "antes": 76542,
-  "despues": 55906,
+  "antes": 4780032,
+  "despues": 95814,
   "ancho": 1920,
   "mini": {
-   "ruta": "img/residencial/arecas-altamira/slider-01-8-66cd38fcbd-800.webp",
-   "peso": 15198
+   "ruta": "img/residencial/arecas-altamira/sala-comedor-800.webp",
+   "peso": 19080
   }
  },
  {
-  "ruta": "img/residencial/arecas-altamira/slider-03-7-e5f63011d1.webp",
-  "origen": "https://backend.grupovelas.com/uploads/Slider_03_7_e5f63011d1.webp",
+  "ruta": "img/residencial/arecas-altamira/sala.webp",
+  "origen": "DJI_20260429153153_0346_D.JPG",
   "estado": "ok",
-  "antes": 131230,
-  "despues": 97898,
+  "antes": 6008832,
+  "despues": 270064,
   "ancho": 1920,
   "mini": {
-   "ruta": "img/residencial/arecas-altamira/slider-03-7-e5f63011d1-800.webp",
-   "peso": 27886
-  }
- },
- {
-  "ruta": "img/residencial/arecas-altamira/slider-04-7-e5d82e7c51.webp",
-  "origen": "https://backend.grupovelas.com/uploads/Slider_04_7_e5d82e7c51.webp",
-  "estado": "ok",
-  "antes": 61994,
-  "despues": 48026,
-  "ancho": 1920,
-  "mini": {
-   "ruta": "img/residencial/arecas-altamira/slider-04-7-e5d82e7c51-800.webp",
-   "peso": 15202
+   "ruta": "img/residencial/arecas-altamira/sala-800.webp",
+   "peso": 44724
   }
  },
  {

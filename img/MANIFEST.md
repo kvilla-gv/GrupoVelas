@@ -4,8 +4,8 @@ Generado por `tools/generar-desarrollos.js` a partir de `img/manifest.json` (ori
 No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manifest.json`
 (aparte de los datos crudos de `tools/data/grupovelas.json`, que no se tocan).
 
-- 376 imágenes locales, 234 con miniatura de 800 px (`-800.webp`, solo en galerías y recortes de Selvanova).
-- Peso: 537,494 KB antes → 41,445 KB después, más 10,253 KB de miniaturas.
+- 375 imágenes locales, 234 con miniatura de 800 px (`-800.webp`, solo en galerías y recortes de Selvanova).
+- Peso: 573,427 KB antes → 41,970 KB después, más 10,216 KB de miniaturas.
 - WebP de máx. 1920 px de ancho y ≤400 KB; los SVG se copian tal cual.
 
 ## Imágenes
@@ -329,17 +329,16 @@ No editar a mano. La URL original de cada imagen solo vive aquí y en `img/manif
 | `img/residencial-plus/velasur/velasur-casas-queretaro-olivo-vestidor-d1a11369dd.webp` | https://backend.grupovelas.com/uploads/velasur_casas_queretaro_olivo_vestidor_d1a11369dd.jpg | 225 KB | 122 KB | — |
 | `img/residencial-plus/velasur/velasur-cfa30aa3c3.webp` | https://backend.grupovelas.com/uploads/Velasur_cfa30aa3c3.webp | 39 KB | 39 KB | — |
 | `img/residencial-plus/zafiro-residencial/zafiro.webp` | zafiro.jpeg | 183 KB | 130 KB | — |
-| `img/residencial/arecas-altamira/carrusel-01-5-54fb926eb6.webp` | https://backend.grupovelas.com/uploads/Carrusel_01_5_54fb926eb6.webp | 132 KB | 132 KB | — |
-| `img/residencial/arecas-altamira/carrusel-01-6-d2fbdd8513.webp` | https://backend.grupovelas.com/uploads/Carrusel_01_6_d2fbdd8513.webp | 132 KB | 132 KB | 48 KB |
-| `img/residencial/arecas-altamira/carrusel-03-6-7d0df19d4e.webp` | https://backend.grupovelas.com/uploads/Carrusel_03_6_7d0df19d4e.webp | 87 KB | 87 KB | 39 KB |
-| `img/residencial/arecas-altamira/galeria-04-6-4150c9c783.webp` | https://backend.grupovelas.com/uploads/Galeria_04_6_4150c9c783.webp | 27 KB | 27 KB | 26 KB |
-| `img/residencial/arecas-altamira/galeria-05-6-616625420b.webp` | https://backend.grupovelas.com/uploads/Galeria_05_6_616625420b.webp | 32 KB | 32 KB | 32 KB |
-| `img/residencial/arecas-altamira/galeria-06-6-f3de6074af.webp` | https://backend.grupovelas.com/uploads/Galeria_06_6_f3de6074af.webp | 31 KB | 31 KB | 31 KB |
+| `img/residencial/arecas-altamira/bano.webp` | DJI_20260429152815_0335_D.JPG | 4,540 KB | 74 KB | 14 KB |
+| `img/residencial/arecas-altamira/comedor.webp` | DJI_20260429153939_0375_D.JPG | 4,968 KB | 138 KB | 24 KB |
+| `img/residencial/arecas-altamira/escalera.webp` | DJI_20260429152920_0337_D.JPG | 4,620 KB | 54 KB | 9 KB |
+| `img/residencial/arecas-altamira/estancia.webp` | DJI_20260429153804_0365_D.JPG | 5,436 KB | 183 KB | 24 KB |
+| `img/residencial/arecas-altamira/fachada.webp` | Gemini_Generated_Image_9bsnfx9bsnfx9bsn.jpg | 690 KB | 96 KB | 29 KB |
+| `img/residencial/arecas-altamira/lavabo.webp` | DJI_20260429152637_0328_D.JPG | 5,848 KB | 262 KB | 35 KB |
 | `img/residencial/arecas-altamira/planta-bali-2.webp` | brochures/arecas-altamira.pdf (p. 6) | 1,682 KB | 86 KB | — |
 | `img/residencial/arecas-altamira/planta-bali-3.webp` | brochures/arecas-altamira.pdf (p. 5) | 1,682 KB | 89 KB | — |
-| `img/residencial/arecas-altamira/slider-01-8-66cd38fcbd.webp` | https://backend.grupovelas.com/uploads/Slider_01_8_66cd38fcbd.webp | 75 KB | 55 KB | 15 KB |
-| `img/residencial/arecas-altamira/slider-03-7-e5f63011d1.webp` | https://backend.grupovelas.com/uploads/Slider_03_7_e5f63011d1.webp | 128 KB | 96 KB | 27 KB |
-| `img/residencial/arecas-altamira/slider-04-7-e5d82e7c51.webp` | https://backend.grupovelas.com/uploads/Slider_04_7_e5d82e7c51.webp | 61 KB | 47 KB | 15 KB |
+| `img/residencial/arecas-altamira/sala-comedor.webp` | DJI_20260429153912_0373_D.JPG | 4,668 KB | 94 KB | 19 KB |
+| `img/residencial/arecas-altamira/sala.webp` | DJI_20260429153153_0346_D.JPG | 5,868 KB | 264 KB | 44 KB |
 | `img/residencial/florencia/galeria-01-c380ef9470.webp` | https://backend.grupovelas.com/uploads/Galeria_01_c380ef9470.jpg | 42 KB | 33 KB | 33 KB |
 | `img/residencial/florencia/galeria-02-4105525a0a.webp` | https://backend.grupovelas.com/uploads/Galeria_02_4105525a0a.jpg | 44 KB | 35 KB | 35 KB |
 | `img/residencial/florencia/galeria-03-642d1ef7a0.webp` | https://backend.grupovelas.com/uploads/Galeria_03_642d1ef7a0.jpg | 38 KB | 28 KB | 28 KB |

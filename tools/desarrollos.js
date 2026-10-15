@@ -590,9 +590,10 @@ module.exports = [
   },
   {
     /* Modelos: brochure "Coto Arecas Residencial" (brochures/); no trae m².
-       Prototipos, promociones, amenidades, dirección y contacto: lista de Construcciones Aryve Tampico (oct. 2026) */
+       Prototipos, promociones, amenidades, dirección y contacto: lista de Construcciones Aryve Tampico (oct. 2026)
+       Fotos: entregadas por Grupo Velas (oct. 2026); las de grupovelas.com.mx no son de este desarrollo */
     slug: 'arecas-altamira', name: 'Arecas', categoria: 'entrada', plaza: 'Tampico', zona: 'Altamira', gv: 'arecas',
-    rec: '2 – 3 rec.', img: 'img/residencial/arecas-altamira/carrusel-01-5-54fb926eb6.webp', feat: 'Desarrollo de 12 casas en Altamira, con tranquilidad y seguridad.',
+    rec: '2 – 3 rec.', img: 'img/residencial/arecas-altamira/fachada.webp', feat: 'Desarrollo de 12 casas en Altamira, con tranquilidad y seguridad.',
     type: 'Casas', m2: '87.20 m²', units: '12 casas',
     h1: ['Tranquilidad', 'en <em>Altamira</em>'],
     sub: 'Excelente ubicación, tranquilidad y seguridad. Atrás del Tec de Monterrey y supermercados.',
@@ -616,6 +617,11 @@ module.exports = [
     address: 'Blvd. Petrocel km 1.3, Puerto Industrial, Altamira, Tamps. (entrada por San Jacinto)',
     tel2: '833 343 0529',
     nearby: ['Tecnológico de Monterrey', 'Supermercados: Soriana, Arteli y HEB', 'Hospitales Bene y Ángeles, a minutos', 'Playa Miramar y Plaza Arenas', 'Fácil acceso a la carretera Tampico–Mante'],
+    hero: ['img/residencial/arecas-altamira/fachada.webp', 'img/residencial/arecas-altamira/sala-comedor.webp', 'img/residencial/arecas-altamira/comedor.webp'],
+    images: ['img/residencial/arecas-altamira/fachada.webp', 'img/residencial/arecas-altamira/sala-comedor.webp', 'img/residencial/arecas-altamira/comedor.webp',
+      'img/residencial/arecas-altamira/sala.webp', 'img/residencial/arecas-altamira/estancia.webp', 'img/residencial/arecas-altamira/escalera.webp',
+      'img/residencial/arecas-altamira/bano.webp', 'img/residencial/arecas-altamira/lavabo.webp'],
+    skipImages: ['backend.grupovelas.com'],
     logoText: 'Arecas'
   },
   {
