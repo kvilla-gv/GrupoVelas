@@ -151,9 +151,10 @@
     plan.classList.toggle('photo', !p.isPlan);
     $('#pM2wrap').hidden = !p.m2;
     $('#pCap').textContent = p.cap || '';
-    $('#pCta').dataset.unit = p.unit || p.name;
+    const cta = $('#pCta'); cta.dataset.unit = p.unit || p.name;
+    cta.firstChild.textContent = (p.consultar ? 'Consulta precio con un asesor' : cta.dataset.label || cta.firstChild.textContent.trim()) + ' ';
     const fp = $('#fproto'); if (fp) fp.value = p.unit || p.name;
-    $('#flist').innerHTML = (p.feats || []).map((f, j) => `<li style="--i:${j}" class="${f.endsWith('*') ? 'hl' : ''}">${f.replace('*', '')}</li>`).join('');
+    $('#flist').innerHTML = (p.feats || []).map((f, j) => `<li style="--i:${j}" class="${f.endsWith('*') ? 'hl' : ''}">${f.replace(/\*$/, '')}</li>`).join('');
     if (p.m2){
       const el = $('#pM2'), from = first ? 0 : parseFloat(el.textContent.replace(/,/g, '')) || 0, dec = p.m2 % 1 ? 2 : 0, t0 = performance.now();
       const s = t => { const q = Math.min((t - t0) / 900, 1); el.textContent = (from + (p.m2 - from) * (1 - Math.pow(1 - q, 3))).toFixed(dec); if (q < 1) requestAnimationFrame(s); };
